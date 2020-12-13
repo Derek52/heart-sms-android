@@ -2,7 +2,7 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto" >
 
-    <xyz.klinker.messenger.shared.view.MaterialPreferenceCategory
+    <xyz.klinker.sms.shared.view.MaterialPreferenceCategory
         android:key="@string/pref_general_category"
         android:title="@string/general_category">
 
@@ -26,9 +26,9 @@
             android:summary="@string/apply_primary_theme_toolbar_summary"
             android:defaultValue="true" />
 
-    </xyz.klinker.messenger.shared.view.MaterialPreferenceCategory>
+    </xyz.klinker.sms.shared.view.MaterialPreferenceCategory>
 
-    <xyz.klinker.messenger.shared.view.MaterialPreferenceCategory
+    <xyz.klinker.sms.shared.view.MaterialPreferenceCategory
         android:key="@string/pref_conversation_list"
         android:title="@string/conversation_list_category">
 
@@ -59,9 +59,9 @@
             android:summary="@string/conversation_categories_summary"
             android:defaultValue="true" />
 
-    </xyz.klinker.messenger.shared.view.MaterialPreferenceCategory>
+    </xyz.klinker.sms.shared.view.MaterialPreferenceCategory>
 
-    <xyz.klinker.messenger.shared.view.MaterialPreferenceCategory
+    <xyz.klinker.sms.shared.view.MaterialPreferenceCategory
         android:key="@string/pref_message_list"
         android:title="@string/message_list_category">
 
@@ -78,6 +78,6 @@
             android:summary="@string/message_timestamp_summary"
             android:defaultValue="false" />
 
-    </xyz.klinker.messenger.shared.view.MaterialPreferenceCategory>
+    </xyz.klinker.sms.shared.view.MaterialPreferenceCategory>
 
 </PreferenceScreen>

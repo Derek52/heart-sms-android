@@ -34,7 +34,7 @@
         android:title="@string/mms_download_directory"
         android:summary="@string/mms_download_directory_summary" />
 
-    <xyz.klinker.messenger.shared.view.MaterialPreferenceCategory
+    <xyz.klinker.sms.shared.view.MaterialPreferenceCategory
         android:title="@string/apn_configuration" >
 
         <SwitchPreference
@@ -74,6 +74,6 @@
             android:defaultValue="x-wap-profile"
             android:dependency="@string/pref_override_system_apn" />
 
-    </xyz.klinker.messenger.shared.view.MaterialPreferenceCategory>
+    </xyz.klinker.sms.shared.view.MaterialPreferenceCategory>
 
 </PreferenceScreen>
