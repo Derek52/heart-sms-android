@@ -31,7 +31,7 @@ class ComposeIntentHandler(private val activity: ComposeActivity) {
                 intent.action == Intent.ACTION_SEND_MULTIPLE -> shareMultipleImages(intent)
             }
         } catch (e: Exception) {
-            implementation.firebase.AnalyticsHelper.caughtForceClose(activity, "caught when sharing to compose activity", e)
+            AnalyticsHelper.caughtForceClose(activity, "caught when sharing to compose activity", e)
         }
     }
 
