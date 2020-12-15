@@ -1,11 +1,11 @@
 package xyz.heart.sms.activity.compose
 
-import xyz.klinker.sms.R
-import xyz.klinker.sms.shared.data.DataSource
-import xyz.klinker.sms.shared.data.MimeType
-import xyz.klinker.sms.shared.data.model.Message
-import xyz.klinker.sms.shared.service.MessengerChooserTargetService
-import xyz.klinker.sms.shared.util.TimeUtils
+import xyz.heart.sms.R
+import xyz.heart.sms.shared.data.DataSource
+import xyz.heart.sms.shared.data.MimeType
+import xyz.heart.sms.shared.data.model.Message
+import xyz.heart.sms.shared.service.MessengerChooserTargetService
+import xyz.heart.sms.shared.util.TimeUtils
 
 data class ShareData(val mimeType: String, val data: String)
 

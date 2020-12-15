@@ -6,17 +6,17 @@ import android.widget.FrameLayout
 import androidx.coordinatorlayout.widget.CoordinatorLayout
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.snackbar.Snackbar
-import xyz.klinker.sms.R
-import xyz.klinker.sms.activity.MessengerActivity
-import xyz.klinker.sms.fragment.BlacklistFragment
-import xyz.klinker.sms.fragment.ScheduledMessagesFragment
-import xyz.klinker.sms.fragment.SearchFragment
-import xyz.klinker.sms.fragment.conversation.ConversationListFragment
-import xyz.klinker.sms.fragment.message.EdgeToEdgeKeyboardWorkaround
-import xyz.klinker.sms.fragment.message.MessageListFragment
-import xyz.klinker.sms.fragment.settings.MaterialPreferenceFragmentCompat
-import xyz.klinker.sms.shared.util.ActivityUtils
-import xyz.klinker.sms.shared.util.DensityUtil
+import xyz.heart.sms.R
+import xyz.heart.sms.activity.MessengerActivity
+import xyz.heart.sms.fragment.BlacklistFragment
+import xyz.heart.sms.fragment.ScheduledMessagesFragment
+import xyz.heart.sms.fragment.SearchFragment
+import xyz.heart.sms.fragment.conversation.ConversationListFragment
+import xyz.heart.sms.fragment.message.EdgeToEdgeKeyboardWorkaround
+import xyz.heart.sms.fragment.message.MessageListFragment
+import xyz.heart.sms.fragment.settings.MaterialPreferenceFragmentCompat
+import xyz.heart.sms.shared.util.ActivityUtils
+import xyz.heart.sms.shared.util.DensityUtil
 
 class MainInsetController(private val activity: MessengerActivity) {
 

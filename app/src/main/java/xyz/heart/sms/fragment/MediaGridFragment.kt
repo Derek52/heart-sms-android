@@ -9,18 +9,18 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.GridLayoutManager
 import com.afollestad.dragselectrecyclerview.DragSelectRecyclerView
-import xyz.klinker.sms.R
-import xyz.klinker.sms.activity.ImageViewerActivity
-import xyz.klinker.sms.activity.MediaGridActivity
-import xyz.klinker.sms.adapter.MediaGridAdapter
-import xyz.klinker.sms.shared.activity.AbstractSettingsActivity
-import xyz.klinker.sms.shared.data.DataSource
-import xyz.klinker.sms.shared.data.MediaMessage
-import xyz.klinker.sms.shared.data.Settings
-import xyz.klinker.sms.shared.data.model.Conversation
-import xyz.klinker.sms.shared.data.model.Message
-import xyz.klinker.sms.shared.util.ActivityUtils
-import xyz.klinker.sms.shared.util.listener.MediaSelectedListener
+import xyz.heart.sms.R
+import xyz.heart.sms.activity.ImageViewerActivity
+import xyz.heart.sms.activity.MediaGridActivity
+import xyz.heart.sms.adapter.MediaGridAdapter
+import xyz.heart.sms.shared.activity.AbstractSettingsActivity
+import xyz.heart.sms.shared.data.DataSource
+import xyz.heart.sms.shared.data.MediaMessage
+import xyz.heart.sms.shared.data.Settings
+import xyz.heart.sms.shared.data.model.Conversation
+import xyz.heart.sms.shared.data.model.Message
+import xyz.heart.sms.shared.util.ActivityUtils
+import xyz.heart.sms.shared.util.listener.MediaSelectedListener
 import java.lang.Exception
 
 class MediaGridFragment : Fragment(), MediaSelectedListener {

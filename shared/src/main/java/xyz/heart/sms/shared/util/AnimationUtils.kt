@@ -29,9 +29,9 @@ import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 import xyz.klinker.android.drag_dismiss.util.StatusBarHelper
-import xyz.klinker.sms.shared.R
-import xyz.klinker.sms.shared.data.Settings
-import xyz.klinker.sms.shared.data.pojo.BaseTheme
+import xyz.heart.sms.shared.R
+import xyz.heart.sms.shared.data.Settings
+import xyz.heart.sms.shared.data.pojo.BaseTheme
 
 /**
  * Helper for handling all animations such as expanding and contracting conversations so that we

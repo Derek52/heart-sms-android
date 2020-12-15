@@ -6,8 +6,8 @@ import android.preference.PreferenceFragment
 import android.view.View
 import android.widget.ListView
 
-import xyz.klinker.sms.R
-import xyz.klinker.sms.shared.util.DensityUtil
+import xyz.heart.sms.R
+import xyz.heart.sms.shared.util.DensityUtil
 
 /**
  * To be used with the MaterialPreferenceCategory

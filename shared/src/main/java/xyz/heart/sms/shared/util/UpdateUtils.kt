@@ -7,14 +7,14 @@ import android.os.Build
 import android.preference.PreferenceManager
 import android.util.Log
 import androidx.work.WorkManager
-import xyz.klinker.sms.api.implementation.Account
-import xyz.klinker.sms.api.implementation.ApiUtils
+import xyz.heart.sms.api.implementation.Account
+import xyz.heart.sms.api.implementation.ApiUtils
 import xyz.heart.sms.api.implementation.firebase.ScheduledTokenRefreshService
-import xyz.klinker.sms.shared.R
-import xyz.klinker.sms.shared.data.Settings
-import xyz.klinker.sms.shared.data.pojo.SwipeOption
-import xyz.klinker.sms.shared.service.ContactResyncService
-import xyz.klinker.sms.shared.service.jobs.*
+import xyz.heart.sms.shared.R
+import xyz.heart.sms.shared.data.Settings
+import xyz.heart.sms.shared.data.pojo.SwipeOption
+import xyz.heart.sms.shared.service.ContactResyncService
+import xyz.heart.sms.shared.service.jobs.*
 
 class UpdateUtils(private val context: Activity) {
 
@@ -69,7 +69,7 @@ class UpdateUtils(private val context: Activity) {
             ContactSyncWork.scheduleNextRun(context)
             SubscriptionExpirationCheckJob.scheduleNextRun(context)
             SignoutJob.scheduleNextRun(context)
-            _root_ide_package_.xyz.heart.sms.api.implementation.firebase.ScheduledTokenRefreshService.scheduleNextRun(context)
+            ScheduledTokenRefreshService.scheduleNextRun(context)
             SyncRetryableRequestsWork.scheduleNextRun(context)
             RepostQuickComposeNotificationWork.scheduleNextRun(context)
         }

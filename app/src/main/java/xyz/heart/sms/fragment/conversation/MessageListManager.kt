@@ -3,15 +3,15 @@ package xyz.heart.sms.fragment.conversation
 import android.os.Handler
 import android.util.Log
 import androidx.fragment.app.FragmentActivity
-import xyz.klinker.sms.R
-import xyz.klinker.sms.adapter.view_holder.ConversationViewHolder
-import xyz.klinker.sms.fragment.message.MessageListFragment
-import xyz.klinker.sms.fragment.message.MessageInstanceManager
-import xyz.klinker.sms.shared.MessengerActivityExtras
-import xyz.klinker.sms.shared.data.Settings
-import xyz.klinker.sms.shared.util.ActivityUtils
-import xyz.klinker.sms.shared.util.AnimationUtils
-import xyz.klinker.sms.shared.util.ColorUtils
+import xyz.heart.sms.R
+import xyz.heart.sms.adapter.view_holder.ConversationViewHolder
+import xyz.heart.sms.fragment.message.MessageListFragment
+import xyz.heart.sms.fragment.message.MessageInstanceManager
+import xyz.heart.sms.shared.MessengerActivityExtras
+import xyz.heart.sms.shared.data.Settings
+import xyz.heart.sms.shared.util.ActivityUtils
+import xyz.heart.sms.shared.util.AnimationUtils
+import xyz.heart.sms.shared.util.ColorUtils
 
 class MessageListManager(private val fragment: ConversationListFragment) {
 

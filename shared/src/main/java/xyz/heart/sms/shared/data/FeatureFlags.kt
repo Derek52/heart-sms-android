@@ -3,9 +3,9 @@ package xyz.heart.sms.shared.data
 import android.content.Context
 import android.content.SharedPreferences
 import android.preference.PreferenceManager
-import xyz.klinker.sms.api.implementation.Account
+import xyz.heart.sms.api.implementation.Account
 
-import xyz.klinker.sms.shared.R
+import xyz.heart.sms.shared.R
 
 @Suppress("unused", "MayBeConstant", "MemberVisibilityCanBePrivate")
 /**

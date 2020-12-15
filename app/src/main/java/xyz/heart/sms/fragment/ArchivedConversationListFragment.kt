@@ -3,10 +3,10 @@ package xyz.heart.sms.fragment
 import android.view.View
 import com.google.android.material.navigation.NavigationView
 
-import xyz.klinker.sms.R
-import xyz.klinker.sms.activity.MessengerActivity
-import xyz.klinker.sms.adapter.view_holder.ConversationViewHolder
-import xyz.klinker.sms.fragment.conversation.ConversationListFragment
+import xyz.heart.sms.R
+import xyz.heart.sms.activity.MessengerActivity
+import xyz.heart.sms.adapter.view_holder.ConversationViewHolder
+import xyz.heart.sms.fragment.conversation.ConversationListFragment
 
 class ArchivedConversationListFragment : ConversationListFragment() {
 

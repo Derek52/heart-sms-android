@@ -16,7 +16,7 @@
 
 package xyz.heart.sms.shared.util.listener
 
-import xyz.klinker.sms.shared.data.ColorSet
+import xyz.heart.sms.shared.data.ColorSet
 
 /**
  * Listener for when a user chooses a color set in settings_global.

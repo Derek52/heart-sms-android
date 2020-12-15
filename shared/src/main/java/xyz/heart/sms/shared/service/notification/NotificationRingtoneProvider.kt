@@ -3,7 +3,7 @@ package xyz.heart.sms.shared.service.notification
 import android.content.Context
 import android.media.RingtoneManager
 import android.net.Uri
-import xyz.klinker.sms.shared.data.Settings
+import xyz.heart.sms.shared.data.Settings
 
 class NotificationRingtoneProvider(private val context: Context) {
 

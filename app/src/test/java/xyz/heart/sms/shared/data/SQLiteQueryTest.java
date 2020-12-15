@@ -27,18 +27,18 @@ import java.util.ArrayList;
 import java.util.List;
 
 import xyz.heart.sms.MessengerRealDataSuite;
-import xyz.klinker.sms.shared.data.model.AutoReply;
-import xyz.klinker.sms.shared.data.model.Blacklist;
-import xyz.klinker.sms.shared.data.model.Contact;
-import xyz.klinker.sms.shared.data.model.Conversation;
-import xyz.klinker.sms.shared.data.model.Draft;
-import xyz.klinker.sms.shared.data.model.Folder;
-import xyz.klinker.sms.shared.data.model.Message;
-import xyz.klinker.sms.shared.data.model.RetryableRequest;
-import xyz.klinker.sms.shared.data.model.ScheduledMessage;
-import xyz.klinker.sms.shared.data.model.Template;
-import xyz.klinker.sms.shared.util.ColorUtils;
-import xyz.klinker.sms.shared.util.TimeUtils;
+import xyz.heart.sms.shared.data.model.AutoReply;
+import xyz.heart.sms.shared.data.model.Blacklist;
+import xyz.heart.sms.shared.data.model.Contact;
+import xyz.heart.sms.shared.data.model.Conversation;
+import xyz.heart.sms.shared.data.model.Draft;
+import xyz.heart.sms.shared.data.model.Folder;
+import xyz.heart.sms.shared.data.model.Message;
+import xyz.heart.sms.shared.data.model.RetryableRequest;
+import xyz.heart.sms.shared.data.model.ScheduledMessage;
+import xyz.heart.sms.shared.data.model.Template;
+import xyz.heart.sms.shared.util.ColorUtils;
+import xyz.heart.sms.shared.util.TimeUtils;
 
 import static junit.framework.Assert.assertEquals;
 import static junit.framework.Assert.assertNotNull;
@@ -191,10 +191,10 @@ public class SQLiteQueryTest extends MessengerRealDataSuite {
 
     @Test
     public void updateContact() {
-        source.updateContact(context, 1, "5159911493", "Lucas Klinker", 1, 2, 3, 4, 5, false);
+        source.updateContact(context, 1, "5159911493", "Lucas heart", 1, 2, 3, 4, 5, false);
         Contact contact = source.getContact(context, "5159911493");
         assertEquals("5159911493", contact.getPhoneNumber());
-        assertEquals("Lucas Klinker", contact.getName());
+        assertEquals("Lucas heart", contact.getName());
         assertEquals(2, contact.getColors().getColor());
         assertEquals(3, contact.getColors().getColorDark());
         assertEquals(4, contact.getColors().getColorLight());
@@ -283,8 +283,8 @@ public class SQLiteQueryTest extends MessengerRealDataSuite {
             cursor.close();
         }
 
-        assertEquals("Luke Klinker", titles.get(0));
-        assertEquals("Aaron Klinker", titles.get(1));
+        assertEquals("Luke heart", titles.get(0));
+        assertEquals("Aaron heart", titles.get(1));
         assertEquals("Aaron, Luke", titles.get(2));
     }
 
@@ -302,8 +302,8 @@ public class SQLiteQueryTest extends MessengerRealDataSuite {
         }
 
         assertEquals(2, titles.size());
-        assertEquals("Luke Klinker", titles.get(0));
-        assertEquals("Aaron Klinker", titles.get(1));
+        assertEquals("Luke heart", titles.get(0));
+        assertEquals("Aaron heart", titles.get(1));
     }
 
     @Test
@@ -319,7 +319,7 @@ public class SQLiteQueryTest extends MessengerRealDataSuite {
 
     @Test
     public void findConversationByName() {
-        Long id = source.findConversationIdByTitle(context, "Luke Klinker");
+        Long id = source.findConversationIdByTitle(context, "Luke heart");
         assertEquals(id, Long.valueOf(1));
     }
 
@@ -354,7 +354,7 @@ public class SQLiteQueryTest extends MessengerRealDataSuite {
     @Test
     public void getConversation() {
         Conversation conversation = source.getConversation(context, 1L);
-        assertEquals("Luke Klinker", conversation.getTitle());
+        assertEquals("Luke heart", conversation.getTitle());
     }
 
     @Test
@@ -826,7 +826,7 @@ public class SQLiteQueryTest extends MessengerRealDataSuite {
     @Test
     public void insertScheduledMessage() {
         ScheduledMessage message = new ScheduledMessage();
-        message.setTitle("Jake Klinker");
+        message.setTitle("Jake heart");
         message.setTo("515-422-4558");
         message.setData("hey!");
         message.setMimeType("text/plain");

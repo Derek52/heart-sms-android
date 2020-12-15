@@ -4,11 +4,11 @@ import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import xyz.klinker.sms.R
-import xyz.klinker.sms.activity.main.MainColorController
-import xyz.klinker.sms.fragment.message.MessageInstanceManager
-import xyz.klinker.sms.shared.data.DataSource
-import xyz.klinker.sms.shared.util.ActivityUtils
+import xyz.heart.sms.R
+import xyz.heart.sms.activity.main.MainColorController
+import xyz.heart.sms.fragment.message.MessageInstanceManager
+import xyz.heart.sms.shared.data.DataSource
+import xyz.heart.sms.shared.util.ActivityUtils
 import java.lang.Exception
 
 open class NoLimitMessageListActivity : AppCompatActivity() {

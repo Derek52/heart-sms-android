@@ -4,12 +4,12 @@ import android.os.Bundle
 import androidx.appcompat.view.ActionMode
 import android.view.Menu
 import android.view.MenuItem
-import xyz.klinker.sms.R
-import xyz.klinker.sms.activity.main.MainColorController
-import xyz.klinker.sms.fragment.MediaGridFragment
-import xyz.klinker.sms.shared.activity.AbstractSettingsActivity
-import xyz.klinker.sms.shared.util.ActivityUtils
-import xyz.klinker.sms.shared.util.ColorUtils
+import xyz.heart.sms.R
+import xyz.heart.sms.activity.main.MainColorController
+import xyz.heart.sms.fragment.MediaGridFragment
+import xyz.heart.sms.shared.activity.AbstractSettingsActivity
+import xyz.heart.sms.shared.util.ActivityUtils
+import xyz.heart.sms.shared.util.ColorUtils
 
 class MediaGridActivity : AbstractSettingsActivity() {
 

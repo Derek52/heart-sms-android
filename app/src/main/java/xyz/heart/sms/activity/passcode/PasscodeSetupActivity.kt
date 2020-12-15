@@ -9,11 +9,11 @@ import android.widget.TextView
 import xyz.klinker.android.floating_tutorial.FloatingTutorialActivity
 import xyz.klinker.android.floating_tutorial.TutorialPage
 import com.raycoarana.codeinputview.CodeInputView
-import xyz.klinker.sms.activity.main.MainColorController
-import xyz.klinker.sms.api.implementation.Account
-import xyz.klinker.sms.api.implementation.ApiUtils
-import xyz.klinker.sms.shared.R
-import xyz.klinker.sms.shared.data.Settings
+import xyz.heart.sms.activity.main.MainColorController
+import xyz.heart.sms.api.implementation.Account
+import xyz.heart.sms.api.implementation.ApiUtils
+import xyz.heart.sms.shared.R
+import xyz.heart.sms.shared.data.Settings
 
 class PasscodeSetupActivity : FloatingTutorialActivity() {
 

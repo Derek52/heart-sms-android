@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
     <!--
-  ~ Copyright (C) 2017 Luke Klinker
+  ~ Copyright (C) 2017 Luke heart
   ~
   ~ Licensed under the Apache License, Version 2.0 (the "License");
   ~ you may not use this file except in compliance with the License.
@@ -283,7 +283,7 @@ onde não existam configurações individuais para a conversa.</string>
     <string name="bubble_channel">Balões de notificação</string>
     <!-- About, Help and Feedback and Settings -->
     <string name="changelog">Alterações</string>
-    <string name="copyright">© 2016 Jake Klinker &amp; Luke Klinker</string>
+    <string name="copyright">© 2016 Jake heart &amp; Luke heart</string>
     <string name="copyright_summary">Visualizar informações de licença de Software Aberto</string>
     <string name="app_version">Versão do app</string>
     <string name="account_information">Informações da Conta</string>
@@ -638,7 +638,7 @@ Você pode personalizar estas opções tocando no botão abaixo e saber mais a r
     <string name="off">Desligado</string>
     <string name="on">Ligado</string>
     <string name="share_promo">Ei, estou adorando o Pulse para o envio de mensagens! Dê uma olhada:
-https://play.google.com/store/apps/details?id=xyz.klinker.messenger</string>
+https://play.google.com/store/apps/details?id=xyz.heart.messenger</string>
     <string name="verifying_password">Verificando senha...</string>
     <!-- Rate it -->
     <string name="rate_it">Avalie!</string>

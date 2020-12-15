@@ -4,13 +4,13 @@ import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
 import androidx.core.app.NotificationManagerCompat
-import xyz.klinker.sms.api.implementation.Account
-import xyz.klinker.sms.api.implementation.ApiUtils
-import xyz.klinker.sms.shared.data.DataSource
-import xyz.klinker.sms.shared.util.NotificationUtils
-import xyz.klinker.sms.shared.util.UnreadBadger
-import xyz.klinker.sms.shared.util.closeSilent
-import xyz.klinker.sms.shared.widget.MessengerAppWidgetProvider
+import xyz.heart.sms.api.implementation.Account
+import xyz.heart.sms.api.implementation.ApiUtils
+import xyz.heart.sms.shared.data.DataSource
+import xyz.heart.sms.shared.util.NotificationUtils
+import xyz.heart.sms.shared.util.UnreadBadger
+import xyz.heart.sms.shared.util.closeSilent
+import xyz.heart.sms.shared.widget.MessengerAppWidgetProvider
 
 open class NotificationMarkReadReceiver : BroadcastReceiver() {
 
@@ -19,7 +19,7 @@ open class NotificationMarkReadReceiver : BroadcastReceiver() {
             return
         }
 
-        xyz.klinker.sms.shared.receiver.notification_action.NotificationMarkReadReceiver.Companion.handle(intent, context)
+        xyz.heart.sms.shared.receiver.notification_action.NotificationMarkReadReceiver.Companion.handle(intent, context)
     }
 
     companion object {
@@ -28,7 +28,7 @@ open class NotificationMarkReadReceiver : BroadcastReceiver() {
 
         fun handle(intent: Intent?, context: Context) {
             Thread {
-                val conversationId = intent?.getLongExtra(xyz.klinker.sms.shared.receiver.notification_action.NotificationMarkReadReceiver.Companion.EXTRA_CONVERSATION_ID, -1) ?: return@Thread
+                val conversationId = intent?.getLongExtra(xyz.heart.sms.shared.receiver.notification_action.NotificationMarkReadReceiver.Companion.EXTRA_CONVERSATION_ID, -1) ?: return@Thread
                 DataSource.readConversation(context, conversationId)
                 val conversation = DataSource.getConversation(context, conversationId)
 
@@ -51,7 +51,7 @@ open class NotificationMarkReadReceiver : BroadcastReceiver() {
                         Account.deviceId,
                         conversationId)
 
-                xyz.klinker.sms.shared.receiver.ConversationListUpdatedReceiver.Companion.sendBroadcast(context, conversationId, if (conversation == null) "" else conversation.snippet, true)
+                xyz.heart.sms.shared.receiver.ConversationListUpdatedReceiver.Companion.sendBroadcast(context, conversationId, if (conversation == null) "" else conversation.snippet, true)
 
                 UnreadBadger(context).clearCount()
                 MessengerAppWidgetProvider.refreshWidget(context)

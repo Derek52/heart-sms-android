@@ -28,10 +28,10 @@ import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 
 import uk.co.senab.photoview.PhotoView
-import xyz.klinker.sms.R
-import xyz.klinker.sms.shared.data.MimeType
-import xyz.klinker.sms.shared.data.Settings
-import xyz.klinker.sms.shared.util.listener.EasyVideoCallbackAdapter
+import xyz.heart.sms.R
+import xyz.heart.sms.shared.data.MimeType
+import xyz.heart.sms.shared.data.Settings
+import xyz.heart.sms.shared.util.listener.EasyVideoCallbackAdapter
 
 /**
  * Fragment for viewing an image using Chris Banes's PhotoView library.

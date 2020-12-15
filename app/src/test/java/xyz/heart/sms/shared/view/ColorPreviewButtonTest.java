@@ -23,7 +23,7 @@ import org.robolectric.Robolectric;
 
 import xyz.heart.sms.view.ColorPreviewButton;
 import xyz.heart.sms.MessengerRobolectricSuite;
-import xyz.klinker.sms.view.ColorPreviewButton;
+import xyz.heart.sms.view.ColorPreviewButton;
 
 import static org.junit.Assert.*;
 

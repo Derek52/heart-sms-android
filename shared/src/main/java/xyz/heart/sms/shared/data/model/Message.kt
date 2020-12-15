@@ -41,7 +41,7 @@ class Message : DatabaseTable {
     var nullableConvoTitle: String? = null
 
     constructor()
-    constructor(body: _root_ide_package_.xyz.heart.sms.api.entity.MessageBody) {
+    constructor(body: MessageBody) {
         this.id = body.deviceId
         this.conversationId = body.deviceConversationId
         this.type = body.messageType
@@ -87,14 +87,14 @@ class Message : DatabaseTable {
         }
     }
 
-    override fun encrypt(utils: _root_ide_package_.xyz.heart.sms.encryption.EncryptionUtils) {
+    override fun encrypt(utils: EncryptionUtils) {
         this.data = utils.encrypt(this.data)
         this.mimeType = utils.encrypt(this.mimeType)
         this.from = utils.encrypt(this.from)
         this.simPhoneNumber = utils.encrypt(this.simPhoneNumber)
     }
 
-    override fun decrypt(utils: _root_ide_package_.xyz.heart.sms.encryption.EncryptionUtils) {
+    override fun decrypt(utils: EncryptionUtils) {
         this.mimeType = utils.decrypt(this.mimeType)
         this.from = utils.decrypt(this.from)
         this.data = utils.decrypt(this.data)

@@ -1,9 +1,9 @@
 package xyz.heart.sms.shared.util
 
 import com.google.android.material.navigation.NavigationView
-import xyz.klinker.sms.shared.R
-import xyz.klinker.sms.shared.data.DataSource
-import xyz.klinker.sms.shared.data.model.Folder
+import xyz.heart.sms.shared.R
+import xyz.heart.sms.shared.data.DataSource
+import xyz.heart.sms.shared.data.model.Folder
 
 class DrawerItemHelper(private val navigationView: NavigationView) {
 

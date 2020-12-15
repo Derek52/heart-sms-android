@@ -1,8 +1,8 @@
 package xyz.heart.sms.shared.util.vcard
 
 import android.content.Context
-import xyz.klinker.sms.api.implementation.Account
-import xyz.klinker.sms.shared.data.model.Message
+import xyz.heart.sms.api.implementation.Account
+import xyz.heart.sms.shared.data.model.Message
 
 abstract class VcardParser(protected var context: Context?) {
 

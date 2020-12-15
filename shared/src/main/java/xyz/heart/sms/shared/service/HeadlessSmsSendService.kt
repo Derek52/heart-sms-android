@@ -21,10 +21,10 @@ import android.content.Intent
 import android.net.Uri
 import android.os.IBinder
 
-import xyz.klinker.sms.shared.data.DataSource
-import xyz.klinker.sms.shared.data.MimeType
-import xyz.klinker.sms.shared.util.PhoneNumberUtils
-import xyz.klinker.sms.shared.util.SendUtils
+import xyz.heart.sms.shared.data.DataSource
+import xyz.heart.sms.shared.data.MimeType
+import xyz.heart.sms.shared.util.PhoneNumberUtils
+import xyz.heart.sms.shared.util.SendUtils
 
 /**
  * Service for sending messages to a conversation without a UI present. These messages could come

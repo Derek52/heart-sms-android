@@ -18,21 +18,21 @@ package xyz.heart.sms
 
 import android.app.Application
 import android.content.Intent
-import xyz.klinker.sms.api.implementation.Account
-import xyz.klinker.sms.api.implementation.AccountInvalidator
+import xyz.heart.sms.api.implementation.Account
+import xyz.heart.sms.api.implementation.AccountInvalidator
 
 import xyz.heart.sms.api.implementation.firebase.FirebaseApplication
 import xyz.heart.sms.api.implementation.firebase.FirebaseMessageHandler
-import xyz.klinker.sms.shared.data.DataSource
-import xyz.klinker.sms.shared.service.FirebaseHandlerService
-import xyz.klinker.sms.shared.service.FirebaseResetService
-import xyz.klinker.sms.shared.util.*
+import xyz.heart.sms.shared.data.DataSource
+import xyz.heart.sms.shared.service.FirebaseHandlerService
+import xyz.heart.sms.shared.service.FirebaseResetService
+import xyz.heart.sms.shared.util.*
 
 /**
  * Base application that will serve as any intro for any context in the rest of the app. Main
  * function is to enable night mode so that colors change depending on time of day.
  */
-class MessengerApplication : _root_ide_package_.xyz.heart.sms.api.implementation.firebase.FirebaseApplication(), AccountInvalidator {
+class MessengerApplication : implementation.firebase.FirebaseApplication(), AccountInvalidator {
 
     override fun onCreate() {
         super.onCreate()
@@ -46,8 +46,8 @@ class MessengerApplication : _root_ide_package_.xyz.heart.sms.api.implementation
         NotificationUtils.createNotificationChannels(this)
     }
 
-    override fun getFirebaseMessageHandler(): _root_ide_package_.xyz.heart.sms.api.implementation.firebase.FirebaseMessageHandler {
-        return object : _root_ide_package_.xyz.heart.sms.api.implementation.firebase.FirebaseMessageHandler {
+    override fun getFirebaseMessageHandler(): implementation.firebase.FirebaseMessageHandler {
+        return object : implementation.firebase.FirebaseMessageHandler {
             override fun handleMessage(application: Application, operation: String, data: String) {
                 Thread { FirebaseHandlerService.process(application, operation, data) }.start()
             }

@@ -19,10 +19,10 @@ package xyz.heart.sms.fragment.settings
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
-import xyz.klinker.sms.R
-import xyz.klinker.sms.api.implementation.Account
-import xyz.klinker.sms.api.implementation.ApiUtils
-import xyz.klinker.sms.shared.data.Settings
+import xyz.heart.sms.R
+import xyz.heart.sms.api.implementation.Account
+import xyz.heart.sms.api.implementation.ApiUtils
+import xyz.heart.sms.shared.data.Settings
 
 /**
  * Fragment for modifying app settings_global.
@@ -44,7 +44,7 @@ class OpenSourceExperimentsFragment : MaterialPreferenceFragment() {
         findPreference(getString(R.string.pref_open_source_link))
                 .setOnPreferenceClickListener {
                     val intent = Intent(Intent.ACTION_VIEW)
-                    intent.data = Uri.parse("https://github.com/klinker-apps/pulse-sms-android")
+                    intent.data = Uri.parse("https://github.com/heart-apps/pulse-sms-android")
                     startActivity(intent)
                     true
                 }

@@ -22,7 +22,7 @@ import org.robolectric.annotation.LooperMode;
 
 import xyz.heart.sms.fragment.conversation.ConversationListFragment;
 import xyz.heart.sms.MessengerRobolectricSuite;
-import xyz.klinker.sms.fragment.conversation.ConversationListFragment;
+import xyz.heart.sms.fragment.conversation.ConversationListFragment;
 
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;

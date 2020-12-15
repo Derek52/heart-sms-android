@@ -5,7 +5,7 @@ import android.content.ClipboardManager
 import android.content.Context
 import android.content.Intent
 
-open class NotificationCopyOtpReceiver : xyz.klinker.sms.shared.receiver.notification_action.NotificationMarkReadReceiver() {
+open class NotificationCopyOtpReceiver : xyz.heart.sms.shared.receiver.notification_action.NotificationMarkReadReceiver() {
 
     override fun onReceive(context: Context?, intent: Intent?) {
         super.onReceive(context, intent)

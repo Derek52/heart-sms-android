@@ -41,20 +41,20 @@ import com.android.ex.chips.RecipientEditTextView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.google.android.material.floatingactionbutton.FloatingActionButton
-import xyz.klinker.giphy.Giphy
-import xyz.klinker.sms.BuildConfig
-import xyz.klinker.sms.R
-import xyz.klinker.sms.activity.MessengerActivity
-import xyz.klinker.sms.activity.compose.ShareData
-import xyz.klinker.sms.adapter.ScheduledMessagesAdapter
-import xyz.klinker.sms.api.implementation.Account
-import xyz.klinker.sms.fragment.bottom_sheet.EditScheduledMessageFragment
-import xyz.klinker.sms.fragment.message.attach.AttachmentListener
-import xyz.klinker.sms.shared.data.*
-import xyz.klinker.sms.shared.data.model.ScheduledMessage
-import xyz.klinker.sms.shared.service.jobs.ScheduledMessageJob
-import xyz.klinker.sms.shared.util.*
-import xyz.klinker.sms.shared.util.listener.ScheduledMessageClickListener
+import xyz.heart.giphy.Giphy
+import xyz.heart.sms.BuildConfig
+import xyz.heart.sms.R
+import xyz.heart.sms.activity.MessengerActivity
+import xyz.heart.sms.activity.compose.ShareData
+import xyz.heart.sms.adapter.ScheduledMessagesAdapter
+import xyz.heart.sms.api.implementation.Account
+import xyz.heart.sms.fragment.bottom_sheet.EditScheduledMessageFragment
+import xyz.heart.sms.fragment.message.attach.AttachmentListener
+import xyz.heart.sms.shared.data.*
+import xyz.heart.sms.shared.data.model.ScheduledMessage
+import xyz.heart.sms.shared.service.jobs.ScheduledMessageJob
+import xyz.heart.sms.shared.util.*
+import xyz.heart.sms.shared.util.listener.ScheduledMessageClickListener
 import java.util.*
 
 @Suppress("DEPRECATION")

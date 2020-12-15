@@ -3,7 +3,7 @@ package xyz.heart.sms.util
 import org.junit.Test
 import xyz.heart.sms.MessengerRobolectricSuite
 import junit.framework.Assert.*
-import xyz.klinker.sms.shared.util.OneTimePasswordParser
+import xyz.heart.sms.shared.util.OneTimePasswordParser
 
 class OneTimePasswordParserTest : _root_ide_package_.xyz.heart.sms.MessengerRobolectricSuite() {
 

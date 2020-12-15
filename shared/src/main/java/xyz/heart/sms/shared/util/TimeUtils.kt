@@ -19,9 +19,9 @@ package xyz.heart.sms.shared.util
 import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
-import xyz.klinker.sms.shared.R
-import xyz.klinker.sms.shared.data.Settings
-import xyz.klinker.sms.shared.data.pojo.BaseTheme
+import xyz.heart.sms.shared.R
+import xyz.heart.sms.shared.data.Settings
+import xyz.heart.sms.shared.data.pojo.BaseTheme
 import java.text.SimpleDateFormat
 import java.util.*
 

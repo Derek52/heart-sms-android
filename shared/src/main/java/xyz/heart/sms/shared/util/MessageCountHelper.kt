@@ -4,8 +4,8 @@ import android.telephony.SmsMessage
 
 import com.klinker.android.send_message.StripAccents
 
-import xyz.klinker.sms.shared.data.MmsSettings
-import xyz.klinker.sms.shared.data.Settings
+import xyz.heart.sms.shared.data.MmsSettings
+import xyz.heart.sms.shared.data.Settings
 
 object MessageCountHelper {
 

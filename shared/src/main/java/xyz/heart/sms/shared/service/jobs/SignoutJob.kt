@@ -8,15 +8,15 @@ import android.content.ComponentName
 import android.content.Context
 import android.preference.PreferenceManager
 import android.util.Log
-import xyz.klinker.sms.api.implementation.Account
-import xyz.klinker.sms.api.implementation.ApiUtils
+import xyz.heart.sms.api.implementation.Account
+import xyz.heart.sms.api.implementation.ApiUtils
 import xyz.heart.sms.shared.util.billing.BillingHelper
-import xyz.klinker.sms.shared.util.billing.ProductPurchased
+import xyz.heart.sms.shared.util.billing.ProductPurchased
 import java.util.*
 
 class SignoutJob : BackgroundJob() {
 
-    private var billing: _root_ide_package_.xyz.heart.sms.shared.util.billing.BillingHelper? = null
+    private var billing: BillingHelper? = null
 
     private val isExpired: Boolean
         get() {
@@ -38,7 +38,7 @@ class SignoutJob : BackgroundJob() {
         }
 
     override fun onRunJob(parameters: JobParameters?) {
-        billing = _root_ide_package_.xyz.heart.sms.shared.util.billing.BillingHelper(this)
+        billing = BillingHelper(this)
 
         // Only need to manage this on the primary device
         if (Account.exists() && Account.primary && Account.subscriptionType !== Account.SubscriptionType.LIFETIME &&

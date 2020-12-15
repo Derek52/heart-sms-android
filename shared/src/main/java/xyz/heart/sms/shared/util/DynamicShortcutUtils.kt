@@ -14,7 +14,7 @@ import androidx.core.graphics.drawable.IconCompat
 
 import java.util.HashSet
 
-import xyz.klinker.sms.shared.data.model.Conversation
+import xyz.heart.sms.shared.data.model.Conversation
 
 class DynamicShortcutUtils(private val context: Context) {
 

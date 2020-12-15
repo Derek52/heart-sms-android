@@ -5,11 +5,11 @@ import android.content.Context
 import java.util.regex.Pattern
 
 import xyz.klinker.android.article.ArticleUtils
-import xyz.klinker.sms.shared.BuildConfig
-import xyz.klinker.sms.shared.data.ArticlePreview
-import xyz.klinker.sms.shared.data.MimeType
-import xyz.klinker.sms.shared.util.Regex
-import xyz.klinker.sms.shared.util.media.MediaParser
+import xyz.heart.sms.shared.BuildConfig
+import xyz.heart.sms.shared.data.ArticlePreview
+import xyz.heart.sms.shared.data.MimeType
+import xyz.heart.sms.shared.util.Regex
+import xyz.heart.sms.shared.util.media.MediaParser
 
 class ArticleParser(context: Context?) : MediaParser(context) {
 

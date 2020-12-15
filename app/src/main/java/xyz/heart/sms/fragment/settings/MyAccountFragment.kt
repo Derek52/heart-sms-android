@@ -37,26 +37,26 @@ import com.google.android.material.navigation.NavigationView
 
 import java.util.Date
 
-import xyz.klinker.sms.R
-import xyz.klinker.sms.activity.*
-import xyz.klinker.sms.api.implementation.Account
-import xyz.klinker.sms.api.implementation.ApiUtils
+import xyz.heart.sms.R
+import xyz.heart.sms.activity.*
+import xyz.heart.sms.api.implementation.Account
+import xyz.heart.sms.api.implementation.ApiUtils
 import xyz.heart.sms.api.implementation.LoginActivity
 import xyz.heart.sms.api.implementation.RecreateAccountActivity
-import xyz.klinker.sms.shared.data.DataSource
-import xyz.klinker.sms.shared.data.Settings
-import xyz.klinker.sms.shared.service.ApiUploadService
-import xyz.klinker.sms.shared.service.SimpleLifetimeSubscriptionCheckService
-import xyz.klinker.sms.shared.service.SimpleSubscriptionCheckService
-import xyz.klinker.sms.shared.service.jobs.SubscriptionExpirationCheckJob
+import xyz.heart.sms.shared.data.DataSource
+import xyz.heart.sms.shared.data.Settings
+import xyz.heart.sms.shared.service.ApiUploadService
+import xyz.heart.sms.shared.service.SimpleLifetimeSubscriptionCheckService
+import xyz.heart.sms.shared.service.SimpleSubscriptionCheckService
+import xyz.heart.sms.shared.service.jobs.SubscriptionExpirationCheckJob
 import xyz.heart.sms.api.implementation.firebase.AnalyticsHelper
-import xyz.klinker.sms.shared.data.FeatureFlags
-import xyz.klinker.sms.shared.service.ContactResyncService
-import xyz.klinker.sms.shared.util.StringUtils
+import xyz.heart.sms.shared.data.FeatureFlags
+import xyz.heart.sms.shared.service.ContactResyncService
+import xyz.heart.sms.shared.util.StringUtils
 import xyz.heart.sms.shared.util.billing.BillingHelper
-import xyz.klinker.sms.shared.util.billing.ProductAvailable
-import xyz.klinker.sms.shared.util.billing.ProductPurchased
-import xyz.klinker.sms.shared.util.billing.PurchasedItemCallback
+import xyz.heart.sms.shared.util.billing.ProductAvailable
+import xyz.heart.sms.shared.util.billing.ProductPurchased
+import xyz.heart.sms.shared.util.billing.PurchasedItemCallback
 
 /**
  * Fragment for displaying information about the user's account. We can display different stats
@@ -102,8 +102,8 @@ class MyAccountFragment : MaterialPreferenceFragmentCompat() {
         if (openTrialUpgradePreference) {
             upgradeTrial()
 
-            _root_ide_package_.xyz.heart.sms.api.implementation.firebase.AnalyticsHelper.accountExpiredFreeTrial(fragmentActivity!!)
-            _root_ide_package_.xyz.heart.sms.api.implementation.firebase.AnalyticsHelper.accountFreeTrialUpgradeDialogShown(fragmentActivity!!)
+            implementation.firebase.AnalyticsHelper.accountExpiredFreeTrial(fragmentActivity!!)
+            implementation.firebase.AnalyticsHelper.accountFreeTrialUpgradeDialogShown(fragmentActivity!!)
             
             openTrialUpgradePreference = false
         }
@@ -190,7 +190,7 @@ class MyAccountFragment : MaterialPreferenceFragmentCompat() {
             if (!runUi) {
                 if (hasSubs && Account.exists() && Account.subscriptionType == Account.SubscriptionType.FREE_TRIAL) {
                     Account.updateSubscription(fragmentActivity!!, Account.SubscriptionType.SUBSCRIBER, 1L, true)
-                    _root_ide_package_.xyz.heart.sms.api.implementation.firebase.AnalyticsHelper.accountRestoreSubToTrial(fragmentActivity!!)
+                    implementation.firebase.AnalyticsHelper.accountRestoreSubToTrial(fragmentActivity!!)
                 }
 
                 return@Thread
@@ -264,7 +264,7 @@ class MyAccountFragment : MaterialPreferenceFragmentCompat() {
 
             preference.setOnPreferenceClickListener {
                 upgradeTrial()
-                _root_ide_package_.xyz.heart.sms.api.implementation.firebase.AnalyticsHelper.accountFreeTrialUpgradeDialogShown(fragmentActivity!!)
+                implementation.firebase.AnalyticsHelper.accountFreeTrialUpgradeDialogShown(fragmentActivity!!)
                 false
             }
         }
@@ -360,7 +360,7 @@ class MyAccountFragment : MaterialPreferenceFragmentCompat() {
 
                         Thread { ApiUtils.deleteAccount(accountId) }.start()
 
-                        startActivity(Intent(fragmentActivity!!, _root_ide_package_.xyz.heart.sms.api.implementation.RecreateAccountActivity::class.java))
+                        startActivity(Intent(fragmentActivity!!, implementation.RecreateAccountActivity::class.java))
                     }.show()
             true
         }
@@ -432,7 +432,7 @@ class MyAccountFragment : MaterialPreferenceFragmentCompat() {
 
                 val login = Intent(fragmentActivity!!, InitialLoadActivity::class.java)
                 login.putExtra(InitialLoadActivity.UPLOAD_AFTER_SYNC, true)
-                login.putExtra(_root_ide_package_.xyz.heart.sms.api.implementation.LoginActivity.ARG_SKIP_LOGIN, true)
+                login.putExtra(implementation.LoginActivity.ARG_SKIP_LOGIN, true)
                 startActivity(login)
                 fragmentActivity?.finish()
             }
@@ -445,12 +445,12 @@ class MyAccountFragment : MaterialPreferenceFragmentCompat() {
                     .setMessage(R.string.redirect_to_play_store)
                     .setPositiveButton(R.string.play_store) { _: DialogInterface, _: Int ->
                         val intent = Intent(Intent.ACTION_VIEW)
-                        intent.data = Uri.parse("https://play.google.com/store/apps/details?id=xyz.klinker.messenger")
+                        intent.data = Uri.parse("https://play.google.com/store/apps/details?id=xyz.heart.messenger")
                         fragmentActivity?.startActivity(intent)
                     }.show()
         } else {
             val intent = Intent(Intent.ACTION_VIEW)
-            intent.data = Uri.parse("https://play.google.com/store/apps/details?id=xyz.klinker.messenger")
+            intent.data = Uri.parse("https://play.google.com/store/apps/details?id=xyz.heart.messenger")
             fragmentActivity?.startActivity(intent)
 
             Toast.makeText(fragmentActivity, R.string.redirect_to_play_store, Toast.LENGTH_LONG).show()
@@ -506,7 +506,7 @@ class MyAccountFragment : MaterialPreferenceFragmentCompat() {
             }
         } else if (!billing!!.handleOnActivityResult(requestCode, responseCode, data)) {
             if (requestCode == SETUP_REQUEST && responseCode != Activity.RESULT_CANCELED) {
-                if (responseCode == _root_ide_package_.xyz.heart.sms.api.implementation.LoginActivity.RESULT_START_DEVICE_SYNC) {
+                if (responseCode == implementation.LoginActivity.RESULT_START_DEVICE_SYNC) {
                     ApiUploadService.start(fragmentActivity!!)
                     returnToConversationsAfterLogin()
 
@@ -514,7 +514,7 @@ class MyAccountFragment : MaterialPreferenceFragmentCompat() {
                     nav.menu.findItem(R.id.drawer_account).setTitle(R.string.menu_account)
 
                     fragmentActivity!!.startService(Intent(fragmentActivity!!, SimpleLifetimeSubscriptionCheckService::class.java))
-                } else if (responseCode == _root_ide_package_.xyz.heart.sms.api.implementation.LoginActivity.RESULT_START_NETWORK_SYNC) {
+                } else if (responseCode == implementation.LoginActivity.RESULT_START_NETWORK_SYNC) {
                     restoreAccount()
                 }
             } else if (requestCode == ONBOARDING_REQUEST) {
@@ -539,13 +539,13 @@ class MyAccountFragment : MaterialPreferenceFragmentCompat() {
                     // record the purchase to the API
                     Thread { ApiUtils.recordNewPurchase(product.productId) }.start()
 
-                    _root_ide_package_.xyz.heart.sms.api.implementation.firebase.AnalyticsHelper.accountCompetedPurchase(fragmentActivity!!)
-                    _root_ide_package_.xyz.heart.sms.api.implementation.firebase.AnalyticsHelper.userSubscribed(fragmentActivity!!, productId)
+                    implementation.firebase.AnalyticsHelper.accountCompetedPurchase(fragmentActivity!!)
+                    implementation.firebase.AnalyticsHelper.userSubscribed(fragmentActivity!!, productId)
                     Account.setHasPurchased(fragmentActivity!!, true)
                 }
 
                 if (Account.accountId == null) {
-                    _root_ide_package_.xyz.heart.sms.api.implementation.firebase.AnalyticsHelper.userSubscribed(fragmentActivity!!, productId)
+                    implementation.firebase.AnalyticsHelper.userSubscribed(fragmentActivity!!, productId)
 
                     if (product.productId.contains("lifetime")) {
                         Account.updateSubscription(fragmentActivity!!, Account.SubscriptionType.LIFETIME, Date(1))
@@ -560,7 +560,7 @@ class MyAccountFragment : MaterialPreferenceFragmentCompat() {
                     val newExperation = ProductPurchased.getExpiration(product.productId)
                     val oldSubscription = Account.subscriptionType
 
-                    _root_ide_package_.xyz.heart.sms.api.implementation.firebase.AnalyticsHelper.userUpgraded(fragmentActivity!!, productId)
+                    implementation.firebase.AnalyticsHelper.userUpgraded(fragmentActivity!!, productId)
                     if (product.productId.contains("lifetime")) {
                         Account.updateSubscription(fragmentActivity!!, Account.SubscriptionType.LIFETIME, Date(newExperation))
                     } else {
@@ -582,7 +582,7 @@ class MyAccountFragment : MaterialPreferenceFragmentCompat() {
     }
 
     private fun purchaseCancelled(message: String? = null) {
-        _root_ide_package_.xyz.heart.sms.api.implementation.firebase.AnalyticsHelper.purchaseError(fragmentActivity!!)
+        implementation.firebase.AnalyticsHelper.purchaseError(fragmentActivity!!)
         if (message != null) {
             fragmentActivity?.runOnUiThread { Toast.makeText(activity, message, Toast.LENGTH_SHORT).show() }
         }
@@ -630,10 +630,10 @@ class MyAccountFragment : MaterialPreferenceFragmentCompat() {
     }
 
     private fun startLoginActivity(signInOnly: Boolean = false) {
-        val intent = Intent(fragmentActivity, _root_ide_package_.xyz.heart.sms.api.implementation.LoginActivity::class.java)
-        intent.putExtra(_root_ide_package_.xyz.heart.sms.api.implementation.LoginActivity.ARG_FORCE_NO_CREATE_ACCOUNT, signInOnly)
-        intent.putExtra(_root_ide_package_.xyz.heart.sms.api.implementation.LoginActivity.ARG_BACKGROUND_COLOR, Settings.mainColorSet.color)
-        intent.putExtra(_root_ide_package_.xyz.heart.sms.api.implementation.LoginActivity.ARG_ACCENT_COLOR, Settings.mainColorSet.colorAccent)
+        val intent = Intent(fragmentActivity, implementation.LoginActivity::class.java)
+        intent.putExtra(implementation.LoginActivity.ARG_FORCE_NO_CREATE_ACCOUNT, signInOnly)
+        intent.putExtra(implementation.LoginActivity.ARG_BACKGROUND_COLOR, Settings.mainColorSet.color)
+        intent.putExtra(implementation.LoginActivity.ARG_ACCENT_COLOR, Settings.mainColorSet.colorAccent)
         startActivityForResult(intent, SETUP_REQUEST)
     }
 

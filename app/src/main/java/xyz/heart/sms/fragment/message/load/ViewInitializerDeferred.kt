@@ -7,15 +7,15 @@ import android.view.View
 import android.view.inputmethod.InputMethodManager
 import android.widget.EditText
 import androidx.fragment.app.FragmentActivity
-import xyz.klinker.sms.R
-import xyz.klinker.sms.activity.BubbleActivity
-import xyz.klinker.sms.activity.MessengerActivity
-import xyz.klinker.sms.fragment.message.MessageListFragment
-import xyz.klinker.sms.shared.MessengerActivityExtras
-import xyz.klinker.sms.shared.util.DualSimApplication
-import xyz.klinker.sms.shared.util.TvUtils
-import xyz.klinker.sms.view.ElasticDragDismissFrameLayout
-import xyz.klinker.sms.view.ImageKeyboardEditText
+import xyz.heart.sms.R
+import xyz.heart.sms.activity.BubbleActivity
+import xyz.heart.sms.activity.MessengerActivity
+import xyz.heart.sms.fragment.message.MessageListFragment
+import xyz.heart.sms.shared.MessengerActivityExtras
+import xyz.heart.sms.shared.util.DualSimApplication
+import xyz.heart.sms.shared.util.TvUtils
+import xyz.heart.sms.view.ElasticDragDismissFrameLayout
+import xyz.heart.sms.view.ImageKeyboardEditText
 
 class ViewInitializerDeferred(private val fragment: MessageListFragment) {
 

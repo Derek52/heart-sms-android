@@ -20,17 +20,17 @@ import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
 import android.content.IntentFilter
-import xyz.klinker.sms.api.implementation.Account
-import xyz.klinker.sms.api.implementation.ApiUtils
+import xyz.heart.sms.api.implementation.Account
+import xyz.heart.sms.api.implementation.ApiUtils
 
-import xyz.klinker.sms.shared.R
-import xyz.klinker.sms.shared.data.DataSource
-import xyz.klinker.sms.shared.data.MimeType
-import xyz.klinker.sms.shared.data.Settings
-import xyz.klinker.sms.shared.data.model.Message
-import xyz.klinker.sms.shared.service.notification.NotificationConstants
-import xyz.klinker.sms.shared.shared_interfaces.IMessageListFragment
-import xyz.klinker.sms.shared.util.AudioWrapper
+import xyz.heart.sms.shared.R
+import xyz.heart.sms.shared.data.DataSource
+import xyz.heart.sms.shared.data.MimeType
+import xyz.heart.sms.shared.data.Settings
+import xyz.heart.sms.shared.data.model.Message
+import xyz.heart.sms.shared.service.notification.NotificationConstants
+import xyz.heart.sms.shared.shared_interfaces.IMessageListFragment
+import xyz.heart.sms.shared.util.AudioWrapper
 
 /**
  * Receiver that handles updating the message list when a new message is received for the
@@ -104,7 +104,7 @@ class MessageListUpdatedReceiver(private val fragment: IMessageListFragment) : B
 
     companion object {
 
-        private val ACTION_UPDATED = "xyz.klinker.messenger.MESSAGE_UPDATED"
+        private val ACTION_UPDATED = "xyz.heart.messenger.MESSAGE_UPDATED"
         private val ARG_CONVERSATION_ID = "conversation_id"
         private val ARG_NEW_MESSAGE_TEXT = "new_message_text"
         private val ARG_MESSAGE_TYPE = "message_type"

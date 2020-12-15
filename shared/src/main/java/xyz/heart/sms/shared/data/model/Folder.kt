@@ -20,7 +20,7 @@ import android.database.Cursor
 
 import xyz.heart.sms.api.entity.FolderBody
 import xyz.heart.sms.encryption.EncryptionUtils
-import xyz.klinker.sms.shared.data.ColorSet
+import xyz.heart.sms.shared.data.ColorSet
 
 /**
  * Table for holding drafts for a conversation.
@@ -32,7 +32,7 @@ class Folder : DatabaseTable {
     var colors = ColorSet()
 
     constructor()
-    constructor(body: _root_ide_package_.xyz.heart.sms.api.entity.FolderBody) {
+    constructor(body: FolderBody) {
         this.id = body.deviceId
         this.name = body.name
         this.colors.color = body.color
@@ -58,11 +58,11 @@ class Folder : DatabaseTable {
         }
     }
 
-    override fun encrypt(utils: _root_ide_package_.xyz.heart.sms.encryption.EncryptionUtils) {
+    override fun encrypt(utils: EncryptionUtils) {
         this.name = utils.encrypt(this.name)
     }
 
-    override fun decrypt(utils: _root_ide_package_.xyz.heart.sms.encryption.EncryptionUtils) {
+    override fun decrypt(utils: EncryptionUtils) {
         try {
             this.name = utils.decrypt(this.name)
         } catch (e: Exception) {

@@ -6,8 +6,8 @@ import android.util.AttributeSet
 import android.view.inputmethod.EditorInfo
 import android.view.inputmethod.InputConnection
 import androidx.emoji.widget.EmojiEditTextHelper
-import xyz.klinker.sms.shared.data.Settings
-import xyz.klinker.sms.shared.data.pojo.EmojiStyle
+import xyz.heart.sms.shared.data.Settings
+import xyz.heart.sms.shared.data.pojo.EmojiStyle
 
 open class EmojiableEditText : AppCompatEditText {
 

@@ -19,13 +19,13 @@ package xyz.heart.sms.activity
 import android.content.Intent
 import android.os.Bundle
 import android.view.MenuItem
-import xyz.klinker.sms.R
-import xyz.klinker.sms.activity.main.MainColorController
-import xyz.klinker.sms.fragment.settings.ContactSettingsFragment
-import xyz.klinker.sms.shared.MessengerActivityExtras
-import xyz.klinker.sms.shared.activity.AbstractSettingsActivity
-import xyz.klinker.sms.shared.util.ActivityUtils
-import xyz.klinker.sms.shared.util.ColorUtils
+import xyz.heart.sms.R
+import xyz.heart.sms.activity.main.MainColorController
+import xyz.heart.sms.fragment.settings.ContactSettingsFragment
+import xyz.heart.sms.shared.MessengerActivityExtras
+import xyz.heart.sms.shared.activity.AbstractSettingsActivity
+import xyz.heart.sms.shared.util.ActivityUtils
+import xyz.heart.sms.shared.util.ColorUtils
 
 /**
  * Activity for changing contact settings_global.

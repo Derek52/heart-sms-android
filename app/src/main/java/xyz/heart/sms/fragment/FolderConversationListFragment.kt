@@ -6,13 +6,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.google.android.material.navigation.NavigationView
-import xyz.klinker.sms.R
-import xyz.klinker.sms.activity.MessengerActivity
-import xyz.klinker.sms.adapter.view_holder.ConversationViewHolder
-import xyz.klinker.sms.fragment.conversation.ConversationListFragment
-import xyz.klinker.sms.shared.data.DataSource
-import xyz.klinker.sms.shared.data.model.Conversation
-import xyz.klinker.sms.shared.data.model.Folder
+import xyz.heart.sms.R
+import xyz.heart.sms.activity.MessengerActivity
+import xyz.heart.sms.adapter.view_holder.ConversationViewHolder
+import xyz.heart.sms.fragment.conversation.ConversationListFragment
+import xyz.heart.sms.shared.data.DataSource
+import xyz.heart.sms.shared.data.model.Conversation
+import xyz.heart.sms.shared.data.model.Folder
 
 class FolderConversationListFragment : ConversationListFragment() {
 

@@ -20,11 +20,11 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 
-import xyz.klinker.sms.R
-import xyz.klinker.sms.adapter.view_holder.BlacklistViewHolder
-import xyz.klinker.sms.shared.data.model.Blacklist
-import xyz.klinker.sms.shared.util.PhoneNumberUtils
-import xyz.klinker.sms.shared.util.listener.BlacklistClickedListener
+import xyz.heart.sms.R
+import xyz.heart.sms.adapter.view_holder.BlacklistViewHolder
+import xyz.heart.sms.shared.data.model.Blacklist
+import xyz.heart.sms.shared.util.PhoneNumberUtils
+import xyz.heart.sms.shared.util.listener.BlacklistClickedListener
 
 /**
  * A simple adapter that displays a formatted phone number in a list.

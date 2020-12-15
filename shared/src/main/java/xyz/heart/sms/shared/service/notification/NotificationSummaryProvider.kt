@@ -8,12 +8,12 @@ import android.os.Build
 import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
 import android.text.Html
-import xyz.klinker.sms.shared.R
-import xyz.klinker.sms.shared.data.Settings
-import xyz.klinker.sms.shared.data.pojo.NotificationConversation
-import xyz.klinker.sms.shared.service.NotificationDismissedReceiver
-import xyz.klinker.sms.shared.util.ActivityUtils
-import xyz.klinker.sms.shared.util.NotificationUtils
+import xyz.heart.sms.shared.R
+import xyz.heart.sms.shared.data.Settings
+import xyz.heart.sms.shared.data.pojo.NotificationConversation
+import xyz.heart.sms.shared.service.NotificationDismissedReceiver
+import xyz.heart.sms.shared.util.ActivityUtils
+import xyz.heart.sms.shared.util.NotificationUtils
 
 /**
  * Displays a summary notification for all conversations using the rows returned by each

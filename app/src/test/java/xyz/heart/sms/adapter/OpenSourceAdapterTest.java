@@ -27,8 +27,8 @@ import org.robolectric.Robolectric;
 import org.robolectric.RuntimeEnvironment;
 
 import xyz.heart.sms.MessengerRobolectricSuite;
-import xyz.klinker.sms.R;
-import xyz.klinker.sms.shared.util.xml.OpenSourceParser;
+import xyz.heart.sms.R;
+import xyz.heart.sms.shared.util.xml.OpenSourceParser;
 
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;

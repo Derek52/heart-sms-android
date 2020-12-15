@@ -1,8 +1,8 @@
 package xyz.heart.sms.adapter.search
 
 import android.view.View
-import xyz.klinker.sms.R
-import xyz.klinker.sms.adapter.view_holder.ConversationViewHolder
+import xyz.heart.sms.R
+import xyz.heart.sms.adapter.view_holder.ConversationViewHolder
 
 class SearchListHeaderBinder(private val adapter: SearchAdapter) {
 

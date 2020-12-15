@@ -6,16 +6,16 @@ import android.net.Uri
 import android.view.View
 import android.view.ViewGroup
 import com.bumptech.glide.Glide
-import xyz.klinker.sms.adapter.view_holder.ConversationViewHolder
-import xyz.klinker.sms.adapter.view_holder.MessageViewHolder
-import xyz.klinker.sms.shared.data.Settings
-import xyz.klinker.sms.shared.data.model.Conversation
-import xyz.klinker.sms.shared.data.model.Message
-import xyz.klinker.sms.shared.data.pojo.BubbleTheme
-import xyz.klinker.sms.shared.util.ContactUtils
-import xyz.klinker.sms.shared.util.DensityUtil
-import xyz.klinker.sms.shared.util.TimeUtils
-import xyz.klinker.sms.shared.util.listener.SearchListener
+import xyz.heart.sms.adapter.view_holder.ConversationViewHolder
+import xyz.heart.sms.adapter.view_holder.MessageViewHolder
+import xyz.heart.sms.shared.data.Settings
+import xyz.heart.sms.shared.data.model.Conversation
+import xyz.heart.sms.shared.data.model.Message
+import xyz.heart.sms.shared.data.pojo.BubbleTheme
+import xyz.heart.sms.shared.util.ContactUtils
+import xyz.heart.sms.shared.util.DensityUtil
+import xyz.heart.sms.shared.util.TimeUtils
+import xyz.heart.sms.shared.util.listener.SearchListener
 
 class SearchListItemBinder(private val listener: SearchListener) {
 

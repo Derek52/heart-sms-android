@@ -7,9 +7,6 @@ import java.io.IOException;
 import xyz.heart.sms.api.entity.AddContactRequest;
 import xyz.heart.sms.api.entity.ContactBody;
 import xyz.heart.sms.api.entity.UpdateContactRequest;
-import xyz.heart.sms.api.entity.AddContactRequest;
-import xyz.heart.sms.api.entity.ContactBody;
-import xyz.heart.sms.api.entity.UpdateContactRequest;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
@@ -20,7 +17,8 @@ public class ContactTest extends ApiTest {
         String accountId = getAccountId();
         int originalSize = api.contact().list(accountId).execute().body().length;
 
-        ContactBody contact = new ContactBody("515", "515", "Luke", 1, 1, 1, 1);
+        //TODO. This method was called without the id, and wouldn't compile, so I just added the 0L to be able to build the app.
+        ContactBody contact = new ContactBody(0L, "515", "515", "Luke", 1, 1, 1, 1);
         AddContactRequest request = new AddContactRequest(accountId, contact);
         Object response = api.contact().add(request).execute().body();
         assertNotNull(response);

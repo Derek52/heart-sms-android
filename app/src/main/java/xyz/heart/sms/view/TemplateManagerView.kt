@@ -11,12 +11,12 @@ import android.widget.FrameLayout
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.floatingactionbutton.FloatingActionButton
-import xyz.klinker.sms.R
-import xyz.klinker.sms.adapter.TemplateAdapter
-import xyz.klinker.sms.shared.data.DataSource
-import xyz.klinker.sms.shared.data.model.Template
-import xyz.klinker.sms.shared.util.listener.TemplateClickListener
-import xyz.klinker.sms.shared.util.listener.TextSelectedListener
+import xyz.heart.sms.R
+import xyz.heart.sms.adapter.TemplateAdapter
+import xyz.heart.sms.shared.data.DataSource
+import xyz.heart.sms.shared.data.model.Template
+import xyz.heart.sms.shared.util.listener.TemplateClickListener
+import xyz.heart.sms.shared.util.listener.TextSelectedListener
 
 @SuppressLint("ViewConstructor")
 class TemplateManagerView(context: Context, colorAccent: Int, private val listener: TextSelectedListener)

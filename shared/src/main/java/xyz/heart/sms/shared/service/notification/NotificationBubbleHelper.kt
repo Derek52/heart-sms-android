@@ -12,10 +12,10 @@ import android.graphics.drawable.Icon
 import android.net.Uri
 import android.os.Build
 import androidx.annotation.RequiresApi
-import xyz.klinker.sms.shared.MessengerActivityExtras
-import xyz.klinker.sms.shared.R
-import xyz.klinker.sms.shared.data.model.Conversation
-import xyz.klinker.sms.shared.util.*
+import xyz.heart.sms.shared.MessengerActivityExtras
+import xyz.heart.sms.shared.R
+import xyz.heart.sms.shared.data.model.Conversation
+import xyz.heart.sms.shared.util.*
 
 @RequiresApi(Build.VERSION_CODES.Q)
 object NotificationBubbleHelper {

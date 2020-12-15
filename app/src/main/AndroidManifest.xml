@@ -259,7 +259,7 @@
             android:name=".activity.ImageViewerActivity"
             android:theme="@style/PulseTheme.NoActionBar.Translucent" />
         <activity
-            android:name="xyz.klinker.giphy.GiphyActivity"
+            android:name="xyz.heart.giphy.GiphyActivity"
             android:theme="@style/PulseTheme.NoActionBar"
             tools:replace="android:theme" />
         <activity
@@ -273,10 +273,10 @@
             android:launchMode="singleInstance"
             android:theme="@style/api_Theme.MaterialComponents.Translucent"/>
         <activity android:name="net.rdrei.android.dirchooser.DirectoryChooserActivity" />
-        <activity android:name="xyz.klinker.sms.activity.passcode.PasscodeVerificationActivity"
+        <activity android:name="xyz.heart.sms.activity.passcode.PasscodeVerificationActivity"
             android:theme="@style/PulsePasscode"
             android:launchMode="singleInstance" />
-        <activity android:name="xyz.klinker.sms.activity.passcode.PasscodeSetupActivity"
+        <activity android:name="xyz.heart.sms.activity.passcode.PasscodeSetupActivity"
             android:theme="@style/PulsePasscode"
             android:launchMode="singleInstance" />
 

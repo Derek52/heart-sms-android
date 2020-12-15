@@ -1,7 +1,7 @@
 package xyz.heart.sms.utils
 
-import xyz.klinker.sms.fragment.conversation.ConversationListFragment
-import xyz.klinker.sms.shared.data.SectionType
+import xyz.heart.sms.fragment.conversation.ConversationListFragment
+import xyz.heart.sms.shared.data.SectionType
 
 class TextAnywhereConversationCardApplier(private val conversationList: ConversationListFragment) {
 

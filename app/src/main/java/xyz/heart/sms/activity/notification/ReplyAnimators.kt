@@ -5,7 +5,7 @@ import android.view.animation.AccelerateInterpolator
 import android.view.animation.OvershootInterpolator
 import android.widget.LinearLayout
 import android.widget.ScrollView
-import xyz.klinker.sms.R
+import xyz.heart.sms.R
 
 class ReplyAnimators(private val activity: MarshmallowReplyActivity) {
 

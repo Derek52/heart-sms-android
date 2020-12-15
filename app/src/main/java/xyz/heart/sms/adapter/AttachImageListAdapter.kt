@@ -27,10 +27,10 @@ import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
-import xyz.klinker.sms.R
-import xyz.klinker.sms.adapter.view_holder.ImageViewHolder
-import xyz.klinker.sms.shared.data.MimeType
-import xyz.klinker.sms.shared.util.listener.ImageSelectedListener
+import xyz.heart.sms.R
+import xyz.heart.sms.adapter.view_holder.ImageViewHolder
+import xyz.heart.sms.shared.data.MimeType
+import xyz.heart.sms.shared.util.listener.ImageSelectedListener
 
 /**
  * An adapter for displaying images in a grid for the user to select to attach to a message.

@@ -2,8 +2,8 @@ package xyz.heart.sms.shared.service.jobs
 
 import android.content.Context
 import androidx.work.*
-import xyz.klinker.sms.shared.data.Settings
-import xyz.klinker.sms.shared.service.QuickComposeNotificationService
+import xyz.heart.sms.shared.data.Settings
+import xyz.heart.sms.shared.service.QuickComposeNotificationService
 import java.util.concurrent.TimeUnit
 
 class RepostQuickComposeNotificationWork(private val context: Context, params: WorkerParameters) : Worker(context, params) {

@@ -21,16 +21,16 @@ import android.content.Intent
 import androidx.core.app.NotificationManagerCompat
 import androidx.core.app.RemoteInput
 import android.util.Log
-import xyz.klinker.sms.api.implementation.Account
-import xyz.klinker.sms.api.implementation.ApiUtils
-import xyz.klinker.sms.shared.R
-import xyz.klinker.sms.shared.data.DataSource
-import xyz.klinker.sms.shared.data.MimeType
-import xyz.klinker.sms.shared.data.model.Message
-import xyz.klinker.sms.shared.receiver.ConversationListUpdatedReceiver
-import xyz.klinker.sms.shared.receiver.MessageListUpdatedReceiver
-import xyz.klinker.sms.shared.util.*
-import xyz.klinker.sms.shared.widget.MessengerAppWidgetProvider
+import xyz.heart.sms.api.implementation.Account
+import xyz.heart.sms.api.implementation.ApiUtils
+import xyz.heart.sms.shared.R
+import xyz.heart.sms.shared.data.DataSource
+import xyz.heart.sms.shared.data.MimeType
+import xyz.heart.sms.shared.data.model.Message
+import xyz.heart.sms.shared.receiver.ConversationListUpdatedReceiver
+import xyz.heart.sms.shared.receiver.MessageListUpdatedReceiver
+import xyz.heart.sms.shared.util.*
+import xyz.heart.sms.shared.widget.MessengerAppWidgetProvider
 
 /**
  * Service for getting back voice replies from Android Wear and sending them out.

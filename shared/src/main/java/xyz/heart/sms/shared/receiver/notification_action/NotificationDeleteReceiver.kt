@@ -4,15 +4,15 @@ import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
 import androidx.core.app.NotificationManagerCompat
-import xyz.klinker.sms.api.implementation.Account
-import xyz.klinker.sms.api.implementation.ApiUtils
-import xyz.klinker.sms.shared.data.DataSource
-import xyz.klinker.sms.shared.data.MimeType
-import xyz.klinker.sms.shared.data.model.Message
-import xyz.klinker.sms.shared.util.CursorUtil
-import xyz.klinker.sms.shared.util.NotificationUtils
-import xyz.klinker.sms.shared.util.UnreadBadger
-import xyz.klinker.sms.shared.widget.MessengerAppWidgetProvider
+import xyz.heart.sms.api.implementation.Account
+import xyz.heart.sms.api.implementation.ApiUtils
+import xyz.heart.sms.shared.data.DataSource
+import xyz.heart.sms.shared.data.MimeType
+import xyz.heart.sms.shared.data.model.Message
+import xyz.heart.sms.shared.util.CursorUtil
+import xyz.heart.sms.shared.util.NotificationUtils
+import xyz.heart.sms.shared.util.UnreadBadger
+import xyz.heart.sms.shared.widget.MessengerAppWidgetProvider
 
 class NotificationDeleteReceiver : BroadcastReceiver() {
 
@@ -22,8 +22,8 @@ class NotificationDeleteReceiver : BroadcastReceiver() {
         }
 
         Thread {
-            val messageId = intent.getLongExtra(xyz.klinker.sms.shared.receiver.notification_action.NotificationDeleteReceiver.Companion.EXTRA_MESSAGE_ID, -1)
-            val conversationId = intent.getLongExtra(xyz.klinker.sms.shared.receiver.notification_action.NotificationDeleteReceiver.Companion.EXTRA_CONVERSATION_ID, -1)
+            val messageId = intent.getLongExtra(xyz.heart.sms.shared.receiver.notification_action.NotificationDeleteReceiver.Companion.EXTRA_MESSAGE_ID, -1)
+            val conversationId = intent.getLongExtra(xyz.heart.sms.shared.receiver.notification_action.NotificationDeleteReceiver.Companion.EXTRA_CONVERSATION_ID, -1)
 
             DataSource.deleteMessage(context, messageId)
 
@@ -55,7 +55,7 @@ class NotificationDeleteReceiver : BroadcastReceiver() {
                     Account.deviceId,
                     conversationId)
 
-            xyz.klinker.sms.shared.receiver.ConversationListUpdatedReceiver.Companion.sendBroadcast(context, conversationId,
+            xyz.heart.sms.shared.receiver.ConversationListUpdatedReceiver.Companion.sendBroadcast(context, conversationId,
                     if (latest != null && latest.mimeType == MimeType.TEXT_PLAIN) latest.data else MimeType.getTextDescription(context, latest?.mimeType),
                     true)
 

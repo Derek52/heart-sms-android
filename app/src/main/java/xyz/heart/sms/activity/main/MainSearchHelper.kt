@@ -3,9 +3,9 @@ package xyz.heart.sms.activity.main
 import android.view.MenuItem
 import android.view.View
 import com.miguelcatalan.materialsearchview.MaterialSearchView
-import xyz.klinker.sms.R
-import xyz.klinker.sms.activity.MessengerActivity
-import xyz.klinker.sms.fragment.SearchFragment
+import xyz.heart.sms.R
+import xyz.heart.sms.activity.MessengerActivity
+import xyz.heart.sms.fragment.SearchFragment
 
 @Suppress("DEPRECATION")
 class MainSearchHelper(private val activity: MessengerActivity) : MaterialSearchView.OnQueryTextListener, MaterialSearchView.SearchViewListener {

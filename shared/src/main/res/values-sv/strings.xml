@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
     <!--
-  ~ Copyright (C) 2017 Luke Klinker
+  ~ Copyright (C) 2017 Luke heart
   ~
   ~ Licensed under the Apache License, Version 2.0 (the "License");
   ~ you may not use this file except in compliance with the License.
@@ -259,7 +259,7 @@ att du kommer gilla den! Dessutom är den gratis, testa: http://messenger.klinke
     <string name="receiving_a_message">Tar emot ett meddelande...</string>
     <!-- About, Help and Feedback and Settings -->
     <string name="changelog">Nyheter i appen</string>
-    <string name="copyright">© 2018 Luke &amp; Jake Klinker</string>
+    <string name="copyright">© 2018 Luke &amp; Jake heart</string>
     <string name="copyright_summary">Se information om licens för öppen källkod</string>
     <string name="app_version">Appversion</string>
     <string name="account_information">Kontoinformation</string>
@@ -575,7 +575,7 @@ Med ditt konto kommer Pulse automatiskt säkerhetskopiera alla meddelanden som d
     <string name="channels_global_warning_3">Med Android Oreo kommer några av inställningarna ovan att omdirigera dig till systeminställningarna för <i>notiskanaler</i>. För att läsa mer om notiskanaler, hur de fungerar och varför de måste användas, var vänlig läs Pulse hjälpsidor.</string>
     <string name="off">Av</string>
     <string name="on">På</string>
-    <string name="share_promo">Hej, jag älskar Pulse för meddelanden! Prova du med: https://play.google.com/store/apps/details?id=xyz.klinker.messenger</string>
+    <string name="share_promo">Hej, jag älskar Pulse för meddelanden! Prova du med: https://play.google.com/store/apps/details?id=xyz.heart.messenger</string>
     <string name="verifying_password">Bekräftar lösenord...</string>
     <!-- Rate it -->
     <string name="rate_it">Betygsätt!</string>

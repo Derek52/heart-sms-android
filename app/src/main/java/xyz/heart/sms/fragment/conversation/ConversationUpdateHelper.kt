@@ -1,13 +1,13 @@
 package xyz.heart.sms.fragment.conversation
 
 import androidx.fragment.app.FragmentActivity
-import xyz.klinker.sms.R
-import xyz.klinker.sms.shared.MessengerActivityExtras
-import xyz.klinker.sms.shared.data.MimeType
-import xyz.klinker.sms.shared.data.Settings
-import xyz.klinker.sms.shared.data.model.Message
-import xyz.klinker.sms.shared.data.pojo.ConversationUpdateInfo
-import xyz.klinker.sms.shared.receiver.ConversationListUpdatedReceiver
+import xyz.heart.sms.R
+import xyz.heart.sms.shared.MessengerActivityExtras
+import xyz.heart.sms.shared.data.MimeType
+import xyz.heart.sms.shared.data.Settings
+import xyz.heart.sms.shared.data.model.Message
+import xyz.heart.sms.shared.data.pojo.ConversationUpdateInfo
+import xyz.heart.sms.shared.receiver.ConversationListUpdatedReceiver
 import java.lang.IllegalStateException
 
 class ConversationUpdateHelper(private val fragment: ConversationListFragment) {

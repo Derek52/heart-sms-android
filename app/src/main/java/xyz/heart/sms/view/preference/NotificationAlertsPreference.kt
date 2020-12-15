@@ -18,14 +18,14 @@ import android.view.View
 import android.widget.Toast
 import androidx.annotation.RequiresApi
 
-import xyz.klinker.sms.R
-import xyz.klinker.sms.api.implementation.Account
-import xyz.klinker.sms.api.implementation.ApiUtils
-import xyz.klinker.sms.shared.data.Settings
-import xyz.klinker.sms.shared.data.pojo.VibratePattern
-import xyz.klinker.sms.shared.util.AndroidVersionUtil
-import xyz.klinker.sms.shared.util.NotificationUtils
-import xyz.klinker.sms.shared.util.TimeUtils
+import xyz.heart.sms.R
+import xyz.heart.sms.api.implementation.Account
+import xyz.heart.sms.api.implementation.ApiUtils
+import xyz.heart.sms.shared.data.Settings
+import xyz.heart.sms.shared.data.pojo.VibratePattern
+import xyz.heart.sms.shared.util.AndroidVersionUtil
+import xyz.heart.sms.shared.util.NotificationUtils
+import xyz.heart.sms.shared.util.TimeUtils
 
 @Suppress("DEPRECATION")
 class NotificationAlertsPreference : Preference, Preference.OnPreferenceClickListener {

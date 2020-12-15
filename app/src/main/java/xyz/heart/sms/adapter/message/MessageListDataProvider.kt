@@ -6,14 +6,14 @@ import androidx.coordinatorlayout.widget.CoordinatorLayout
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.snackbar.Snackbar
-import xyz.klinker.sms.R
-import xyz.klinker.sms.activity.MessengerActivity
-import xyz.klinker.sms.fragment.message.MessageListFragment
-import xyz.klinker.sms.shared.data.DataSource
-import xyz.klinker.sms.shared.data.model.Message
-import xyz.klinker.sms.shared.util.CursorUtil
-import xyz.klinker.sms.shared.util.DensityUtil
-import xyz.klinker.sms.shared.util.SnackbarAnimationFix
+import xyz.heart.sms.R
+import xyz.heart.sms.activity.MessengerActivity
+import xyz.heart.sms.fragment.message.MessageListFragment
+import xyz.heart.sms.shared.data.DataSource
+import xyz.heart.sms.shared.data.model.Message
+import xyz.heart.sms.shared.util.CursorUtil
+import xyz.heart.sms.shared.util.DensityUtil
+import xyz.heart.sms.shared.util.SnackbarAnimationFix
 
 class MessageListDataProvider(private val adapter: MessageListAdapter, private val fragment: MessageListFragment,
                               initialCursor: Cursor) {

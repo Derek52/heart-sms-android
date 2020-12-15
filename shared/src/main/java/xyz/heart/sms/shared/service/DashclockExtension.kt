@@ -7,11 +7,11 @@ import android.content.IntentFilter
 import android.net.Uri
 import com.google.android.apps.dashclock.api.DashClockExtension
 import com.google.android.apps.dashclock.api.ExtensionData
-import xyz.klinker.sms.shared.R
-import xyz.klinker.sms.shared.data.DataSource
-import xyz.klinker.sms.shared.data.model.Conversation
-import xyz.klinker.sms.shared.util.ActivityUtils
-import xyz.klinker.sms.shared.widget.MessengerAppWidgetProvider
+import xyz.heart.sms.shared.R
+import xyz.heart.sms.shared.data.DataSource
+import xyz.heart.sms.shared.data.model.Conversation
+import xyz.heart.sms.shared.util.ActivityUtils
+import xyz.heart.sms.shared.widget.MessengerAppWidgetProvider
 
 // similar to:
 // https://github.com/romannurik/dashclock/blob/master/main/src/main/java/com/google/android/apps/dashclock/phone/SmsExtension.java

@@ -4,7 +4,7 @@ import android.content.Context
 import android.util.AttributeSet
 import androidx.preference.PreferenceCategory
 
-import xyz.klinker.sms.shared.R
+import xyz.heart.sms.shared.R
 
 class MaterialPreferenceCategoryCompat : PreferenceCategory {
 

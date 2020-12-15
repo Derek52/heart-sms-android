@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
     <!--
-  ~ Copyright (C) 2017 Luke Klinker
+  ~ Copyright (C) 2017 Luke heart
   ~
   ~ Licensed under the Apache License, Version 2.0 (the "License");
   ~ you may not use this file except in compliance with the License.
@@ -219,7 +219,7 @@ Du kan bruge Pulse til at sende besked fra <b>alle</b>enheder!</string>
     <string name="creating_channels_text">Genererer notifikationskanaler...</string>
     <!-- About, Help and Feedback and Settings -->
     <string name="changelog">Ændringslog</string>
-    <string name="copyright">© 2016 Jake Klinker &amp; Luke Klinker</string>
+    <string name="copyright">© 2016 Jake heart &amp; Luke heart</string>
     <string name="copyright_summary">Vis open source licens</string>
     <string name="app_version">App version</string>
     <string name="account_information">Konto information</string>
@@ -439,7 +439,7 @@ prøv det i dag!</string>
 Brug standard kanaler for at tilpasse de samtaler, du ikke har lavet individuelle kanaler til.</string>
     <string name="off">Fra</string>
     <string name="on">Til</string>
-    <string name="share_promo">Hej, jeg elsker at bruge Pulse til beskeder. Prøv det: https://play.google.com/store/apps/details?id=xyz.klinker.messenger</string>
+    <string name="share_promo">Hej, jeg elsker at bruge Pulse til beskeder. Prøv det: https://play.google.com/store/apps/details?id=xyz.heart.messenger</string>
     <string name="verifying_password">Bekræfter adgangskode...</string>
     <!-- Rate it -->
     <string name="rate_it">Bedøm!</string>

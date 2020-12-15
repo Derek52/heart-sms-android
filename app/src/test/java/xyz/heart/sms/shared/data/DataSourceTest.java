@@ -35,17 +35,17 @@ import java.util.List;
 
 import xyz.heart.sms.MessengerRobolectricSuite;
 import xyz.heart.sms.encryption.EncryptionUtils;
-import xyz.klinker.sms.shared.data.model.AutoReply;
-import xyz.klinker.sms.shared.data.model.Blacklist;
-import xyz.klinker.sms.shared.data.model.Contact;
-import xyz.klinker.sms.shared.data.model.Conversation;
-import xyz.klinker.sms.shared.data.model.Draft;
-import xyz.klinker.sms.shared.data.model.Folder;
-import xyz.klinker.sms.shared.data.model.Message;
-import xyz.klinker.sms.shared.data.model.RetryableRequest;
-import xyz.klinker.sms.shared.data.model.ScheduledMessage;
-import xyz.klinker.sms.shared.data.model.Template;
-import xyz.klinker.sms.shared.util.TimeUtils;
+import xyz.heart.sms.shared.data.model.AutoReply;
+import xyz.heart.sms.shared.data.model.Blacklist;
+import xyz.heart.sms.shared.data.model.Contact;
+import xyz.heart.sms.shared.data.model.Conversation;
+import xyz.heart.sms.shared.data.model.Draft;
+import xyz.heart.sms.shared.data.model.Folder;
+import xyz.heart.sms.shared.data.model.Message;
+import xyz.heart.sms.shared.data.model.RetryableRequest;
+import xyz.heart.sms.shared.data.model.ScheduledMessage;
+import xyz.heart.sms.shared.data.model.Template;
+import xyz.heart.sms.shared.util.TimeUtils;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
@@ -752,7 +752,7 @@ public class DataSourceTest extends MessengerRobolectricSuite {
         List<Conversation> conversations = new ArrayList<>();
 
         Conversation conversation = new Conversation();
-        conversation.setTitle("Luke Klinker");
+        conversation.setTitle("Luke heart");
         conversation.setPhoneNumbers("(515) 991-1493");
 //        conversation.colors.color = resources.getColor(R.color.materialIndigo);
 //        conversation.colors.colorDark = resources.getColor(R.color.materialIndigoDark);
@@ -784,7 +784,7 @@ public class DataSourceTest extends MessengerRobolectricSuite {
         conversations.add(conversation);
 
         conversation = new Conversation();
-        conversation.setTitle("Kris Klinker");
+        conversation.setTitle("Kris heart");
         conversation.setPhoneNumbers("(515) 419-6726");
 //        conversation.colors.color = resources.getColor(R.color.materialPink);
 //        conversation.colors.colorDark = resources.getColor(R.color.materialPinkDark);
@@ -800,7 +800,7 @@ public class DataSourceTest extends MessengerRobolectricSuite {
         conversations.add(conversation);
 
         conversation = new Conversation();
-        conversation.setTitle("Andrew Klinker");
+        conversation.setTitle("Andrew heart");
         conversation.setPhoneNumbers("(515) 991-8235");
 //        conversation.colors.color = resources.getColor(R.color.materialBlue);
 //        conversation.colors.colorDark = resources.getColor(R.color.materialBlueDark);
@@ -816,7 +816,7 @@ public class DataSourceTest extends MessengerRobolectricSuite {
         conversations.add(conversation);
 
         conversation = new Conversation();
-        conversation.setTitle("Aaron Klinker");
+        conversation.setTitle("Aaron heart");
         conversation.setPhoneNumbers("(515) 556-7749");
 //        conversation.colors.color = resources.getColor(R.color.materialGreen);
 //        conversation.colors.colorDark = resources.getColor(R.color.materialGreenDark);
@@ -832,7 +832,7 @@ public class DataSourceTest extends MessengerRobolectricSuite {
         conversations.add(conversation);
 
         conversation = new Conversation();
-        conversation.setTitle("Mike Klinker");
+        conversation.setTitle("Mike heart");
         conversation.setPhoneNumbers("(515) 480-8532");
 //        conversation.colors.color = resources.getColor(R.color.materialBrown);
 //        conversation.colors.colorDark = resources.getColor(R.color.materialBrownDark);
@@ -871,7 +871,7 @@ public class DataSourceTest extends MessengerRobolectricSuite {
 
         Contact contact = new Contact();
         contact.setId(11);
-        contact.setName("Luke Klinker");
+        contact.setName("Luke heart");
         contact.setPhoneNumber("(515) 991-1493");
 //        contact.colors.color = resources.getColor(R.color.materialIndigo);
 //        contact.colors.colorDark = resources.getColor(R.color.materialIndigoDark);
@@ -891,7 +891,7 @@ public class DataSourceTest extends MessengerRobolectricSuite {
 
         contact = new Contact();
         contact.setId(13);
-        contact.setName("Kris Klinker");
+        contact.setName("Kris heart");
         contact.setPhoneNumber("(515) 419-6726");
 //        contact.colors.color = resources.getColor(R.color.materialPink);
 //        contact.colors.colorDark = resources.getColor(R.color.materialPinkDark);
@@ -901,7 +901,7 @@ public class DataSourceTest extends MessengerRobolectricSuite {
 
         contact = new Contact();
         contact.setId(14);
-        contact.setName("Andrew Klinker");
+        contact.setName("Andrew heart");
         contact.setPhoneNumber("(515) 991-8235");
 //        contact.colors.color = resources.getColor(R.color.materialBlue);
 //        contact.colors.colorDark = resources.getColor(R.color.materialBlueDark);
@@ -911,7 +911,7 @@ public class DataSourceTest extends MessengerRobolectricSuite {
 
         contact = new Contact();
         contact.setId(15);
-        contact.setName("Aaron Klinker");
+        contact.setName("Aaron heart");
         contact.setPhoneNumber("(515) 556-7749");
 //        contact.colors.color = resources.getColor(R.color.materialGreen);
 //        contact.colors.colorDark = resources.getColor(R.color.materialGreenDark);
@@ -921,7 +921,7 @@ public class DataSourceTest extends MessengerRobolectricSuite {
 
         contact = new Contact();
         contact.setId(16);
-        contact.setName("Mike Klinker");
+        contact.setName("Mike heart");
         contact.setPhoneNumber("(515) 480-8532");
 //        contact.colors.color = resources.getColor(R.color.materialBrown);
 //        contact.colors.colorDark = resources.getColor(R.color.materialBrownDark);

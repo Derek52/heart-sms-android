@@ -28,7 +28,7 @@ class Blacklist : DatabaseTable {
     var phrase: String? = null
 
     constructor()
-    constructor(body: _root_ide_package_.xyz.heart.sms.api.entity.BlacklistBody) {
+    constructor(body: BlacklistBody) {
         this.id = body.deviceId
         this.phoneNumber = body.phoneNumber
         this.phrase = body.phrase
@@ -48,12 +48,12 @@ class Blacklist : DatabaseTable {
         }
     }
 
-    override fun encrypt(utils: _root_ide_package_.xyz.heart.sms.encryption.EncryptionUtils) {
+    override fun encrypt(utils: EncryptionUtils) {
         this.phoneNumber = utils.encrypt(this.phoneNumber)
         this.phrase = utils.encrypt(this.phrase)
     }
 
-    override fun decrypt(utils: _root_ide_package_.xyz.heart.sms.encryption.EncryptionUtils) {
+    override fun decrypt(utils: EncryptionUtils) {
         try {
             this.phoneNumber = utils.decrypt(this.phoneNumber)
             this.phrase = utils.decrypt(this.phrase)

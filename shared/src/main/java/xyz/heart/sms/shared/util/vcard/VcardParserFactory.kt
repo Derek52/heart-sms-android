@@ -1,9 +1,9 @@
 package xyz.heart.sms.shared.util.vcard
 
 import android.content.Context
-import xyz.klinker.sms.shared.data.model.Message
-import xyz.klinker.sms.shared.util.vcard.parsers.MapLocationVcardParser
-import xyz.klinker.sms.shared.util.vcard.parsers.TextAttributeVcardParser
+import xyz.heart.sms.shared.data.model.Message
+import xyz.heart.sms.shared.util.vcard.parsers.MapLocationVcardParser
+import xyz.heart.sms.shared.util.vcard.parsers.TextAttributeVcardParser
 
 class VcardParserFactory {
 

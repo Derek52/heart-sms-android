@@ -1,9 +1,9 @@
 package xyz.heart.sms.utils.swipe_to_dismiss.actions
 
 import android.graphics.Color
-import xyz.klinker.sms.R
-import xyz.klinker.sms.adapter.conversation.ConversationListAdapter
-import xyz.klinker.sms.shared.data.Settings
+import xyz.heart.sms.R
+import xyz.heart.sms.adapter.conversation.ConversationListAdapter
+import xyz.heart.sms.shared.data.Settings
 
 open class SwipeArchiveAction : BaseSwipeAction() {
 

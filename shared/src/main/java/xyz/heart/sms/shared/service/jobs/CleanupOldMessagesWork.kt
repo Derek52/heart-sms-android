@@ -2,9 +2,9 @@ package xyz.heart.sms.shared.service.jobs
 
 import android.content.Context
 import androidx.work.*
-import xyz.klinker.sms.shared.data.DataSource
-import xyz.klinker.sms.shared.data.Settings
-import xyz.klinker.sms.shared.util.TimeUtils
+import xyz.heart.sms.shared.data.DataSource
+import xyz.heart.sms.shared.data.Settings
+import xyz.heart.sms.shared.util.TimeUtils
 import java.util.concurrent.TimeUnit
 
 class CleanupOldMessagesWork(private val context: Context, params: WorkerParameters) : Worker(context, params) {

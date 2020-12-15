@@ -20,8 +20,8 @@ import androidx.leanback.widget.ArrayObjectAdapter
 import androidx.leanback.widget.HeaderItem
 import androidx.leanback.widget.ListRow
 import com.sgottard.sofa.support.BrowseSupportFragment
-import xyz.klinker.sms.adapter.TvAdapter
-import xyz.klinker.sms.shared.data.DataSource
+import xyz.heart.sms.adapter.TvAdapter
+import xyz.heart.sms.shared.data.DataSource
 
 /**
  * A fragment that displays messages on the right side of the screen and conversations on the left

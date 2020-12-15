@@ -5,7 +5,7 @@ import android.view.ViewGroup
 import android.view.ViewTreeObserver
 import android.widget.FrameLayout
 import xyz.klinker.android.drag_dismiss.util.StatusBarHelper
-import xyz.klinker.sms.activity.MessengerActivity
+import xyz.heart.sms.activity.MessengerActivity
 import java.lang.IllegalStateException
 
 class EdgeToEdgeKeyboardWorkaround(private val activity: MessengerActivity) {

@@ -14,16 +14,16 @@ import android.widget.ScrollView
 import android.widget.TextView
 import com.bumptech.glide.Glide
 import de.hdodenhof.circleimageview.CircleImageView
-import xyz.klinker.sms.R
-import xyz.klinker.sms.activity.MessengerActivity
-import xyz.klinker.sms.shared.MessengerActivityExtras
-import xyz.klinker.sms.shared.data.MimeType
-import xyz.klinker.sms.shared.data.Settings
-import xyz.klinker.sms.shared.data.model.Message
-import xyz.klinker.sms.shared.data.pojo.BaseTheme
-import xyz.klinker.sms.shared.util.ContactImageCreator
-import xyz.klinker.sms.shared.util.ContactUtils
-import xyz.klinker.sms.shared.util.DensityUtil
+import xyz.heart.sms.R
+import xyz.heart.sms.activity.MessengerActivity
+import xyz.heart.sms.shared.MessengerActivityExtras
+import xyz.heart.sms.shared.data.MimeType
+import xyz.heart.sms.shared.data.Settings
+import xyz.heart.sms.shared.data.model.Message
+import xyz.heart.sms.shared.data.pojo.BaseTheme
+import xyz.heart.sms.shared.util.ContactImageCreator
+import xyz.heart.sms.shared.util.ContactUtils
+import xyz.heart.sms.shared.util.DensityUtil
 
 @Suppress("DEPRECATION")
 class ReplyLayoutInitializer(private val activity: MarshmallowReplyActivity, private val dataProvider: ReplyDataProvider, private val animator: ReplyAnimators) {

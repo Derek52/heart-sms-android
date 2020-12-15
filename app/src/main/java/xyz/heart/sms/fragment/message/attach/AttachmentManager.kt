@@ -9,11 +9,11 @@ import android.widget.EditText
 import android.widget.HorizontalScrollView
 import android.widget.LinearLayout
 import androidx.fragment.app.FragmentActivity
-import xyz.klinker.sms.R
-import xyz.klinker.sms.fragment.message.MessageListFragment
-import xyz.klinker.sms.shared.data.DataSource
-import xyz.klinker.sms.shared.util.DensityUtil
-import xyz.klinker.sms.view.SelectedAttachmentView
+import xyz.heart.sms.R
+import xyz.heart.sms.fragment.message.MessageListFragment
+import xyz.heart.sms.shared.data.DataSource
+import xyz.heart.sms.shared.util.DensityUtil
+import xyz.heart.sms.view.SelectedAttachmentView
 
 class AttachmentManager(private val fragment: MessageListFragment) {
 

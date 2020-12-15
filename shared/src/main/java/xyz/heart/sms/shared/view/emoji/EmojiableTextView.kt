@@ -5,8 +5,8 @@ import androidx.appcompat.widget.AppCompatTextView
 import android.text.InputFilter
 import android.util.AttributeSet
 import androidx.emoji.widget.EmojiTextViewHelper
-import xyz.klinker.sms.shared.data.Settings
-import xyz.klinker.sms.shared.data.pojo.EmojiStyle
+import xyz.heart.sms.shared.data.Settings
+import xyz.heart.sms.shared.data.pojo.EmojiStyle
 
 class EmojiableTextView : AppCompatTextView {
 

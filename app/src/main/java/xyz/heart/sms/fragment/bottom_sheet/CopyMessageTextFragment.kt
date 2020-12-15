@@ -7,7 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.widget.TextView
 import android.widget.Toast
-import xyz.klinker.sms.R
+import xyz.heart.sms.R
 
 class CopyMessageTextFragment(val message: String) : TabletOptimizedBottomSheetDialogFragment() {
 

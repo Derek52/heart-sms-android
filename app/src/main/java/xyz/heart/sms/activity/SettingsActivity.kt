@@ -22,15 +22,15 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
-import xyz.klinker.sms.R
-import xyz.klinker.sms.activity.main.MainColorController
-import xyz.klinker.sms.fragment.settings.*
-import xyz.klinker.sms.shared.activity.AbstractSettingsActivity
-import xyz.klinker.sms.shared.data.MmsSettings
-import xyz.klinker.sms.shared.data.Settings
-import xyz.klinker.sms.shared.util.ActivityUtils
-import xyz.klinker.sms.shared.util.ColorUtils
-import xyz.klinker.sms.shared.util.StringUtils
+import xyz.heart.sms.R
+import xyz.heart.sms.activity.main.MainColorController
+import xyz.heart.sms.fragment.settings.*
+import xyz.heart.sms.shared.activity.AbstractSettingsActivity
+import xyz.heart.sms.shared.data.MmsSettings
+import xyz.heart.sms.shared.data.Settings
+import xyz.heart.sms.shared.util.ActivityUtils
+import xyz.heart.sms.shared.util.ColorUtils
+import xyz.heart.sms.shared.util.StringUtils
 
 class SettingsActivity : AbstractSettingsActivity() {
 

@@ -16,12 +16,12 @@ import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.bumptech.glide.request.target.SimpleTarget
 import com.bumptech.glide.request.transition.Transition
-import xyz.klinker.sms.R
-import xyz.klinker.sms.adapter.view_holder.WearableMessageViewHolder
-import xyz.klinker.sms.shared.data.*
-import xyz.klinker.sms.shared.data.model.Message
-import xyz.klinker.sms.shared.data.pojo.BubbleTheme
-import xyz.klinker.sms.shared.util.*
+import xyz.heart.sms.R
+import xyz.heart.sms.adapter.view_holder.WearableMessageViewHolder
+import xyz.heart.sms.shared.data.*
+import xyz.heart.sms.shared.data.model.Message
+import xyz.heart.sms.shared.data.pojo.BubbleTheme
+import xyz.heart.sms.shared.util.*
 
 class WearableMessageListAdapter(context: Context, private val manager: LinearLayoutManager,
                                  var messages: Cursor?, private val receivedColor: Int,

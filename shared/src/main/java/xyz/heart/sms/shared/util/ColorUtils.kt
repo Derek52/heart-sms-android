@@ -37,12 +37,12 @@ import androidx.appcompat.widget.Toolbar
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.navigation.NavigationView
-import xyz.klinker.sms.api.implementation.Account
-import xyz.klinker.sms.shared.R
-import xyz.klinker.sms.shared.activity.AbstractSettingsActivity
-import xyz.klinker.sms.shared.data.ColorSet
-import xyz.klinker.sms.shared.data.Settings
-import xyz.klinker.sms.shared.data.pojo.BaseTheme
+import xyz.heart.sms.api.implementation.Account
+import xyz.heart.sms.shared.R
+import xyz.heart.sms.shared.activity.AbstractSettingsActivity
+import xyz.heart.sms.shared.data.ColorSet
+import xyz.heart.sms.shared.data.Settings
+import xyz.heart.sms.shared.data.pojo.BaseTheme
 import java.util.*
 
 

@@ -25,14 +25,14 @@ import android.util.TypedValue
 import android.view.View
 import android.widget.RemoteViews
 import android.widget.RemoteViewsService
-import xyz.klinker.sms.shared.R
-import xyz.klinker.sms.shared.data.DataSource
-import xyz.klinker.sms.shared.data.Settings
-import xyz.klinker.sms.shared.data.model.Conversation
-import xyz.klinker.sms.shared.data.pojo.BaseTheme
-import xyz.klinker.sms.shared.util.ContactUtils
-import xyz.klinker.sms.shared.util.CursorUtil
-import xyz.klinker.sms.shared.util.ImageUtils
+import xyz.heart.sms.shared.R
+import xyz.heart.sms.shared.data.DataSource
+import xyz.heart.sms.shared.data.Settings
+import xyz.heart.sms.shared.data.model.Conversation
+import xyz.heart.sms.shared.data.pojo.BaseTheme
+import xyz.heart.sms.shared.util.ContactUtils
+import xyz.heart.sms.shared.util.CursorUtil
+import xyz.heart.sms.shared.util.ImageUtils
 import java.util.*
 
 class MessengerRemoteViewsFactory(private val context: Context) : RemoteViewsService.RemoteViewsFactory {

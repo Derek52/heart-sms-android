@@ -34,16 +34,16 @@ import java.text.SimpleDateFormat
 import java.util.ArrayList
 import java.util.Date
 
-import xyz.klinker.sms.shared.R
-import xyz.klinker.sms.api.implementation.Account
-import xyz.klinker.sms.api.implementation.ApiUtils
+import xyz.heart.sms.shared.R
+import xyz.heart.sms.api.implementation.Account
+import xyz.heart.sms.api.implementation.ApiUtils
 import xyz.heart.sms.api.implementation.BinaryUtils
 import xyz.heart.sms.encryption.EncryptionUtils
-import xyz.klinker.sms.shared.data.model.*
-import xyz.klinker.sms.shared.receiver.ConversationListUpdatedReceiver
-import xyz.klinker.sms.shared.service.NewMessagesCheckService
-import xyz.klinker.sms.shared.util.*
-import xyz.klinker.sms.shared.util.listener.ProgressUpdateListener
+import xyz.heart.sms.shared.data.model.*
+import xyz.heart.sms.shared.receiver.ConversationListUpdatedReceiver
+import xyz.heart.sms.shared.service.NewMessagesCheckService
+import xyz.heart.sms.shared.util.*
+import xyz.heart.sms.shared.util.listener.ProgressUpdateListener
 
 /**
  * Handles interactions with database models.
@@ -58,13 +58,13 @@ object DataSource {
      * user uploads 100,000 messages, so we should be safe assuming that no user will be uploading
      * that many messages.
      *
-     * See https://github.com/klinker41/messenger-server/wiki/Generating-GUIDs.
+     * See https://github.com/heart41/messenger-server/wiki/Generating-GUIDs.
      */
     private val MAX_ID = java.lang.Long.MAX_VALUE / 10000
 
     var _database: SQLiteDatabase? = null
     var _dbHelper: DatabaseSQLiteHelper? = null
-    var _encryptor: _root_ide_package_.xyz.heart.sms.encryption.EncryptionUtils? = null
+    var _encryptor: EncryptionUtils? = null
     var _accountId: String? = null
     var _androidDeviceId: String? = null
 
@@ -81,7 +81,7 @@ object DataSource {
     }
 
     @Synchronized
-    private fun encryptor(context: Context): _root_ide_package_.xyz.heart.sms.encryption.EncryptionUtils? {
+    private fun encryptor(context: Context): EncryptionUtils? {
         if (_encryptor == null) {
             _encryptor = Account.encryptor
         }
@@ -426,7 +426,7 @@ object DataSource {
     /**
      * Get a list of contacts from a list of phone numbers
      *
-     * @param names a comma separated list of phone numbers (Ex: Luke Klinker, Jake Klinker)
+     * @param names a comma separated list of phone numbers (Ex: Luke heart, Jake heart)
      * @return list of any contacts in the database for those phone numbers. Ignores numbers that are
      * not in the database.
      */
@@ -1501,7 +1501,7 @@ object DataSource {
             }
 
             if (message.mimeType != MimeType.TEXT_PLAIN) {
-                val bytes = _root_ide_package_.xyz.heart.sms.api.implementation.BinaryUtils.getMediaBytes(context, message.data, message.mimeType, false)
+                val bytes = BinaryUtils.getMediaBytes(context, message.data, message.mimeType, false)
                 builder.append("<b>Size: </b>")
                 builder.append(Formatter.formatShortFileSize(context, bytes.size.toLong()))
                 builder.append("<br/>")

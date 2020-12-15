@@ -10,13 +10,13 @@ import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.bumptech.glide.request.RequestOptions
 import com.bumptech.glide.request.target.SimpleTarget
 import com.bumptech.glide.request.transition.Transition
-import xyz.klinker.sms.R
-import xyz.klinker.sms.adapter.view_holder.MessageViewHolder
-import xyz.klinker.sms.shared.data.ArticlePreview
-import xyz.klinker.sms.shared.data.MapPreview
-import xyz.klinker.sms.shared.data.YouTubePreview
-import xyz.klinker.sms.shared.data.model.Message
-import xyz.klinker.sms.shared.util.ImageUtils
+import xyz.heart.sms.R
+import xyz.heart.sms.adapter.view_holder.MessageViewHolder
+import xyz.heart.sms.shared.data.ArticlePreview
+import xyz.heart.sms.shared.data.MapPreview
+import xyz.heart.sms.shared.data.YouTubePreview
+import xyz.heart.sms.shared.data.model.Message
+import xyz.heart.sms.shared.util.ImageUtils
 
 class MessageItemBinder(private val adapter: MessageListAdapter) {
 

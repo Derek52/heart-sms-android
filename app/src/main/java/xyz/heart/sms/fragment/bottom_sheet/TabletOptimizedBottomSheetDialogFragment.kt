@@ -8,7 +8,7 @@ import androidx.coordinatorlayout.widget.CoordinatorLayout
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 
-import xyz.klinker.sms.R
+import xyz.heart.sms.R
 
 abstract class TabletOptimizedBottomSheetDialogFragment : BottomSheetDialogFragment() {
 

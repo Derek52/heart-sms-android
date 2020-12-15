@@ -1,15 +1,15 @@
 package xyz.heart.sms.shared.util.autoreply
 
 import android.content.Context
-import xyz.klinker.sms.shared.data.DataSource
-import xyz.klinker.sms.shared.data.Settings
-import xyz.klinker.sms.shared.data.model.AutoReply
-import xyz.klinker.sms.shared.data.model.Conversation
-import xyz.klinker.sms.shared.data.model.Message
-import xyz.klinker.sms.shared.util.autoreply.parsers.ContactReplyParser
-import xyz.klinker.sms.shared.util.autoreply.parsers.DrivingReplyParser
-import xyz.klinker.sms.shared.util.autoreply.parsers.KeywordReplyParser
-import xyz.klinker.sms.shared.util.autoreply.parsers.VacationReplyParser
+import xyz.heart.sms.shared.data.DataSource
+import xyz.heart.sms.shared.data.Settings
+import xyz.heart.sms.shared.data.model.AutoReply
+import xyz.heart.sms.shared.data.model.Conversation
+import xyz.heart.sms.shared.data.model.Message
+import xyz.heart.sms.shared.util.autoreply.parsers.ContactReplyParser
+import xyz.heart.sms.shared.util.autoreply.parsers.DrivingReplyParser
+import xyz.heart.sms.shared.util.autoreply.parsers.KeywordReplyParser
+import xyz.heart.sms.shared.util.autoreply.parsers.VacationReplyParser
 
 class AutoReplyParserFactory {
 

@@ -20,10 +20,10 @@ import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import xyz.klinker.sms.R
-import xyz.klinker.sms.adapter.view_holder.TemplateViewHolder
-import xyz.klinker.sms.shared.data.model.Template
-import xyz.klinker.sms.shared.util.listener.TemplateClickListener
+import xyz.heart.sms.R
+import xyz.heart.sms.adapter.view_holder.TemplateViewHolder
+import xyz.heart.sms.shared.data.model.Template
+import xyz.heart.sms.shared.util.listener.TemplateClickListener
 
 /**
  * Adapter for displaying scheduled messages in a recyclerview.

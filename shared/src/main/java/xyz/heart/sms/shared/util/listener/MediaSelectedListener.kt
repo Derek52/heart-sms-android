@@ -1,6 +1,6 @@
 package xyz.heart.sms.shared.util.listener
 
-import xyz.klinker.sms.shared.data.MediaMessage
+import xyz.heart.sms.shared.data.MediaMessage
 
 /**
  * Callback for easily notifying the caller when a media has been selected

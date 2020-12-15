@@ -9,7 +9,7 @@ import org.mockito.Mock;
 import org.robolectric.RuntimeEnvironment;
 
 import xyz.heart.sms.MessengerRobolectricSuite;
-import xyz.klinker.sms.shared.util.SendUtils;
+import xyz.heart.sms.shared.util.SendUtils;
 
 import static junit.framework.Assert.assertFalse;
 import static junit.framework.Assert.assertTrue;

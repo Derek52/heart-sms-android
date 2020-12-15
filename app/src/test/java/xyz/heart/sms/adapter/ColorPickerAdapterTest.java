@@ -31,8 +31,8 @@ import java.util.List;
 
 import xyz.heart.sms.view.ColorPreviewButton;
 import xyz.heart.sms.MessengerRobolectricSuite;
-import xyz.klinker.sms.shared.data.ColorSet;
-import xyz.klinker.sms.view.ColorPreviewButton;
+import xyz.heart.sms.shared.data.ColorSet;
+import xyz.heart.sms.view.ColorPreviewButton;
 
 import static org.junit.Assert.*;
 import static org.mockito.Matchers.any;

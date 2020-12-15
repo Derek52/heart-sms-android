@@ -16,7 +16,7 @@
 
 package xyz.heart.sms.utils.swipe_to_dismiss
 
-import xyz.klinker.sms.shared.data.model.Conversation
+import xyz.heart.sms.shared.data.model.Conversation
 
 /**
  * Interface for listening for swipe to delete actions.

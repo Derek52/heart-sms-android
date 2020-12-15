@@ -4,7 +4,7 @@ import android.os.Bundle
 
 import java.util.ArrayList
 
-import xyz.klinker.sms.shared.util.TimeUtils
+import xyz.heart.sms.shared.util.TimeUtils
 
 class ProductPurchased(val type: ProductType?, val productId: String) {
 

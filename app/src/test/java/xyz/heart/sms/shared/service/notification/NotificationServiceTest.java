@@ -30,10 +30,10 @@ import org.robolectric.RuntimeEnvironment;
 import java.util.List;
 
 import xyz.heart.sms.MessengerRobolectricSuite;
-import xyz.klinker.sms.shared.data.model.Conversation;
-import xyz.klinker.sms.shared.data.model.Message;
-import xyz.klinker.sms.shared.data.pojo.NotificationConversation;
-import xyz.klinker.sms.shared.util.MockableDataSourceWrapper;
+import xyz.heart.sms.shared.data.model.Conversation;
+import xyz.heart.sms.shared.data.model.Message;
+import xyz.heart.sms.shared.data.pojo.NotificationConversation;
+import xyz.heart.sms.shared.util.MockableDataSourceWrapper;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
@@ -83,12 +83,12 @@ public class NotificationServiceTest extends MessengerRobolectricSuite {
         List<NotificationConversation> conversations = new NotificationUnreadConversationQuery(service).getUnseenConversations(source);
 
         assertEquals(3, conversations.size());
-        assertEquals("Luke Klinker", conversations.get(2).getTitle());
+        assertEquals("Luke heart", conversations.get(2).getTitle());
         assertEquals(3, conversations.get(2).getMessages().size());
         assertEquals("Hey what's up?", conversations.get(2).getMessages().get(0).getData());
         assertEquals("Yo, you around?", conversations.get(2).getMessages().get(1).getData());
         assertEquals("Hello?", conversations.get(2).getMessages().get(2).getData());
-        assertEquals("Aaron Klinker", conversations.get(1).getTitle());
+        assertEquals("Aaron heart", conversations.get(1).getTitle());
         assertEquals(1, conversations.get(1).getMessages().size());
         assertEquals("Can we hang out tonight?", conversations.get(1).getMessages().get(0).getData());
         assertEquals(1, conversations.get(0).getMessages().size());
@@ -155,7 +155,7 @@ public class NotificationServiceTest extends MessengerRobolectricSuite {
 
     private Conversation getConversation1() {
         Conversation conversation = new Conversation();
-        conversation.setTitle("Luke Klinker");
+        conversation.setTitle("Luke heart");
         conversation.setPhoneNumbers("test");
         conversation.setTimestamp(1);
         return conversation;
@@ -163,7 +163,7 @@ public class NotificationServiceTest extends MessengerRobolectricSuite {
 
     private Conversation getConversation2() {
         Conversation conversation = new Conversation();
-        conversation.setTitle("Aaron Klinker");
+        conversation.setTitle("Aaron heart");
         conversation.setPhoneNumbers("test");
         conversation.setTimestamp(2);
         return conversation;
@@ -171,7 +171,7 @@ public class NotificationServiceTest extends MessengerRobolectricSuite {
 
     private Conversation getConversation3() {
         Conversation conversation = new Conversation();
-        conversation.setTitle("Andrew Klinker");
+        conversation.setTitle("Andrew heart");
         conversation.setPhoneNumbers("test");
         conversation.setTimestamp(3);
         return conversation;

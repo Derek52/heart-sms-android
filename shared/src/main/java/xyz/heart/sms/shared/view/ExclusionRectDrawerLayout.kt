@@ -5,7 +5,7 @@ import android.graphics.Rect
 import android.os.Build
 import android.util.AttributeSet
 import androidx.drawerlayout.widget.DrawerLayout
-import xyz.klinker.sms.shared.util.DensityUtil
+import xyz.heart.sms.shared.util.DensityUtil
 
 /**
  * This is used for Android Q, to define the exclusion rectangles, for the gestures. Once the newer

@@ -9,11 +9,11 @@ import android.content.Context
 import android.graphics.Color
 import android.os.Build
 import androidx.core.app.NotificationManagerCompat
-import xyz.klinker.sms.shared.R
-import xyz.klinker.sms.shared.data.DataSource
-import xyz.klinker.sms.shared.data.Settings
-import xyz.klinker.sms.shared.data.model.Conversation
-import xyz.klinker.sms.shared.service.QuickComposeNotificationService
+import xyz.heart.sms.shared.R
+import xyz.heart.sms.shared.data.DataSource
+import xyz.heart.sms.shared.data.Settings
+import xyz.heart.sms.shared.data.model.Conversation
+import xyz.heart.sms.shared.service.QuickComposeNotificationService
 
 object NotificationUtils {
 

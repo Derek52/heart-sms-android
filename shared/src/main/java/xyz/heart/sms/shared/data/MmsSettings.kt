@@ -9,7 +9,7 @@ import com.codekidlabs.storagechooser.utils.DiskUtil
 
 import java.io.File
 
-import xyz.klinker.sms.shared.R
+import xyz.heart.sms.shared.R
 
 object MmsSettings {
 

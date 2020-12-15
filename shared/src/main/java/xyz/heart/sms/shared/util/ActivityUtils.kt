@@ -26,25 +26,25 @@ import android.graphics.Color
 import android.os.Build
 import android.view.View
 
-import xyz.klinker.sms.shared.R
-import xyz.klinker.sms.shared.data.Settings
-import xyz.klinker.sms.shared.data.pojo.BaseTheme
+import xyz.heart.sms.shared.R
+import xyz.heart.sms.shared.data.Settings
+import xyz.heart.sms.shared.data.pojo.BaseTheme
 
 /**
  * Utils for helping with different activity tasks such as setting the task description.
  */
 object ActivityUtils {
 
-    val MESSENGER_ACTIVITY = ComponentName("xyz.klinker.messenger",
-            "xyz.klinker.messenger" + ".activity.MessengerActivity")
-    val BUBBLE_ACTIVITY = ComponentName("xyz.klinker.messenger",
-            "xyz.klinker.messenger" + ".activity.BubbleActivity")
-    val COMPOSE_ACTIVITY = ComponentName("xyz.klinker.messenger",
-            "xyz.klinker.messenger" + ".activity.compose.ComposeActivity")
-    val QUICK_SHARE_ACTIVITY = ComponentName("xyz.klinker.messenger",
-            "xyz.klinker.messenger" + ".activity.share.QuickShareActivity")
-    val NOTIFICATION_REPLY = ComponentName("xyz.klinker.messenger",
-            "xyz.klinker.messenger" + ".activity.notification.MarshmallowReplyActivity")
+    val MESSENGER_ACTIVITY = ComponentName("xyz.heart.messenger",
+            "xyz.heart.messenger" + ".activity.MessengerActivity")
+    val BUBBLE_ACTIVITY = ComponentName("xyz.heart.messenger",
+            "xyz.heart.messenger" + ".activity.BubbleActivity")
+    val COMPOSE_ACTIVITY = ComponentName("xyz.heart.messenger",
+            "xyz.heart.messenger" + ".activity.compose.ComposeActivity")
+    val QUICK_SHARE_ACTIVITY = ComponentName("xyz.heart.messenger",
+            "xyz.heart.messenger" + ".activity.share.QuickShareActivity")
+    val NOTIFICATION_REPLY = ComponentName("xyz.heart.messenger",
+            "xyz.heart.messenger" + ".activity.notification.MarshmallowReplyActivity")
 
     fun buildForComponent(component: ComponentName): Intent {
         val intent = Intent(Intent.ACTION_MAIN)

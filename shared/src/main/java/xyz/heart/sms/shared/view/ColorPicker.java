@@ -21,7 +21,7 @@ import android.widget.TextView;
 import com.pes.androidmaterialcolorpickerdialog.ColorPickerCallback;
 
 import androidx.annotation.ColorInt;
-import xyz.klinker.sms.shared.R;
+import xyz.heart.sms.shared.R;
 import xyz.heart.sms.shared.util.ColorFormatHelper;
 
 /**

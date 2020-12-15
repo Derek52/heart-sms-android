@@ -5,15 +5,15 @@ import androidx.core.app.NotificationManagerCompat
 import androidx.fragment.app.FragmentActivity
 import androidx.recyclerview.widget.ItemTouchHelper
 import com.google.android.material.snackbar.Snackbar
-import xyz.klinker.sms.R
-import xyz.klinker.sms.activity.MessengerActivity
-import xyz.klinker.sms.adapter.conversation.ConversationListAdapter
-import xyz.klinker.sms.fragment.ArchivedConversationListFragment
-import xyz.klinker.sms.shared.data.DataSource
-import xyz.klinker.sms.shared.data.model.Conversation
-import xyz.klinker.sms.shared.util.SnackbarAnimationFix
-import xyz.klinker.sms.utils.swipe_to_dismiss.SwipeTouchHelper
-import xyz.klinker.sms.utils.swipe_to_dismiss.setup.SwipeSetupUnarchive
+import xyz.heart.sms.R
+import xyz.heart.sms.activity.MessengerActivity
+import xyz.heart.sms.adapter.conversation.ConversationListAdapter
+import xyz.heart.sms.fragment.ArchivedConversationListFragment
+import xyz.heart.sms.shared.data.DataSource
+import xyz.heart.sms.shared.data.model.Conversation
+import xyz.heart.sms.shared.util.SnackbarAnimationFix
+import xyz.heart.sms.utils.swipe_to_dismiss.SwipeTouchHelper
+import xyz.heart.sms.utils.swipe_to_dismiss.setup.SwipeSetupUnarchive
 
 class ConversationSwipeHelper(private val fragment: ConversationListFragment) {
 

@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
     <!--
-  ~ Copyright (C) 2017 Luke Klinker
+  ~ Copyright (C) 2017 Luke heart
   ~
   ~ Licensed under the Apache License, Version 2.0 (the "License");
   ~ you may not use this file except in compliance with the License.
@@ -284,7 +284,7 @@ hadi başlatın!</string>
     <string name="bubble_channel">Bildirim Balonları</string>
     <!-- About, Help and Feedback and Settings -->
     <string name="changelog">Değişim Günlüğü</string>
-    <string name="copyright">© 2019 Luke &amp; Jake Klinker</string>
+    <string name="copyright">© 2019 Luke &amp; Jake heart</string>
     <string name="copyright_summary">Açık kaynak lisans bilgilerini görüntüle</string>
     <string name="app_version">Uygulama Sürümü</string>
     <string name="account_information">Hesap Bilgileri</string>
@@ -631,7 +631,7 @@ Aşağıdaki düğme ile bu seçenekleri özelleştirebilirsiniz. Daha fazla bil
     <string name="off">Kapalı</string>
     <string name="on">Açık</string>
     <string name="share_promo">Selam, mesajlaşmak için Pulse\'a bayılıyorum! Bir şans ver:
-https://play.google.com/store/apps/details?id=xyz.klinker.messenger</string>
+https://play.google.com/store/apps/details?id=xyz.heart.messenger</string>
     <string name="verifying_password">Parola doğrulanıyor...</string>
     <!-- Rate it -->
     <string name="rate_it">Oyla!</string>

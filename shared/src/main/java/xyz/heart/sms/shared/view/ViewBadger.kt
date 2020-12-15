@@ -12,8 +12,8 @@ import android.view.ViewGroup.LayoutParams
 import android.widget.FrameLayout
 import android.widget.TextView
 
-import xyz.klinker.sms.shared.R
-import xyz.klinker.sms.shared.util.DensityUtil
+import xyz.heart.sms.shared.R
+import xyz.heart.sms.shared.util.DensityUtil
 
 @SuppressLint("AppCompatCustomView", "ViewConstructor")
 class ViewBadger(context: Context, target: View) : TextView(context, null, android.R.attr.textViewStyle) {

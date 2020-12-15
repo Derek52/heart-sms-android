@@ -24,21 +24,21 @@ import androidx.appcompat.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
-import xyz.klinker.sms.R
-import xyz.klinker.sms.activity.compose.ComposeActivity
-import xyz.klinker.sms.activity.main.*
-import xyz.klinker.sms.shared.data.Settings
-import xyz.klinker.sms.shared.view.WhitableToolbar
-import xyz.klinker.sms.shared.widget.MessengerAppWidgetProvider
-import xyz.klinker.sms.shared.util.UpdateUtils
+import xyz.heart.sms.R
+import xyz.heart.sms.activity.compose.ComposeActivity
+import xyz.heart.sms.activity.main.*
+import xyz.heart.sms.shared.data.Settings
+import xyz.heart.sms.shared.view.WhitableToolbar
+import xyz.heart.sms.shared.widget.MessengerAppWidgetProvider
+import xyz.heart.sms.shared.util.UpdateUtils
 import android.view.inputmethod.InputMethodManager
 import android.widget.FrameLayout
 import com.google.android.material.floatingactionbutton.FloatingActionButton
-import xyz.klinker.sms.fragment.PrivateConversationListFragment
-import xyz.klinker.sms.fragment.settings.MyAccountFragment
-import xyz.klinker.sms.shared.data.pojo.BaseTheme
-import xyz.klinker.sms.shared.service.notification.NotificationConstants
-import xyz.klinker.sms.shared.util.*
+import xyz.heart.sms.fragment.PrivateConversationListFragment
+import xyz.heart.sms.fragment.settings.MyAccountFragment
+import xyz.heart.sms.shared.data.pojo.BaseTheme
+import xyz.heart.sms.shared.service.notification.NotificationConstants
+import xyz.heart.sms.shared.util.*
 
 
 /**
@@ -95,7 +95,7 @@ class MessengerActivity : AppCompatActivity() {
         drawerItemHelper.prepareDrawer()
 
         if (Settings.baseTheme == BaseTheme.BLACK) {
-            findViewById<View?>(xyz.klinker.sms.shared.R.id.nav_bar_divider)?.visibility = View.GONE
+            findViewById<View?>(xyz.heart.sms.shared.R.id.nav_bar_divider)?.visibility = View.GONE
         }
     }
 

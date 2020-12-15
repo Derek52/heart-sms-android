@@ -8,13 +8,13 @@ import androidx.appcompat.widget.Toolbar
 import android.view.View
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.navigation.NavigationView
-import xyz.klinker.sms.R
-import xyz.klinker.sms.activity.MessengerActivity
-import xyz.klinker.sms.shared.data.Settings
-import xyz.klinker.sms.shared.data.pojo.BaseTheme
-import xyz.klinker.sms.shared.util.ActivityUtils
-import xyz.klinker.sms.shared.util.ColorUtils
-import xyz.klinker.sms.shared.util.TimeUtils
+import xyz.heart.sms.R
+import xyz.heart.sms.activity.MessengerActivity
+import xyz.heart.sms.shared.data.Settings
+import xyz.heart.sms.shared.data.pojo.BaseTheme
+import xyz.heart.sms.shared.util.ActivityUtils
+import xyz.heart.sms.shared.util.ColorUtils
+import xyz.heart.sms.shared.util.TimeUtils
 
 class MainColorController(private val activity: AppCompatActivity) {
 

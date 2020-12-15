@@ -11,18 +11,18 @@ import android.widget.TextView
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.Fragment
 import com.google.android.material.navigation.NavigationView
-import xyz.klinker.sms.R
-import xyz.klinker.sms.activity.MessengerActivity
-import xyz.klinker.sms.api.implementation.Account
-import xyz.klinker.sms.fragment.conversation.ConversationListFragment
-import xyz.klinker.sms.fragment.message.MessageListFragment
-import xyz.klinker.sms.shared.MessengerActivityExtras
-import xyz.klinker.sms.shared.data.Settings
-import xyz.klinker.sms.shared.service.ApiDownloadService
-import xyz.klinker.sms.shared.util.ColorUtils
-import xyz.klinker.sms.shared.util.PhoneNumberUtils
-import xyz.klinker.sms.shared.util.StringUtils
-import xyz.klinker.sms.shared.util.listener.BackPressedListener
+import xyz.heart.sms.R
+import xyz.heart.sms.activity.MessengerActivity
+import xyz.heart.sms.api.implementation.Account
+import xyz.heart.sms.fragment.conversation.ConversationListFragment
+import xyz.heart.sms.fragment.message.MessageListFragment
+import xyz.heart.sms.shared.MessengerActivityExtras
+import xyz.heart.sms.shared.data.Settings
+import xyz.heart.sms.shared.service.ApiDownloadService
+import xyz.heart.sms.shared.util.ColorUtils
+import xyz.heart.sms.shared.util.PhoneNumberUtils
+import xyz.heart.sms.shared.util.StringUtils
+import xyz.heart.sms.shared.util.listener.BackPressedListener
 
 @Suppress("DEPRECATION")
 class MainNavigationController(private val activity: MessengerActivity)

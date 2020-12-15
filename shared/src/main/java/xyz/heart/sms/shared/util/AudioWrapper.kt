@@ -12,11 +12,11 @@ import android.net.Uri
 import android.os.Build
 import android.util.Log
 
-import xyz.klinker.sms.shared.data.DataSource
-import xyz.klinker.sms.shared.data.Settings
+import xyz.heart.sms.shared.data.DataSource
+import xyz.heart.sms.shared.data.Settings
 
 import android.content.Context.UI_MODE_SERVICE
-import xyz.klinker.sms.shared.service.notification.NotificationRingtoneProvider
+import xyz.heart.sms.shared.service.notification.NotificationRingtoneProvider
 
 class AudioWrapper {
 

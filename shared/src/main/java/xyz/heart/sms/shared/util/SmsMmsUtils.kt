@@ -41,12 +41,12 @@ import java.io.IOException
 import java.io.InputStream
 import java.io.InputStreamReader
 
-import xyz.klinker.sms.shared.data.DataSource
-import xyz.klinker.sms.shared.data.IdMatcher
-import xyz.klinker.sms.shared.data.MimeType
-import xyz.klinker.sms.shared.data.MmsSettings
-import xyz.klinker.sms.shared.data.model.Conversation
-import xyz.klinker.sms.shared.data.model.Message
+import xyz.heart.sms.shared.data.DataSource
+import xyz.heart.sms.shared.data.IdMatcher
+import xyz.heart.sms.shared.data.MimeType
+import xyz.heart.sms.shared.data.MmsSettings
+import xyz.heart.sms.shared.data.model.Conversation
+import xyz.heart.sms.shared.data.model.Message
 import java.text.DecimalFormat
 import java.util.*
 

@@ -19,10 +19,10 @@ package xyz.heart.sms.shared.util
 import android.content.Context
 import android.util.Log
 
-import xyz.klinker.sms.shared.data.DataSource
-import xyz.klinker.sms.shared.data.Settings
-import xyz.klinker.sms.shared.data.model.Blacklist
-import xyz.klinker.sms.shared.data.pojo.UnknownNumbersReception
+import xyz.heart.sms.shared.data.DataSource
+import xyz.heart.sms.shared.data.Settings
+import xyz.heart.sms.shared.data.model.Blacklist
+import xyz.heart.sms.shared.data.pojo.UnknownNumbersReception
 import java.util.regex.PatternSyntaxException
 
 /**

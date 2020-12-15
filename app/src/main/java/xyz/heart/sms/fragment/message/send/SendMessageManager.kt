@@ -14,18 +14,18 @@ import android.widget.EditText
 import android.widget.ProgressBar
 import androidx.fragment.app.FragmentActivity
 import com.google.android.material.floatingactionbutton.FloatingActionButton
-import xyz.klinker.sms.R
-import xyz.klinker.sms.activity.MessengerActivity
-import xyz.klinker.sms.api.implementation.Account
-import xyz.klinker.sms.fragment.conversation.ConversationListFragment
-import xyz.klinker.sms.fragment.message.MessageListFragment
-import xyz.klinker.sms.shared.data.DataSource
-import xyz.klinker.sms.shared.data.MimeType
-import xyz.klinker.sms.shared.data.Settings
-import xyz.klinker.sms.shared.data.model.Message
-import xyz.klinker.sms.shared.data.pojo.KeyboardLayout
-import xyz.klinker.sms.shared.service.NewMessagesCheckService
-import xyz.klinker.sms.shared.util.*
+import xyz.heart.sms.R
+import xyz.heart.sms.activity.MessengerActivity
+import xyz.heart.sms.api.implementation.Account
+import xyz.heart.sms.fragment.conversation.ConversationListFragment
+import xyz.heart.sms.fragment.message.MessageListFragment
+import xyz.heart.sms.shared.data.DataSource
+import xyz.heart.sms.shared.data.MimeType
+import xyz.heart.sms.shared.data.Settings
+import xyz.heart.sms.shared.data.model.Message
+import xyz.heart.sms.shared.data.pojo.KeyboardLayout
+import xyz.heart.sms.shared.service.NewMessagesCheckService
+import xyz.heart.sms.shared.util.*
 import java.util.*
 
 class SendMessageManager(private val fragment: MessageListFragment) {

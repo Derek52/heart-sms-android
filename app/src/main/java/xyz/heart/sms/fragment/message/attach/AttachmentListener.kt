@@ -15,16 +15,16 @@ import androidx.core.view.inputmethod.InputContentInfoCompat
 import androidx.fragment.app.FragmentActivity
 import com.afollestad.materialcamera.MaterialCamera
 import com.yalantis.ucrop.UCrop
-import xyz.klinker.giphy.Giphy
-import xyz.klinker.sms.R
-import xyz.klinker.sms.fragment.message.MessageListFragment
-import xyz.klinker.sms.shared.data.MimeType
-import xyz.klinker.sms.shared.util.ImageUtils
-import xyz.klinker.sms.shared.util.vcard.VcardWriter
-import xyz.klinker.sms.shared.util.listener.AttachContactListener
-import xyz.klinker.sms.shared.util.listener.AudioRecordedListener
-import xyz.klinker.sms.shared.util.listener.ImageSelectedListener
-import xyz.klinker.sms.shared.util.listener.TextSelectedListener
+import xyz.heart.giphy.Giphy
+import xyz.heart.sms.R
+import xyz.heart.sms.fragment.message.MessageListFragment
+import xyz.heart.sms.shared.data.MimeType
+import xyz.heart.sms.shared.util.ImageUtils
+import xyz.heart.sms.shared.util.vcard.VcardWriter
+import xyz.heart.sms.shared.util.listener.AttachContactListener
+import xyz.heart.sms.shared.util.listener.AudioRecordedListener
+import xyz.heart.sms.shared.util.listener.ImageSelectedListener
+import xyz.heart.sms.shared.util.listener.TextSelectedListener
 
 class AttachmentListener(private val fragment: MessageListFragment)
     : ImageSelectedListener, AudioRecordedListener, AttachContactListener, TextSelectedListener,

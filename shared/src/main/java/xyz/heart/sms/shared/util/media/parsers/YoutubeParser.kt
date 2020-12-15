@@ -7,11 +7,11 @@ import org.json.JSONObject
 
 import java.util.regex.Pattern
 
-import xyz.klinker.sms.shared.BuildConfig
-import xyz.klinker.sms.shared.data.MimeType
-import xyz.klinker.sms.shared.data.YouTubePreview
-import xyz.klinker.sms.shared.util.UrlConnectionReader
-import xyz.klinker.sms.shared.util.media.MediaParser
+import xyz.heart.sms.shared.BuildConfig
+import xyz.heart.sms.shared.data.MimeType
+import xyz.heart.sms.shared.data.YouTubePreview
+import xyz.heart.sms.shared.util.UrlConnectionReader
+import xyz.heart.sms.shared.util.media.MediaParser
 
 class YoutubeParser(context: Context?) : MediaParser(context) {
 

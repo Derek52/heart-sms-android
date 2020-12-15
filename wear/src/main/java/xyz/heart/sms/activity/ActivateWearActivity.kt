@@ -10,10 +10,10 @@ import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import com.google.firebase.iid.FirebaseInstanceId
-import xyz.klinker.sms.R
+import xyz.heart.sms.R
 import xyz.heart.sms.api.entity.LoginResponse
 import xyz.heart.sms.api.implementation.AccountEncryptionCreator
-import xyz.klinker.sms.api.implementation.ApiUtils
+import xyz.heart.sms.api.implementation.ApiUtils
 import xyz.heart.sms.api.implementation.LoginActivity
 import java.util.*
 
@@ -41,7 +41,7 @@ class ActivateWearActivity : Activity() {
             Thread {
                 Log.v(TAG, "checking activate response")
 
-                val response: _root_ide_package_.xyz.heart.sms.api.entity.LoginResponse? = try {
+                val response: LoginResponse? = try {
                     api.activate().check(code).execute().body()
                 } catch (e: Throwable) {
                     e.printStackTrace()
@@ -69,7 +69,7 @@ class ActivateWearActivity : Activity() {
         }, RETRY_INTERVAL.toLong())
     }
 
-    private fun activated(response: _root_ide_package_.xyz.heart.sms.api.entity.LoginResponse) {
+    private fun activated(response: LoginResponse) {
         findViewById<View>(R.id.waiting_to_activate).visibility = View.GONE
         findViewById<View>(R.id.password_confirmation).visibility = View.VISIBLE
         val password = findViewById<View>(R.id.password) as EditText
@@ -83,14 +83,14 @@ class ActivateWearActivity : Activity() {
         }
     }
 
-    private fun checkPassword(response: _root_ide_package_.xyz.heart.sms.api.entity.LoginResponse, password: String?) {
+    private fun checkPassword(response: LoginResponse, password: String?) {
         if (password == null || password.isEmpty()) {
             Toast.makeText(this, R.string.api_no_password, Toast.LENGTH_SHORT).show()
             return
         }
 
         Thread {
-            val encryptionCreator = _root_ide_package_.xyz.heart.sms.api.implementation.AccountEncryptionCreator(this@ActivateWearActivity, password)
+            val encryptionCreator = AccountEncryptionCreator(this@ActivateWearActivity, password)
             val utils = encryptionCreator.createAccountEncryptionFromLogin(response)
 
             try {
@@ -114,11 +114,11 @@ class ActivateWearActivity : Activity() {
                         Build.MANUFACTURER + ", " + Build.MODEL, Build.MODEL,
                         false, FirebaseInstanceId.getInstance().token)
 
-                setResult(_root_ide_package_.xyz.heart.sms.api.implementation.LoginActivity.RESULT_START_NETWORK_SYNC)
+                setResult(LoginActivity.RESULT_START_NETWORK_SYNC)
                 finish()
             } catch (e: Exception) {
                 runOnUiThread {
-                    Toast.makeText(this@ActivateWearActivity, xyz.klinker.sms.api.implementation.R.string.api_wrong_password,
+                    Toast.makeText(this@ActivateWearActivity, xyz.heart.sms.api.implementation.R.string.api_wrong_password,
                             Toast.LENGTH_LONG).show()
                     activated(response)
                 }

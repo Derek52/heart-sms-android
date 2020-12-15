@@ -5,19 +5,19 @@ import android.os.Bundle
 import android.os.Handler
 import android.view.View
 import androidx.fragment.app.Fragment
-import xyz.klinker.sms.R
-import xyz.klinker.sms.activity.MessengerActivity
-import xyz.klinker.sms.activity.SettingsActivity
-import xyz.klinker.sms.activity.passcode.PasscodeVerificationActivity
-import xyz.klinker.sms.fragment.*
-import xyz.klinker.sms.fragment.conversation.ConversationListFragment
-import xyz.klinker.sms.fragment.settings.AboutFragment
-import xyz.klinker.sms.fragment.settings.HelpAndFeedbackFragment
-import xyz.klinker.sms.fragment.settings.MyAccountFragment
-import xyz.klinker.sms.shared.data.Settings
-import xyz.klinker.sms.shared.data.model.Folder
-import xyz.klinker.sms.shared.util.AnimationUtils
-import xyz.klinker.sms.shared.util.TimeUtils
+import xyz.heart.sms.R
+import xyz.heart.sms.activity.MessengerActivity
+import xyz.heart.sms.activity.SettingsActivity
+import xyz.heart.sms.activity.passcode.PasscodeVerificationActivity
+import xyz.heart.sms.fragment.*
+import xyz.heart.sms.fragment.conversation.ConversationListFragment
+import xyz.heart.sms.fragment.settings.AboutFragment
+import xyz.heart.sms.fragment.settings.HelpAndFeedbackFragment
+import xyz.heart.sms.fragment.settings.MyAccountFragment
+import xyz.heart.sms.shared.data.Settings
+import xyz.heart.sms.shared.data.model.Folder
+import xyz.heart.sms.shared.util.AnimationUtils
+import xyz.heart.sms.shared.util.TimeUtils
 
 
 class MainNavigationConversationListActionDelegate(private val activity: MessengerActivity) {

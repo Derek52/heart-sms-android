@@ -23,15 +23,15 @@ import androidx.recyclerview.widget.RecyclerView
 import com.afollestad.sectionedrecyclerview.SectionedRecyclerViewAdapter
 import com.klinker.android.link_builder.Link
 import com.klinker.android.link_builder.applyLinks
-import xyz.klinker.sms.R
-import xyz.klinker.sms.adapter.view_holder.ConversationViewHolder
-import xyz.klinker.sms.adapter.view_holder.MessageViewHolder
-import xyz.klinker.sms.shared.data.ColorSet
-import xyz.klinker.sms.shared.data.Settings
-import xyz.klinker.sms.shared.data.model.Conversation
-import xyz.klinker.sms.shared.data.model.Message
-import xyz.klinker.sms.shared.data.pojo.BubbleTheme
-import xyz.klinker.sms.shared.util.listener.SearchListener
+import xyz.heart.sms.R
+import xyz.heart.sms.adapter.view_holder.ConversationViewHolder
+import xyz.heart.sms.adapter.view_holder.MessageViewHolder
+import xyz.heart.sms.shared.data.ColorSet
+import xyz.heart.sms.shared.data.Settings
+import xyz.heart.sms.shared.data.model.Conversation
+import xyz.heart.sms.shared.data.model.Message
+import xyz.heart.sms.shared.data.pojo.BubbleTheme
+import xyz.heart.sms.shared.util.listener.SearchListener
 import java.util.regex.Pattern
 
 @SuppressLint("Range")

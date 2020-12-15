@@ -35,7 +35,7 @@ class ScheduledMessage : DatabaseTable {
     var repeat: Int = REPEAT_NEVER
 
     constructor()
-    constructor(body: _root_ide_package_.xyz.heart.sms.api.entity.ScheduledMessageBody) {
+    constructor(body: ScheduledMessageBody) {
         this.id = body.deviceId
         this.title = body.title
         this.to = body.to
@@ -63,14 +63,14 @@ class ScheduledMessage : DatabaseTable {
         }
     }
 
-    override fun encrypt(utils: _root_ide_package_.xyz.heart.sms.encryption.EncryptionUtils) {
+    override fun encrypt(utils: EncryptionUtils) {
         this.title = utils.encrypt(this.title)
         this.to = utils.encrypt(this.to)
         this.data = utils.encrypt(this.data)
         this.mimeType = utils.encrypt(this.mimeType)
     }
 
-    override fun decrypt(utils: _root_ide_package_.xyz.heart.sms.encryption.EncryptionUtils) {
+    override fun decrypt(utils: EncryptionUtils) {
         try {
             this.title = utils.decrypt(this.title)
             this.to = utils.decrypt(this.to)

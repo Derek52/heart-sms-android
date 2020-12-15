@@ -32,7 +32,7 @@ class Draft : DatabaseTable {
     var mimeType: String? = null
 
     constructor()
-    constructor(body: _root_ide_package_.xyz.heart.sms.api.entity.DraftBody) {
+    constructor(body: DraftBody) {
         this.id = body.deviceId
         this.conversationId = body.deviceConversationId
         this.data = body.data
@@ -54,12 +54,12 @@ class Draft : DatabaseTable {
         }
     }
 
-    override fun encrypt(utils: _root_ide_package_.xyz.heart.sms.encryption.EncryptionUtils) {
+    override fun encrypt(utils: EncryptionUtils) {
         this.data = utils.encrypt(this.data)
         this.mimeType = utils.encrypt(this.mimeType)
     }
 
-    override fun decrypt(utils: _root_ide_package_.xyz.heart.sms.encryption.EncryptionUtils) {
+    override fun decrypt(utils: EncryptionUtils) {
         try {
             this.data = utils.decrypt(this.data)
             this.mimeType = utils.decrypt(this.mimeType)

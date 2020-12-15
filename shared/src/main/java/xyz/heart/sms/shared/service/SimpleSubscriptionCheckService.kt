@@ -5,20 +5,21 @@ import android.content.Intent
 
 import java.util.Date
 
-import xyz.klinker.sms.api.implementation.Account
+import xyz.heart.sms.api.implementation.Account
 import xyz.heart.sms.shared.util.billing.BillingHelper
-import xyz.klinker.sms.shared.util.billing.ProductPurchased
+import xyz.heart.sms.shared.util.billing.ProductPurchased
 
 /**
  * Just checks to see if a user has a subscripiton, if they do, write it to the database,
  * if they don't, just let it be.
  */
+                            //TODO IntentService is deprecated. You're probably gonna wanna do something about that.
 open class SimpleSubscriptionCheckService : IntentService("SimpleSubscriptionCheckService") {
 
-    private var billing: _root_ide_package_.xyz.heart.sms.shared.util.billing.BillingHelper? = null
+    private var billing: BillingHelper? = null
 
     override fun onHandleIntent(intent: Intent?) {
-        billing = _root_ide_package_.xyz.heart.sms.shared.util.billing.BillingHelper(this)
+        billing = BillingHelper(this)
 
         if (Account.accountId == null || !Account.primary) {
             return

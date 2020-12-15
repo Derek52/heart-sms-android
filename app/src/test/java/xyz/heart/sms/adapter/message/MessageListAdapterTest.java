@@ -36,12 +36,12 @@ import xyz.heart.sms.adapter.view_holder.MessageViewHolder;
 import xyz.heart.sms.fragment.message.MessageListFragment;
 import xyz.heart.sms.utils.multi_select.MessageMultiSelectDelegate;
 import xyz.heart.sms.MessengerRobolectricSuite;
-import xyz.klinker.sms.R;
-import xyz.klinker.sms.adapter.view_holder.MessageViewHolder;
-import xyz.klinker.sms.shared.data.model.Message;
-import xyz.klinker.sms.fragment.message.MessageListFragment;
-import xyz.klinker.sms.shared.util.TimeUtils;
-import xyz.klinker.sms.utils.multi_select.MessageMultiSelectDelegate;
+import xyz.heart.sms.R;
+import xyz.heart.sms.adapter.view_holder.MessageViewHolder;
+import xyz.heart.sms.shared.data.model.Message;
+import xyz.heart.sms.fragment.message.MessageListFragment;
+import xyz.heart.sms.shared.util.TimeUtils;
+import xyz.heart.sms.utils.multi_select.MessageMultiSelectDelegate;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
@@ -185,7 +185,7 @@ public class MessageListAdapterTest extends MessengerRobolectricSuite {
                 "text/plain",
                 1,
                 1,
-                "Luke Klinker",
+                "Luke heart",
                 null
         });
 
@@ -229,7 +229,7 @@ public class MessageListAdapterTest extends MessengerRobolectricSuite {
                 "text/plain",
                 1,
                 1,
-                "Luke Klinker",
+                "Luke heart",
                 null
         });
 
@@ -269,7 +269,7 @@ public class MessageListAdapterTest extends MessengerRobolectricSuite {
                 "text/plain",
                 1,
                 1,
-                "Luke Klinker",
+                "Luke heart",
                 null
         });
 
@@ -295,7 +295,7 @@ public class MessageListAdapterTest extends MessengerRobolectricSuite {
                 "text/plain",
                 1,
                 1,
-                "Luke Klinker",
+                "Luke heart",
                 null
         });
 
@@ -322,7 +322,7 @@ public class MessageListAdapterTest extends MessengerRobolectricSuite {
                 "text/plain",
                 1,
                 1,
-                "Luke Klinker",
+                "Luke heart",
                 null
         });
 

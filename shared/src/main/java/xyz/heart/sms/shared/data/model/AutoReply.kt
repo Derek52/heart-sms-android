@@ -15,7 +15,7 @@ class AutoReply : DatabaseTable {
     var response: String? = null
 
     constructor()
-    constructor(body: _root_ide_package_.xyz.heart.sms.api.entity.AutoReplyBody) {
+    constructor(body: AutoReplyBody) {
         this.id = body.deviceId
         this.type = body.replyType
         this.pattern = body.pattern
@@ -37,12 +37,12 @@ class AutoReply : DatabaseTable {
         }
     }
 
-    override fun encrypt(utils: _root_ide_package_.xyz.heart.sms.encryption.EncryptionUtils) {
+    override fun encrypt(utils: EncryptionUtils) {
         this.pattern = utils.encrypt(this.pattern)
         this.response = utils.encrypt(this.response)
     }
 
-    override fun decrypt(utils: _root_ide_package_.xyz.heart.sms.encryption.EncryptionUtils) {
+    override fun decrypt(utils: EncryptionUtils) {
         try {
             this.pattern = utils.decrypt(this.pattern)
             this.response = utils.decrypt(this.response)

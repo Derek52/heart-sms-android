@@ -42,8 +42,8 @@ public class SmsMmsUtilsTest extends MessengerRobolectricSuite {
 
     @Test
     public void createIdMatcherEmail() {
-        assertEquals("jklinker1@gmail.com",
-                SmsMmsUtils.INSTANCE.createIdMatcher("jklinker1@gmail.com").getSevenLetter());
+        assertEquals("jheart1@gmail.com",
+                SmsMmsUtils.INSTANCE.createIdMatcher("jheart1@gmail.com").getSevenLetter());
     }
 
     @Test

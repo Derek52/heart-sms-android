@@ -3,7 +3,7 @@ package xyz.heart.sms.shared.data
 import org.json.JSONException
 import org.json.JSONObject
 
-import xyz.klinker.sms.shared.BuildConfig
+import xyz.heart.sms.shared.BuildConfig
 
 class MapPreview {
 

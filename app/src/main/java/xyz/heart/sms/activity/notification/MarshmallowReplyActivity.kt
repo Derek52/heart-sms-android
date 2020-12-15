@@ -6,8 +6,8 @@ import android.os.Handler
 import androidx.appcompat.app.AppCompatActivity
 import android.view.View
 
-import xyz.klinker.sms.R
-import xyz.klinker.sms.shared.service.ReplyService
+import xyz.heart.sms.R
+import xyz.heart.sms.shared.service.ReplyService
 
 class MarshmallowReplyActivity : AppCompatActivity() {
 

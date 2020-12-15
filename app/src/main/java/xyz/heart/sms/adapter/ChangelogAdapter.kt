@@ -24,7 +24,7 @@ import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import android.widget.TextView
 
-import xyz.klinker.sms.R
+import xyz.heart.sms.R
 
 /**
  * Adapter for displaying changelog items in a list.

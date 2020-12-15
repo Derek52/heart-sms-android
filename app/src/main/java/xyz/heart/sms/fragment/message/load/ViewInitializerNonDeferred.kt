@@ -17,15 +17,15 @@ import com.bumptech.glide.Glide
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.navigation.NavigationView
 import com.miguelcatalan.materialsearchview.MaterialSearchView
-import xyz.klinker.sms.R
-import xyz.klinker.sms.activity.MessengerActivity
-import xyz.klinker.sms.activity.MessengerTvActivity
-import xyz.klinker.sms.fragment.message.MessageListFragment
-import xyz.klinker.sms.shared.data.FeatureFlags
-import xyz.klinker.sms.shared.data.Settings
-import xyz.klinker.sms.shared.data.pojo.BaseTheme
-import xyz.klinker.sms.shared.data.pojo.BubbleTheme
-import xyz.klinker.sms.shared.util.*
+import xyz.heart.sms.R
+import xyz.heart.sms.activity.MessengerActivity
+import xyz.heart.sms.activity.MessengerTvActivity
+import xyz.heart.sms.fragment.message.MessageListFragment
+import xyz.heart.sms.shared.data.FeatureFlags
+import xyz.heart.sms.shared.data.Settings
+import xyz.heart.sms.shared.data.pojo.BaseTheme
+import xyz.heart.sms.shared.data.pojo.BubbleTheme
+import xyz.heart.sms.shared.util.*
 
 @Suppress("DEPRECATION")
 class ViewInitializerNonDeferred(private val fragment: MessageListFragment) {

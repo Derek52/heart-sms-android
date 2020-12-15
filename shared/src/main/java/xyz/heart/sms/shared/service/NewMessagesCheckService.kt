@@ -6,12 +6,12 @@ import android.content.Context
 import android.content.Intent
 import android.provider.Telephony
 import androidx.core.app.NotificationCompat
-import xyz.klinker.sms.api.implementation.Account
-import xyz.klinker.sms.shared.R
-import xyz.klinker.sms.shared.data.*
-import xyz.klinker.sms.shared.data.model.Message
-import xyz.klinker.sms.shared.receiver.MessageListUpdatedReceiver
-import xyz.klinker.sms.shared.util.*
+import xyz.heart.sms.api.implementation.Account
+import xyz.heart.sms.shared.R
+import xyz.heart.sms.shared.data.*
+import xyz.heart.sms.shared.data.model.Message
+import xyz.heart.sms.shared.receiver.MessageListUpdatedReceiver
+import xyz.heart.sms.shared.util.*
 import java.util.*
 
 /**
@@ -170,7 +170,7 @@ class NewMessagesCheckService : IntentService("NewMessageCheckService") {
 
         private const val FOREGROUND_NOTIFICATION_ID = 44562
         private const val EXTRA_FOREGROUND_NOTIFICATION = "extra_foreground_notification"
-        const val REFRESH_WHOLE_CONVERSATION_LIST = "xyz.klinker.messenger.REFRESH_WHOLE_CONVERSATION_LIST"
+        const val REFRESH_WHOLE_CONVERSATION_LIST = "xyz.heart.messenger.REFRESH_WHOLE_CONVERSATION_LIST"
 
         fun startService(activity: Activity) {
             try {

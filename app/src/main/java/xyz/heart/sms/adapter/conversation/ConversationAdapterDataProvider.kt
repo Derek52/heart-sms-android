@@ -2,10 +2,10 @@ package xyz.heart.sms.adapter.conversation
 
 import android.app.Activity
 import xyz.heart.sms.api.implementation.firebase.AnalyticsHelper
-import xyz.klinker.sms.shared.data.SectionType
-import xyz.klinker.sms.shared.data.model.Conversation
-import xyz.klinker.sms.shared.data.pojo.ReorderType
-import xyz.klinker.sms.shared.util.TimeUtils
+import xyz.heart.sms.shared.data.SectionType
+import xyz.heart.sms.shared.data.model.Conversation
+import xyz.heart.sms.shared.data.pojo.ReorderType
+import xyz.heart.sms.shared.util.TimeUtils
 
 class ConversationAdapterDataProvider(private val adapter: ConversationListAdapter, private val activity: Activity) {
 
@@ -18,7 +18,7 @@ class ConversationAdapterDataProvider(private val adapter: ConversationListAdapt
 
         if (adapter.showHeaderAboutTextingOnline()) {
             sectionCounts.add(SectionType(SectionType.CARD_ABOUT_ONLINE, 0))
-            _root_ide_package_.xyz.heart.sms.api.implementation.firebase.AnalyticsHelper.convoListCardShown(activity)
+            implementation.firebase.AnalyticsHelper.convoListCardShown(activity)
         }
 
         var currentSection = 0

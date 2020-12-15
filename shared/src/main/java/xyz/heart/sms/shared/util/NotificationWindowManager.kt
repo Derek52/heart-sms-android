@@ -26,8 +26,8 @@ import android.view.View
 import android.view.WindowManager
 import androidx.interpolator.view.animation.FastOutSlowInInterpolator
 
-import xyz.klinker.sms.shared.R
-import xyz.klinker.sms.shared.service.notification.NotificationService
+import xyz.heart.sms.shared.R
+import xyz.heart.sms.shared.service.notification.NotificationService
 
 /**
  * Does the heavy lifting behind setting up the window correctly so that the service can draw

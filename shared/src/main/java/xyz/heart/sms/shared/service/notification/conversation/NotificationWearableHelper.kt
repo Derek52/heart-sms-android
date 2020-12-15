@@ -5,12 +5,12 @@ import android.os.Build
 import androidx.core.app.NotificationCompat
 import android.text.Html
 import android.text.Spanned
-import xyz.klinker.sms.shared.R
-import xyz.klinker.sms.shared.data.DataSource
-import xyz.klinker.sms.shared.data.MimeType
-import xyz.klinker.sms.shared.data.model.Message
-import xyz.klinker.sms.shared.data.pojo.NotificationConversation
-import xyz.klinker.sms.shared.util.NotificationUtils
+import xyz.heart.sms.shared.R
+import xyz.heart.sms.shared.data.DataSource
+import xyz.heart.sms.shared.data.MimeType
+import xyz.heart.sms.shared.data.model.Message
+import xyz.heart.sms.shared.data.pojo.NotificationConversation
+import xyz.heart.sms.shared.util.NotificationUtils
 
 class NotificationWearableHelper(private val service: Context) {
 

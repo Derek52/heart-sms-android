@@ -16,7 +16,7 @@
 
 package xyz.heart.sms.shared.util.listener
 
-import xyz.klinker.sms.shared.data.model.Conversation
+import xyz.heart.sms.shared.data.model.Conversation
 
 /**
  * Callback for when a contact is clicked on a screen such as the compose screen.

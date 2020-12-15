@@ -31,11 +31,11 @@ import java.util.List;
 import xyz.heart.sms.adapter.conversation.ConversationListAdapter;
 import xyz.heart.sms.fragment.conversation.ConversationListFragment;
 import xyz.heart.sms.MessengerRobolectricSuite;
-import xyz.klinker.sms.adapter.conversation.ConversationListAdapter;
-import xyz.klinker.sms.shared.data.SectionType;
-import xyz.klinker.sms.shared.data.model.Conversation;
-import xyz.klinker.sms.fragment.conversation.ConversationListFragment;
-import xyz.klinker.sms.shared.data.pojo.ReorderType;
+import xyz.heart.sms.adapter.conversation.ConversationListAdapter;
+import xyz.heart.sms.shared.data.SectionType;
+import xyz.heart.sms.shared.data.model.Conversation;
+import xyz.heart.sms.fragment.conversation.ConversationListFragment;
+import xyz.heart.sms.shared.data.pojo.ReorderType;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertThat;

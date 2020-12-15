@@ -23,7 +23,7 @@ import android.view.View
 import android.view.animation.AnimationUtils
 import android.view.animation.Interpolator
 import android.widget.FrameLayout
-import xyz.klinker.sms.R
+import xyz.heart.sms.R
 
 /**
  * A [FrameLayout] which responds to nested scrolls to create drag-dismissable layouts.

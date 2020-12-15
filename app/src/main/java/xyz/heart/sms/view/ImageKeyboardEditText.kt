@@ -6,11 +6,11 @@ import android.view.inputmethod.EditorInfo
 import android.view.inputmethod.InputConnection
 import androidx.core.view.inputmethod.EditorInfoCompat
 import androidx.core.view.inputmethod.InputConnectionCompat
-import xyz.klinker.sms.activity.share.QuickShareActivity
-import xyz.klinker.sms.shared.data.Settings
-import xyz.klinker.sms.shared.data.pojo.KeyboardLayout
-import xyz.klinker.sms.shared.util.AndroidVersionUtil
-import xyz.klinker.sms.shared.view.emoji.EmojiableEditText
+import xyz.heart.sms.activity.share.QuickShareActivity
+import xyz.heart.sms.shared.data.Settings
+import xyz.heart.sms.shared.data.pojo.KeyboardLayout
+import xyz.heart.sms.shared.util.AndroidVersionUtil
+import xyz.heart.sms.shared.view.emoji.EmojiableEditText
 
 class ImageKeyboardEditText : EmojiableEditText {
 

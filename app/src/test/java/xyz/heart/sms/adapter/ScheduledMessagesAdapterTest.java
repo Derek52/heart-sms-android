@@ -27,7 +27,7 @@ import org.robolectric.Robolectric;
 import java.util.ArrayList;
 
 import xyz.heart.sms.MessengerRobolectricSuite;
-import xyz.klinker.sms.shared.data.model.ScheduledMessage;
+import xyz.heart.sms.shared.data.model.ScheduledMessage;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;

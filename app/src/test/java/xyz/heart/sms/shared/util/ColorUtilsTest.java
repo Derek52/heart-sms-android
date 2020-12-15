@@ -20,7 +20,7 @@ import org.junit.Test;
 import org.robolectric.RuntimeEnvironment;
 
 import xyz.heart.sms.MessengerRobolectricSuite;
-import xyz.klinker.sms.R;
+import xyz.heart.sms.R;
 
 import static junit.framework.Assert.assertEquals;
 

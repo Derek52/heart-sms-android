@@ -1,8 +1,8 @@
 package xyz.heart.sms.shared.data.pojo
 
 import com.google.firebase.ml.naturallanguage.smartreply.FirebaseTextMessage
-import xyz.klinker.sms.shared.data.MimeType
-import xyz.klinker.sms.shared.data.model.Message
+import xyz.heart.sms.shared.data.MimeType
+import xyz.heart.sms.shared.data.model.Message
 
 class NotificationConversation {
     var id: Long = 0

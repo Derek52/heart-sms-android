@@ -31,23 +31,23 @@ import java.io.IOException
 import java.util.ArrayList
 
 import retrofit2.Response
-import xyz.klinker.sms.api.entity.*
+import xyz.heart.sms.api.entity.*
 import xyz.heart.sms.api.implementation.LoginActivity
 import xyz.heart.sms.api.implementation.firebase.FirebaseUploadCallback
-import xyz.klinker.sms.shared.R
-import xyz.klinker.sms.api.implementation.ApiUtils
-import xyz.klinker.sms.api.implementation.Account
-import xyz.klinker.sms.shared.data.ColorSet
-import xyz.klinker.sms.shared.data.DataSource
-import xyz.klinker.sms.shared.data.MimeType
+import xyz.heart.sms.shared.R
+import xyz.heart.sms.api.implementation.ApiUtils
+import xyz.heart.sms.api.implementation.Account
+import xyz.heart.sms.shared.data.ColorSet
+import xyz.heart.sms.shared.data.DataSource
+import xyz.heart.sms.shared.data.MimeType
 import xyz.heart.sms.encryption.EncryptionUtils
 import xyz.heart.sms.api.implementation.BinaryUtils
-import xyz.klinker.sms.shared.data.model.*
-import xyz.klinker.sms.shared.util.*
+import xyz.heart.sms.shared.data.model.*
+import xyz.heart.sms.shared.util.*
 
 open class ApiUploadService : Service() {
 
-    private var encryptionUtils: _root_ide_package_.xyz.heart.sms.encryption.EncryptionUtils? = null
+    private var encryptionUtils: EncryptionUtils? = null
     private var completedMediaUploads = 0
     private var finished = false
 
@@ -74,7 +74,7 @@ open class ApiUploadService : Service() {
 
         encryptionUtils = Account.encryptor
         if (encryptionUtils == null) {
-            val intent = Intent(this, _root_ide_package_.xyz.heart.sms.api.implementation.LoginActivity::class.java)
+            val intent = Intent(this, LoginActivity::class.java)
             intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
             startActivity(intent)
             return
@@ -104,7 +104,7 @@ open class ApiUploadService : Service() {
         val cursor = DataSource.getMessages(this)
 
         if (cursor.moveToFirst()) {
-            val messages = ArrayList<_root_ide_package_.xyz.heart.sms.api.entity.MessageBody>()
+            val messages = ArrayList<MessageBody>()
             var firebaseNumber = 0
 
             do {
@@ -119,7 +119,7 @@ open class ApiUploadService : Service() {
                 }
 
                 m.encrypt(encryptionUtils!!)
-                val message = _root_ide_package_.xyz.heart.sms.api.entity.MessageBody(m.id, m.conversationId, m.type, m.data,
+                val message = MessageBody(m.id, m.conversationId, m.type, m.data,
                         m.timestamp, m.mimeType, m.read, m.seen, m.from, m.color, "-1", m.simPhoneNumber)
                 messages.add(message)
             } while (cursor.moveToNext())
@@ -129,7 +129,7 @@ open class ApiUploadService : Service() {
             val pages = PaginationUtils.getPages(messages, MESSAGE_UPLOAD_PAGE_SIZE)
 
             for (page in pages) {
-                val request = _root_ide_package_.xyz.heart.sms.api.entity.AddMessagesRequest(Account.accountId, page.toTypedArray())
+                val request = AddMessagesRequest(Account.accountId, page.toTypedArray())
                 try {
                     val response = ApiUtils.api.message().add(request).execute()
                     expectedPages++
@@ -160,13 +160,13 @@ open class ApiUploadService : Service() {
         val cursor = DataSource.getAllConversations(this)
 
         if (cursor.moveToFirst()) {
-            val conversations = arrayOfNulls<_root_ide_package_.xyz.heart.sms.api.entity.ConversationBody>(cursor.count)
+            val conversations = arrayOfNulls<ConversationBody>(cursor.count)
 
             do {
                 val c = Conversation()
                 c.fillFromCursor(cursor)
                 c.encrypt(encryptionUtils!!)
-                val conversation = _root_ide_package_.xyz.heart.sms.api.entity.ConversationBody(c.id, c.colors.color,
+                val conversation = ConversationBody(c.id, c.colors.color,
                         c.colors.colorDark, c.colors.colorLight, c.colors.colorAccent, c.ledColor, c.pinned,
                         c.read, c.timestamp, c.title, c.phoneNumbers, c.snippet, c.ringtoneUri, null,
                         c.idMatcher, c.mute, c.archive, c.private, c.folderId)/*c.imageUri*/
@@ -174,7 +174,7 @@ open class ApiUploadService : Service() {
                 conversations[cursor.position] = conversation
             } while (cursor.moveToNext())
 
-            val request = _root_ide_package_.xyz.heart.sms.api.entity.AddConversationRequest(Account.accountId, conversations)
+            val request = AddConversationRequest(Account.accountId, conversations)
             var result: Response<*>?
 
             var errorText: String? = null
@@ -209,18 +209,18 @@ open class ApiUploadService : Service() {
         val cursor = DataSource.getBlacklists(this)
 
         if (cursor.moveToFirst()) {
-            val blacklists = arrayOfNulls<_root_ide_package_.xyz.heart.sms.api.entity.BlacklistBody>(cursor.count)
+            val blacklists = arrayOfNulls<BlacklistBody>(cursor.count)
 
             do {
                 val b = Blacklist()
                 b.fillFromCursor(cursor)
                 b.encrypt(encryptionUtils!!)
-                val blacklist = _root_ide_package_.xyz.heart.sms.api.entity.BlacklistBody(b.id, b.phoneNumber, b.phrase)
+                val blacklist = BlacklistBody(b.id, b.phoneNumber, b.phrase)
 
                 blacklists[cursor.position] = blacklist
             } while (cursor.moveToNext())
 
-            val request = _root_ide_package_.xyz.heart.sms.api.entity.AddBlacklistRequest(Account.accountId, blacklists)
+            val request = AddBlacklistRequest(Account.accountId, blacklists)
             val result = try {
                 ApiUtils.api.blacklist().add(request).execute()
             } catch (e: IOException) {
@@ -244,19 +244,19 @@ open class ApiUploadService : Service() {
         val cursor = DataSource.getScheduledMessages(this)
 
         if (cursor.moveToFirst()) {
-            val messages = arrayOfNulls<_root_ide_package_.xyz.heart.sms.api.entity.ScheduledMessageBody>(cursor.count)
+            val messages = arrayOfNulls<ScheduledMessageBody>(cursor.count)
 
             do {
                 val m = ScheduledMessage()
                 m.fillFromCursor(cursor)
                 m.encrypt(encryptionUtils!!)
-                val message = _root_ide_package_.xyz.heart.sms.api.entity.ScheduledMessageBody(m.id, m.to, m.data,
+                val message = ScheduledMessageBody(m.id, m.to, m.data,
                         m.mimeType, m.timestamp, m.title, m.repeat)
 
                 messages[cursor.position] = message
             } while (cursor.moveToNext())
 
-            val request = _root_ide_package_.xyz.heart.sms.api.entity.AddScheduledMessageRequest(Account.accountId, messages)
+            val request = AddScheduledMessageRequest(Account.accountId, messages)
             val result = try {
                 ApiUtils.api.scheduled().add(request).execute()
             } catch (e: IOException) {
@@ -280,18 +280,18 @@ open class ApiUploadService : Service() {
         val cursor = DataSource.getDrafts(this)
 
         if (cursor.moveToFirst()) {
-            val drafts = arrayOfNulls<_root_ide_package_.xyz.heart.sms.api.entity.DraftBody>(cursor.count)
+            val drafts = arrayOfNulls<DraftBody>(cursor.count)
 
             do {
                 val d = Draft()
                 d.fillFromCursor(cursor)
                 d.encrypt(encryptionUtils!!)
-                val draft = _root_ide_package_.xyz.heart.sms.api.entity.DraftBody(d.id, d.conversationId, d.data, d.mimeType)
+                val draft = DraftBody(d.id, d.conversationId, d.data, d.mimeType)
 
                 drafts[cursor.position] = draft
             } while (cursor.moveToNext())
 
-            val request = _root_ide_package_.xyz.heart.sms.api.entity.AddDraftRequest(Account.accountId, drafts)
+            val request = AddDraftRequest(Account.accountId, drafts)
             val result = try {
                 ApiUtils.api.draft().add(request).execute().body()
             } catch (e: IOException) {
@@ -315,18 +315,18 @@ open class ApiUploadService : Service() {
         val cursor = DataSource.getTemplates(this)
 
         if (cursor.moveToFirst()) {
-            val templates = arrayOfNulls<_root_ide_package_.xyz.heart.sms.api.entity.TemplateBody>(cursor.count)
+            val templates = arrayOfNulls<TemplateBody>(cursor.count)
 
             do {
                 val t = Template()
                 t.fillFromCursor(cursor)
                 t.encrypt(encryptionUtils!!)
-                val template = _root_ide_package_.xyz.heart.sms.api.entity.TemplateBody(t.id, t.text)
+                val template = TemplateBody(t.id, t.text)
 
                 templates[cursor.position] = template
             } while (cursor.moveToNext())
 
-            val request = _root_ide_package_.xyz.heart.sms.api.entity.AddTemplateRequest(Account.accountId, templates)
+            val request = AddTemplateRequest(Account.accountId, templates)
             val result = try {
                 ApiUtils.api.template().add(request).execute().body()
             } catch (e: IOException) {
@@ -350,18 +350,18 @@ open class ApiUploadService : Service() {
         val cursor = DataSource.getFolders(this)
 
         if (cursor.moveToFirst()) {
-            val folders = arrayOfNulls<_root_ide_package_.xyz.heart.sms.api.entity.FolderBody>(cursor.count)
+            val folders = arrayOfNulls<FolderBody>(cursor.count)
 
             do {
                 val f = Folder()
                 f.fillFromCursor(cursor)
                 f.encrypt(encryptionUtils!!)
-                val folder = _root_ide_package_.xyz.heart.sms.api.entity.FolderBody(f.id, f.name, f.colors.color, f.colors.colorDark, f.colors.colorLight, f.colors.colorAccent)
+                val folder = FolderBody(f.id, f.name, f.colors.color, f.colors.colorDark, f.colors.colorLight, f.colors.colorAccent)
 
                 folders[cursor.position] = folder
             } while (cursor.moveToNext())
 
-            val request = _root_ide_package_.xyz.heart.sms.api.entity.AddFolderRequest(Account.accountId, folders)
+            val request = AddFolderRequest(Account.accountId, folders)
             val result = try {
                 ApiUtils.api.folder().add(request).execute().body()
             } catch (e: IOException) {
@@ -385,18 +385,18 @@ open class ApiUploadService : Service() {
         val cursor = DataSource.getAutoReplies(this)
 
         if (cursor.moveToFirst()) {
-            val replies = arrayOfNulls<_root_ide_package_.xyz.heart.sms.api.entity.AutoReplyBody>(cursor.count)
+            val replies = arrayOfNulls<AutoReplyBody>(cursor.count)
 
             do {
                 val r = AutoReply()
                 r.fillFromCursor(cursor)
                 r.encrypt(encryptionUtils!!)
-                val reply = _root_ide_package_.xyz.heart.sms.api.entity.AutoReplyBody(r.id, r.type, r.pattern, r.response)
+                val reply = AutoReplyBody(r.id, r.type, r.pattern, r.response)
 
                 replies[cursor.position] = reply
             } while (cursor.moveToNext())
 
-            val request = _root_ide_package_.xyz.heart.sms.api.entity.AddAutoReplyRequest(Account.accountId, replies)
+            val request = AddAutoReplyRequest(Account.accountId, replies)
             val result = try {
                 ApiUtils.api.autoReply().add(request).execute().body()
             } catch (e: IOException) {
@@ -460,9 +460,9 @@ open class ApiUploadService : Service() {
 
                 Log.v(TAG, "started uploading " + message.id)
 
-                val bytes = _root_ide_package_.xyz.heart.sms.api.implementation.BinaryUtils.getMediaBytes(this, message.data, message.mimeType, true)
+                val bytes = BinaryUtils.getMediaBytes(this, message.data, message.mimeType, true)
 
-                ApiUtils.uploadBytesToFirebase(Account.accountId, bytes, message.id, encryptionUtils, _root_ide_package_.xyz.heart.sms.api.implementation.firebase.FirebaseUploadCallback {
+                ApiUtils.uploadBytesToFirebase(Account.accountId, bytes, message.id, encryptionUtils, FirebaseUploadCallback {
                     completedMediaUploads++
 
                     builder.setProgress(mediaCount, completedMediaUploads, false)
@@ -509,11 +509,11 @@ open class ApiUploadService : Service() {
 
         const val MESSAGE_UPLOAD_PAGE_SIZE = 300
 
-        public fun uploadContacts(context: Context, encryptionUtils: _root_ide_package_.xyz.heart.sms.encryption.EncryptionUtils) {
+        public fun uploadContacts(context: Context, encryptionUtils: EncryptionUtils) {
             val cursor = DataSource.getContacts(context)
 
             if (cursor.moveToFirst()) {
-                val contacts = ArrayList<_root_ide_package_.xyz.heart.sms.api.entity.ContactBody>()
+                val contacts = ArrayList<ContactBody>()
 
                 do {
                     val c = Contact()
@@ -521,9 +521,9 @@ open class ApiUploadService : Service() {
                     c.encrypt(encryptionUtils)
 
                     val contact = if (c.type != null) {
-                        _root_ide_package_.xyz.heart.sms.api.entity.ContactBody(c.id, c.phoneNumber, c.idMatcher, c.name, c.type!!, c.colors.color, c.colors.colorDark, c.colors.colorLight, c.colors.colorAccent)
+                        ContactBody(c.id, c.phoneNumber, c.idMatcher, c.name, c.type!!, c.colors.color, c.colors.colorDark, c.colors.colorLight, c.colors.colorAccent)
                     } else {
-                        _root_ide_package_.xyz.heart.sms.api.entity.ContactBody(c.id, c.phoneNumber, c.idMatcher, c.name, c.colors.color, c.colors.colorDark, c.colors.colorLight, c.colors.colorAccent)
+                        ContactBody(c.id, c.phoneNumber, c.idMatcher, c.name, c.colors.color, c.colors.colorDark, c.colors.colorLight, c.colors.colorAccent)
                     }
 
                     contacts.add(contact)
@@ -535,7 +535,7 @@ open class ApiUploadService : Service() {
             cursor.closeSilent()
         }
 
-        fun uploadContacts(contacts: List<_root_ide_package_.xyz.heart.sms.api.entity.ContactBody>) {
+        fun uploadContacts(contacts: List<ContactBody>) {
             val startTime = TimeUtils.now
 
             var successPages = 0
@@ -543,7 +543,7 @@ open class ApiUploadService : Service() {
             val pages = PaginationUtils.getPages(contacts, MESSAGE_UPLOAD_PAGE_SIZE)
 
             for (page in pages) {
-                val request = _root_ide_package_.xyz.heart.sms.api.entity.AddContactRequest(Account.accountId, page.toTypedArray())
+                val request = AddContactRequest(Account.accountId, page.toTypedArray())
                 try {
                     val response = ApiUtils.api.contact().add(request).execute()
                     expectedPages++

@@ -4,7 +4,7 @@ import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
 
-import xyz.klinker.sms.shared.service.NotificationDismissedReceiver
+import xyz.heart.sms.shared.service.NotificationDismissedReceiver
 
 class NotificationDismissedReceiver : BroadcastReceiver() {
 

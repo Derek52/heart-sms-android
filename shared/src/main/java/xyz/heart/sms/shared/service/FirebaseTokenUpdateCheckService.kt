@@ -5,10 +5,10 @@ import android.content.Intent
 import android.os.Build
 import com.google.android.gms.tasks.OnCompleteListener
 import com.google.firebase.iid.FirebaseInstanceId
-import xyz.klinker.sms.api.implementation.Account
-import xyz.klinker.sms.api.implementation.ApiUtils
+import xyz.heart.sms.api.implementation.Account
+import xyz.heart.sms.api.implementation.ApiUtils
 import xyz.heart.sms.api.implementation.firebase.AnalyticsHelper
-import xyz.klinker.sms.shared.data.Settings
+import xyz.heart.sms.shared.data.Settings
 
 class FirebaseTokenUpdateCheckService : IntentService("FirebaseTokenRefresh") {
 
@@ -35,7 +35,7 @@ class FirebaseTokenUpdateCheckService : IntentService("FirebaseTokenRefresh") {
 
                     // upload to server
                     if (currentToken != null && currentToken != storedToken) {
-                        _root_ide_package_.xyz.heart.sms.api.implementation.firebase.AnalyticsHelper.updatingFcmToken(this)
+                        AnalyticsHelper.updatingFcmToken(this)
                         sharedPrefs.edit().putString(TOKEN_PREF_KEY, currentToken).apply()
 
                         Thread {

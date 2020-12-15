@@ -9,17 +9,17 @@ import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.ml.naturallanguage.FirebaseNaturalLanguage
 import com.google.firebase.ml.naturallanguage.smartreply.FirebaseTextMessage
 import com.l4digital.fastscroll.FastScrollRecyclerView
-import xyz.klinker.sms.R
-import xyz.klinker.sms.adapter.message.MessageListAdapter
-import xyz.klinker.sms.fragment.message.MessageListFragment
-import xyz.klinker.sms.fragment.message.ConversationInformationUpdater
-import xyz.klinker.sms.shared.data.DataSource
-import xyz.klinker.sms.shared.data.MimeType
-import xyz.klinker.sms.shared.data.Settings
-import xyz.klinker.sms.shared.data.model.Contact
-import xyz.klinker.sms.shared.data.model.Message
-import xyz.klinker.sms.shared.service.notification.NotificationConstants
-import xyz.klinker.sms.shared.util.*
+import xyz.heart.sms.R
+import xyz.heart.sms.adapter.message.MessageListAdapter
+import xyz.heart.sms.fragment.message.MessageListFragment
+import xyz.heart.sms.fragment.message.ConversationInformationUpdater
+import xyz.heart.sms.shared.data.DataSource
+import xyz.heart.sms.shared.data.MimeType
+import xyz.heart.sms.shared.data.Settings
+import xyz.heart.sms.shared.data.model.Contact
+import xyz.heart.sms.shared.data.model.Message
+import xyz.heart.sms.shared.service.notification.NotificationConstants
+import xyz.heart.sms.shared.util.*
 import java.util.*
 
 class MessageListLoader(private val fragment: MessageListFragment) {

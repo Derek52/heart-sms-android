@@ -22,8 +22,6 @@ import java.io.IOException;
 
 import xyz.heart.sms.api.entity.AddBlacklistRequest;
 import xyz.heart.sms.api.entity.BlacklistBody;
-import xyz.heart.sms.api.entity.AddBlacklistRequest;
-import xyz.heart.sms.api.entity.BlacklistBody;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
@@ -36,7 +34,8 @@ public class BlacklistTest extends ApiTest {
 
         int originalSize = api.blacklist().list(accountId).execute().body().length;
 
-        BlacklistBody blacklist = new BlacklistBody(1, "5154224558");
+        //TODO this method only had 2 arguments passed to it, so I just added an empty string so the app would build
+        BlacklistBody blacklist = new BlacklistBody(1, "5154224558", "");
         AddBlacklistRequest request = new AddBlacklistRequest(accountId, blacklist);
         Object response = api.blacklist().add(request).execute().body();
         assertNotNull(response);

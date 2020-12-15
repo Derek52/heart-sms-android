@@ -23,7 +23,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import android.widget.TextView
-import xyz.klinker.sms.R
+import xyz.heart.sms.R
 
 /**
  * Adapter for displaying open source projects used in a list.

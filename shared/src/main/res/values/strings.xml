@@ -308,7 +308,7 @@
 
     <!-- About, Help and Feedback and Settings -->
     <string name="changelog">Changelog</string>
-    <string name="copyright">© 2019 Luke &amp; Jake Klinker</string>
+    <string name="copyright">© 2019 Luke &amp; Jake heart</string>
     <string name="copyright_summary">View open source license information</string>
     <string name="app_version">App Version</string>
     <string name="account_information">Account Information</string>
@@ -613,7 +613,7 @@
     <string name="experiments_info_section_title">What is this page?</string>
     <string name="experiments_info_open_source">Heart is open source!</string>
     <string name="experiments_info_open_source_summary">That means that any developer can contribute code and features into the app.</string>
-    <string name="experiments_info_disclaimer_1">This section of settings is just a place to store those community contributions. <b>These features are not officially supported by Klinker Apps.</b> They were coded and will be maintained by the community.</string>
+    <string name="experiments_info_disclaimer_1">This section of settings is just a place to store those community contributions. <b>These features are not officially supported by heart Apps.</b> They were coded and will be maintained by the community.</string>
     <string name="experiments_info_disclaimer_2">As such, they come with no guarantee that they will work the way you expect, will continue to be maintained, or even remain available. <b>These features come with no support.</b></string>
     <string name="experiments_info_disclaimer_3">That said, they would not have been merged into the app if they did not work, solve a specific problem, or add to the app\'s functionality.</string>
     <string name="experiments_preferences_section_title">Experimental Settings</string>
@@ -712,7 +712,7 @@
     <string name="off">Off</string>
     <string name="on">On</string>
     <string name="share_promo">Hey, I am loving Heart for texting! Give it a try:
-        https://play.google.com/store/apps/details?id=xyz.klinker.messenger</string>
+        https://play.google.com/store/apps/details?id=xyz.heart.messenger</string>
     <string name="verifying_password">Verifying password…</string>
 
 

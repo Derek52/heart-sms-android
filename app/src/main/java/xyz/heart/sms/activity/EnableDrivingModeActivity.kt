@@ -2,8 +2,8 @@ package xyz.heart.sms.activity
 
 import android.app.Activity
 import android.os.Bundle
-import xyz.klinker.sms.R
-import xyz.klinker.sms.shared.data.Settings
+import xyz.heart.sms.R
+import xyz.heart.sms.shared.data.Settings
 
 // Added by request. Someone wanted to start an activity from tasker to turn this on and off.
 class EnableDrivingModeActivity : Activity() {

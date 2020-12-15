@@ -31,15 +31,15 @@ import androidx.fragment.app.FragmentActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.floatingactionbutton.FloatingActionButton
-import xyz.klinker.sms.R
-import xyz.klinker.sms.activity.MessengerActivity
-import xyz.klinker.sms.adapter.BlacklistAdapter
-import xyz.klinker.sms.shared.data.DataSource
-import xyz.klinker.sms.shared.data.Settings
-import xyz.klinker.sms.shared.data.model.Blacklist
-import xyz.klinker.sms.shared.util.ColorUtils
-import xyz.klinker.sms.shared.util.PhoneNumberUtils
-import xyz.klinker.sms.shared.util.listener.BlacklistClickedListener
+import xyz.heart.sms.R
+import xyz.heart.sms.activity.MessengerActivity
+import xyz.heart.sms.adapter.BlacklistAdapter
+import xyz.heart.sms.shared.data.DataSource
+import xyz.heart.sms.shared.data.Settings
+import xyz.heart.sms.shared.data.model.Blacklist
+import xyz.heart.sms.shared.util.ColorUtils
+import xyz.heart.sms.shared.util.PhoneNumberUtils
+import xyz.heart.sms.shared.util.listener.BlacklistClickedListener
 
 /**
  * Fragment for displaying/managing blacklisted contacts.

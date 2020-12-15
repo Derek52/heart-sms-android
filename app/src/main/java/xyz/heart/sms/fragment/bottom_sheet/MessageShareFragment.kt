@@ -7,15 +7,15 @@ import android.view.LayoutInflater
 import android.view.View
 import android.widget.Toast
 
-import xyz.klinker.sms.R
-import xyz.klinker.sms.activity.compose.ComposeActivity
-import xyz.klinker.sms.shared.data.model.Message
-import xyz.klinker.sms.utils.multi_select.MessageMultiSelectDelegate
+import xyz.heart.sms.R
+import xyz.heart.sms.activity.compose.ComposeActivity
+import xyz.heart.sms.shared.data.model.Message
+import xyz.heart.sms.utils.multi_select.MessageMultiSelectDelegate
 
 import android.content.Context.CLIPBOARD_SERVICE
 import androidx.fragment.app.FragmentActivity
-import xyz.klinker.sms.shared.data.MimeType
-import xyz.klinker.sms.shared.data.model.Conversation
+import xyz.heart.sms.shared.data.MimeType
+import xyz.heart.sms.shared.data.model.Conversation
 
 class MessageShareFragment : TabletOptimizedBottomSheetDialogFragment() {
 
@@ -95,12 +95,12 @@ class MessageShareFragment : TabletOptimizedBottomSheetDialogFragment() {
                     }
 
                     val messageText = when {
-                        MimeType.isAudio(it.mimeType!!) -> "<i>" + getString(xyz.klinker.sms.shared.R.string.audio_message) + "</i>"
-                        MimeType.isVideo(it.mimeType!!) -> "<i>" + getString(xyz.klinker.sms.shared.R.string.video_message) + "</i>"
-                        MimeType.isVcard(it.mimeType!!) -> "<i>" + getString(xyz.klinker.sms.shared.R.string.contact_card) + "</i>"
-                        MimeType.isStaticImage(it.mimeType) -> "<i>" + getString(xyz.klinker.sms.shared.R.string.picture_message) + "</i>"
-                        it.mimeType == MimeType.IMAGE_GIF -> "<i>" + getString(xyz.klinker.sms.shared.R.string.gif_message) + "</i>"
-                        MimeType.isExpandedMedia(it.mimeType) -> "<i>" + getString(xyz.klinker.sms.shared.R.string.media) + "</i>"
+                        MimeType.isAudio(it.mimeType!!) -> "<i>" + getString(xyz.heart.sms.shared.R.string.audio_message) + "</i>"
+                        MimeType.isVideo(it.mimeType!!) -> "<i>" + getString(xyz.heart.sms.shared.R.string.video_message) + "</i>"
+                        MimeType.isVcard(it.mimeType!!) -> "<i>" + getString(xyz.heart.sms.shared.R.string.contact_card) + "</i>"
+                        MimeType.isStaticImage(it.mimeType) -> "<i>" + getString(xyz.heart.sms.shared.R.string.picture_message) + "</i>"
+                        it.mimeType == MimeType.IMAGE_GIF -> "<i>" + getString(xyz.heart.sms.shared.R.string.gif_message) + "</i>"
+                        MimeType.isExpandedMedia(it.mimeType) -> "<i>" + getString(xyz.heart.sms.shared.R.string.media) + "</i>"
                         else -> it.data
                     }
 

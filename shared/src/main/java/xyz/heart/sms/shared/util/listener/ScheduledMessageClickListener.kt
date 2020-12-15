@@ -16,7 +16,7 @@
 
 package xyz.heart.sms.shared.util.listener
 
-import xyz.klinker.sms.shared.data.model.ScheduledMessage
+import xyz.heart.sms.shared.data.model.ScheduledMessage
 
 /**
  * Listener for when a scheduled message is clicked.

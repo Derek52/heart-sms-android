@@ -24,16 +24,16 @@ import org.mockito.Mock;
 import org.robolectric.RuntimeEnvironment;
 
 import xyz.heart.sms.MessengerRobolectricSuite;
-import xyz.klinker.sms.shared.data.model.AutoReply;
-import xyz.klinker.sms.shared.data.model.Blacklist;
-import xyz.klinker.sms.shared.data.model.Contact;
-import xyz.klinker.sms.shared.data.model.Conversation;
-import xyz.klinker.sms.shared.data.model.Draft;
-import xyz.klinker.sms.shared.data.model.Folder;
-import xyz.klinker.sms.shared.data.model.Message;
-import xyz.klinker.sms.shared.data.model.RetryableRequest;
-import xyz.klinker.sms.shared.data.model.ScheduledMessage;
-import xyz.klinker.sms.shared.data.model.Template;
+import xyz.heart.sms.shared.data.model.AutoReply;
+import xyz.heart.sms.shared.data.model.Blacklist;
+import xyz.heart.sms.shared.data.model.Contact;
+import xyz.heart.sms.shared.data.model.Conversation;
+import xyz.heart.sms.shared.data.model.Draft;
+import xyz.heart.sms.shared.data.model.Folder;
+import xyz.heart.sms.shared.data.model.Message;
+import xyz.heart.sms.shared.data.model.RetryableRequest;
+import xyz.heart.sms.shared.data.model.ScheduledMessage;
+import xyz.heart.sms.shared.data.model.Template;
 
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.verifyNoMoreInteractions;

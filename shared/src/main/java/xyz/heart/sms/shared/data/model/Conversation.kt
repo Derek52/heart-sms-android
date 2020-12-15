@@ -22,10 +22,10 @@ import android.graphics.Color
 import android.provider.ContactsContract
 
 import xyz.heart.sms.api.entity.ConversationBody
-import xyz.klinker.sms.shared.data.ColorSet
+import xyz.heart.sms.shared.data.ColorSet
 import xyz.heart.sms.encryption.EncryptionUtils
-import xyz.klinker.sms.shared.data.DataSource
-import xyz.klinker.sms.shared.util.ColorUtils
+import xyz.heart.sms.shared.data.DataSource
+import xyz.heart.sms.shared.util.ColorUtils
 
 /**
  * Data object for holding information about a conversation.
@@ -54,7 +54,7 @@ class Conversation : DatabaseTable {
         get() = phoneNumbers?.contains(", ") == true
 
     constructor()
-    constructor(body: _root_ide_package_.xyz.heart.sms.api.entity.ConversationBody) {
+    constructor(body: ConversationBody) {
         this.id = body.deviceId
         this.colors.color = body.color
         this.colors.colorDark = body.colorDark
@@ -124,7 +124,7 @@ class Conversation : DatabaseTable {
         }
     }
 
-    override fun encrypt(utils: _root_ide_package_.xyz.heart.sms.encryption.EncryptionUtils) {
+    override fun encrypt(utils: EncryptionUtils) {
         this.title = utils.encrypt(this.title)
         this.phoneNumbers = utils.encrypt(this.phoneNumbers)
         this.snippet = utils.encrypt(this.snippet)
@@ -133,7 +133,7 @@ class Conversation : DatabaseTable {
         this.idMatcher = utils.encrypt(this.idMatcher)
     }
 
-    override fun decrypt(utils: _root_ide_package_.xyz.heart.sms.encryption.EncryptionUtils) {
+    override fun decrypt(utils: EncryptionUtils) {
         this.title = utils.decrypt(this.title)
         this.phoneNumbers = utils.decrypt(this.phoneNumbers)
         this.snippet = utils.decrypt(this.snippet)

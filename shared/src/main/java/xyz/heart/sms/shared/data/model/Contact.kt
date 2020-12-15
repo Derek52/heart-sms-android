@@ -3,7 +3,7 @@ package xyz.heart.sms.shared.data.model
 import android.database.Cursor
 
 import xyz.heart.sms.api.entity.ContactBody
-import xyz.klinker.sms.shared.data.ColorSet
+import xyz.heart.sms.shared.data.ColorSet
 import xyz.heart.sms.encryption.EncryptionUtils
 
 /**
@@ -22,7 +22,7 @@ open class Contact : DatabaseTable {
         this.type = 4 // default to "other"
     }
 
-    constructor(body: _root_ide_package_.xyz.heart.sms.api.entity.ContactBody) {
+    constructor(body: ContactBody) {
         this.id = body.deviceId
         this.phoneNumber = body.phoneNumber
         this.idMatcher = body.idMatcher
@@ -54,13 +54,13 @@ open class Contact : DatabaseTable {
         }
     }
 
-    override fun encrypt(utils: _root_ide_package_.xyz.heart.sms.encryption.EncryptionUtils) {
+    override fun encrypt(utils: EncryptionUtils) {
         this.phoneNumber = utils.encrypt(this.phoneNumber)
         this.name = utils.encrypt(this.name)
         this.idMatcher = utils.encrypt(this.idMatcher)
     }
 
-    override fun decrypt(utils: _root_ide_package_.xyz.heart.sms.encryption.EncryptionUtils) {
+    override fun decrypt(utils: EncryptionUtils) {
         try {
             this.phoneNumber = utils.decrypt(this.phoneNumber)
             this.name = utils.decrypt(this.name)

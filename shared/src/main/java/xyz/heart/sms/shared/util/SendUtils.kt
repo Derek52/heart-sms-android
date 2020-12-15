@@ -25,14 +25,14 @@ import android.util.Log
 import com.klinker.android.send_message.Message
 import com.klinker.android.send_message.Settings
 import com.klinker.android.send_message.Transaction
-import xyz.klinker.sms.api.implementation.Account
-import xyz.klinker.sms.shared.data.MimeType
-import xyz.klinker.sms.shared.data.MmsSettings
-import xyz.klinker.sms.shared.receiver.MmsSentReceiver
-import xyz.klinker.sms.shared.receiver.SmsDeliveredReceiver
-import xyz.klinker.sms.shared.receiver.SmsSentReceiver
-import xyz.klinker.sms.shared.receiver.SmsSentReceiverNoRetry
-import xyz.klinker.sms.shared.service.jobs.MarkAsSentWork
+import xyz.heart.sms.api.implementation.Account
+import xyz.heart.sms.shared.data.MimeType
+import xyz.heart.sms.shared.data.MmsSettings
+import xyz.heart.sms.shared.receiver.MmsSentReceiver
+import xyz.heart.sms.shared.receiver.SmsDeliveredReceiver
+import xyz.heart.sms.shared.receiver.SmsSentReceiver
+import xyz.heart.sms.shared.receiver.SmsSentReceiverNoRetry
+import xyz.heart.sms.shared.service.jobs.MarkAsSentWork
 import java.io.ByteArrayOutputStream
 import java.io.IOException
 import java.util.*
@@ -74,7 +74,7 @@ class SendUtils constructor(private val subscriptionId: Int? = null) {
             return data
         }
 
-        val appSettings = xyz.klinker.sms.shared.data.Settings
+        val appSettings = xyz.heart.sms.shared.data.Settings
         if (!appSettings.signature!!.isEmpty() && !forceNoSignature) {
             text += "\n" + appSettings.signature!!
         }

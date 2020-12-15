@@ -25,9 +25,9 @@ import org.junit.Test;
 import xyz.heart.sms.fragment.message.MessageInstanceManager;
 import xyz.heart.sms.fragment.message.MessageListFragment;
 import xyz.heart.sms.MessengerRobolectricSuite;
-import xyz.klinker.sms.fragment.message.MessageInstanceManager;
-import xyz.klinker.sms.fragment.message.MessageListFragment;
-import xyz.klinker.sms.shared.data.model.Conversation;
+import xyz.heart.sms.fragment.message.MessageInstanceManager;
+import xyz.heart.sms.fragment.message.MessageListFragment;
+import xyz.heart.sms.shared.data.model.Conversation;
 
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
@@ -39,7 +39,7 @@ public class MessageListFragmentTest extends MessengerRobolectricSuite {
     @Before
     public void setUp() {
         Conversation conversation = new Conversation();
-        conversation.setTitle("Luke Klinker");
+        conversation.setTitle("Luke heart");
         conversation.setPhoneNumbers("(515) 991-1493");
         conversation.getColors().setColor(Color.RED);
         conversation.getColors().setColorDark(Color.BLUE);

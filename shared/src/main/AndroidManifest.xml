@@ -242,7 +242,7 @@
             android:name=".receiver.CarReplyReceiver"
             android:exported="false" >
             <intent-filter>
-                <action android:name="xyz.klinker.messenger.CAR_REPLY"/>
+                <action android:name="xyz.heart.sms.CAR_REPLY"/>
             </intent-filter>
         </receiver>
 
@@ -250,7 +250,7 @@
             android:name=".receiver.CarReadReceiver"
             android:exported="false" >
             <intent-filter>
-                <action android:name="xyz.klinker.messenger.CAR_READ"/>
+                <action android:name="xyz.heart.sms.CAR_READ"/>
             </intent-filter>
         </receiver>
 

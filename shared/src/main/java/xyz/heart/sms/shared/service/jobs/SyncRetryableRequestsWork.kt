@@ -2,13 +2,13 @@ package xyz.heart.sms.shared.service.jobs
 
 import android.content.Context
 import androidx.work.*
-import xyz.klinker.sms.api.implementation.Account
-import xyz.klinker.sms.api.implementation.ApiUtils
+import xyz.heart.sms.api.implementation.Account
+import xyz.heart.sms.api.implementation.ApiUtils
 
-import xyz.klinker.sms.shared.data.DataSource
-import xyz.klinker.sms.shared.data.model.Conversation
-import xyz.klinker.sms.shared.data.model.Message
-import xyz.klinker.sms.shared.data.model.RetryableRequest
+import xyz.heart.sms.shared.data.DataSource
+import xyz.heart.sms.shared.data.model.Conversation
+import xyz.heart.sms.shared.data.model.Message
+import xyz.heart.sms.shared.data.model.RetryableRequest
 import java.util.concurrent.TimeUnit
 
 /**

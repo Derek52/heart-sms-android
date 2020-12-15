@@ -3,13 +3,13 @@ package xyz.heart.sms.activity.share
 import android.content.Intent
 import android.net.Uri
 import android.os.Parcelable
-import xyz.klinker.sms.activity.compose.ShareData
+import xyz.heart.sms.activity.compose.ShareData
 import xyz.heart.sms.api.implementation.firebase.AnalyticsHelper
-import xyz.klinker.sms.shared.data.DataSource
-import xyz.klinker.sms.shared.data.MimeType
-import xyz.klinker.sms.shared.service.MessengerChooserTargetService
-import xyz.klinker.sms.shared.util.FileUtils
-import xyz.klinker.sms.shared.util.PhoneNumberUtils
+import xyz.heart.sms.shared.data.DataSource
+import xyz.heart.sms.shared.data.MimeType
+import xyz.heart.sms.shared.service.MessengerChooserTargetService
+import xyz.heart.sms.shared.util.FileUtils
+import xyz.heart.sms.shared.util.PhoneNumberUtils
 import java.io.File
 
 class ShareIntentHandler(private val page: QuickSharePage) {
@@ -25,7 +25,7 @@ class ShareIntentHandler(private val page: QuickSharePage) {
                 intent.action == Intent.ACTION_SEND -> shareContent(intent)
             }
         } catch (e: Error) {
-            _root_ide_package_.xyz.heart.sms.api.implementation.firebase.AnalyticsHelper.caughtForceClose(page.context, "caught when sharing to quick share activity", e)
+            implementation.firebase.AnalyticsHelper.caughtForceClose(page.context, "caught when sharing to quick share activity", e)
         }
     }
 

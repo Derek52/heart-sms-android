@@ -1,9 +1,9 @@
 package xyz.heart.sms.activity.compose
 
 import android.net.Uri
-import xyz.klinker.sms.shared.data.DataSource
-import xyz.klinker.sms.shared.util.CursorUtil
-import xyz.klinker.sms.shared.util.SendUtils
+import xyz.heart.sms.shared.data.DataSource
+import xyz.heart.sms.shared.util.CursorUtil
+import xyz.heart.sms.shared.util.SendUtils
 
 class ComposeVCardSender(private val activity: ComposeActivity) {
 

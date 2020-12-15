@@ -27,14 +27,14 @@ import androidx.appcompat.app.AlertDialog
 import android.telephony.TelephonyManager
 import android.view.LayoutInflater
 import android.widget.Spinner
-import xyz.klinker.sms.R
-import xyz.klinker.sms.activity.SettingsActivity
-import xyz.klinker.sms.api.implementation.Account
-import xyz.klinker.sms.api.implementation.ApiUtils
-import xyz.klinker.sms.shared.data.Settings
-import xyz.klinker.sms.shared.util.EmojiInitializer
-import xyz.klinker.sms.shared.util.SetUtils
-import xyz.klinker.sms.view.preference.NotificationAlertsPreference
+import xyz.heart.sms.R
+import xyz.heart.sms.activity.SettingsActivity
+import xyz.heart.sms.api.implementation.Account
+import xyz.heart.sms.api.implementation.ApiUtils
+import xyz.heart.sms.shared.data.Settings
+import xyz.heart.sms.shared.util.EmojiInitializer
+import xyz.heart.sms.shared.util.SetUtils
+import xyz.heart.sms.view.preference.NotificationAlertsPreference
 import android.widget.ArrayAdapter
 
 

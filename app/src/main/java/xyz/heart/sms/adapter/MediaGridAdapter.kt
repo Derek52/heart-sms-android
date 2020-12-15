@@ -11,11 +11,11 @@ import com.afollestad.dragselectrecyclerview.IDragSelectAdapter
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 
-import xyz.klinker.sms.R
-import xyz.klinker.sms.adapter.view_holder.ImageViewHolder
-import xyz.klinker.sms.shared.data.MediaMessage
-import xyz.klinker.sms.shared.data.model.Message
-import xyz.klinker.sms.shared.util.listener.MediaSelectedListener
+import xyz.heart.sms.R
+import xyz.heart.sms.adapter.view_holder.ImageViewHolder
+import xyz.heart.sms.shared.data.MediaMessage
+import xyz.heart.sms.shared.data.model.Message
+import xyz.heart.sms.shared.util.listener.MediaSelectedListener
 
 /**
  * An adapter for displaying images in a grid for the user to select to attach to a message.

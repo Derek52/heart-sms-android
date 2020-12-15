@@ -11,19 +11,19 @@ import android.net.Uri
 import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
 import android.util.Log
-import xyz.klinker.sms.api.implementation.Account
-import xyz.klinker.sms.shared.R
-import xyz.klinker.sms.shared.data.ColorSet
-import xyz.klinker.sms.shared.data.Settings
-import xyz.klinker.sms.shared.util.RedirectToMyAccount
-import xyz.klinker.sms.shared.util.TimeUtils
+import xyz.heart.sms.api.implementation.Account
+import xyz.heart.sms.shared.R
+import xyz.heart.sms.shared.data.ColorSet
+import xyz.heart.sms.shared.data.Settings
+import xyz.heart.sms.shared.util.RedirectToMyAccount
+import xyz.heart.sms.shared.util.TimeUtils
 import xyz.heart.sms.shared.util.billing.BillingHelper
-import xyz.klinker.sms.shared.util.billing.ProductPurchased
+import xyz.heart.sms.shared.util.billing.ProductPurchased
 import java.util.*
 
 class SubscriptionExpirationCheckJob : BackgroundJob() {
 
-    private var billing: _root_ide_package_.xyz.heart.sms.shared.util.billing.BillingHelper? = null
+    private var billing: BillingHelper? = null
 
     private val isExpired: Boolean
         get() {
@@ -45,7 +45,7 @@ class SubscriptionExpirationCheckJob : BackgroundJob() {
         }
 
     override fun onRunJob(parameters: JobParameters?) {
-        billing = _root_ide_package_.xyz.heart.sms.shared.util.billing.BillingHelper(this)
+        billing = BillingHelper(this)
 
         if (Account.exists() && Account.primary && Account.subscriptionType !== Account.SubscriptionType.LIFETIME) {
             Log.v(TAG, "checking for expiration")

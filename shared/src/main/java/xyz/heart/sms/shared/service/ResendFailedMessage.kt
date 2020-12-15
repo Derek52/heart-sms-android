@@ -4,11 +4,11 @@ import android.app.IntentService
 import android.content.Intent
 import androidx.core.app.NotificationManagerCompat
 
-import xyz.klinker.sms.api.implementation.Account
-import xyz.klinker.sms.shared.data.DataSource
-import xyz.klinker.sms.shared.data.model.Message
-import xyz.klinker.sms.shared.util.DualSimUtils
-import xyz.klinker.sms.shared.util.SendUtils
+import xyz.heart.sms.api.implementation.Account
+import xyz.heart.sms.shared.data.DataSource
+import xyz.heart.sms.shared.data.model.Message
+import xyz.heart.sms.shared.util.DualSimUtils
+import xyz.heart.sms.shared.util.SendUtils
 
 class ResendFailedMessage : IntentService("ResendFailedMessage") {
 

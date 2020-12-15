@@ -20,16 +20,16 @@ import android.content.Context
 import android.content.SharedPreferences
 import android.content.res.Configuration
 import android.preference.PreferenceManager
-import xyz.klinker.sms.shared.MessengerActivityExtras
+import xyz.heart.sms.shared.MessengerActivityExtras
 
 import java.util.Date
 
-import xyz.klinker.sms.shared.R
-import xyz.klinker.sms.shared.data.pojo.*
-import xyz.klinker.sms.shared.util.AndroidVersionUtil
-import xyz.klinker.sms.shared.util.EmojiInitializer
-import xyz.klinker.sms.shared.util.PhoneNumberUtils
-import xyz.klinker.sms.shared.util.TimeUtils
+import xyz.heart.sms.shared.R
+import xyz.heart.sms.shared.data.pojo.*
+import xyz.heart.sms.shared.util.AndroidVersionUtil
+import xyz.heart.sms.shared.util.EmojiInitializer
+import xyz.heart.sms.shared.util.PhoneNumberUtils
+import xyz.heart.sms.shared.util.TimeUtils
 
 /**
  * Holds all settings_global for the application and allows for easily changing the values stored for each

@@ -19,8 +19,8 @@ package xyz.heart.sms.adapter
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
-import xyz.klinker.sms.shared.data.model.Message
-import xyz.klinker.sms.fragment.ImageViewerFragment
+import xyz.heart.sms.shared.data.model.Message
+import xyz.heart.sms.fragment.ImageViewerFragment
 
 /**
  * Adapter for a view pager that displays images.

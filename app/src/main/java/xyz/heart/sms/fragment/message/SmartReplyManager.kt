@@ -13,12 +13,12 @@ import android.widget.*
 import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.FragmentActivity
 import com.google.firebase.ml.naturallanguage.smartreply.SmartReplySuggestion
-import xyz.klinker.sms.R
-import xyz.klinker.sms.activity.SettingsActivity
+import xyz.heart.sms.R
+import xyz.heart.sms.activity.SettingsActivity
 import xyz.heart.sms.api.implementation.firebase.AnalyticsHelper
-import xyz.klinker.sms.fragment.message.send.SendMessageManager
-import xyz.klinker.sms.shared.data.Settings
-import xyz.klinker.sms.shared.util.DensityUtil
+import xyz.heart.sms.fragment.message.send.SendMessageManager
+import xyz.heart.sms.shared.data.Settings
+import xyz.heart.sms.shared.util.DensityUtil
 import java.lang.Exception
 
 class SmartReplyManager(private val fragment: MessageListFragment) {
@@ -60,7 +60,7 @@ class SmartReplyManager(private val fragment: MessageListFragment) {
                         tv.text = suggestion.text
 
                         layout.setOnClickListener {
-                            _root_ide_package_.xyz.heart.sms.api.implementation.firebase.AnalyticsHelper.sendSmartReply(activity)
+                            implementation.firebase.AnalyticsHelper.sendSmartReply(activity)
 
                             messageEntry.setText(suggestion.text)
                             messageEntry.setSelection(suggestion.text.length)

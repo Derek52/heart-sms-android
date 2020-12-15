@@ -6,8 +6,8 @@ import android.os.Build
 import android.service.quicksettings.Tile
 import android.service.quicksettings.TileService
 import android.util.Log
-import xyz.klinker.sms.R
-import xyz.klinker.sms.shared.data.Settings
+import xyz.heart.sms.R
+import xyz.heart.sms.shared.data.Settings
 
 @TargetApi(Build.VERSION_CODES.N)
 class DrivingModeQuickSettingTile : TileService() {
@@ -43,7 +43,7 @@ class DrivingModeQuickSettingTile : TileService() {
 
     companion object {
         private const val LOG_TAG = "pulse_driving_mode"
-        private const val UPDATE_STATE_BROADCAST = "xyz.klinker.messenger.UPDATE_DRIVING_TILE"
+        private const val UPDATE_STATE_BROADCAST = "xyz.heart.messenger.UPDATE_DRIVING_TILE"
         fun updateState(context: Context) {
 //            context.sendBroadcast(Intent(UPDATE_STATE_BROADCAST))
         }

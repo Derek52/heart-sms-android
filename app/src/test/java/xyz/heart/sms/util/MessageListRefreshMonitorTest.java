@@ -3,7 +3,7 @@ package xyz.heart.sms.util;
 import org.junit.Test;
 
 import xyz.heart.sms.MessengerSuite;
-import xyz.klinker.sms.shared.util.MessageListRefreshMonitor;
+import xyz.heart.sms.shared.util.MessageListRefreshMonitor;
 
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.assertFalse;

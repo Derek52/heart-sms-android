@@ -28,14 +28,14 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.miguelcatalan.materialsearchview.MaterialSearchView
-import xyz.klinker.sms.R
-import xyz.klinker.sms.activity.MessengerActivity
-import xyz.klinker.sms.adapter.search.SearchAdapter
-import xyz.klinker.sms.shared.MessengerActivityExtras
-import xyz.klinker.sms.shared.data.DataSource
-import xyz.klinker.sms.shared.data.model.Conversation
-import xyz.klinker.sms.shared.data.model.Message
-import xyz.klinker.sms.shared.util.listener.SearchListener
+import xyz.heart.sms.R
+import xyz.heart.sms.activity.MessengerActivity
+import xyz.heart.sms.adapter.search.SearchAdapter
+import xyz.heart.sms.shared.MessengerActivityExtras
+import xyz.heart.sms.shared.data.DataSource
+import xyz.heart.sms.shared.data.model.Conversation
+import xyz.heart.sms.shared.data.model.Message
+import xyz.heart.sms.shared.util.listener.SearchListener
 
 /**
  * A fragment for searching through conversations and messages.

@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
     <!--
-  ~ Copyright (C) 2017 Luke Klinker
+  ~ Copyright (C) 2017 Luke heart
   ~
   ~ Licensed under the Apache License, Version 2.0 (the "License");
   ~ you may not use this file except in compliance with the License.
@@ -291,7 +291,7 @@ czas ją rozpocząć!</string>
     <string name="bubble_channel">Dymki powiadomień</string>
     <!-- About, Help and Feedback and Settings -->
     <string name="changelog">Lista zmian</string>
-    <string name="copyright">© 2016 Jake Klinker &amp; Luke Klinker</string>
+    <string name="copyright">© 2016 Jake heart &amp; Luke heart</string>
     <string name="copyright_summary">Wyświetl informacje o licencji open source</string>
     <string name="app_version">Wersja aplikacji</string>
     <string name="account_information">Informacje o koncie</string>

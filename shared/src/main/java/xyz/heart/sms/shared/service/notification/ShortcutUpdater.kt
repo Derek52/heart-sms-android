@@ -1,6 +1,6 @@
 package xyz.heart.sms.shared.service.notification
 
-import xyz.klinker.sms.shared.util.TimeUtils
+import xyz.heart.sms.shared.util.TimeUtils
 
 interface ShortcutUpdater {
 

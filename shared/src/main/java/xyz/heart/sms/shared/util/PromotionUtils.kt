@@ -4,8 +4,8 @@ import android.app.Activity
 import android.os.Handler
 import com.sensortower.rating.RatingPrompt
 import com.sensortower.rating.RatingPromptOptions
-import xyz.klinker.sms.api.implementation.Account
-import xyz.klinker.sms.shared.data.Settings
+import xyz.heart.sms.api.implementation.Account
+import xyz.heart.sms.shared.data.Settings
 
 class PromotionUtils(private val context: Activity) {
 

@@ -8,13 +8,13 @@ import androidx.core.app.NotificationManagerCompat
 import androidx.work.OneTimeWorkRequest
 import androidx.work.Worker
 import androidx.work.WorkerParameters
-import xyz.klinker.sms.shared.util.TimeUtils
-import xyz.klinker.sms.api.implementation.Account
+import xyz.heart.sms.shared.util.TimeUtils
+import xyz.heart.sms.api.implementation.Account
 import xyz.heart.sms.api.implementation.firebase.AnalyticsHelper
-import xyz.klinker.sms.shared.R
-import xyz.klinker.sms.shared.data.Settings
-import xyz.klinker.sms.shared.util.NotificationUtils
-import xyz.klinker.sms.shared.util.RedirectToMyAccount
+import xyz.heart.sms.shared.R
+import xyz.heart.sms.shared.data.Settings
+import xyz.heart.sms.shared.util.NotificationUtils
+import xyz.heart.sms.shared.util.RedirectToMyAccount
 import java.util.concurrent.TimeUnit
 
 class FreeTrialNotifierWork(private val context: Context, params: WorkerParameters) : Worker(context, params) {
@@ -22,7 +22,7 @@ class FreeTrialNotifierWork(private val context: Context, params: WorkerParamete
     override fun doWork(): Result {
         if (Account.exists() && Account.subscriptionType == Account.SubscriptionType.FREE_TRIAL) {
             val daysLeft = Account.getDaysLeftInTrial()
-            _root_ide_package_.xyz.heart.sms.api.implementation.firebase.AnalyticsHelper.accountTrialDay(context, daysLeft)
+            AnalyticsHelper.accountTrialDay(context, daysLeft)
             when (daysLeft) {
 //                7 -> notifyDaysLeft(7)
 //                6 -> notifyDaysLeft(6)

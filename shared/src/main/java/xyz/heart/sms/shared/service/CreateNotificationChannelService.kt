@@ -6,10 +6,10 @@ import android.content.Intent
 import android.preference.PreferenceManager
 import androidx.core.app.NotificationCompat
 
-import xyz.klinker.sms.shared.R
-import xyz.klinker.sms.shared.data.ColorSet
-import xyz.klinker.sms.shared.util.AndroidVersionUtil
-import xyz.klinker.sms.shared.util.NotificationUtils
+import xyz.heart.sms.shared.R
+import xyz.heart.sms.shared.data.ColorSet
+import xyz.heart.sms.shared.util.AndroidVersionUtil
+import xyz.heart.sms.shared.util.NotificationUtils
 
 class CreateNotificationChannelService : IntentService("CreateNotificationChannelService") {
 

@@ -22,13 +22,13 @@ import android.content.Intent
 import android.content.IntentFilter
 import android.util.Log
 
-import xyz.klinker.sms.shared.data.DataSource
-import xyz.klinker.sms.shared.data.SectionType
-import xyz.klinker.sms.shared.data.Settings
-import xyz.klinker.sms.shared.data.pojo.ConversationUpdateInfo
-import xyz.klinker.sms.shared.data.pojo.ReorderType
-import xyz.klinker.sms.shared.shared_interfaces.IConversationListFragment
-import xyz.klinker.sms.shared.util.TimeUtils
+import xyz.heart.sms.shared.data.DataSource
+import xyz.heart.sms.shared.data.SectionType
+import xyz.heart.sms.shared.data.Settings
+import xyz.heart.sms.shared.data.pojo.ConversationUpdateInfo
+import xyz.heart.sms.shared.data.pojo.ReorderType
+import xyz.heart.sms.shared.shared_interfaces.IConversationListFragment
+import xyz.heart.sms.shared.util.TimeUtils
 
 /**
  * Receiver that handles changing the conversation list when a new message is received. The logic
@@ -172,7 +172,7 @@ class ConversationListUpdatedReceiver(private val fragment: IConversationListFra
 
     companion object {
 
-        private const val ACTION_UPDATED = "xyz.klinker.messenger.CONVERSATION_UPDATED"
+        private const val ACTION_UPDATED = "xyz.heart.messenger.CONVERSATION_UPDATED"
         private const val EXTRA_CONVERSATION_ID = "conversation_id"
         private const val EXTRA_SNIPPET = "snippet"
         private const val EXTRA_TITLE = "title"

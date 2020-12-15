@@ -4,13 +4,13 @@ import android.app.Activity
 import android.content.Intent
 import android.os.Handler
 import androidx.fragment.app.Fragment
-import xyz.klinker.sms.R
-import xyz.klinker.sms.activity.MessengerActivity
-import xyz.klinker.sms.fragment.PrivateConversationListFragment
-import xyz.klinker.sms.fragment.message.attach.AttachmentListener
-import xyz.klinker.sms.activity.passcode.PasscodeVerificationActivity
-import xyz.klinker.sms.shared.data.Settings
-import xyz.klinker.sms.shared.util.TimeUtils
+import xyz.heart.sms.R
+import xyz.heart.sms.activity.MessengerActivity
+import xyz.heart.sms.fragment.PrivateConversationListFragment
+import xyz.heart.sms.fragment.message.attach.AttachmentListener
+import xyz.heart.sms.activity.passcode.PasscodeVerificationActivity
+import xyz.heart.sms.shared.data.Settings
+import xyz.heart.sms.shared.util.TimeUtils
 
 class MainResultHandler(private val activity: MessengerActivity) {
 

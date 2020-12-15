@@ -21,7 +21,7 @@ import org.junit.Ignore;
 import org.junit.Test;
 
 import xyz.heart.sms.MessengerRobolectricSuite;
-import xyz.klinker.sms.R;
+import xyz.heart.sms.R;
 
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;

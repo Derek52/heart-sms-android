@@ -17,7 +17,7 @@
 package xyz.heart.sms.shared.data
 
 import android.content.Context
-import xyz.klinker.sms.shared.R
+import xyz.heart.sms.shared.R
 import java.util.HashMap
 
 /**

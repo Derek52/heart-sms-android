@@ -6,11 +6,11 @@ import android.content.Intent
 import android.content.SharedPreferences
 import android.util.Log
 import xyz.heart.sms.api.entity.ContactBody
-import xyz.klinker.sms.api.implementation.Account
-import xyz.klinker.sms.api.implementation.ApiUtils
-import xyz.klinker.sms.shared.data.DataSource
-import xyz.klinker.sms.shared.util.ContactUtils
-import xyz.klinker.sms.shared.util.TimeUtils
+import xyz.heart.sms.api.implementation.Account
+import xyz.heart.sms.api.implementation.ApiUtils
+import xyz.heart.sms.shared.data.DataSource
+import xyz.heart.sms.shared.util.ContactUtils
+import xyz.heart.sms.shared.util.TimeUtils
 import java.lang.Exception
 
 class ContactResyncService : IntentService("ContactResyncService") {
@@ -62,16 +62,16 @@ class ContactResyncService : IntentService("ContactResyncService") {
             DataSource.insertContacts(this, contacts, null)
             Log.v(TAG, "inserted contacts and groups: ${TimeUtils.now - startTime} ms")
 
-            val contactBodies = mutableListOf<_root_ide_package_.xyz.heart.sms.api.entity.ContactBody>()
+            val contactBodies = mutableListOf<ContactBody>()
             contacts.forEach {
                 val c = it
 
                 try {
                     c.encrypt(encryptionUtils!!)
                     contactBodies.add(if (c.type != null) {
-                        _root_ide_package_.xyz.heart.sms.api.entity.ContactBody(c.id, c.phoneNumber, c.idMatcher, c.name, c.type!!, c.colors.color, c.colors.colorDark, c.colors.colorLight, c.colors.colorAccent)
+                        ContactBody(c.id, c.phoneNumber, c.idMatcher, c.name, c.type!!, c.colors.color, c.colors.colorDark, c.colors.colorLight, c.colors.colorAccent)
                     } else {
-                        _root_ide_package_.xyz.heart.sms.api.entity.ContactBody(c.id, c.phoneNumber, c.idMatcher, c.name, c.colors.color, c.colors.colorDark, c.colors.colorLight, c.colors.colorAccent)
+                        ContactBody(c.id, c.phoneNumber, c.idMatcher, c.name, c.colors.color, c.colors.colorDark, c.colors.colorLight, c.colors.colorAccent)
                     })
                 } catch (e: Exception) {
 

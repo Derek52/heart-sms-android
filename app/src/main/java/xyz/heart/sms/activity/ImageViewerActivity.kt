@@ -36,14 +36,14 @@ import androidx.viewpager.widget.ViewPager
 import com.google.android.material.appbar.AppBarLayout
 import com.google.android.material.snackbar.Snackbar
 import xyz.klinker.android.drag_dismiss.util.StatusBarHelper
-import xyz.klinker.sms.R
-import xyz.klinker.sms.adapter.ImageViewerAdapter
-import xyz.klinker.sms.shared.data.DataSource
-import xyz.klinker.sms.shared.data.model.Message
-import xyz.klinker.sms.shared.util.ActivityUtils
-import xyz.klinker.sms.shared.util.AndroidVersionUtil
-import xyz.klinker.sms.shared.util.ImageUtils
-import xyz.klinker.sms.shared.util.MediaSaver
+import xyz.heart.sms.R
+import xyz.heart.sms.adapter.ImageViewerAdapter
+import xyz.heart.sms.shared.data.DataSource
+import xyz.heart.sms.shared.data.model.Message
+import xyz.heart.sms.shared.util.ActivityUtils
+import xyz.heart.sms.shared.util.AndroidVersionUtil
+import xyz.heart.sms.shared.util.ImageUtils
+import xyz.heart.sms.shared.util.MediaSaver
 
 /**
  * Activity that allows you to scroll between images in a given conversation.

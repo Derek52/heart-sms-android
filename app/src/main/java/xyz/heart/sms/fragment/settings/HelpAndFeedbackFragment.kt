@@ -25,8 +25,8 @@ import android.provider.Settings.ACTION_IGNORE_BATTERY_OPTIMIZATION_SETTINGS
 import android.view.View
 import androidx.preference.PreferenceCategory
 
-import xyz.klinker.sms.R
-import xyz.klinker.sms.activity.MessengerActivity
+import xyz.heart.sms.R
+import xyz.heart.sms.activity.MessengerActivity
 
 /**
  * Fragment for allowing the user to get some help from the devs or submit feedback. This will
@@ -57,13 +57,13 @@ class HelpAndFeedbackFragment : MaterialPreferenceFragmentCompat() {
 
         findPreference(getString(R.string.pref_help_twitter))
                 .setOnPreferenceClickListener {
-                    openWeb("https://twitter.com/KlinkerApps")
+                    openWeb("https://twitter.com/klinkerapps")
                     true
                 }
 
         findPreference(getString(R.string.pref_help_issues))
                 .setOnPreferenceClickListener {
-                    openWeb("https://github.com/klinker-apps/messenger-issues")
+                    openWeb("https://github.com/heart-apps/messenger-issues")
                     true
                 }
 

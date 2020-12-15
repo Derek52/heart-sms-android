@@ -22,7 +22,7 @@ import org.junit.Test;
 import java.util.ArrayList;
 
 import xyz.heart.sms.MessengerRobolectricSuite;
-import xyz.klinker.sms.shared.data.model.Blacklist;
+import xyz.heart.sms.shared.data.model.Blacklist;
 
 import static org.junit.Assert.assertEquals;
 

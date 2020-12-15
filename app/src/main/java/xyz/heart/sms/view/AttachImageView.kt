@@ -26,11 +26,11 @@ import android.provider.MediaStore
 import android.provider.MediaStore.Images
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import xyz.klinker.sms.R
-import xyz.klinker.sms.adapter.AttachImageListAdapter
-import xyz.klinker.sms.shared.util.ColorUtils
-import xyz.klinker.sms.shared.util.CursorUtil
-import xyz.klinker.sms.shared.util.listener.ImageSelectedListener
+import xyz.heart.sms.R
+import xyz.heart.sms.adapter.AttachImageListAdapter
+import xyz.heart.sms.shared.util.ColorUtils
+import xyz.heart.sms.shared.util.CursorUtil
+import xyz.heart.sms.shared.util.listener.ImageSelectedListener
 
 /**
  * View that displays a list of images that are currently on your device and allows you to choose

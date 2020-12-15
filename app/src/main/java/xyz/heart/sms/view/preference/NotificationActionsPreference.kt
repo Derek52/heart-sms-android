@@ -7,11 +7,11 @@ import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.widget.ArrayAdapter
 import android.widget.Spinner
-import xyz.klinker.sms.R
-import xyz.klinker.sms.api.implementation.Account
-import xyz.klinker.sms.api.implementation.ApiUtils
-import xyz.klinker.sms.shared.data.Settings
-import xyz.klinker.sms.shared.data.pojo.NotificationAction
+import xyz.heart.sms.R
+import xyz.heart.sms.api.implementation.Account
+import xyz.heart.sms.api.implementation.ApiUtils
+import xyz.heart.sms.shared.data.Settings
+import xyz.heart.sms.shared.data.pojo.NotificationAction
 
 @Suppress("DEPRECATION")
 class NotificationActionsPreference : Preference, Preference.OnPreferenceClickListener {

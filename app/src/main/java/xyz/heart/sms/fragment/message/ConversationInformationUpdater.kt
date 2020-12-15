@@ -4,13 +4,13 @@ import android.os.Handler
 import androidx.appcompat.widget.Toolbar
 import android.view.View
 import androidx.fragment.app.FragmentActivity
-import xyz.klinker.sms.R
-import xyz.klinker.sms.api.implementation.Account
-import xyz.klinker.sms.fragment.conversation.ConversationListFragment
-import xyz.klinker.sms.shared.data.DataSource
-import xyz.klinker.sms.shared.data.pojo.ConversationUpdateInfo
-import xyz.klinker.sms.shared.util.ContactUtils
-import xyz.klinker.sms.shared.util.PhoneNumberUtils
+import xyz.heart.sms.R
+import xyz.heart.sms.api.implementation.Account
+import xyz.heart.sms.fragment.conversation.ConversationListFragment
+import xyz.heart.sms.shared.data.DataSource
+import xyz.heart.sms.shared.data.pojo.ConversationUpdateInfo
+import xyz.heart.sms.shared.util.ContactUtils
+import xyz.heart.sms.shared.util.PhoneNumberUtils
 
 class ConversationInformationUpdater(private val fragment: MessageListFragment) {
 

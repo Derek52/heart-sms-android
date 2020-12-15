@@ -4,7 +4,7 @@ import android.content.Context
 import android.util.AttributeSet
 import android.view.View
 import android.widget.FrameLayout
-import xyz.klinker.sms.shared.R
+import xyz.heart.sms.shared.R
 
 class MaxHeightScrollView : FrameLayout {
 

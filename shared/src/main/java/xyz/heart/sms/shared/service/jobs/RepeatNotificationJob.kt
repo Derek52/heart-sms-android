@@ -6,9 +6,9 @@ import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
 import android.os.Build
-import xyz.klinker.sms.api.implementation.Account
-import xyz.klinker.sms.shared.service.notification.Notifier
-import xyz.klinker.sms.shared.util.TimeUtils
+import xyz.heart.sms.api.implementation.Account
+import xyz.heart.sms.shared.service.notification.Notifier
+import xyz.heart.sms.shared.util.TimeUtils
 
 class RepeatNotificationJob : BroadcastReceiver() {
 

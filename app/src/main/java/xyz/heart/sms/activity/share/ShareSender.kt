@@ -1,18 +1,18 @@
 package xyz.heart.sms.activity.share
 
 import android.net.Uri
-import xyz.klinker.sms.R
-import xyz.klinker.sms.api.implementation.Account
-import xyz.klinker.sms.shared.data.DataSource
-import xyz.klinker.sms.shared.data.MimeType
-import xyz.klinker.sms.shared.data.model.Message
-import xyz.klinker.sms.shared.receiver.ConversationListUpdatedReceiver
-import xyz.klinker.sms.shared.receiver.MessageListUpdatedReceiver
-import xyz.klinker.sms.shared.util.DualSimUtils
-import xyz.klinker.sms.shared.util.PhoneNumberUtils
-import xyz.klinker.sms.shared.util.SendUtils
-import xyz.klinker.sms.shared.util.TimeUtils
-import xyz.klinker.sms.shared.widget.MessengerAppWidgetProvider
+import xyz.heart.sms.R
+import xyz.heart.sms.api.implementation.Account
+import xyz.heart.sms.shared.data.DataSource
+import xyz.heart.sms.shared.data.MimeType
+import xyz.heart.sms.shared.data.model.Message
+import xyz.heart.sms.shared.receiver.ConversationListUpdatedReceiver
+import xyz.heart.sms.shared.receiver.MessageListUpdatedReceiver
+import xyz.heart.sms.shared.util.DualSimUtils
+import xyz.heart.sms.shared.util.PhoneNumberUtils
+import xyz.heart.sms.shared.util.SendUtils
+import xyz.heart.sms.shared.util.TimeUtils
+import xyz.heart.sms.shared.widget.MessengerAppWidgetProvider
 
 class ShareSender(private val page: QuickSharePage) {
 

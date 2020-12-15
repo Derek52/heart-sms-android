@@ -16,8 +16,8 @@
 
 package xyz.heart.sms.shared.util.listener
 
-import xyz.klinker.sms.shared.data.model.Conversation
-import xyz.klinker.sms.shared.data.model.Message
+import xyz.heart.sms.shared.data.model.Conversation
+import xyz.heart.sms.shared.data.model.Message
 
 /**
  * Listener for getting callbacks when an item is searched for and clicked on.

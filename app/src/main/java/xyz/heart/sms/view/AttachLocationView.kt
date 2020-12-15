@@ -37,12 +37,12 @@ import com.google.android.gms.maps.model.CameraPosition
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
 import com.google.android.material.floatingactionbutton.FloatingActionButton
-import xyz.klinker.sms.R
-import xyz.klinker.sms.shared.data.MimeType
-import xyz.klinker.sms.shared.util.FileUtils
-import xyz.klinker.sms.shared.util.TimeUtils
-import xyz.klinker.sms.shared.util.listener.ImageSelectedListener
-import xyz.klinker.sms.shared.util.listener.TextSelectedListener
+import xyz.heart.sms.R
+import xyz.heart.sms.shared.data.MimeType
+import xyz.heart.sms.shared.util.FileUtils
+import xyz.heart.sms.shared.util.TimeUtils
+import xyz.heart.sms.shared.util.listener.ImageSelectedListener
+import xyz.heart.sms.shared.util.listener.TextSelectedListener
 import java.io.File
 
 /**

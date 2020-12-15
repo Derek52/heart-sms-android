@@ -6,12 +6,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.widget.EditText
 import android.widget.FrameLayout
-import xyz.klinker.giphy.GiphyView
-import xyz.klinker.sms.BuildConfig
-import xyz.klinker.sms.R
-import xyz.klinker.sms.shared.data.MimeType
-import xyz.klinker.sms.shared.data.MmsSettings
-import xyz.klinker.sms.shared.util.listener.ImageSelectedListener
+import xyz.heart.giphy.GiphyView
+import xyz.heart.sms.BuildConfig
+import xyz.heart.sms.R
+import xyz.heart.sms.shared.data.MimeType
+import xyz.heart.sms.shared.data.MmsSettings
+import xyz.heart.sms.shared.util.listener.ImageSelectedListener
 
 @SuppressLint("ViewConstructor")
 class GiphySearchView(context: Context, private val listener: ImageSelectedListener, useStickers: Boolean) : FrameLayout(context) {

@@ -1,6 +1,6 @@
 package xyz.heart.sms.shared.data
 
-import xyz.klinker.sms.shared.data.model.Conversation
+import xyz.heart.sms.shared.data.model.Conversation
 
 // Don't change the default again. Doing so will mess up contacts and coloring in group conversations.
 class IdMatcher(val fiveLetter: String, val sevenLetter: String, val sevenLetterNoFormatting: String,

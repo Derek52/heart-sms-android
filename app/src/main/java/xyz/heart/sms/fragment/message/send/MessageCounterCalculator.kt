@@ -3,10 +3,10 @@ package xyz.heart.sms.fragment.message.send
 import android.os.Build
 import android.view.View
 import android.widget.TextView
-import xyz.klinker.sms.R
-import xyz.klinker.sms.api.implementation.Account
-import xyz.klinker.sms.fragment.message.MessageListFragment
-import xyz.klinker.sms.shared.util.MessageCountHelper
+import xyz.heart.sms.R
+import xyz.heart.sms.api.implementation.Account
+import xyz.heart.sms.fragment.message.MessageListFragment
+import xyz.heart.sms.shared.util.MessageCountHelper
 
 class MessageCounterCalculator(private val fragment: MessageListFragment) {
 

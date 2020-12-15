@@ -10,10 +10,10 @@ import androidx.fragment.app.FragmentActivity
 import net.ypresto.androidtranscoder.MediaTranscoder
 import net.ypresto.androidtranscoder.format.AndroidStandardFormatStrategy
 import net.ypresto.androidtranscoder.format.MediaFormatStrategyPresets
-import xyz.klinker.sms.R
-import xyz.klinker.sms.fragment.message.MessageListFragment
-import xyz.klinker.sms.shared.data.MimeType
-import xyz.klinker.sms.shared.util.ImageUtils
+import xyz.heart.sms.R
+import xyz.heart.sms.fragment.message.MessageListFragment
+import xyz.heart.sms.shared.data.MimeType
+import xyz.heart.sms.shared.util.ImageUtils
 import java.io.File
 import java.io.FileNotFoundException
 import java.io.IOException

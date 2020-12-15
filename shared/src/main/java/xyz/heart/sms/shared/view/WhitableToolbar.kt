@@ -6,9 +6,9 @@ import android.graphics.Color
 import androidx.appcompat.widget.Toolbar
 import android.util.AttributeSet
 
-import xyz.klinker.sms.shared.R
-import xyz.klinker.sms.shared.util.ActivityUtils
-import xyz.klinker.sms.shared.util.ColorUtils
+import xyz.heart.sms.shared.R
+import xyz.heart.sms.shared.util.ActivityUtils
+import xyz.heart.sms.shared.util.ColorUtils
 
 @Suppress("NAME_SHADOWING")
 class WhitableToolbar : Toolbar {

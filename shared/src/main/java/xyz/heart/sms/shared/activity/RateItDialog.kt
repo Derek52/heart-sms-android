@@ -7,26 +7,27 @@ import android.os.Bundle
 import android.view.View
 import android.widget.TextView
 import android.widget.Toast
+import xyz.heart.sms.api.implementation.firebase.AnalyticsHelper
+import xyz.heart.sms.shared.R
+import xyz.heart.sms.shared.data.Settings
+import xyz.heart.sms.shared.util.DensityUtil
+import xyz.heart.sms.shared.util.isDarkColor
+//TODO these are in a jar, I'm not sure how to change these
 import xyz.klinker.android.floating_tutorial.FloatingTutorialActivity
 import xyz.klinker.android.floating_tutorial.TutorialFinishedListener
 import xyz.klinker.android.floating_tutorial.TutorialPage
-import xyz.heart.sms.api.implementation.firebase.AnalyticsHelper
-import xyz.klinker.sms.shared.R
-import xyz.klinker.sms.shared.data.Settings
-import xyz.klinker.sms.shared.util.DensityUtil
-import xyz.klinker.sms.shared.util.isDarkColor
 
 class RateItDialog : FloatingTutorialActivity(), TutorialFinishedListener {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        _root_ide_package_.xyz.heart.sms.api.implementation.firebase.AnalyticsHelper.rateItPromptShown(this)
+        AnalyticsHelper.rateItPromptShown(this)
     }
 
     override fun onTutorialFinished() {
         try {
             startActivity(Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=$packageName")))
-            _root_ide_package_.xyz.heart.sms.api.implementation.firebase.AnalyticsHelper.rateItClicked(this)
+            AnalyticsHelper.rateItClicked(this)
         } catch (e: ActivityNotFoundException) {
             Toast.makeText(this, "Couldn't launch the Play Store!", Toast.LENGTH_SHORT).show()
         }

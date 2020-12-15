@@ -5,8 +5,8 @@ import org.junit.Before;
 import org.junit.Test;
 
 import xyz.heart.sms.MessengerRobolectricSuite;
-import xyz.klinker.sms.shared.data.MimeType;
-import xyz.klinker.sms.shared.data.model.Message;
+import xyz.heart.sms.shared.data.MimeType;
+import xyz.heart.sms.shared.data.model.Message;
 
 import static org.junit.Assert.*;
 
@@ -36,7 +36,7 @@ public class YoutubeParserTest extends MessengerRobolectricSuite {
     public void shouldNotParseNonVideoUrl() {
         assertThat(parser.canParse(makeMessage("https://www.youtube.com/channel/UCycZgQlj27nwMyGSihghSig/videos")), CoreMatchers.is(false));
         assertThat(parser.canParse(makeMessage("https://www.youtube.com/channel/UCycZgQlj27nwMyGSihghSig/playlist")), CoreMatchers.is(false));
-        assertThat(parser.canParse(makeMessage("https://www.youtube.com/user/klinker24")), CoreMatchers.is(false));
+        assertThat(parser.canParse(makeMessage("https://www.youtube.com/user/heart24")), CoreMatchers.is(false));
     }
 
     @Test

@@ -5,8 +5,8 @@ import org.junit.Before;
 import org.junit.Test;
 
 import xyz.heart.sms.MessengerRobolectricSuite;
-import xyz.klinker.sms.shared.data.MimeType;
-import xyz.klinker.sms.shared.data.model.Message;
+import xyz.heart.sms.shared.data.MimeType;
+import xyz.heart.sms.shared.data.model.Message;
 
 import static org.junit.Assert.*;
 

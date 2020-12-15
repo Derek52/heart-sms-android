@@ -8,13 +8,13 @@ import android.net.Uri
 import android.os.Build
 import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
-import xyz.klinker.sms.shared.R
-import xyz.klinker.sms.shared.data.ColorSet
-import xyz.klinker.sms.shared.data.Settings
-import xyz.klinker.sms.shared.util.ActivityUtils
-import xyz.klinker.sms.shared.util.ContactUtils
-import xyz.klinker.sms.shared.util.NotificationUtils
-import xyz.klinker.sms.shared.util.WearableCheck
+import xyz.heart.sms.shared.R
+import xyz.heart.sms.shared.data.ColorSet
+import xyz.heart.sms.shared.data.Settings
+import xyz.heart.sms.shared.util.ActivityUtils
+import xyz.heart.sms.shared.util.ContactUtils
+import xyz.heart.sms.shared.util.NotificationUtils
+import xyz.heart.sms.shared.util.WearableCheck
 
 class QuickComposeNotificationService : IntentService("QuickComposeNotificationService") {
 

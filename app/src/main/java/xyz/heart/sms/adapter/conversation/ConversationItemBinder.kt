@@ -6,11 +6,11 @@ import android.graphics.drawable.ColorDrawable
 import android.net.Uri
 import android.view.View
 import com.bumptech.glide.Glide
-import xyz.klinker.sms.R
-import xyz.klinker.sms.adapter.view_holder.ConversationViewHolder
-import xyz.klinker.sms.shared.data.Settings
-import xyz.klinker.sms.shared.data.model.Conversation
-import xyz.klinker.sms.shared.util.TimeUtils
+import xyz.heart.sms.R
+import xyz.heart.sms.adapter.view_holder.ConversationViewHolder
+import xyz.heart.sms.shared.data.Settings
+import xyz.heart.sms.shared.data.model.Conversation
+import xyz.heart.sms.shared.util.TimeUtils
 
 @Suppress("DEPRECATION")
 class ConversationItemBinder(private val activity: Activity) {

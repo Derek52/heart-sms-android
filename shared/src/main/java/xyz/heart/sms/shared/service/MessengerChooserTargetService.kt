@@ -25,11 +25,11 @@ import android.os.Build
 import android.os.Bundle
 import android.service.chooser.ChooserTarget
 import android.service.chooser.ChooserTargetService
-import xyz.klinker.sms.shared.data.DataSource
-import xyz.klinker.sms.shared.data.model.Conversation
-import xyz.klinker.sms.shared.util.ContactImageCreator
-import xyz.klinker.sms.shared.util.ImageUtils
-import xyz.klinker.sms.shared.util.closeSilent
+import xyz.heart.sms.shared.data.DataSource
+import xyz.heart.sms.shared.data.model.Conversation
+import xyz.heart.sms.shared.util.ContactImageCreator
+import xyz.heart.sms.shared.util.ImageUtils
+import xyz.heart.sms.shared.util.closeSilent
 import java.util.*
 
 @TargetApi(Build.VERSION_CODES.M)

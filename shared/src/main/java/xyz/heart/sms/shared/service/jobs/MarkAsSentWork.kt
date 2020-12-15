@@ -2,8 +2,8 @@ package xyz.heart.sms.shared.service.jobs
 
 import android.content.Context
 import androidx.work.*
-import xyz.klinker.sms.api.implementation.Account
-import xyz.klinker.sms.shared.receiver.SmsSentReceiver
+import xyz.heart.sms.api.implementation.Account
+import xyz.heart.sms.shared.receiver.SmsSentReceiver
 import java.util.concurrent.TimeUnit
 
 /**

@@ -16,7 +16,7 @@
 
 package xyz.heart.sms.shared.util.listener
 
-import xyz.klinker.sms.shared.data.model.Template
+import xyz.heart.sms.shared.data.model.Template
 
 /**
  * Listener for when a template is clicked.

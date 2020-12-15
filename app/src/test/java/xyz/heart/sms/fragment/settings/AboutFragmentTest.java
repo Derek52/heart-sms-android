@@ -24,7 +24,7 @@ import org.junit.Test;
 import org.mockito.Mock;
 
 import xyz.heart.sms.MessengerRobolectricSuite;
-import xyz.klinker.sms.R;
+import xyz.heart.sms.R;
 
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertNull;

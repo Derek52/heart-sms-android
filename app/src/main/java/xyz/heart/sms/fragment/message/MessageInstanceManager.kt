@@ -2,9 +2,9 @@ package xyz.heart.sms.fragment.message
 
 import android.app.Notification
 import android.os.Bundle
-import xyz.klinker.sms.shared.MessengerActivityExtras
-import xyz.klinker.sms.shared.data.model.Conversation
-import xyz.klinker.sms.shared.util.AndroidVersionUtil
+import xyz.heart.sms.shared.MessengerActivityExtras
+import xyz.heart.sms.shared.data.model.Conversation
+import xyz.heart.sms.shared.util.AndroidVersionUtil
 
 class MessageInstanceManager(private val fragment: MessageListFragment) {
 

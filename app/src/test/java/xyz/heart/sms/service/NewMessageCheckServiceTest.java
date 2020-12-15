@@ -3,8 +3,8 @@ package xyz.heart.sms.service;
 import org.junit.Test;
 
 import xyz.heart.sms.MessengerSuite;
-import xyz.klinker.sms.shared.data.model.Message;
-import xyz.klinker.sms.shared.service.NewMessagesCheckService;
+import xyz.heart.sms.shared.data.model.Message;
+import xyz.heart.sms.shared.service.NewMessagesCheckService;
 
 import static org.junit.Assert.*;
 

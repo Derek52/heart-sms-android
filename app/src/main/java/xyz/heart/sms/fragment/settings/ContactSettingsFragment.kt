@@ -26,17 +26,17 @@ import android.text.InputType
 import android.util.Log
 import android.widget.Toast
 import androidx.annotation.RequiresApi
-import xyz.klinker.sms.R
-import xyz.klinker.sms.activity.compose.ComposeActivity
-import xyz.klinker.sms.activity.compose.ComposeConstants
-import xyz.klinker.sms.shared.activity.AbstractSettingsActivity
-import xyz.klinker.sms.shared.data.ColorSet
-import xyz.klinker.sms.shared.data.DataSource
-import xyz.klinker.sms.shared.data.Settings
-import xyz.klinker.sms.shared.data.model.Conversation
-import xyz.klinker.sms.shared.util.*
-import xyz.klinker.sms.shared.util.listener.ColorSelectedListener
-import xyz.klinker.sms.view.ColorPreference
+import xyz.heart.sms.R
+import xyz.heart.sms.activity.compose.ComposeActivity
+import xyz.heart.sms.activity.compose.ComposeConstants
+import xyz.heart.sms.shared.activity.AbstractSettingsActivity
+import xyz.heart.sms.shared.data.ColorSet
+import xyz.heart.sms.shared.data.DataSource
+import xyz.heart.sms.shared.data.Settings
+import xyz.heart.sms.shared.data.model.Conversation
+import xyz.heart.sms.shared.util.*
+import xyz.heart.sms.shared.util.listener.ColorSelectedListener
+import xyz.heart.sms.view.ColorPreference
 
 /**
  * Fragment for modifying contact preferences. This includes pinning, changing colors, changing

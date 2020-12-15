@@ -76,12 +76,12 @@ import java.util.concurrent.Semaphore;
 import java.util.concurrent.TimeUnit;
 
 import xyz.heart.sms.fragment.message.attach.AttachmentListener;
-import xyz.klinker.sms.R;
-import xyz.klinker.sms.fragment.message.attach.AttachmentListener;
-import xyz.klinker.sms.shared.data.MimeType;
-import xyz.klinker.sms.shared.util.ImageUtils;
-import xyz.klinker.sms.shared.util.listener.ImageSelectedListener;
-import xyz.klinker.sms.view.AutoFitTextureView;
+import xyz.heart.sms.R;
+import xyz.heart.sms.fragment.message.attach.AttachmentListener;
+import xyz.heart.sms.shared.data.MimeType;
+import xyz.heart.sms.shared.util.ImageUtils;
+import xyz.heart.sms.shared.util.listener.ImageSelectedListener;
+import xyz.heart.sms.view.AutoFitTextureView;
 
 public class Camera2BasicFragment extends Fragment
         implements View.OnClickListener, FragmentCompat.OnRequestPermissionsResultCallback {

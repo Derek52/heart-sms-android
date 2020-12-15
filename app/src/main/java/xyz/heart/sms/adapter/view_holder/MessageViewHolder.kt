@@ -36,16 +36,16 @@ import androidx.fragment.app.FragmentActivity
 import com.bignerdranch.android.multiselector.MultiSelector
 import com.bignerdranch.android.multiselector.SwappingHolder
 import xyz.klinker.android.article.ArticleIntent
-import xyz.klinker.sms.R
-import xyz.klinker.sms.activity.ImageViewerActivity
-import xyz.klinker.sms.fragment.message.MessageListFragment
-import xyz.klinker.sms.shared.data.*
-import xyz.klinker.sms.shared.data.model.Message
-import xyz.klinker.sms.shared.receiver.MessageListUpdatedReceiver
-import xyz.klinker.sms.shared.util.*
-import xyz.klinker.sms.shared.util.listener.ForcedRippleTouchListener
-import xyz.klinker.sms.shared.util.listener.MessageDeletedListener
-import xyz.klinker.sms.shared.util.media.parsers.ArticleParser
+import xyz.heart.sms.R
+import xyz.heart.sms.activity.ImageViewerActivity
+import xyz.heart.sms.fragment.message.MessageListFragment
+import xyz.heart.sms.shared.data.*
+import xyz.heart.sms.shared.data.model.Message
+import xyz.heart.sms.shared.receiver.MessageListUpdatedReceiver
+import xyz.heart.sms.shared.util.*
+import xyz.heart.sms.shared.util.listener.ForcedRippleTouchListener
+import xyz.heart.sms.shared.util.listener.MessageDeletedListener
+import xyz.heart.sms.shared.util.media.parsers.ArticleParser
 
 @Suppress("DEPRECATION")
 /**

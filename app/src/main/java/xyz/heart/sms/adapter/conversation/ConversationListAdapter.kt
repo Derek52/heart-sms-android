@@ -21,20 +21,20 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import com.afollestad.sectionedrecyclerview.SectionedRecyclerViewAdapter
 import com.bumptech.glide.Glide
-import xyz.klinker.sms.R
-import xyz.klinker.sms.activity.MessengerActivity
-import xyz.klinker.sms.adapter.view_holder.ConversationViewHolder
-import xyz.klinker.sms.api.implementation.Account
-import xyz.klinker.sms.shared.data.SectionType
-import xyz.klinker.sms.shared.data.Settings
-import xyz.klinker.sms.shared.data.model.Conversation
-import xyz.klinker.sms.shared.data.pojo.ReorderType
-import xyz.klinker.sms.shared.shared_interfaces.IConversationListAdapter
-import xyz.klinker.sms.shared.util.ContactUtils
-import xyz.klinker.sms.shared.util.TimeUtils
-import xyz.klinker.sms.utils.listener.ConversationExpandedListener
-import xyz.klinker.sms.utils.multi_select.ConversationsMultiSelectDelegate
-import xyz.klinker.sms.utils.swipe_to_dismiss.SwipeToDeleteListener
+import xyz.heart.sms.R
+import xyz.heart.sms.activity.MessengerActivity
+import xyz.heart.sms.adapter.view_holder.ConversationViewHolder
+import xyz.heart.sms.api.implementation.Account
+import xyz.heart.sms.shared.data.SectionType
+import xyz.heart.sms.shared.data.Settings
+import xyz.heart.sms.shared.data.model.Conversation
+import xyz.heart.sms.shared.data.pojo.ReorderType
+import xyz.heart.sms.shared.shared_interfaces.IConversationListAdapter
+import xyz.heart.sms.shared.util.ContactUtils
+import xyz.heart.sms.shared.util.TimeUtils
+import xyz.heart.sms.utils.listener.ConversationExpandedListener
+import xyz.heart.sms.utils.multi_select.ConversationsMultiSelectDelegate
+import xyz.heart.sms.utils.swipe_to_dismiss.SwipeToDeleteListener
 import java.util.*
 
 /**

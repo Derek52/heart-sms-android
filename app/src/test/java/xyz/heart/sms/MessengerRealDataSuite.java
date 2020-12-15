@@ -23,8 +23,8 @@ import org.junit.Before;
 import org.robolectric.RuntimeEnvironment;
 
 import xyz.heart.sms.shared.util.FixtureLoader;
-import xyz.klinker.sms.shared.data.DataSource;
-import xyz.klinker.sms.shared.data.DatabaseSQLiteHelper;
+import xyz.heart.sms.shared.data.DataSource;
+import xyz.heart.sms.shared.data.DatabaseSQLiteHelper;
 import xyz.heart.sms.shared.util.FixtureLoader;
 
 import static org.mockito.Mockito.spy;

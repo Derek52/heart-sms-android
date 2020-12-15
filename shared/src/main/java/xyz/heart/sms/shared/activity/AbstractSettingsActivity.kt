@@ -5,7 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import android.view.View
 
-import xyz.klinker.sms.shared.R
+import xyz.heart.sms.shared.R
 
 open class AbstractSettingsActivity : AppCompatActivity() {
 

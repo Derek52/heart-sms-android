@@ -7,10 +7,10 @@ import android.os.Build
 import android.telephony.SubscriptionInfo
 import android.view.View
 
-import xyz.klinker.sms.shared.R
-import xyz.klinker.sms.shared.data.DataSource
-import xyz.klinker.sms.shared.data.model.Conversation
-import xyz.klinker.sms.shared.view.ViewBadger
+import xyz.heart.sms.shared.R
+import xyz.heart.sms.shared.data.DataSource
+import xyz.heart.sms.shared.data.model.Conversation
+import xyz.heart.sms.shared.view.ViewBadger
 
 @TargetApi(Build.VERSION_CODES.LOLLIPOP_MR1)
 class DualSimApplication(private val switchSim: View) {

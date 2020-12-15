@@ -3,13 +3,13 @@ package xyz.heart.sms.activity.main
 import android.content.Intent
 import android.os.Bundle
 import androidx.core.app.NotificationManagerCompat
-import xyz.klinker.sms.R
-import xyz.klinker.sms.activity.MessengerActivity
-import xyz.klinker.sms.api.implementation.Account
-import xyz.klinker.sms.api.implementation.ApiUtils
-import xyz.klinker.sms.fragment.conversation.ConversationListFragment
-import xyz.klinker.sms.shared.MessengerActivityExtras
-import xyz.klinker.sms.shared.service.jobs.SubscriptionExpirationCheckJob
+import xyz.heart.sms.R
+import xyz.heart.sms.activity.MessengerActivity
+import xyz.heart.sms.api.implementation.Account
+import xyz.heart.sms.api.implementation.ApiUtils
+import xyz.heart.sms.fragment.conversation.ConversationListFragment
+import xyz.heart.sms.shared.MessengerActivityExtras
+import xyz.heart.sms.shared.service.jobs.SubscriptionExpirationCheckJob
 
 class MainIntentHandler(private val activity: MessengerActivity) {
 

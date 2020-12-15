@@ -13,21 +13,21 @@ import android.view.View
 import android.view.ViewAnimationUtils
 import android.widget.TextView
 
-import xyz.klinker.sms.R
+import xyz.heart.sms.R
 import xyz.heart.sms.api.implementation.firebase.AnalyticsHelper
-import xyz.klinker.sms.fragment.settings.MyAccountFragment
-import xyz.klinker.sms.shared.data.ColorSet
-import xyz.klinker.sms.shared.data.Settings
-import xyz.klinker.sms.shared.util.DensityUtil
-import xyz.klinker.sms.shared.util.billing.ProductAvailable
-import xyz.klinker.sms.shared.util.billing.ProductType
+import xyz.heart.sms.fragment.settings.MyAccountFragment
+import xyz.heart.sms.shared.data.ColorSet
+import xyz.heart.sms.shared.data.Settings
+import xyz.heart.sms.shared.util.DensityUtil
+import xyz.heart.sms.shared.util.billing.ProductAvailable
+import xyz.heart.sms.shared.util.billing.ProductType
 
 class AccountPickSubscriptionActivity : AppCompatActivity() {
 
     public override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        _root_ide_package_.xyz.heart.sms.api.implementation.firebase.AnalyticsHelper.accountTutorialStarted(this)
+        implementation.firebase.AnalyticsHelper.accountTutorialStarted(this)
 
         setResult(Activity.RESULT_CANCELED)
         setContentView(R.layout.activity_account_pick_subscription)
@@ -43,7 +43,7 @@ class AccountPickSubscriptionActivity : AppCompatActivity() {
     }
 
     private fun setUpPurchaseLayout() {
-        _root_ide_package_.xyz.heart.sms.api.implementation.firebase.AnalyticsHelper.accountTutorialFinished(this)
+        implementation.firebase.AnalyticsHelper.accountTutorialFinished(this)
 
         // set up purchasing views here
         val monthly = findViewById<View>(R.id.monthly)
@@ -92,12 +92,12 @@ class AccountPickSubscriptionActivity : AppCompatActivity() {
 //            Toast.makeText(this, R.string.subscription_toast, Toast.LENGTH_LONG).show()
         }
 
-        _root_ide_package_.xyz.heart.sms.api.implementation.firebase.AnalyticsHelper.accountSelectedPurchase(this)
+        implementation.firebase.AnalyticsHelper.accountSelectedPurchase(this)
         finish()
     }
 
     private fun finishWithTrialCancellation() {
-        _root_ide_package_.xyz.heart.sms.api.implementation.firebase.AnalyticsHelper.accountFreeTrialUpgradeDialogCancelClicked(this)
+        implementation.firebase.AnalyticsHelper.accountFreeTrialUpgradeDialogCancelClicked(this)
 
         setResult(RESULT_CANCEL_TRIAL)
         finish()
@@ -105,7 +105,7 @@ class AccountPickSubscriptionActivity : AppCompatActivity() {
 
     private fun startSignIn() {
         setResult(MyAccountFragment.RESULT_SIGN_IN)
-        _root_ide_package_.xyz.heart.sms.api.implementation.firebase.AnalyticsHelper.accountSignInInsteadOfPurchase(this)
+        implementation.firebase.AnalyticsHelper.accountSignInInsteadOfPurchase(this)
 
         finish()
     }

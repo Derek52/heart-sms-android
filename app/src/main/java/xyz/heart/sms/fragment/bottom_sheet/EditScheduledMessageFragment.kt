@@ -15,12 +15,12 @@ import java.util.Calendar
 import java.util.GregorianCalendar
 import java.util.IllegalFormatConversionException
 
-import xyz.klinker.sms.R
-import xyz.klinker.sms.shared.data.DataSource
-import xyz.klinker.sms.shared.data.model.ScheduledMessage
-import xyz.klinker.sms.fragment.ScheduledMessagesFragment
-import xyz.klinker.sms.shared.service.jobs.ScheduledMessageJob
-import xyz.klinker.sms.shared.util.TimeUtils
+import xyz.heart.sms.R
+import xyz.heart.sms.shared.data.DataSource
+import xyz.heart.sms.shared.data.model.ScheduledMessage
+import xyz.heart.sms.fragment.ScheduledMessagesFragment
+import xyz.heart.sms.shared.service.jobs.ScheduledMessageJob
+import xyz.heart.sms.shared.util.TimeUtils
 
 @Suppress("DEPRECATION")
 class EditScheduledMessageFragment : TabletOptimizedBottomSheetDialogFragment() {

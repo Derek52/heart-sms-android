@@ -18,9 +18,9 @@ package xyz.heart.sms.utils.swipe_to_dismiss
 
 import androidx.recyclerview.widget.ItemTouchHelper
 
-import xyz.klinker.sms.adapter.conversation.ConversationListAdapter
-import xyz.klinker.sms.utils.swipe_to_dismiss.setup.SwipeSetupBase
-import xyz.klinker.sms.utils.swipe_to_dismiss.setup.SwipeSetupCustom
+import xyz.heart.sms.adapter.conversation.ConversationListAdapter
+import xyz.heart.sms.utils.swipe_to_dismiss.setup.SwipeSetupBase
+import xyz.heart.sms.utils.swipe_to_dismiss.setup.SwipeSetupCustom
 
 /**
  * A touch helper that uses the SwipeSetupBase as an impementation.

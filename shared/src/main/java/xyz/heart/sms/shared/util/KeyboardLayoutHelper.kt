@@ -3,8 +3,8 @@ package xyz.heart.sms.shared.util
 import android.text.InputType
 import android.widget.EditText
 
-import xyz.klinker.sms.shared.data.Settings
-import xyz.klinker.sms.shared.data.pojo.KeyboardLayout
+import xyz.heart.sms.shared.data.Settings
+import xyz.heart.sms.shared.data.pojo.KeyboardLayout
 
 object KeyboardLayoutHelper {
 

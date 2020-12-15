@@ -7,14 +7,14 @@ import android.os.Build
 import android.provider.Telephony
 import android.telephony.SmsMessage
 import xyz.heart.sms.api.implementation.firebase.AnalyticsHelper
-import xyz.klinker.sms.shared.data.DataSource
-import xyz.klinker.sms.shared.data.MimeType
-import xyz.klinker.sms.shared.data.model.Message
-import xyz.klinker.sms.shared.receiver.ConversationListUpdatedReceiver
-import xyz.klinker.sms.shared.receiver.MessageListUpdatedReceiver
-import xyz.klinker.sms.shared.receiver.SmsReceivedReceiver
-import xyz.klinker.sms.shared.service.notification.NotificationConstants
-import xyz.klinker.sms.shared.service.notification.Notifier
+import xyz.heart.sms.shared.data.DataSource
+import xyz.heart.sms.shared.data.MimeType
+import xyz.heart.sms.shared.data.model.Message
+import xyz.heart.sms.shared.receiver.ConversationListUpdatedReceiver
+import xyz.heart.sms.shared.receiver.MessageListUpdatedReceiver
+import xyz.heart.sms.shared.receiver.SmsReceivedReceiver
+import xyz.heart.sms.shared.service.notification.NotificationConstants
+import xyz.heart.sms.shared.service.notification.Notifier
 
 class SmsReceivedHandler(private val context: Context) {
 
@@ -168,7 +168,7 @@ class SmsReceivedHandler(private val context: Context) {
 
             return conversationIdNotNull
         } else {
-            _root_ide_package_.xyz.heart.sms.api.implementation.firebase.AnalyticsHelper.receivedDuplicateSms(context)
+            AnalyticsHelper.receivedDuplicateSms(context)
             return -2
         }
     }

@@ -26,15 +26,15 @@ import androidx.core.app.NotificationManagerCompat
 import android.telephony.SmsManager
 import com.klinker.android.send_message.SentReceiver
 import com.klinker.android.send_message.StripAccents
-import xyz.klinker.sms.api.implementation.Account
-import xyz.klinker.sms.shared.MessengerActivityExtras
-import xyz.klinker.sms.shared.R
-import xyz.klinker.sms.shared.data.ColorSet
-import xyz.klinker.sms.shared.data.DataSource
-import xyz.klinker.sms.shared.data.Settings
-import xyz.klinker.sms.shared.data.model.Message
-import xyz.klinker.sms.shared.service.ResendFailedMessage
-import xyz.klinker.sms.shared.util.*
+import xyz.heart.sms.api.implementation.Account
+import xyz.heart.sms.shared.MessengerActivityExtras
+import xyz.heart.sms.shared.R
+import xyz.heart.sms.shared.data.ColorSet
+import xyz.heart.sms.shared.data.DataSource
+import xyz.heart.sms.shared.data.Settings
+import xyz.heart.sms.shared.data.model.Message
+import xyz.heart.sms.shared.service.ResendFailedMessage
+import xyz.heart.sms.shared.util.*
 import java.util.*
 
 /**

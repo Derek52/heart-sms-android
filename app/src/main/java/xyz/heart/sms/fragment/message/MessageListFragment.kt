@@ -28,24 +28,24 @@ import androidx.fragment.app.FragmentActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.sgottard.sofa.ContentFragment
 
-import xyz.klinker.sms.R
-import xyz.klinker.sms.activity.MessengerTvActivity
-import xyz.klinker.sms.fragment.message.attach.AttachmentInitializer
-import xyz.klinker.sms.fragment.message.attach.AttachmentListener
-import xyz.klinker.sms.fragment.message.attach.AttachmentManager
-import xyz.klinker.sms.fragment.message.send.MessageCounterCalculator
-import xyz.klinker.sms.fragment.message.load.MessageListLoader
-import xyz.klinker.sms.fragment.message.send.PermissionHelper
-import xyz.klinker.sms.fragment.message.send.SendMessageManager
-import xyz.klinker.sms.fragment.message.load.ViewInitializerDeferred
-import xyz.klinker.sms.fragment.message.load.ViewInitializerNonDeferred
-import xyz.klinker.sms.shared.data.DataSource
-import xyz.klinker.sms.shared.receiver.MessageListUpdatedReceiver
-import xyz.klinker.sms.shared.service.notification.NotificationConstants
-import xyz.klinker.sms.shared.shared_interfaces.IMessageListFragment
-import xyz.klinker.sms.shared.util.AnimationUtils
-import xyz.klinker.sms.shared.util.CursorUtil
-import xyz.klinker.sms.utils.multi_select.MessageMultiSelectDelegate
+import xyz.heart.sms.R
+import xyz.heart.sms.activity.MessengerTvActivity
+import xyz.heart.sms.fragment.message.attach.AttachmentInitializer
+import xyz.heart.sms.fragment.message.attach.AttachmentListener
+import xyz.heart.sms.fragment.message.attach.AttachmentManager
+import xyz.heart.sms.fragment.message.send.MessageCounterCalculator
+import xyz.heart.sms.fragment.message.load.MessageListLoader
+import xyz.heart.sms.fragment.message.send.PermissionHelper
+import xyz.heart.sms.fragment.message.send.SendMessageManager
+import xyz.heart.sms.fragment.message.load.ViewInitializerDeferred
+import xyz.heart.sms.fragment.message.load.ViewInitializerNonDeferred
+import xyz.heart.sms.shared.data.DataSource
+import xyz.heart.sms.shared.receiver.MessageListUpdatedReceiver
+import xyz.heart.sms.shared.service.notification.NotificationConstants
+import xyz.heart.sms.shared.shared_interfaces.IMessageListFragment
+import xyz.heart.sms.shared.util.AnimationUtils
+import xyz.heart.sms.shared.util.CursorUtil
+import xyz.heart.sms.utils.multi_select.MessageMultiSelectDelegate
 
 /**
  * Fragment for displaying messages for a certain conversation.

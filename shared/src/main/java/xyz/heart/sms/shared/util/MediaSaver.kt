@@ -16,11 +16,11 @@ import android.util.Log
 import android.widget.Toast
 import androidx.annotation.StringRes
 import androidx.core.content.ContextCompat
-import xyz.klinker.sms.shared.R
-import xyz.klinker.sms.shared.data.DataSource
-import xyz.klinker.sms.shared.data.MimeType
-import xyz.klinker.sms.shared.data.MmsSettings
-import xyz.klinker.sms.shared.data.model.Message
+import xyz.heart.sms.shared.R
+import xyz.heart.sms.shared.data.DataSource
+import xyz.heart.sms.shared.data.MimeType
+import xyz.heart.sms.shared.data.MmsSettings
+import xyz.heart.sms.shared.data.model.Message
 import java.io.File
 import java.io.FileOutputStream
 import java.io.IOException

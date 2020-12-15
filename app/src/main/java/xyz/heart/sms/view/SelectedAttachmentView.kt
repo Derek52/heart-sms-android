@@ -15,10 +15,10 @@ import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.bumptech.glide.request.RequestOptions
 import com.yalantis.ucrop.UCrop
 import de.hdodenhof.circleimageview.CircleImageView
-import xyz.klinker.sms.fragment.message.attach.AttachmentManager
-import xyz.klinker.sms.shared.R
-import xyz.klinker.sms.shared.data.MimeType
-import xyz.klinker.sms.shared.data.Settings
+import xyz.heart.sms.fragment.message.attach.AttachmentManager
+import xyz.heart.sms.shared.R
+import xyz.heart.sms.shared.data.MimeType
+import xyz.heart.sms.shared.data.Settings
 import java.io.File
 
 class SelectedAttachmentView(private val context: Context) {
@@ -92,7 +92,7 @@ class SelectedAttachmentView(private val context: Context) {
                 Glide.with(context).load(mediaUri)
                         .apply(RequestOptions()
                                 .diskCacheStrategy(DiskCacheStrategy.DATA)
-                                .placeholder(xyz.klinker.sms.R.drawable.ic_image_sending))
+                                .placeholder(xyz.heart.sms.R.drawable.ic_image_sending))
                         .into(attachedImage)
             }
         }

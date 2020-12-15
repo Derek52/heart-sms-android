@@ -27,13 +27,13 @@ import androidx.recyclerview.widget.RecyclerView
 
 import com.bumptech.glide.Glide
 
-import xyz.klinker.sms.R
-import xyz.klinker.sms.adapter.view_holder.ConversationViewHolder
-import xyz.klinker.sms.shared.data.Settings
-import xyz.klinker.sms.shared.data.model.Conversation
-import xyz.klinker.sms.shared.util.ContactUtils
-import xyz.klinker.sms.shared.util.PhoneNumberUtils
-import xyz.klinker.sms.shared.util.listener.ContactClickedListener
+import xyz.heart.sms.R
+import xyz.heart.sms.adapter.view_holder.ConversationViewHolder
+import xyz.heart.sms.shared.data.Settings
+import xyz.heart.sms.shared.data.model.Conversation
+import xyz.heart.sms.shared.util.ContactUtils
+import xyz.heart.sms.shared.util.PhoneNumberUtils
+import xyz.heart.sms.shared.util.listener.ContactClickedListener
 
 /**
  * Adapter for displaying a list of contacts. Each contact should be loaded into a conversation

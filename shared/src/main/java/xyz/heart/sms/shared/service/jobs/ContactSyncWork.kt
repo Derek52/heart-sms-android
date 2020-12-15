@@ -9,12 +9,12 @@ import androidx.work.Worker
 import androidx.work.WorkerParameters
 import xyz.heart.sms.api.entity.AddContactRequest
 import xyz.heart.sms.api.entity.ContactBody
-import xyz.klinker.sms.api.implementation.Account
-import xyz.klinker.sms.api.implementation.ApiUtils
-import xyz.klinker.sms.shared.data.DataSource
-import xyz.klinker.sms.shared.data.FeatureFlags
-import xyz.klinker.sms.shared.util.ContactUtils
-import xyz.klinker.sms.shared.util.TimeUtils
+import xyz.heart.sms.api.implementation.Account
+import xyz.heart.sms.api.implementation.ApiUtils
+import xyz.heart.sms.shared.data.DataSource
+import xyz.heart.sms.shared.data.FeatureFlags
+import xyz.heart.sms.shared.util.ContactUtils
+import xyz.heart.sms.shared.util.TimeUtils
 import java.util.*
 import java.util.concurrent.TimeUnit
 
@@ -52,7 +52,7 @@ class ContactSyncWork(private val context: Context, params: WorkerParameters) : 
 
         source.insertContacts(context, contactsList, null)
 
-        val contacts = arrayOfNulls<_root_ide_package_.xyz.heart.sms.api.entity.ContactBody>(contactsList.size)
+        val contacts = arrayOfNulls<ContactBody>(contactsList.size)
 
         // create the array of encrypted contacts
         for (i in contactsList.indices) {
@@ -60,16 +60,16 @@ class ContactSyncWork(private val context: Context, params: WorkerParameters) : 
             c.encrypt(account.encryptor!!)
 
             val contactBody = if (c.type != null) {
-                _root_ide_package_.xyz.heart.sms.api.entity.ContactBody(c.id, c.phoneNumber, c.idMatcher, c.name, c.type!!, c.colors.color, c.colors.colorDark, c.colors.colorLight, c.colors.colorAccent)
+                ContactBody(c.id, c.phoneNumber, c.idMatcher, c.name, c.type!!, c.colors.color, c.colors.colorDark, c.colors.colorLight, c.colors.colorAccent)
             } else {
-                _root_ide_package_.xyz.heart.sms.api.entity.ContactBody(c.id, c.phoneNumber, c.idMatcher, c.name, c.colors.color, c.colors.colorDark, c.colors.colorLight, c.colors.colorAccent)
+                ContactBody(c.id, c.phoneNumber, c.idMatcher, c.name, c.colors.color, c.colors.colorDark, c.colors.colorLight, c.colors.colorAccent)
             }
 
             contacts[i] = contactBody
         }
 
         // send the contacts to our backend
-        val request = _root_ide_package_.xyz.heart.sms.api.entity.AddContactRequest(Account.accountId, contacts)
+        val request = AddContactRequest(Account.accountId, contacts)
         ApiUtils.addContact(request)
 
         // set the "since" time for our change listener

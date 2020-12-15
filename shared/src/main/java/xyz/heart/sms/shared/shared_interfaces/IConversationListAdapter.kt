@@ -1,8 +1,8 @@
 package xyz.heart.sms.shared.shared_interfaces
 
-import xyz.klinker.sms.shared.data.SectionType
-import xyz.klinker.sms.shared.data.model.Conversation
-import xyz.klinker.sms.shared.data.pojo.ReorderType
+import xyz.heart.sms.shared.data.SectionType
+import xyz.heart.sms.shared.data.model.Conversation
+import xyz.heart.sms.shared.data.pojo.ReorderType
 
 interface IConversationListAdapter {
 

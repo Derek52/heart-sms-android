@@ -5,7 +5,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-import xyz.klinker.sms.R
+import xyz.heart.sms.R
 
 class AttachContactViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 

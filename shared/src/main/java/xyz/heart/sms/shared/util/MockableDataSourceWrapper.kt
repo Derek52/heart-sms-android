@@ -3,9 +3,9 @@ package xyz.heart.sms.shared.util
 import android.content.Context
 import android.database.Cursor
 
-import xyz.klinker.sms.shared.data.DataSource
-import xyz.klinker.sms.shared.data.model.Conversation
-import xyz.klinker.sms.shared.data.model.Message
+import xyz.heart.sms.shared.data.DataSource
+import xyz.heart.sms.shared.data.model.Conversation
+import xyz.heart.sms.shared.data.model.Message
 
 class MockableDataSourceWrapper(private val source: DataSource) {
 

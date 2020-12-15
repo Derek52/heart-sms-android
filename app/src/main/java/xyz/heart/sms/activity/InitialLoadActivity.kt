@@ -33,18 +33,18 @@ import android.util.Log
 import android.view.View
 import android.widget.ProgressBar
 import com.klinker.android.send_message.Utils
-import xyz.klinker.sms.R
-import xyz.klinker.sms.api.implementation.Account
+import xyz.heart.sms.R
+import xyz.heart.sms.api.implementation.Account
 import xyz.heart.sms.api.implementation.ActivateActivity
-import xyz.klinker.sms.api.implementation.ApiUtils
+import xyz.heart.sms.api.implementation.ApiUtils
 import xyz.heart.sms.api.implementation.LoginActivity
 import xyz.heart.sms.api.implementation.firebase.AnalyticsHelper
-import xyz.klinker.sms.shared.data.DataSource
-import xyz.klinker.sms.shared.data.Settings
-import xyz.klinker.sms.shared.service.ApiDownloadService
-import xyz.klinker.sms.shared.service.ApiUploadService
-import xyz.klinker.sms.shared.util.*
-import xyz.klinker.sms.shared.util.listener.ProgressUpdateListener
+import xyz.heart.sms.shared.data.DataSource
+import xyz.heart.sms.shared.data.Settings
+import xyz.heart.sms.shared.service.ApiDownloadService
+import xyz.heart.sms.shared.service.ApiUploadService
+import xyz.heart.sms.shared.util.*
+import xyz.heart.sms.shared.util.listener.ProgressUpdateListener
 
 /**
  * Activity for onboarding and initial database load.
@@ -173,11 +173,11 @@ open class InitialLoadActivity : AppCompatActivity(), ProgressUpdateListener {
 
                     startDatabaseSync()
                 }
-                _root_ide_package_.xyz.heart.sms.api.implementation.LoginActivity.RESULT_START_DEVICE_SYNC -> {
+                implementation.LoginActivity.RESULT_START_DEVICE_SYNC -> {
                     startDatabaseSync()
                     startUploadAfterSync = true
                 }
-                _root_ide_package_.xyz.heart.sms.api.implementation.LoginActivity.RESULT_START_NETWORK_SYNC -> {
+                implementation.LoginActivity.RESULT_START_NETWORK_SYNC -> {
                     ApiDownloadService.start(this)
                     downloadReceiver = object : BroadcastReceiver() {
                         override fun onReceive(context: Context, intent: Intent) {
@@ -187,7 +187,7 @@ open class InitialLoadActivity : AppCompatActivity(), ProgressUpdateListener {
 
                     registerReceiver(downloadReceiver, IntentFilter(ApiDownloadService.ACTION_DOWNLOAD_FINISHED))
                 }
-                _root_ide_package_.xyz.heart.sms.api.implementation.ActivateActivity.RESULT_FAILED -> finish()
+                implementation.ActivateActivity.RESULT_FAILED -> finish()
             }
         }
     }
@@ -204,7 +204,7 @@ open class InitialLoadActivity : AppCompatActivity(), ProgressUpdateListener {
     private fun startLogin() {
         // we want to pass the extras from the last intent to this one, since they will tell us if
         // we should automatically skip the login and just go into the data load.
-        val login = Intent(this, _root_ide_package_.xyz.heart.sms.api.implementation.LoginActivity::class.java)
+        val login = Intent(this, implementation.LoginActivity::class.java)
         login.putExtras(intent)
 
         startActivityForResult(login, SETUP_REQUEST)
@@ -240,7 +240,7 @@ open class InitialLoadActivity : AppCompatActivity(), ProgressUpdateListener {
             source.insertContacts(this, contacts, null)
 
             val importTime = TimeUtils.now - startTime
-            _root_ide_package_.xyz.heart.sms.api.implementation.firebase.AnalyticsHelper.importFinished(this, importTime)
+            implementation.firebase.AnalyticsHelper.importFinished(this, importTime)
             Log.v("initial_load", "load took $importTime ms")
 
             try {

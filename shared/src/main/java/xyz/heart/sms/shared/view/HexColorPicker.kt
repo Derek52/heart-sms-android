@@ -7,9 +7,9 @@ import android.os.Handler
 import android.text.Editable
 import android.text.TextWatcher
 import android.widget.EditText
-import xyz.klinker.sms.shared.R
+import xyz.heart.sms.shared.R
 
-class HexColorPicker(context: Context) : _root_ide_package_.xyz.heart.sms.shared.view.ColorPicker(context as Activity) {
+class HexColorPicker(context: Context) : ColorPicker(context as Activity) {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

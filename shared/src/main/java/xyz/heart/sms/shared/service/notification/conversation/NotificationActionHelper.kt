@@ -8,17 +8,17 @@ import android.os.Bundle
 import androidx.core.app.NotificationCompat
 import androidx.core.app.RemoteInput
 import com.google.firebase.ml.naturallanguage.smartreply.SmartReplySuggestion
-import xyz.klinker.sms.api.implementation.Account
-import xyz.klinker.sms.shared.MessengerActivityExtras
-import xyz.klinker.sms.shared.R
-import xyz.klinker.sms.shared.data.Settings
-import xyz.klinker.sms.shared.data.pojo.NotificationAction
-import xyz.klinker.sms.shared.data.pojo.NotificationConversation
-import xyz.klinker.sms.shared.receiver.notification_action.NotificationDismissedReceiver
-import xyz.klinker.sms.shared.service.*
-import xyz.klinker.sms.shared.service.notification.NotificationConstants
-import xyz.klinker.sms.shared.util.ActivityUtils
-import xyz.klinker.sms.shared.util.AndroidVersionUtil
+import xyz.heart.sms.api.implementation.Account
+import xyz.heart.sms.shared.MessengerActivityExtras
+import xyz.heart.sms.shared.R
+import xyz.heart.sms.shared.data.Settings
+import xyz.heart.sms.shared.data.pojo.NotificationAction
+import xyz.heart.sms.shared.data.pojo.NotificationConversation
+import xyz.heart.sms.shared.receiver.notification_action.NotificationDismissedReceiver
+import xyz.heart.sms.shared.service.*
+import xyz.heart.sms.shared.service.notification.NotificationConstants
+import xyz.heart.sms.shared.util.ActivityUtils
+import xyz.heart.sms.shared.util.AndroidVersionUtil
 
 class NotificationActionHelper(private val service: Context) {
 
@@ -124,9 +124,9 @@ class NotificationActionHelper(private val service: Context) {
     }
 
     fun addOtpAction(builder: NotificationCompat.Builder, otp: String, conversationId: Long) {
-        val copy = Intent(service, xyz.klinker.sms.shared.receiver.notification_action.NotificationCopyOtpReceiver::class.java)
-        copy.putExtra(xyz.klinker.sms.shared.receiver.notification_action.NotificationCopyOtpReceiver.EXTRA_PASSWORD, otp)
-        copy.putExtra(xyz.klinker.sms.shared.receiver.notification_action.NotificationMarkReadReceiver.EXTRA_CONVERSATION_ID, conversationId)
+        val copy = Intent(service, xyz.heart.sms.shared.receiver.notification_action.NotificationCopyOtpReceiver::class.java)
+        copy.putExtra(xyz.heart.sms.shared.receiver.notification_action.NotificationCopyOtpReceiver.EXTRA_PASSWORD, otp)
+        copy.putExtra(xyz.heart.sms.shared.receiver.notification_action.NotificationMarkReadReceiver.EXTRA_CONVERSATION_ID, conversationId)
         val pendingCopy = PendingIntent.getBroadcast(service, conversationId.toInt() + 5,
                 copy, PendingIntent.FLAG_CANCEL_CURRENT)
 
@@ -139,7 +139,7 @@ class NotificationActionHelper(private val service: Context) {
         }
 
         val reply = smartReplies[smartReplyIndex].text
-        val send = Intent(service, xyz.klinker.sms.shared.receiver.notification_action.SendSmartReplyReceiver::class.java)
+        val send = Intent(service, xyz.heart.sms.shared.receiver.notification_action.SendSmartReplyReceiver::class.java)
         send.putExtra(ReplyService.EXTRA_CONVERSATION_ID, conversation.id)
         send.putExtra(ReplyService.EXTRA_REPLY, reply)
         val sendPending = PendingIntent.getBroadcast(service, conversation.id.toInt() + 20 + smartReplyIndex,
@@ -151,9 +151,9 @@ class NotificationActionHelper(private val service: Context) {
 
     fun addCallAction(builder: NotificationCompat.Builder, wearableExtender: NotificationCompat.WearableExtender, conversation: NotificationConversation) {
         if (!conversation.groupConversation && (!Account.exists() || Account.primary)) {
-            val call = Intent(service, xyz.klinker.sms.shared.receiver.notification_action.NotificationCallReceiver::class.java)
-            call.putExtra(xyz.klinker.sms.shared.receiver.notification_action.NotificationMarkReadReceiver.EXTRA_CONVERSATION_ID, conversation.id)
-            call.putExtra(xyz.klinker.sms.shared.receiver.notification_action.NotificationCallReceiver.EXTRA_PHONE_NUMBER, conversation.phoneNumbers)
+            val call = Intent(service, xyz.heart.sms.shared.receiver.notification_action.NotificationCallReceiver::class.java)
+            call.putExtra(xyz.heart.sms.shared.receiver.notification_action.NotificationMarkReadReceiver.EXTRA_CONVERSATION_ID, conversation.id)
+            call.putExtra(xyz.heart.sms.shared.receiver.notification_action.NotificationCallReceiver.EXTRA_PHONE_NUMBER, conversation.phoneNumbers)
             val callPending = PendingIntent.getBroadcast(service, conversation.id.toInt() + 1,
                     call, PendingIntent.FLAG_CANCEL_CURRENT)
 
@@ -162,9 +162,9 @@ class NotificationActionHelper(private val service: Context) {
     }
 
     fun addDeleteAction(builder: NotificationCompat.Builder, wearableExtender: NotificationCompat.WearableExtender, conversation: NotificationConversation) {
-        val deleteMessage = Intent(service, xyz.klinker.sms.shared.receiver.notification_action.NotificationDeleteReceiver::class.java)
-        deleteMessage.putExtra(xyz.klinker.sms.shared.receiver.notification_action.NotificationDeleteReceiver.EXTRA_CONVERSATION_ID, conversation.id)
-        deleteMessage.putExtra(xyz.klinker.sms.shared.receiver.notification_action.NotificationDeleteReceiver.EXTRA_MESSAGE_ID, conversation.unseenMessageId)
+        val deleteMessage = Intent(service, xyz.heart.sms.shared.receiver.notification_action.NotificationDeleteReceiver::class.java)
+        deleteMessage.putExtra(xyz.heart.sms.shared.receiver.notification_action.NotificationDeleteReceiver.EXTRA_CONVERSATION_ID, conversation.id)
+        deleteMessage.putExtra(xyz.heart.sms.shared.receiver.notification_action.NotificationDeleteReceiver.EXTRA_MESSAGE_ID, conversation.unseenMessageId)
         val pendingDeleteMessage = PendingIntent.getBroadcast(service, conversation.id.toInt() + 2,
                 deleteMessage, PendingIntent.FLAG_CANCEL_CURRENT)
 
@@ -174,8 +174,8 @@ class NotificationActionHelper(private val service: Context) {
 
     private fun generateMarkAsReadAction(conversation: NotificationConversation): Pair<NotificationCompat.Action, NotificationCompat.Action> {
         val title = service.getString(if (AndroidVersionUtil.isAndroidN) R.string.mark_as_read else R.string.read)
-        val read = Intent(service, xyz.klinker.sms.shared.receiver.notification_action.NotificationMarkReadReceiver::class.java)
-        read.putExtra(xyz.klinker.sms.shared.receiver.notification_action.NotificationMarkReadReceiver.EXTRA_CONVERSATION_ID, conversation.id)
+        val read = Intent(service, xyz.heart.sms.shared.receiver.notification_action.NotificationMarkReadReceiver::class.java)
+        read.putExtra(xyz.heart.sms.shared.receiver.notification_action.NotificationMarkReadReceiver.EXTRA_CONVERSATION_ID, conversation.id)
         val pendingRead = PendingIntent.getBroadcast(service, conversation.id.toInt() + 3,
                 read, PendingIntent.FLAG_CANCEL_CURRENT)
 
@@ -203,8 +203,8 @@ class NotificationActionHelper(private val service: Context) {
     }
 
     fun addMuteAction(builder: NotificationCompat.Builder, wearableExtender: NotificationCompat.WearableExtender, conversation: NotificationConversation) {
-        val mute = Intent(service, xyz.klinker.sms.shared.receiver.notification_action.NotificationMuteReceiver::class.java)
-        mute.putExtra(xyz.klinker.sms.shared.receiver.notification_action.NotificationMarkReadReceiver.EXTRA_CONVERSATION_ID, conversation.id)
+        val mute = Intent(service, xyz.heart.sms.shared.receiver.notification_action.NotificationMuteReceiver::class.java)
+        mute.putExtra(xyz.heart.sms.shared.receiver.notification_action.NotificationMarkReadReceiver.EXTRA_CONVERSATION_ID, conversation.id)
         val pendingMute = PendingIntent.getBroadcast(service, conversation.id.toInt() + 4,
                 mute, PendingIntent.FLAG_CANCEL_CURRENT)
 
@@ -213,8 +213,8 @@ class NotificationActionHelper(private val service: Context) {
     }
 
     fun addArchiveAction(builder: NotificationCompat.Builder, wearableExtender: NotificationCompat.WearableExtender, conversation: NotificationConversation) {
-        val archive = Intent(service, xyz.klinker.sms.shared.receiver.notification_action.NotificationArchiveReceiver::class.java)
-        archive.putExtra(xyz.klinker.sms.shared.receiver.notification_action.NotificationMarkReadReceiver.EXTRA_CONVERSATION_ID, conversation.id)
+        val archive = Intent(service, xyz.heart.sms.shared.receiver.notification_action.NotificationArchiveReceiver::class.java)
+        archive.putExtra(xyz.heart.sms.shared.receiver.notification_action.NotificationMarkReadReceiver.EXTRA_CONVERSATION_ID, conversation.id)
         val pendingArchive = PendingIntent.getBroadcast(service, conversation.id.toInt() + 6,
                 archive, PendingIntent.FLAG_CANCEL_CURRENT)
 
@@ -224,7 +224,7 @@ class NotificationActionHelper(private val service: Context) {
 
     fun addContentIntents(builder: NotificationCompat.Builder, conversation: NotificationConversation) {
         val delete = Intent(service, NotificationDismissedReceiver::class.java)
-        delete.putExtra(xyz.klinker.sms.shared.service.NotificationDismissedReceiver.EXTRA_CONVERSATION_ID, conversation.id)
+        delete.putExtra(xyz.heart.sms.shared.service.NotificationDismissedReceiver.EXTRA_CONVERSATION_ID, conversation.id)
         val pendingDelete = PendingIntent.getBroadcast(service, conversation.id.toInt(),
                 delete, PendingIntent.FLAG_CANCEL_CURRENT)
 

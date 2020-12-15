@@ -5,26 +5,26 @@ import android.content.Context
 import android.content.Intent
 import androidx.core.app.NotificationCompat
 import androidx.core.app.RemoteInput
-import xyz.klinker.sms.shared.R
-import xyz.klinker.sms.shared.data.MimeType
-import xyz.klinker.sms.shared.data.pojo.NotificationConversation
-import xyz.klinker.sms.shared.receiver.notification_action.NotificationMarkReadReceiver
-import xyz.klinker.sms.shared.service.ReplyService
+import xyz.heart.sms.shared.R
+import xyz.heart.sms.shared.data.MimeType
+import xyz.heart.sms.shared.data.pojo.NotificationConversation
+import xyz.heart.sms.shared.receiver.notification_action.NotificationMarkReadReceiver
+import xyz.heart.sms.shared.service.ReplyService
 
 class NotificationCarHelper(private val service: Context) {
 
     fun buildExtender(conversation: NotificationConversation, remoteInput: RemoteInput): NotificationCompat.CarExtender {
         val carReply = Intent().addFlags(Intent.FLAG_INCLUDE_STOPPED_PACKAGES)
-                .setAction("xyz.klinker.messenger.CAR_REPLY")
+                .setAction("xyz.heart.messenger.CAR_REPLY")
                 .putExtra(ReplyService.EXTRA_CONVERSATION_ID, conversation.id)
-                .setPackage("xyz.klinker.messenger")
+                .setPackage("xyz.heart.messenger")
         val pendingCarReply = PendingIntent.getBroadcast(service, conversation.id.toInt(),
                 carReply, PendingIntent.FLAG_UPDATE_CURRENT)
 
         val carRead = Intent().addFlags(Intent.FLAG_INCLUDE_STOPPED_PACKAGES)
-                .setAction("xyz.klinker.messenger.CAR_READ")
+                .setAction("xyz.heart.messenger.CAR_READ")
                 .putExtra(NotificationMarkReadReceiver.EXTRA_CONVERSATION_ID, conversation.id)
-                .setPackage("xyz.klinker.messenger")
+                .setPackage("xyz.heart.messenger")
         val pendingCarRead = PendingIntent.getBroadcast(service, conversation.id.toInt(),
                 carRead, PendingIntent.FLAG_UPDATE_CURRENT)
 

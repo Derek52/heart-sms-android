@@ -25,11 +25,11 @@ import android.widget.FrameLayout
 import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.RecyclerView
 
-import xyz.klinker.sms.R
-import xyz.klinker.sms.adapter.conversation.ConversationListAdapter
-import xyz.klinker.sms.shared.util.ColorUtils
-import xyz.klinker.sms.utils.swipe_to_dismiss.actions.BaseSwipeAction
-import xyz.klinker.sms.utils.swipe_to_dismiss.actions.SwipeNoAction
+import xyz.heart.sms.R
+import xyz.heart.sms.adapter.conversation.ConversationListAdapter
+import xyz.heart.sms.shared.util.ColorUtils
+import xyz.heart.sms.utils.swipe_to_dismiss.actions.BaseSwipeAction
+import xyz.heart.sms.utils.swipe_to_dismiss.actions.SwipeNoAction
 
 /**
  * A simple callback for a recyclerview that can act on swipe motions.

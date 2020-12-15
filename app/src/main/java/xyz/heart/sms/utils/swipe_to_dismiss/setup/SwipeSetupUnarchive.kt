@@ -1,9 +1,9 @@
 package xyz.heart.sms.utils.swipe_to_dismiss.setup
 
-import xyz.klinker.sms.adapter.conversation.ConversationListAdapter
-import xyz.klinker.sms.utils.swipe_to_dismiss.actions.BaseSwipeAction
-import xyz.klinker.sms.utils.swipe_to_dismiss.actions.SwipeDeleteAction
-import xyz.klinker.sms.utils.swipe_to_dismiss.actions.SwipeUnarchiveAction
+import xyz.heart.sms.adapter.conversation.ConversationListAdapter
+import xyz.heart.sms.utils.swipe_to_dismiss.actions.BaseSwipeAction
+import xyz.heart.sms.utils.swipe_to_dismiss.actions.SwipeDeleteAction
+import xyz.heart.sms.utils.swipe_to_dismiss.actions.SwipeUnarchiveAction
 
 @Suppress("DEPRECATION")
 class SwipeSetupUnarchive(adapter: ConversationListAdapter) : SwipeSetupBase(adapter) {

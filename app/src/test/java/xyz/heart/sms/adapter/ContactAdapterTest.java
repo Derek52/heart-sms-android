@@ -23,7 +23,7 @@ import org.mockito.Mock;
 import java.util.List;
 
 import xyz.heart.sms.MessengerSuite;
-import xyz.klinker.sms.shared.data.model.Conversation;
+import xyz.heart.sms.shared.data.model.Conversation;
 
 import static org.junit.Assert.assertEquals;
 import static org.mockito.Mockito.when;

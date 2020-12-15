@@ -27,15 +27,15 @@ import android.widget.TextView
 import com.bignerdranch.android.multiselector.MultiSelector
 import com.bignerdranch.android.multiselector.SwappingHolder
 import de.hdodenhof.circleimageview.CircleImageView
-import xyz.klinker.sms.R
-import xyz.klinker.sms.adapter.conversation.ConversationListAdapter
-import xyz.klinker.sms.shared.data.Settings
-import xyz.klinker.sms.shared.data.model.Conversation
-import xyz.klinker.sms.shared.data.pojo.BaseTheme
-import xyz.klinker.sms.shared.util.AnimationUtils
-import xyz.klinker.sms.shared.util.DensityUtil
-import xyz.klinker.sms.shared.util.listener.ContactClickedListener
-import xyz.klinker.sms.utils.listener.ConversationExpandedListener
+import xyz.heart.sms.R
+import xyz.heart.sms.adapter.conversation.ConversationListAdapter
+import xyz.heart.sms.shared.data.Settings
+import xyz.heart.sms.shared.data.model.Conversation
+import xyz.heart.sms.shared.data.pojo.BaseTheme
+import xyz.heart.sms.shared.util.AnimationUtils
+import xyz.heart.sms.shared.util.DensityUtil
+import xyz.heart.sms.shared.util.listener.ContactClickedListener
+import xyz.heart.sms.utils.listener.ConversationExpandedListener
 
 @Suppress("DEPRECATION")
 /**

@@ -20,7 +20,7 @@ import android.annotation.TargetApi
 import android.app.NotificationManager
 import android.content.Context
 import android.os.Build
-import xyz.klinker.sms.shared.data.pojo.NotificationConversation
+import xyz.heart.sms.shared.data.pojo.NotificationConversation
 
 /**
  * When creating notifications, a single new conversation will never get the group message key on it.

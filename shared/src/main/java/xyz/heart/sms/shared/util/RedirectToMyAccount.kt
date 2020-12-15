@@ -3,7 +3,7 @@ package xyz.heart.sms.shared.util
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 
-import xyz.klinker.sms.shared.MessengerActivityExtras
+import xyz.heart.sms.shared.MessengerActivityExtras
 
 class RedirectToMyAccount : AppCompatActivity() {
 

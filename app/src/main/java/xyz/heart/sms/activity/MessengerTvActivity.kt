@@ -25,9 +25,9 @@ import android.os.Build
 import android.os.Bundle
 import androidx.core.content.ContextCompat
 import androidx.appcompat.app.AppCompatActivity
-import xyz.klinker.sms.api.implementation.Account
-import xyz.klinker.sms.fragment.TvBrowseFragment
-import xyz.klinker.sms.shared.util.TimeUtils
+import xyz.heart.sms.api.implementation.Account
+import xyz.heart.sms.fragment.TvBrowseFragment
+import xyz.heart.sms.shared.util.TimeUtils
 
 /**
  * Activity for displaying content on your tv.

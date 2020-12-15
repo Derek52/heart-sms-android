@@ -19,21 +19,21 @@ import android.widget.ImageButton
 import android.widget.LinearLayout
 import androidx.fragment.app.FragmentActivity
 import com.afollestad.materialcamera.MaterialCamera
-import xyz.klinker.sms.R
-import xyz.klinker.sms.fragment.ScheduledMessagesFragment
-import xyz.klinker.sms.fragment.camera.FotoapparatFragment
-import xyz.klinker.sms.fragment.message.MessageListFragment
-import xyz.klinker.sms.fragment.message.send.PermissionHelper
-import xyz.klinker.sms.shared.data.DataSource
-import xyz.klinker.sms.shared.data.MmsSettings
-import xyz.klinker.sms.shared.data.Settings
-import xyz.klinker.sms.shared.data.pojo.BaseTheme
-import xyz.klinker.sms.shared.util.DensityUtil
-import xyz.klinker.sms.shared.util.PhoneNumberUtils
-import xyz.klinker.sms.shared.util.SmsMmsUtils
-import xyz.klinker.sms.shared.util.TvUtils
-import xyz.klinker.sms.shared.util.listener.TextSelectedListener
-import xyz.klinker.sms.view.*
+import xyz.heart.sms.R
+import xyz.heart.sms.fragment.ScheduledMessagesFragment
+import xyz.heart.sms.fragment.camera.FotoapparatFragment
+import xyz.heart.sms.fragment.message.MessageListFragment
+import xyz.heart.sms.fragment.message.send.PermissionHelper
+import xyz.heart.sms.shared.data.DataSource
+import xyz.heart.sms.shared.data.MmsSettings
+import xyz.heart.sms.shared.data.Settings
+import xyz.heart.sms.shared.data.pojo.BaseTheme
+import xyz.heart.sms.shared.util.DensityUtil
+import xyz.heart.sms.shared.util.PhoneNumberUtils
+import xyz.heart.sms.shared.util.SmsMmsUtils
+import xyz.heart.sms.shared.util.TvUtils
+import xyz.heart.sms.shared.util.listener.TextSelectedListener
+import xyz.heart.sms.view.*
 import java.lang.Exception
 
 @Suppress("DEPRECATION")

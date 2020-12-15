@@ -15,14 +15,14 @@ import android.widget.ProgressBar
 
 import com.klinker.android.send_message.Utils
 
-import xyz.klinker.sms.R
-import xyz.klinker.sms.api.implementation.*
-import xyz.klinker.sms.shared.data.DataSource
-import xyz.klinker.sms.shared.data.Settings
-import xyz.klinker.sms.shared.service.ApiDownloadService
-import xyz.klinker.sms.shared.service.ApiUploadService
-import xyz.klinker.sms.shared.util.*
-import xyz.klinker.sms.shared.util.listener.ProgressUpdateListener
+import xyz.heart.sms.R
+import xyz.heart.sms.api.implementation.*
+import xyz.heart.sms.shared.data.DataSource
+import xyz.heart.sms.shared.data.Settings
+import xyz.heart.sms.shared.service.ApiDownloadService
+import xyz.heart.sms.shared.service.ApiUploadService
+import xyz.heart.sms.shared.util.*
+import xyz.heart.sms.shared.util.listener.ProgressUpdateListener
 
 class InitialLoadWearActivity : Activity(), ProgressUpdateListener {
 
@@ -61,7 +61,7 @@ class InitialLoadWearActivity : Activity(), ProgressUpdateListener {
 
     public override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(xyz.klinker.sms.R.layout.activity_initial_load_wear)
+        setContentView(xyz.heart.sms.R.layout.activity_initial_load_wear)
 
         handler = Handler()
         requestPermissions()
@@ -101,11 +101,11 @@ class InitialLoadWearActivity : Activity(), ProgressUpdateListener {
 
                     startDatabaseSync()
                 }
-                _root_ide_package_.xyz.heart.sms.api.implementation.LoginActivity.RESULT_START_DEVICE_SYNC -> {
+                implementation.LoginActivity.RESULT_START_DEVICE_SYNC -> {
                     startDatabaseSync()
                     startUploadAfterSync = true
                 }
-                _root_ide_package_.xyz.heart.sms.api.implementation.LoginActivity.RESULT_START_NETWORK_SYNC -> {
+                implementation.LoginActivity.RESULT_START_NETWORK_SYNC -> {
                     ApiDownloadService.start(this)
                     downloadReceiver = object : BroadcastReceiver() {
                         override fun onReceive(context: Context, intent: Intent) {
@@ -116,7 +116,7 @@ class InitialLoadWearActivity : Activity(), ProgressUpdateListener {
                     registerReceiver(downloadReceiver,
                             IntentFilter(ApiDownloadService.ACTION_DOWNLOAD_FINISHED))
                 }
-                _root_ide_package_.xyz.heart.sms.api.implementation.ActivateActivity.RESULT_FAILED -> finish()
+                implementation.ActivateActivity.RESULT_FAILED -> finish()
             }
         }
     }

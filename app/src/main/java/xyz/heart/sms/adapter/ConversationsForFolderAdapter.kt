@@ -16,10 +16,10 @@
 
 package xyz.heart.sms.adapter
 
-import xyz.klinker.sms.R
-import xyz.klinker.sms.adapter.view_holder.ConversationViewHolder
-import xyz.klinker.sms.shared.data.model.Conversation
-import xyz.klinker.sms.shared.util.listener.ContactClickedListener
+import xyz.heart.sms.R
+import xyz.heart.sms.adapter.view_holder.ConversationViewHolder
+import xyz.heart.sms.shared.data.model.Conversation
+import xyz.heart.sms.shared.util.listener.ContactClickedListener
 
 /**
  * Adds a checkbox to the base contact adapter so that you can select multiple items.

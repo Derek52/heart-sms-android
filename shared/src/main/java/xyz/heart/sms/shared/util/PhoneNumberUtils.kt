@@ -26,7 +26,7 @@ import com.klinker.android.send_message.Utils
 import java.util.Locale
 import java.util.regex.Pattern
 
-import xyz.klinker.sms.api.implementation.Account
+import xyz.heart.sms.api.implementation.Account
 
 /**
  * Helper for working with phone numbers, mainly formatting them.
@@ -123,7 +123,7 @@ object PhoneNumberUtils {
 
         try {
             if (useSettings) {
-                val settings = xyz.klinker.sms.shared.data.Settings
+                val settings = xyz.heart.sms.shared.data.Settings
                 if (settings.phoneNumber != null) {
                     numbers.add(settings.phoneNumber!!)
                 }

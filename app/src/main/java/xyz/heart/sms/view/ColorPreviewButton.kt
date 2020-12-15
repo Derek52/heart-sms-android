@@ -26,8 +26,8 @@ import android.util.TypedValue
 import android.view.MotionEvent
 import android.view.View
 
-import xyz.klinker.sms.R
-import xyz.klinker.sms.shared.util.TimeUtils
+import xyz.heart.sms.R
+import xyz.heart.sms.shared.util.TimeUtils
 
 /**
  * A button that can be used for previewing theme color changes. When pressed, the accent color

@@ -20,27 +20,27 @@ import android.app.Application
 import android.content.Intent
 import android.os.Build
 import com.sensortower.events.EventHandler
-import xyz.klinker.sms.api.implementation.Account
-import xyz.klinker.sms.api.implementation.AccountInvalidator
+import xyz.heart.sms.api.implementation.Account
+import xyz.heart.sms.api.implementation.AccountInvalidator
 import xyz.heart.sms.api.implementation.firebase.AnalyticsHelper
 import xyz.heart.sms.api.implementation.firebase.FirebaseApplication
 import xyz.heart.sms.api.implementation.firebase.FirebaseMessageHandler
 import xyz.heart.sms.api.implementation.retrofit.ApiErrorPersister
-import xyz.klinker.sms.shared.data.DataSource
-import xyz.klinker.sms.shared.data.Settings
-import xyz.klinker.sms.shared.data.model.RetryableRequest
-import xyz.klinker.sms.shared.service.FirebaseHandlerService
-import xyz.klinker.sms.shared.service.FirebaseResetService
-import xyz.klinker.sms.shared.service.QuickComposeNotificationService
-import xyz.klinker.sms.shared.service.notification.ShortcutUpdater
-import xyz.klinker.sms.shared.util.*
-import xyz.klinker.sms.shared.util.UpdateUtils
+import xyz.heart.sms.shared.data.DataSource
+import xyz.heart.sms.shared.data.Settings
+import xyz.heart.sms.shared.data.model.RetryableRequest
+import xyz.heart.sms.shared.service.FirebaseHandlerService
+import xyz.heart.sms.shared.service.FirebaseResetService
+import xyz.heart.sms.shared.service.QuickComposeNotificationService
+import xyz.heart.sms.shared.service.notification.ShortcutUpdater
+import xyz.heart.sms.shared.util.*
+import xyz.heart.sms.shared.util.UpdateUtils
 
 /**
  * Base application that will serve as any intro for any context in the rest of the app. Main
  * function is to enable night mode so that colors change depending on time of day.
  */
-class MessengerApplication : _root_ide_package_.xyz.heart.sms.api.implementation.firebase.FirebaseApplication(), _root_ide_package_.xyz.heart.sms.api.implementation.retrofit.ApiErrorPersister, AccountInvalidator, EventHandler.Provider, ShortcutUpdater {
+class MessengerApplication : implementation.firebase.FirebaseApplication(), implementation.retrofit.ApiErrorPersister, AccountInvalidator, EventHandler.Provider, ShortcutUpdater {
 
     override fun onCreate() {
         super.onCreate()
@@ -83,8 +83,8 @@ class MessengerApplication : _root_ide_package_.xyz.heart.sms.api.implementation
         }
     }
 
-    override fun getFirebaseMessageHandler(): _root_ide_package_.xyz.heart.sms.api.implementation.firebase.FirebaseMessageHandler {
-        return object : _root_ide_package_.xyz.heart.sms.api.implementation.firebase.FirebaseMessageHandler {
+    override fun getFirebaseMessageHandler(): implementation.firebase.FirebaseMessageHandler {
+        return object : implementation.firebase.FirebaseMessageHandler {
             override fun handleMessage(application: Application, operation: String, data: String) {
                 Thread { FirebaseHandlerService.process(application, operation, data) }.start()
             }
@@ -148,7 +148,7 @@ class MessengerApplication : _root_ide_package_.xyz.heart.sms.api.implementation
     override val eventHandler: EventHandler
         get() = object : EventHandler {
             override fun onAnalyticsEvent(type: String, message: String?) {
-                _root_ide_package_.xyz.heart.sms.api.implementation.firebase.AnalyticsHelper.logEvent(this@MessengerApplication, type)
+                implementation.firebase.AnalyticsHelper.logEvent(this@MessengerApplication, type)
             }
         }
 }

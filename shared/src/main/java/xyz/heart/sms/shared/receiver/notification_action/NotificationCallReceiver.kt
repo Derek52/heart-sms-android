@@ -5,7 +5,7 @@ import android.content.Context
 import android.content.Intent
 import android.net.Uri
 
-class NotificationCallReceiver : xyz.klinker.sms.shared.receiver.notification_action.NotificationMarkReadReceiver() {
+class NotificationCallReceiver : xyz.heart.sms.shared.receiver.notification_action.NotificationMarkReadReceiver() {
 
     override fun onReceive(context: Context?, intent: Intent?) {
         super.onReceive(context, intent)
@@ -15,7 +15,7 @@ class NotificationCallReceiver : xyz.klinker.sms.shared.receiver.notification_ac
             return
         }
 
-        val phoneNumber = intent.getStringExtra(xyz.klinker.sms.shared.receiver.notification_action.NotificationCallReceiver.Companion.EXTRA_PHONE_NUMBER)
+        val phoneNumber = intent.getStringExtra(xyz.heart.sms.shared.receiver.notification_action.NotificationCallReceiver.Companion.EXTRA_PHONE_NUMBER)
         if (phoneNumber != null) {
             val call = Intent(Intent.ACTION_DIAL)
             call.flags = Intent.FLAG_ACTIVITY_NEW_TASK

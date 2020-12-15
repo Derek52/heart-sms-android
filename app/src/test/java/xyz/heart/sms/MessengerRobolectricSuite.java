@@ -31,7 +31,7 @@ import org.robolectric.Robolectric;
 import org.robolectric.RobolectricTestRunner;
 import org.robolectric.annotation.Config;
 
-import xyz.klinker.sms.shared.data.DataSource;
+import xyz.heart.sms.shared.data.DataSource;
 
 @RunWith(RobolectricTestRunner.class)
 @Config(sdk = Build.VERSION_CODES.M)

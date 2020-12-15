@@ -8,17 +8,17 @@ import android.content.pm.PackageManager
 import android.os.Bundle
 import android.os.Handler
 import com.google.android.material.snackbar.Snackbar
-import xyz.klinker.sms.R
-import xyz.klinker.sms.activity.InitialLoadActivity
-import xyz.klinker.sms.activity.MessengerActivity
-import xyz.klinker.sms.activity.OnboardingActivity
+import xyz.heart.sms.R
+import xyz.heart.sms.activity.InitialLoadActivity
+import xyz.heart.sms.activity.MessengerActivity
+import xyz.heart.sms.activity.OnboardingActivity
 import xyz.heart.sms.api.implementation.LoginActivity
-import xyz.klinker.sms.shared.MessengerActivityExtras
-import xyz.klinker.sms.shared.data.FeatureFlags
-import xyz.klinker.sms.shared.data.Settings
-import xyz.klinker.sms.shared.service.ApiDownloadService
-import xyz.klinker.sms.shared.service.FirebaseTokenUpdateCheckService
-import xyz.klinker.sms.shared.service.NewMessagesCheckService
+import xyz.heart.sms.shared.MessengerActivityExtras
+import xyz.heart.sms.shared.data.FeatureFlags
+import xyz.heart.sms.shared.data.Settings
+import xyz.heart.sms.shared.service.ApiDownloadService
+import xyz.heart.sms.shared.service.FirebaseTokenUpdateCheckService
+import xyz.heart.sms.shared.service.NewMessagesCheckService
 
 class MainAccountController(private val activity: MessengerActivity) {
 
@@ -62,7 +62,7 @@ class MainAccountController(private val activity: MessengerActivity) {
         if (requestCode == MessengerActivityExtras.REQUEST_ONBOARDING) {
             val hasTelephone = activity.packageManager.hasSystemFeature(PackageManager.FEATURE_TELEPHONY)
             val login = Intent(activity, InitialLoadActivity::class.java)
-            login.putExtra(_root_ide_package_.xyz.heart.sms.api.implementation.LoginActivity.ARG_SKIP_LOGIN, hasTelephone)
+            login.putExtra(implementation.LoginActivity.ARG_SKIP_LOGIN, hasTelephone)
 
             activity.startActivity(login)
             activity.finish()

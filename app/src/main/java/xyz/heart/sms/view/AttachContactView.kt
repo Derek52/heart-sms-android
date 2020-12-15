@@ -11,11 +11,11 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.android.ex.chips.BaseRecipientAdapter
 import com.android.ex.chips.RecipientEditTextView
-import xyz.klinker.sms.R
-import xyz.klinker.sms.adapter.AttachContactAdapter
-import xyz.klinker.sms.shared.data.DataSource
-import xyz.klinker.sms.shared.util.ColorUtils
-import xyz.klinker.sms.shared.util.listener.AttachContactListener
+import xyz.heart.sms.R
+import xyz.heart.sms.adapter.AttachContactAdapter
+import xyz.heart.sms.shared.data.DataSource
+import xyz.heart.sms.shared.util.ColorUtils
+import xyz.heart.sms.shared.util.listener.AttachContactListener
 
 /**
  * View that allows you to select a contact and attach it to a message.

@@ -18,7 +18,7 @@ package xyz.heart.sms.shared.receiver
 
 import android.content.Context
 import android.content.Intent
-import xyz.klinker.sms.api.implementation.Account
+import xyz.heart.sms.api.implementation.Account
 
 /**
  * Receiver which gets a notification when an MMS message has finished sending. It will mark the

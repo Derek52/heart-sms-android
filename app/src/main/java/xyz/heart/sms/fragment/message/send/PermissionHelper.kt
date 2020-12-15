@@ -1,6 +1,6 @@
 package xyz.heart.sms.fragment.message.send
 
-import xyz.klinker.sms.fragment.message.MessageListFragment
+import xyz.heart.sms.fragment.message.MessageListFragment
 
 class PermissionHelper(private val fragment: MessageListFragment) {
 

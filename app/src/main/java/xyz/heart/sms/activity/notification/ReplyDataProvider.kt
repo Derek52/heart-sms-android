@@ -1,14 +1,14 @@
 package xyz.heart.sms.activity.notification
 
 import androidx.core.app.NotificationManagerCompat
-import xyz.klinker.sms.api.implementation.Account
-import xyz.klinker.sms.api.implementation.ApiUtils
-import xyz.klinker.sms.shared.data.DataSource
-import xyz.klinker.sms.shared.data.MimeType
-import xyz.klinker.sms.shared.data.model.Conversation
-import xyz.klinker.sms.shared.data.model.Message
-import xyz.klinker.sms.shared.service.ReplyService
-import xyz.klinker.sms.shared.util.CursorUtil
+import xyz.heart.sms.api.implementation.Account
+import xyz.heart.sms.api.implementation.ApiUtils
+import xyz.heart.sms.shared.data.DataSource
+import xyz.heart.sms.shared.data.MimeType
+import xyz.heart.sms.shared.data.model.Conversation
+import xyz.heart.sms.shared.data.model.Message
+import xyz.heart.sms.shared.service.ReplyService
+import xyz.heart.sms.shared.util.CursorUtil
 
 class ReplyDataProvider(private val activity: MarshmallowReplyActivity) {
 

@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
     <!--
-  ~ Copyright (C) 2017 Luke Klinker
+  ~ Copyright (C) 2017 Luke heart
   ~
   ~ Licensed under the Apache License, Version 2.0 (the "License");
   ~ you may not use this file except in compliance with the License.
@@ -290,7 +290,7 @@
     <string name="receiving_a_message">Получение сообщения ...</string>
     <!-- About, Help and Feedback and Settings -->
     <string name="changelog">Список изменений</string>
-    <string name="copyright">© 2016 Jake Klinker &amp; Luke Klinker</string>
+    <string name="copyright">© 2016 Jake heart &amp; Luke heart</string>
     <string name="copyright_summary">Просмотр лицензий открытых источников</string>
     <string name="app_version">Версия приложения</string>
     <string name="account_information">Об учётной записи</string>
@@ -567,7 +567,7 @@
     <string name="experiments_info_section_title">О чем эта страница?</string>
     <string name="experiments_info_open_source">Pulse - проект с открытым исходным кодом!</string>
     <string name="experiments_info_open_source_summary">Это означает, что любой разработчик может добавить код и новые функции в приложение.</string>
-    <string name="experiments_info_disclaimer_1">Этот раздел настроек - просто место для хранения функций, которые добавлены сообществом. <b> Эти функции официально не поддерживаются приложениями Klinker. </b> Они были добавлены и будут поддерживаться сообществом.</string>
+    <string name="experiments_info_disclaimer_1">Этот раздел настроек - просто место для хранения функций, которые добавлены сообществом. <b> Эти функции официально не поддерживаются приложениями heart. </b> Они были добавлены и будут поддерживаться сообществом.</string>
     <string name="experiments_info_disclaimer_2">Работоспособность этих функций не гарантируется, они могут работать нестабильно или могут быть отключены. <b> Эти функции не поддерживаются. </b></string>
     <string name="experiments_info_disclaimer_3">Тем не менее, они не были бы добавлены в приложение, если бы они не работали, не решали определенную проблему или не добавляли функциональность приложения.</string>
     <string name="experiments_preferences_section_title">Экспериментальные настройки</string>
@@ -654,7 +654,7 @@
     <string name="channels_global_warning_3">В Android Oreo некоторые из перечисленных выше вариантов перенаправят вас на системные настройки <i> Каналы уведомлений </i> для настройки. Чтобы узнать больше об этих каналах, о том, как они работают и почему они должны использоваться, см. справку Pulse.</string>
     <string name="off">Не включать</string>
     <string name="on">Включать</string>
-    <string name="share_promo">Привет! Мне очень понравилось переписываться через Pulse! Попробуй и ты, по это ссылке: https://play.google.com/store/apps/details?id=xyz.klinker.messenger</string>
+    <string name="share_promo">Привет! Мне очень понравилось переписываться через Pulse! Попробуй и ты, по это ссылке: https://play.google.com/store/apps/details?id=xyz.heart.messenger</string>
     <string name="verifying_password">Проверяем пароль...</string>
     <!-- Rate it -->
     <string name="rate_it">Оценить!</string>

@@ -7,15 +7,15 @@ import android.view.View
 import android.view.ViewGroup
 import com.afollestad.sectionedrecyclerview.SectionedRecyclerViewAdapter
 import com.bumptech.glide.Glide
-import xyz.klinker.sms.R
-import xyz.klinker.sms.adapter.view_holder.WearableConversationViewHolder
-import xyz.klinker.sms.shared.data.SectionType
-import xyz.klinker.sms.shared.data.Settings
-import xyz.klinker.sms.shared.data.model.Conversation
-import xyz.klinker.sms.shared.data.pojo.ReorderType
-import xyz.klinker.sms.shared.shared_interfaces.IConversationListAdapter
-import xyz.klinker.sms.shared.util.ContactUtils
-import xyz.klinker.sms.shared.util.TimeUtils
+import xyz.heart.sms.R
+import xyz.heart.sms.adapter.view_holder.WearableConversationViewHolder
+import xyz.heart.sms.shared.data.SectionType
+import xyz.heart.sms.shared.data.Settings
+import xyz.heart.sms.shared.data.model.Conversation
+import xyz.heart.sms.shared.data.pojo.ReorderType
+import xyz.heart.sms.shared.shared_interfaces.IConversationListAdapter
+import xyz.heart.sms.shared.util.ContactUtils
+import xyz.heart.sms.shared.util.TimeUtils
 import java.util.*
 
 class WearableConversationListAdapter(conversations: List<Conversation>) : SectionedRecyclerViewAdapter<WearableConversationViewHolder>(), IConversationListAdapter {

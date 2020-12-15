@@ -2,16 +2,16 @@ package xyz.heart.sms.fragment.settings
 
 import android.os.Bundle
 
-import xyz.klinker.sms.R
-import xyz.klinker.sms.api.implementation.Account
-import xyz.klinker.sms.api.implementation.ApiUtils
-import xyz.klinker.sms.shared.data.ColorSet
-import xyz.klinker.sms.shared.data.Settings
-import xyz.klinker.sms.shared.data.pojo.BaseTheme
-import xyz.klinker.sms.shared.util.ColorUtils
-import xyz.klinker.sms.shared.util.TimeUtils
-import xyz.klinker.sms.shared.util.listener.ColorSelectedListener
-import xyz.klinker.sms.view.ColorPreference
+import xyz.heart.sms.R
+import xyz.heart.sms.api.implementation.Account
+import xyz.heart.sms.api.implementation.ApiUtils
+import xyz.heart.sms.shared.data.ColorSet
+import xyz.heart.sms.shared.data.Settings
+import xyz.heart.sms.shared.data.pojo.BaseTheme
+import xyz.heart.sms.shared.util.ColorUtils
+import xyz.heart.sms.shared.util.TimeUtils
+import xyz.heart.sms.shared.util.listener.ColorSelectedListener
+import xyz.heart.sms.view.ColorPreference
 
 class ThemeSettingsFragment : MaterialPreferenceFragment() {
 

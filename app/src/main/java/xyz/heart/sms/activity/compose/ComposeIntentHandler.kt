@@ -5,13 +5,13 @@ import android.net.Uri
 import android.os.Build
 import android.os.Handler
 import android.os.Parcelable
-import xyz.klinker.sms.R
+import xyz.heart.sms.R
 import xyz.heart.sms.api.implementation.firebase.AnalyticsHelper
-import xyz.klinker.sms.shared.data.MimeType
-import xyz.klinker.sms.shared.service.MessengerChooserTargetService
-import xyz.klinker.sms.shared.util.FileUtils
-import xyz.klinker.sms.shared.util.NonStandardUriUtils
-import xyz.klinker.sms.shared.util.PhoneNumberUtils
+import xyz.heart.sms.shared.data.MimeType
+import xyz.heart.sms.shared.service.MessengerChooserTargetService
+import xyz.heart.sms.shared.util.FileUtils
+import xyz.heart.sms.shared.util.NonStandardUriUtils
+import xyz.heart.sms.shared.util.PhoneNumberUtils
 import java.io.File
 
 @Suppress("DEPRECATION")
@@ -31,7 +31,7 @@ class ComposeIntentHandler(private val activity: ComposeActivity) {
                 intent.action == Intent.ACTION_SEND_MULTIPLE -> shareMultipleImages(intent)
             }
         } catch (e: Exception) {
-            _root_ide_package_.xyz.heart.sms.api.implementation.firebase.AnalyticsHelper.caughtForceClose(activity, "caught when sharing to compose activity", e)
+            implementation.firebase.AnalyticsHelper.caughtForceClose(activity, "caught when sharing to compose activity", e)
         }
     }
 

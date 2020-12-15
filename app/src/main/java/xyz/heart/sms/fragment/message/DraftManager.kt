@@ -5,12 +5,12 @@ import android.net.Uri
 import android.view.View
 import android.widget.EditText
 import androidx.fragment.app.FragmentActivity
-import xyz.klinker.sms.R
-import xyz.klinker.sms.fragment.conversation.ConversationListFragment
-import xyz.klinker.sms.shared.data.DataSource
-import xyz.klinker.sms.shared.data.MimeType
-import xyz.klinker.sms.shared.data.model.Draft
-import xyz.klinker.sms.shared.data.pojo.ConversationUpdateInfo
+import xyz.heart.sms.R
+import xyz.heart.sms.fragment.conversation.ConversationListFragment
+import xyz.heart.sms.shared.data.DataSource
+import xyz.heart.sms.shared.data.MimeType
+import xyz.heart.sms.shared.data.model.Draft
+import xyz.heart.sms.shared.data.pojo.ConversationUpdateInfo
 
 class DraftManager(private val fragment: MessageListFragment) {
 

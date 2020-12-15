@@ -25,8 +25,8 @@ public class RecreateAccountActivity extends LoginActivity {
         Account.INSTANCE.updateSubscription(this, Account.SubscriptionType.SUBSCRIBER, new Date().getTime(), true);
 
         final Intent uploadService = new Intent();
-        uploadService.setComponent(new ComponentName("xyz.klinker.messenger",
-                "xyz.klinker.messenger.shared" + ".service.ApiUploadService"));
+        uploadService.setComponent(new ComponentName("xyz.heart.messenger",
+                "xyz.heart.messenger.shared" + ".service.ApiUploadService"));
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             startForegroundService(uploadService);

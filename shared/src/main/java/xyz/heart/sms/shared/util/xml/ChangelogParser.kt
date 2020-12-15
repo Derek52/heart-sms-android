@@ -26,7 +26,7 @@ import org.xmlpull.v1.XmlPullParserException
 import java.io.IOException
 import java.util.ArrayList
 
-import xyz.klinker.sms.shared.R
+import xyz.heart.sms.shared.R
 
 /**
  * Helper for parsing the changelog.xml resource into a usable array of strings that can

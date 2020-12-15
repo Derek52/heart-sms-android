@@ -26,11 +26,11 @@ import java.util.HashMap
 import java.util.NoSuchElementException
 import java.util.regex.Pattern
 
-import xyz.klinker.sms.shared.data.ColorSet
-import xyz.klinker.sms.shared.data.DataSource
-import xyz.klinker.sms.shared.data.model.Contact
-import xyz.klinker.sms.shared.data.model.Conversation
-import xyz.klinker.sms.shared.data.model.ImageContact
+import xyz.heart.sms.shared.data.ColorSet
+import xyz.heart.sms.shared.data.DataSource
+import xyz.heart.sms.shared.data.model.Contact
+import xyz.heart.sms.shared.data.model.Conversation
+import xyz.heart.sms.shared.data.model.ImageContact
 
 /**
  * Helper for working with Android's contact provider.

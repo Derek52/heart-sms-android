@@ -11,19 +11,19 @@ import androidx.appcompat.app.AppCompatActivity
 import android.view.View
 import android.view.ViewAnimationUtils
 
-import xyz.klinker.sms.R
+import xyz.heart.sms.R
 import xyz.heart.sms.api.implementation.firebase.AnalyticsHelper
-import xyz.klinker.sms.fragment.settings.MyAccountFragment
-import xyz.klinker.sms.shared.data.ColorSet
-import xyz.klinker.sms.shared.data.Settings
-import xyz.klinker.sms.shared.util.DensityUtil
+import xyz.heart.sms.fragment.settings.MyAccountFragment
+import xyz.heart.sms.shared.data.ColorSet
+import xyz.heart.sms.shared.data.Settings
+import xyz.heart.sms.shared.util.DensityUtil
 
 class AccountTrialActivity : AppCompatActivity() {
 
     public override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        _root_ide_package_.xyz.heart.sms.api.implementation.firebase.AnalyticsHelper.accountStartTrialTutorial(this)
+        implementation.firebase.AnalyticsHelper.accountStartTrialTutorial(this)
 
         setResult(Activity.RESULT_CANCELED)
         setContentView(R.layout.activity_account_trial)
@@ -51,7 +51,7 @@ class AccountTrialActivity : AppCompatActivity() {
 
     private fun tryIt() {
         setResult(MyAccountFragment.RESULT_START_TRIAL)
-        _root_ide_package_.xyz.heart.sms.api.implementation.firebase.AnalyticsHelper.accountAcceptFreeTrial(this)
+        implementation.firebase.AnalyticsHelper.accountAcceptFreeTrial(this)
 
         close()
     }

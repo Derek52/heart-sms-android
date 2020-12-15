@@ -28,7 +28,7 @@ import android.provider.Telephony
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 
-import xyz.klinker.sms.shared.R
+import xyz.heart.sms.shared.R
 
 /**
  * Helper class for working with permissions and making sure that they are granted.

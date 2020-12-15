@@ -11,8 +11,8 @@ import android.widget.Toast
 import xyz.klinker.android.floating_tutorial.FloatingTutorialActivity
 import xyz.klinker.android.floating_tutorial.TutorialPage
 import com.raycoarana.codeinputview.CodeInputView
-import xyz.klinker.sms.shared.R
-import xyz.klinker.sms.shared.data.Settings
+import xyz.heart.sms.shared.R
+import xyz.heart.sms.shared.data.Settings
 import android.content.Intent
 import android.net.Uri
 import android.os.Looper
@@ -20,9 +20,9 @@ import android.widget.EditText
 import androidx.biometric.BiometricManager
 import androidx.biometric.BiometricPrompt
 import androidx.fragment.app.FragmentActivity
-import xyz.klinker.sms.activity.main.MainColorController
-import xyz.klinker.sms.api.implementation.Account
-import xyz.klinker.sms.api.implementation.ApiUtils
+import xyz.heart.sms.activity.main.MainColorController
+import xyz.heart.sms.api.implementation.Account
+import xyz.heart.sms.api.implementation.ApiUtils
 import java.util.concurrent.Executor
 
 class PasscodeVerificationActivity : FloatingTutorialActivity() {
@@ -187,7 +187,7 @@ class AccountPasswordPage(context: FloatingTutorialActivity) : TutorialPage(cont
         }
 
         val dialog = ProgressDialog(getActivity())
-        dialog.setMessage(getActivity().getString(xyz.klinker.sms.api.implementation.R.string.api_connecting))
+        dialog.setMessage(getActivity().getString(xyz.heart.sms.api.implementation.R.string.api_connecting))
         dialog.show()
 
         Thread {
@@ -199,7 +199,7 @@ class AccountPasswordPage(context: FloatingTutorialActivity) : TutorialPage(cont
                 }
 
                 if (response == null) {
-                    Toast.makeText(getActivity(), xyz.klinker.sms.api.implementation.R.string.api_login_error,
+                    Toast.makeText(getActivity(), xyz.heart.sms.api.implementation.R.string.api_login_error,
                             Toast.LENGTH_SHORT).show()
                 } else {
                     setActivityResult(Activity.RESULT_OK)

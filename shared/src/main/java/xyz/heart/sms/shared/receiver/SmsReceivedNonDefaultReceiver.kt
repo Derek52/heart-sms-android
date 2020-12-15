@@ -22,16 +22,16 @@ import android.content.Intent
 import android.os.Build
 import android.os.Handler
 import android.telephony.SmsMessage
-import xyz.klinker.sms.api.implementation.Account
-import xyz.klinker.sms.shared.data.DataSource
-import xyz.klinker.sms.shared.data.MimeType
-import xyz.klinker.sms.shared.data.model.Message
-import xyz.klinker.sms.shared.service.notification.NotificationConstants
-import xyz.klinker.sms.shared.service.notification.Notifier
-import xyz.klinker.sms.shared.util.BlacklistUtils
-import xyz.klinker.sms.shared.util.PermissionsUtils
-import xyz.klinker.sms.shared.util.PhoneNumberUtils
-import xyz.klinker.sms.shared.util.TimeUtils
+import xyz.heart.sms.api.implementation.Account
+import xyz.heart.sms.shared.data.DataSource
+import xyz.heart.sms.shared.data.MimeType
+import xyz.heart.sms.shared.data.model.Message
+import xyz.heart.sms.shared.service.notification.NotificationConstants
+import xyz.heart.sms.shared.service.notification.Notifier
+import xyz.heart.sms.shared.util.BlacklistUtils
+import xyz.heart.sms.shared.util.PermissionsUtils
+import xyz.heart.sms.shared.util.PhoneNumberUtils
+import xyz.heart.sms.shared.util.TimeUtils
 
 class SmsReceivedNonDefaultReceiver : BroadcastReceiver() {
 

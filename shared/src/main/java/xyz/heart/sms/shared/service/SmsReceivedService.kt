@@ -3,7 +3,7 @@ package xyz.heart.sms.shared.service
 import android.content.Context
 import android.content.Intent
 import androidx.core.app.JobIntentService
-import xyz.klinker.sms.shared.util.*
+import xyz.heart.sms.shared.util.*
 
 class SmsReceivedService : JobIntentService() {
 

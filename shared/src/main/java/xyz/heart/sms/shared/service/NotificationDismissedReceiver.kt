@@ -21,10 +21,10 @@ import android.content.Context
 import android.content.Intent
 import android.util.Log
 
-import xyz.klinker.sms.api.implementation.Account
-import xyz.klinker.sms.api.implementation.ApiUtils
-import xyz.klinker.sms.shared.data.DataSource
-import xyz.klinker.sms.shared.service.jobs.RepeatNotificationJob
+import xyz.heart.sms.api.implementation.Account
+import xyz.heart.sms.api.implementation.ApiUtils
+import xyz.heart.sms.shared.data.DataSource
+import xyz.heart.sms.shared.service.jobs.RepeatNotificationJob
 
 /**
  * A service to get run when a notification is dismissed.

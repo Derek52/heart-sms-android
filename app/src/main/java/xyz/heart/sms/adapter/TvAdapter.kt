@@ -3,8 +3,8 @@ package xyz.heart.sms.adapter
 import androidx.leanback.widget.ArrayObjectAdapter
 import androidx.leanback.widget.HeaderItem
 import androidx.leanback.widget.ListRow
-import xyz.klinker.sms.fragment.message.MessageInstanceManager
-import xyz.klinker.sms.shared.data.model.Conversation
+import xyz.heart.sms.fragment.message.MessageInstanceManager
+import xyz.heart.sms.shared.data.model.Conversation
 
 class TvAdapter(val conversations: List<Conversation>) : ArrayObjectAdapter() {
 

@@ -10,14 +10,14 @@ import android.widget.EditText
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
-import xyz.klinker.sms.R
-import xyz.klinker.sms.adapter.ConversationsForFolderAdapter
-import xyz.klinker.sms.shared.data.ColorSet
-import xyz.klinker.sms.shared.data.DataSource
-import xyz.klinker.sms.shared.data.model.Conversation
-import xyz.klinker.sms.shared.data.model.Folder
-import xyz.klinker.sms.shared.util.DrawerItemHelper
-import xyz.klinker.sms.shared.util.listener.ContactClickedListener
+import xyz.heart.sms.R
+import xyz.heart.sms.adapter.ConversationsForFolderAdapter
+import xyz.heart.sms.shared.data.ColorSet
+import xyz.heart.sms.shared.data.DataSource
+import xyz.heart.sms.shared.data.model.Conversation
+import xyz.heart.sms.shared.data.model.Folder
+import xyz.heart.sms.shared.util.DrawerItemHelper
+import xyz.heart.sms.shared.util.listener.ContactClickedListener
 
 class FolderManagementFragment : MaterialPreferenceFragment() {
 

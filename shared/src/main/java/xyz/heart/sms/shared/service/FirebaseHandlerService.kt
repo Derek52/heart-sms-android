@@ -28,25 +28,25 @@ import android.util.Log
 import com.klinker.android.send_message.Utils
 import org.json.JSONException
 import org.json.JSONObject
-import xyz.klinker.sms.api.implementation.Account
-import xyz.klinker.sms.api.implementation.ApiUtils
+import xyz.heart.sms.api.implementation.Account
+import xyz.heart.sms.api.implementation.ApiUtils
 import xyz.heart.sms.api.implementation.BinaryUtils
 import xyz.heart.sms.api.implementation.LoginActivity
 import xyz.heart.sms.api.implementation.firebase.FirebaseDownloadCallback
 import xyz.heart.sms.api.implementation.firebase.FirebaseUploadCallback
 import xyz.heart.sms.api.implementation.firebase.MessengerFirebaseMessagingService
 import xyz.heart.sms.encryption.EncryptionUtils
-import xyz.klinker.sms.shared.R
-import xyz.klinker.sms.shared.data.*
-import xyz.klinker.sms.shared.data.model.*
-import xyz.klinker.sms.shared.receiver.ConversationListUpdatedReceiver
-import xyz.klinker.sms.shared.receiver.MessageListUpdatedReceiver
-import xyz.klinker.sms.shared.service.jobs.ScheduledMessageJob
-import xyz.klinker.sms.shared.service.jobs.SignoutJob
-import xyz.klinker.sms.shared.service.jobs.SubscriptionExpirationCheckJob
-import xyz.klinker.sms.shared.service.notification.Notifier
-import xyz.klinker.sms.shared.util.*
-import xyz.klinker.sms.shared.widget.MessengerAppWidgetProvider
+import xyz.heart.sms.shared.R
+import xyz.heart.sms.shared.data.*
+import xyz.heart.sms.shared.data.model.*
+import xyz.heart.sms.shared.receiver.ConversationListUpdatedReceiver
+import xyz.heart.sms.shared.receiver.MessageListUpdatedReceiver
+import xyz.heart.sms.shared.service.jobs.ScheduledMessageJob
+import xyz.heart.sms.shared.service.jobs.SignoutJob
+import xyz.heart.sms.shared.service.jobs.SubscriptionExpirationCheckJob
+import xyz.heart.sms.shared.service.notification.Notifier
+import xyz.heart.sms.shared.util.*
+import xyz.heart.sms.shared.widget.MessengerAppWidgetProvider
 import java.io.File
 import java.util.*
 
@@ -57,9 +57,9 @@ class FirebaseHandlerService : IntentService("FirebaseHandlerService") {
 
     //    override fun doWakefulWork(intent: Intent?) {
     override fun onHandleIntent(intent: Intent?) {
-        if (intent != null && intent.action != null && intent.action == _root_ide_package_.xyz.heart.sms.api.implementation.firebase.MessengerFirebaseMessagingService.ACTION_FIREBASE_MESSAGE_RECEIVED) {
-            val operation = intent.getStringExtra(_root_ide_package_.xyz.heart.sms.api.implementation.firebase.MessengerFirebaseMessagingService.EXTRA_OPERATION)
-            val data = intent.getStringExtra(_root_ide_package_.xyz.heart.sms.api.implementation.firebase.MessengerFirebaseMessagingService.EXTRA_DATA)
+        if (intent != null && intent.action != null && intent.action == MessengerFirebaseMessagingService.ACTION_FIREBASE_MESSAGE_RECEIVED) {
+            val operation = intent.getStringExtra(MessengerFirebaseMessagingService.EXTRA_OPERATION)
+            val data = intent.getStringExtra(MessengerFirebaseMessagingService.EXTRA_DATA)
 
             if (operation != null && data != null) {
                 process(this, operation, data)
@@ -84,7 +84,7 @@ class FirebaseHandlerService : IntentService("FirebaseHandlerService") {
             val encryptionUtils = account.encryptor
 
             if (encryptionUtils == null && account.exists()) {
-                context.startActivity(Intent(context, _root_ide_package_.xyz.heart.sms.api.implementation.LoginActivity::class.java))
+                context.startActivity(Intent(context, LoginActivity::class.java))
                 return
             }
 
@@ -190,7 +190,7 @@ class FirebaseHandlerService : IntentService("FirebaseHandlerService") {
         }
 
         @Throws(JSONException::class)
-        private fun addMessage(json: JSONObject, context: Context, encryptionUtils: _root_ide_package_.xyz.heart.sms.encryption.EncryptionUtils?) {
+        private fun addMessage(json: JSONObject, context: Context, encryptionUtils: EncryptionUtils?) {
             val id = getLong(json, "id")
             if (DataSource.getMessage(context, id) == null) {
                 var conversation = DataSource.getConversation(context, getLong(json, "conversation_id"))
@@ -316,7 +316,7 @@ class FirebaseHandlerService : IntentService("FirebaseHandlerService") {
             }
         }
 
-        private fun addMessageAfterFirebaseDownload(context: Context, encryptionUtils: _root_ide_package_.xyz.heart.sms.encryption.EncryptionUtils, message: Message, to: String? = null) {
+        private fun addMessageAfterFirebaseDownload(context: Context, encryptionUtils: EncryptionUtils, message: Message, to: String? = null) {
             val apiUtils = ApiUtils
             apiUtils.saveFirebaseFolderRef(Account.accountId)
             val file = File(context.filesDir, message.id.toString() + MimeType.getExtension(message.mimeType!!))
@@ -335,7 +335,7 @@ class FirebaseHandlerService : IntentService("FirebaseHandlerService") {
                 message.type = Message.TYPE_SENT
             }
 
-            val callback = _root_ide_package_.xyz.heart.sms.api.implementation.firebase.FirebaseDownloadCallback {
+            val callback = FirebaseDownloadCallback {
                 message.data = Uri.fromFile(file).toString()
                 DataSource.updateMessageData(context, message.id, message.data!!)
                 MessageListUpdatedReceiver.sendBroadcast(context, message.conversationId)
@@ -386,8 +386,8 @@ class FirebaseHandlerService : IntentService("FirebaseHandlerService") {
                 }
 
                 if (to != null) {
-                    val bytes = _root_ide_package_.xyz.heart.sms.api.implementation.BinaryUtils.getMediaBytes(context, message.data, message.mimeType, true)
-                    ApiUtils.uploadBytesToFirebase(Account.accountId, bytes, message.id, encryptionUtils, _root_ide_package_.xyz.heart.sms.api.implementation.firebase.FirebaseUploadCallback { }, 0)
+                    val bytes = BinaryUtils.getMediaBytes(context, message.data, message.mimeType, true)
+                    ApiUtils.uploadBytesToFirebase(Account.accountId, bytes, message.id, encryptionUtils, FirebaseUploadCallback { }, 0)
                 }
             }
 
@@ -452,7 +452,7 @@ class FirebaseHandlerService : IntentService("FirebaseHandlerService") {
         }
 
         @Throws(JSONException::class)
-        private fun addConversation(json: JSONObject, context: Context, encryptionUtils: _root_ide_package_.xyz.heart.sms.encryption.EncryptionUtils?) {
+        private fun addConversation(json: JSONObject, context: Context, encryptionUtils: EncryptionUtils?) {
             val conversation = Conversation()
             conversation.id = getLong(json, "id")
             conversation.colors.color = json.getInt("color")
@@ -493,7 +493,7 @@ class FirebaseHandlerService : IntentService("FirebaseHandlerService") {
         }
 
         @Throws(JSONException::class)
-        private fun updateContact(json: JSONObject, context: Context, encryptionUtils: _root_ide_package_.xyz.heart.sms.encryption.EncryptionUtils?) {
+        private fun updateContact(json: JSONObject, context: Context, encryptionUtils: EncryptionUtils?) {
             try {
                 val contact = Contact()
                 contact.id = json.getLong("device_id")
@@ -529,7 +529,7 @@ class FirebaseHandlerService : IntentService("FirebaseHandlerService") {
         }
 
         @Throws(JSONException::class)
-        private fun addContact(json: JSONObject, context: Context, encryptionUtils: _root_ide_package_.xyz.heart.sms.encryption.EncryptionUtils?) {
+        private fun addContact(json: JSONObject, context: Context, encryptionUtils: EncryptionUtils?) {
 
             try {
                 val contact = Contact()
@@ -553,7 +553,7 @@ class FirebaseHandlerService : IntentService("FirebaseHandlerService") {
         }
 
         @Throws(JSONException::class)
-        private fun updateConversation(json: JSONObject, context: Context, encryptionUtils: _root_ide_package_.xyz.heart.sms.encryption.EncryptionUtils?) {
+        private fun updateConversation(json: JSONObject, context: Context, encryptionUtils: EncryptionUtils?) {
             try {
                 val conversation = Conversation()
                 conversation.id = getLong(json, "id")
@@ -585,7 +585,7 @@ class FirebaseHandlerService : IntentService("FirebaseHandlerService") {
         }
 
         @Throws(JSONException::class)
-        private fun updateConversationTitle(json: JSONObject, context: Context, encryptionUtils: _root_ide_package_.xyz.heart.sms.encryption.EncryptionUtils?) {
+        private fun updateConversationTitle(json: JSONObject, context: Context, encryptionUtils: EncryptionUtils?) {
             try {
                 DataSource.updateConversationTitle(context, getLong(json, "id"),
                         encryptionUtils!!.decrypt(json.getString("title"))!!, false
@@ -599,7 +599,7 @@ class FirebaseHandlerService : IntentService("FirebaseHandlerService") {
         }
 
         @Throws(JSONException::class)
-        private fun updateConversationSnippet(json: JSONObject, context: Context, encryptionUtils: _root_ide_package_.xyz.heart.sms.encryption.EncryptionUtils?) {
+        private fun updateConversationSnippet(json: JSONObject, context: Context, encryptionUtils: EncryptionUtils?) {
             try {
                 DataSource.updateConversation(context,
                         getLong(json, "id"),
@@ -664,7 +664,7 @@ class FirebaseHandlerService : IntentService("FirebaseHandlerService") {
         }
 
         @Throws(JSONException::class)
-        private fun addDraft(json: JSONObject, context: Context, encryptionUtils: _root_ide_package_.xyz.heart.sms.encryption.EncryptionUtils?) {
+        private fun addDraft(json: JSONObject, context: Context, encryptionUtils: EncryptionUtils?) {
             val draft = Draft()
             draft.id = getLong(json, "id")
             draft.conversationId = getLong(json, "conversation_id")
@@ -676,7 +676,7 @@ class FirebaseHandlerService : IntentService("FirebaseHandlerService") {
         }
 
         @Throws(JSONException::class)
-        private fun replacedDrafts(json: JSONObject, context: Context, encryptionUtils: _root_ide_package_.xyz.heart.sms.encryption.EncryptionUtils?) {
+        private fun replacedDrafts(json: JSONObject, context: Context, encryptionUtils: EncryptionUtils?) {
             val draft = Draft()
             draft.id = getLong(json, "id")
             draft.conversationId = getLong(json, "conversation_id")
@@ -700,7 +700,7 @@ class FirebaseHandlerService : IntentService("FirebaseHandlerService") {
         }
 
         @Throws(JSONException::class)
-        private fun addBlacklist(json: JSONObject, context: Context, encryptionUtils: _root_ide_package_.xyz.heart.sms.encryption.EncryptionUtils?) {
+        private fun addBlacklist(json: JSONObject, context: Context, encryptionUtils: EncryptionUtils?) {
             val id = getLong(json, "id")
             var phoneNumber: String? = json.getString("phone_number")
             phoneNumber = encryptionUtils!!.decrypt(phoneNumber)
@@ -723,7 +723,7 @@ class FirebaseHandlerService : IntentService("FirebaseHandlerService") {
         }
 
         @Throws(JSONException::class)
-        private fun addScheduledMessage(json: JSONObject, context: Context, encryptionUtils: _root_ide_package_.xyz.heart.sms.encryption.EncryptionUtils?) {
+        private fun addScheduledMessage(json: JSONObject, context: Context, encryptionUtils: EncryptionUtils?) {
             val message = ScheduledMessage()
             message.id = getLong(json, "id")
             message.to = encryptionUtils!!.decrypt(json.getString("to"))
@@ -739,7 +739,7 @@ class FirebaseHandlerService : IntentService("FirebaseHandlerService") {
         }
 
         @Throws(JSONException::class)
-        private fun updatedScheduledMessage(json: JSONObject, context: Context, encryptionUtils: _root_ide_package_.xyz.heart.sms.encryption.EncryptionUtils?) {
+        private fun updatedScheduledMessage(json: JSONObject, context: Context, encryptionUtils: EncryptionUtils?) {
             val message = ScheduledMessage()
             message.id = getLong(json, "id")
             message.to = encryptionUtils!!.decrypt(json.getString("to"))
@@ -764,7 +764,7 @@ class FirebaseHandlerService : IntentService("FirebaseHandlerService") {
         }
 
         @Throws(JSONException::class)
-        private fun addTemplate(json: JSONObject, context: Context, encryptionUtils: _root_ide_package_.xyz.heart.sms.encryption.EncryptionUtils?) {
+        private fun addTemplate(json: JSONObject, context: Context, encryptionUtils: EncryptionUtils?) {
             val template = Template()
             template.id = getLong(json, "device_id")
             template.text = encryptionUtils!!.decrypt(json.getString("text"))
@@ -774,7 +774,7 @@ class FirebaseHandlerService : IntentService("FirebaseHandlerService") {
         }
 
         @Throws(JSONException::class)
-        private fun updateTemplate(json: JSONObject, context: Context, encryptionUtils: _root_ide_package_.xyz.heart.sms.encryption.EncryptionUtils?) {
+        private fun updateTemplate(json: JSONObject, context: Context, encryptionUtils: EncryptionUtils?) {
             val template = Template()
             template.id = getLong(json, "device_id")
             template.text = encryptionUtils!!.decrypt(json.getString("text"))
@@ -791,7 +791,7 @@ class FirebaseHandlerService : IntentService("FirebaseHandlerService") {
         }
 
         @Throws(JSONException::class)
-        private fun addAutoReply(json: JSONObject, context: Context, encryptionUtils: _root_ide_package_.xyz.heart.sms.encryption.EncryptionUtils?) {
+        private fun addAutoReply(json: JSONObject, context: Context, encryptionUtils: EncryptionUtils?) {
             val reply = AutoReply()
             reply.id = getLong(json, "device_id")
             reply.type = json.getString("type")
@@ -803,7 +803,7 @@ class FirebaseHandlerService : IntentService("FirebaseHandlerService") {
         }
 
         @Throws(JSONException::class)
-        private fun updateAutoReply(json: JSONObject, context: Context, encryptionUtils: _root_ide_package_.xyz.heart.sms.encryption.EncryptionUtils?) {
+        private fun updateAutoReply(json: JSONObject, context: Context, encryptionUtils: EncryptionUtils?) {
             val reply = AutoReply()
             reply.id = getLong(json, "device_id")
             reply.type = json.getString("type")
@@ -856,7 +856,7 @@ class FirebaseHandlerService : IntentService("FirebaseHandlerService") {
         }
 
         @Throws(JSONException::class)
-        private fun addFolder(json: JSONObject, context: Context, encryptionUtils: _root_ide_package_.xyz.heart.sms.encryption.EncryptionUtils?) {
+        private fun addFolder(json: JSONObject, context: Context, encryptionUtils: EncryptionUtils?) {
             val folder = Folder()
             folder.id = getLong(json, "device_id")
             folder.name = encryptionUtils!!.decrypt(json.getString("name"))
@@ -872,7 +872,7 @@ class FirebaseHandlerService : IntentService("FirebaseHandlerService") {
         }
 
         @Throws(JSONException::class)
-        private fun updateFolder(json: JSONObject, context: Context, encryptionUtils: _root_ide_package_.xyz.heart.sms.encryption.EncryptionUtils?) {
+        private fun updateFolder(json: JSONObject, context: Context, encryptionUtils: EncryptionUtils?) {
             val folder = Folder()
             folder.id = getLong(json, "device_id")
             folder.name = encryptionUtils!!.decrypt(json.getString("name"))
@@ -1013,7 +1013,7 @@ class FirebaseHandlerService : IntentService("FirebaseHandlerService") {
         }
 
         @Throws(JSONException::class)
-        private fun forwardToPhone(json: JSONObject, context: Context, encryptionUtils: _root_ide_package_.xyz.heart.sms.encryption.EncryptionUtils?) {
+        private fun forwardToPhone(json: JSONObject, context: Context, encryptionUtils: EncryptionUtils?) {
             if (!Account.primary) {
                 return
             }

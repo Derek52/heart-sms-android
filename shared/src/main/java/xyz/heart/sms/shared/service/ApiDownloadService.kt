@@ -27,25 +27,25 @@ import androidx.core.app.NotificationManagerCompat
 import android.util.Log
 
 import com.google.firebase.auth.FirebaseAuth
-import xyz.klinker.sms.api.entity.*
+import xyz.heart.sms.api.entity.*
 
 import java.io.File
 import java.io.IOException
 
 import xyz.heart.sms.api.implementation.firebase.FirebaseDownloadCallback
-import xyz.klinker.sms.shared.R
-import xyz.klinker.sms.api.implementation.ApiUtils
-import xyz.klinker.sms.api.implementation.Account
-import xyz.klinker.sms.shared.data.ColorSet
-import xyz.klinker.sms.shared.data.DataSource
-import xyz.klinker.sms.shared.data.MimeType
+import xyz.heart.sms.shared.R
+import xyz.heart.sms.api.implementation.ApiUtils
+import xyz.heart.sms.api.implementation.Account
+import xyz.heart.sms.shared.data.ColorSet
+import xyz.heart.sms.shared.data.DataSource
+import xyz.heart.sms.shared.data.MimeType
 import xyz.heart.sms.encryption.EncryptionUtils
-import xyz.klinker.sms.shared.data.model.*
-import xyz.klinker.sms.shared.util.*
+import xyz.heart.sms.shared.data.model.*
+import xyz.heart.sms.shared.util.*
 
 class ApiDownloadService : Service() {
 
-    private var encryptionUtils: _root_ide_package_.xyz.heart.sms.encryption.EncryptionUtils? = null
+    private var encryptionUtils: EncryptionUtils? = null
     private var showNotification = true
     private var completedMediaDownloads = 0
 
@@ -126,7 +126,7 @@ class ApiDownloadService : Service() {
                         .list(Account.accountId, null, MESSAGE_DOWNLOAD_PAGE_SIZE, downloaded)
                         .execute().body()
             } catch (e: IOException) {
-                emptyArray<_root_ide_package_.xyz.heart.sms.api.entity.MessageBody>()
+                emptyArray<MessageBody>()
             }
 
             if (messages != null && !messages.isEmpty()) {
@@ -188,7 +188,7 @@ class ApiDownloadService : Service() {
                             .list(Account.accountId, it.id, MESSAGE_DOWNLOAD_PAGE_SIZE, downloaded)
                             .execute().body()
                 } catch (e: IOException) {
-                    emptyArray<_root_ide_package_.xyz.heart.sms.api.entity.MessageBody>()
+                    emptyArray<MessageBody>()
                 }
 
                 if (messages != null && messages.isNotEmpty()) {
@@ -245,7 +245,7 @@ class ApiDownloadService : Service() {
                         .list(Account.accountId, CONVERSATION_DOWNLOAD_PAGE_SIZE, downloaded)
                         .execute().body()
             } catch (e: IOException) {
-                emptyArray<_root_ide_package_.xyz.heart.sms.api.entity.ConversationBody>()
+                emptyArray<ConversationBody>()
             }
 
             if (conversations != null && !conversations.isEmpty()) {
@@ -296,7 +296,7 @@ class ApiDownloadService : Service() {
         val blacklists = try {
             ApiUtils.api.blacklist().list(Account.accountId).execute().body()
         } catch (e: Exception) {
-            emptyArray<_root_ide_package_.xyz.heart.sms.api.entity.BlacklistBody>()
+            emptyArray<BlacklistBody>()
         }
 
         if (blacklists != null) {
@@ -317,7 +317,7 @@ class ApiDownloadService : Service() {
         val messages = try {
             ApiUtils.api.scheduled().list(Account.accountId).execute().body()
         } catch (e: IOException) {
-            emptyArray<_root_ide_package_.xyz.heart.sms.api.entity.ScheduledMessageBody>()
+            emptyArray<ScheduledMessageBody>()
         }
 
         if (messages != null) {
@@ -338,7 +338,7 @@ class ApiDownloadService : Service() {
         val drafts = try {
             ApiUtils.api.draft().list(Account.accountId).execute().body()
         } catch (e: IOException) {
-            emptyArray<_root_ide_package_.xyz.heart.sms.api.entity.DraftBody>()
+            emptyArray<DraftBody>()
         }
 
         if (drafts != null) {
@@ -368,7 +368,7 @@ class ApiDownloadService : Service() {
                         .list(Account.accountId, CONTACTS_DOWNLOAD_PAGE_SIZE, downloaded)
                         .execute().body()
             } catch (e: IOException) {
-                emptyArray<_root_ide_package_.xyz.heart.sms.api.entity.ContactBody>()
+                emptyArray<ContactBody>()
             }
 
             if (contacts != null && !contacts.isEmpty()) {
@@ -413,7 +413,7 @@ class ApiDownloadService : Service() {
         val templates = try {
             ApiUtils.api.template().list(Account.accountId).execute().body()
         } catch (e: IOException) {
-            emptyArray<_root_ide_package_.xyz.heart.sms.api.entity.TemplateBody>()
+            emptyArray<TemplateBody>()
         }
 
         if (templates != null) {
@@ -434,7 +434,7 @@ class ApiDownloadService : Service() {
         val folders = try {
             ApiUtils.api.folder().list(Account.accountId).execute().body()
         } catch (e: IOException) {
-            emptyArray<_root_ide_package_.xyz.heart.sms.api.entity.FolderBody>()
+            emptyArray<FolderBody>()
         }
 
         if (folders != null) {
@@ -455,7 +455,7 @@ class ApiDownloadService : Service() {
         val replies = try {
             ApiUtils.api.autoReply().list(Account.accountId).execute().body()
         } catch (e: IOException) {
-            emptyArray<_root_ide_package_.xyz.heart.sms.api.entity.AutoReplyBody>()
+            emptyArray<AutoReplyBody>()
         }
 
         if (replies != null) {
@@ -531,7 +531,7 @@ class ApiDownloadService : Service() {
 
                     Log.v(TAG, "started downloading " + message.id)
 
-                    ApiUtils.downloadFileFromFirebase(Account.accountId, file, message.id, encryptionUtils, _root_ide_package_.xyz.heart.sms.api.implementation.firebase.FirebaseDownloadCallback {
+                    ApiUtils.downloadFileFromFirebase(Account.accountId, file, message.id, encryptionUtils, FirebaseDownloadCallback {
                         completedMediaDownloads++
 
                         DataSource.updateMessageData(this@ApiDownloadService, message.id, Uri.fromFile(file).toString())
@@ -583,7 +583,7 @@ class ApiDownloadService : Service() {
 
         private const val TAG = "ApiDownloadService"
         private const val MESSAGE_DOWNLOAD_ID = 7237
-        const val ACTION_DOWNLOAD_FINISHED = "xyz.klinker.messenger.API_DOWNLOAD_FINISHED"
+        const val ACTION_DOWNLOAD_FINISHED = "xyz.heart.messenger.API_DOWNLOAD_FINISHED"
 
         const val MESSAGE_DOWNLOAD_PAGE_SIZE = 5000
         const val CONVERSATION_DOWNLOAD_PAGE_SIZE = 500

@@ -3,8 +3,8 @@ package xyz.heart.sms.util;
 import org.junit.Test;
 
 import xyz.heart.sms.MessengerRobolectricSuite;
-import xyz.klinker.sms.shared.data.MmsSettings;
-import xyz.klinker.sms.shared.util.MessageCountHelper;
+import xyz.heart.sms.shared.data.MmsSettings;
+import xyz.heart.sms.shared.util.MessageCountHelper;
 
 import static org.junit.Assert.*;
 

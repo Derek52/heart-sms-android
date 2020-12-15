@@ -22,16 +22,16 @@ import android.content.Intent
 import android.os.Build
 import android.os.PowerManager
 import com.google.firebase.ml.naturallanguage.FirebaseNaturalLanguage
-import xyz.klinker.sms.shared.data.DataSource
-import xyz.klinker.sms.shared.data.Settings
-import xyz.klinker.sms.shared.data.pojo.NotificationAction
-import xyz.klinker.sms.shared.data.pojo.NotificationConversation
-import xyz.klinker.sms.shared.service.jobs.RepeatNotificationJob
-import xyz.klinker.sms.shared.service.notification.conversation.NotificationConversationProvider
-import xyz.klinker.sms.shared.util.AndroidVersionUtil
-import xyz.klinker.sms.shared.util.MockableDataSourceWrapper
-import xyz.klinker.sms.shared.util.TimeUtils
-import xyz.klinker.sms.shared.widget.MessengerAppWidgetProvider
+import xyz.heart.sms.shared.data.DataSource
+import xyz.heart.sms.shared.data.Settings
+import xyz.heart.sms.shared.data.pojo.NotificationAction
+import xyz.heart.sms.shared.data.pojo.NotificationConversation
+import xyz.heart.sms.shared.service.jobs.RepeatNotificationJob
+import xyz.heart.sms.shared.service.notification.conversation.NotificationConversationProvider
+import xyz.heart.sms.shared.util.AndroidVersionUtil
+import xyz.heart.sms.shared.util.MockableDataSourceWrapper
+import xyz.heart.sms.shared.util.TimeUtils
+import xyz.heart.sms.shared.widget.MessengerAppWidgetProvider
 import java.util.*
 
 /**

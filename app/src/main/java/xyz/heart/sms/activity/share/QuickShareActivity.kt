@@ -15,19 +15,19 @@ import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import xyz.klinker.android.floating_tutorial.FloatingTutorialActivity
 import xyz.klinker.android.floating_tutorial.TutorialPage
-import xyz.klinker.sms.R
-import xyz.klinker.sms.activity.compose.ComposeActivity
-import xyz.klinker.sms.shared.data.MimeType
-import xyz.klinker.sms.shared.data.Settings
-import xyz.klinker.sms.shared.data.pojo.KeyboardLayout
-import xyz.klinker.sms.shared.util.ColorUtils
-import xyz.klinker.sms.shared.util.ContactUtils
-import xyz.klinker.sms.shared.util.KeyboardLayoutHelper
+import xyz.heart.sms.R
+import xyz.heart.sms.activity.compose.ComposeActivity
+import xyz.heart.sms.shared.data.MimeType
+import xyz.heart.sms.shared.data.Settings
+import xyz.heart.sms.shared.data.pojo.KeyboardLayout
+import xyz.heart.sms.shared.util.ColorUtils
+import xyz.heart.sms.shared.util.ContactUtils
+import xyz.heart.sms.shared.util.KeyboardLayoutHelper
 import android.util.TypedValue
 import android.widget.*
 import xyz.klinker.android.floating_tutorial.util.DensityConverter
 import android.view.inputmethod.InputMethodManager
-import xyz.klinker.sms.activity.compose.ShareData
+import xyz.heart.sms.activity.compose.ShareData
 
 
 class QuickShareActivity : FloatingTutorialActivity() {

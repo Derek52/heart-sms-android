@@ -2,15 +2,15 @@ package xyz.heart.sms.shared.service.notification
 
 import android.content.Context
 import android.graphics.Color
-import xyz.klinker.sms.shared.R
-import xyz.klinker.sms.shared.data.DataSource
-import xyz.klinker.sms.shared.data.MimeType
-import xyz.klinker.sms.shared.data.Settings
-import xyz.klinker.sms.shared.data.model.Message
-import xyz.klinker.sms.shared.data.pojo.NotificationConversation
-import xyz.klinker.sms.shared.data.pojo.NotificationMessage
-import xyz.klinker.sms.shared.util.MockableDataSourceWrapper
-import xyz.klinker.sms.shared.util.closeSilent
+import xyz.heart.sms.shared.R
+import xyz.heart.sms.shared.data.DataSource
+import xyz.heart.sms.shared.data.MimeType
+import xyz.heart.sms.shared.data.Settings
+import xyz.heart.sms.shared.data.model.Message
+import xyz.heart.sms.shared.data.pojo.NotificationConversation
+import xyz.heart.sms.shared.data.pojo.NotificationMessage
+import xyz.heart.sms.shared.util.MockableDataSourceWrapper
+import xyz.heart.sms.shared.util.closeSilent
 import java.lang.Exception
 import java.util.*
 

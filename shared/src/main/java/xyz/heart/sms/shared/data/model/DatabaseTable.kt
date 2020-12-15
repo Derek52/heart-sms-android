@@ -14,8 +14,8 @@ interface DatabaseTable {
 
     fun fillFromCursor(cursor: Cursor)
 
-    fun encrypt(utils: _root_ide_package_.xyz.heart.sms.encryption.EncryptionUtils)
+    fun encrypt(utils: EncryptionUtils)
 
-    fun decrypt(utils: _root_ide_package_.xyz.heart.sms.encryption.EncryptionUtils)
+    fun decrypt(utils: EncryptionUtils)
 
 }

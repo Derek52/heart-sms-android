@@ -4,7 +4,7 @@ import junit.framework.Assert.assertFalse
 import junit.framework.Assert.assertTrue
 import org.junit.Test
 import xyz.heart.sms.MessengerRobolectricSuite
-import xyz.klinker.sms.shared.util.BlacklistUtils
+import xyz.heart.sms.shared.util.BlacklistUtils
 
 class BlacklistUtilsTest : _root_ide_package_.xyz.heart.sms.MessengerRobolectricSuite() {
 

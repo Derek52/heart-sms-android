@@ -22,13 +22,13 @@ import android.net.Uri
 import android.util.Log
 import androidx.annotation.VisibleForTesting
 
-import xyz.klinker.sms.api.implementation.Account
-import xyz.klinker.sms.shared.data.DataSource
-import xyz.klinker.sms.shared.data.MimeType
-import xyz.klinker.sms.shared.data.MmsSettings
-import xyz.klinker.sms.shared.data.model.Message
-import xyz.klinker.sms.shared.service.notification.Notifier
-import xyz.klinker.sms.shared.util.*
+import xyz.heart.sms.api.implementation.Account
+import xyz.heart.sms.shared.data.DataSource
+import xyz.heart.sms.shared.data.MimeType
+import xyz.heart.sms.shared.data.MmsSettings
+import xyz.heart.sms.shared.data.model.Message
+import xyz.heart.sms.shared.service.notification.Notifier
+import xyz.heart.sms.shared.util.*
 
 /**
  * Receiver for notifying us when a new MMS has been received by the device. By default it will

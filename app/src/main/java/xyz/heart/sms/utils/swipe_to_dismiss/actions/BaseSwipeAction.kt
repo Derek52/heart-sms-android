@@ -1,6 +1,6 @@
 package xyz.heart.sms.utils.swipe_to_dismiss.actions
 
-import xyz.klinker.sms.adapter.conversation.ConversationListAdapter
+import xyz.heart.sms.adapter.conversation.ConversationListAdapter
 
 abstract class BaseSwipeAction {
 

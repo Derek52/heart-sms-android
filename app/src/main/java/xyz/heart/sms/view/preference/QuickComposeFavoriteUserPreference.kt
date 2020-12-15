@@ -9,13 +9,13 @@ import android.view.LayoutInflater
 import android.widget.MultiAutoCompleteTextView
 import com.android.ex.chips.BaseRecipientAdapter
 import com.android.ex.chips.RecipientEditTextView
-import xyz.klinker.sms.R
-import xyz.klinker.sms.api.implementation.Account
-import xyz.klinker.sms.api.implementation.ApiUtils
-import xyz.klinker.sms.shared.data.Settings
-import xyz.klinker.sms.shared.service.QuickComposeNotificationService
-import xyz.klinker.sms.shared.util.ContactUtils
-import xyz.klinker.sms.shared.util.PhoneNumberUtils
+import xyz.heart.sms.R
+import xyz.heart.sms.api.implementation.Account
+import xyz.heart.sms.api.implementation.ApiUtils
+import xyz.heart.sms.shared.data.Settings
+import xyz.heart.sms.shared.service.QuickComposeNotificationService
+import xyz.heart.sms.shared.util.ContactUtils
+import xyz.heart.sms.shared.util.PhoneNumberUtils
 
 @Suppress("DEPRECATION")
 class QuickComposeFavoriteUserPreference : Preference, Preference.OnPreferenceClickListener {

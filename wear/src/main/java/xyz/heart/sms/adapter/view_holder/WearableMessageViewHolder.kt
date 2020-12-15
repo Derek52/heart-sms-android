@@ -11,16 +11,16 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import xyz.klinker.android.article.ArticleIntent
-import xyz.klinker.sms.R
-import xyz.klinker.sms.shared.data.ArticlePreview
-import xyz.klinker.sms.shared.data.MimeType
-import xyz.klinker.sms.shared.data.Settings
-import xyz.klinker.sms.shared.data.model.Message
-import xyz.klinker.sms.shared.util.ColorUtils
-import xyz.klinker.sms.shared.util.DensityUtil
-import xyz.klinker.sms.shared.util.ImageUtils
-import xyz.klinker.sms.shared.util.listener.ForcedRippleTouchListener
-import xyz.klinker.sms.shared.util.media.parsers.ArticleParser
+import xyz.heart.sms.R
+import xyz.heart.sms.shared.data.ArticlePreview
+import xyz.heart.sms.shared.data.MimeType
+import xyz.heart.sms.shared.data.Settings
+import xyz.heart.sms.shared.data.model.Message
+import xyz.heart.sms.shared.util.ColorUtils
+import xyz.heart.sms.shared.util.DensityUtil
+import xyz.heart.sms.shared.util.ImageUtils
+import xyz.heart.sms.shared.util.listener.ForcedRippleTouchListener
+import xyz.heart.sms.shared.util.media.parsers.ArticleParser
 
 class WearableMessageViewHolder(itemView: View, color: Int, type: Int, private val timestampHeight: Int)
     : RecyclerView.ViewHolder(itemView) {

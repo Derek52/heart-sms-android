@@ -5,21 +5,21 @@ import android.util.Log
 import android.view.View
 import androidx.fragment.app.FragmentActivity
 import androidx.recyclerview.widget.RecyclerView
-import xyz.klinker.sms.MessengerApplication
-import xyz.klinker.sms.R
-import xyz.klinker.sms.activity.MessengerActivity
-import xyz.klinker.sms.adapter.conversation.ConversationListAdapter
-import xyz.klinker.sms.fragment.ArchivedConversationListFragment
-import xyz.klinker.sms.fragment.FolderConversationListFragment
-import xyz.klinker.sms.fragment.PrivateConversationListFragment
-import xyz.klinker.sms.fragment.UnreadConversationListFragment
-import xyz.klinker.sms.shared.data.DataSource
-import xyz.klinker.sms.shared.data.Settings
-import xyz.klinker.sms.shared.data.model.Conversation
-import xyz.klinker.sms.shared.util.ColorUtils
-import xyz.klinker.sms.shared.util.TimeUtils
-import xyz.klinker.sms.utils.FixedScrollLinearLayoutManager
-import xyz.klinker.sms.utils.swipe_to_dismiss.SwipeItemDecoration
+import xyz.heart.sms.MessengerApplication
+import xyz.heart.sms.R
+import xyz.heart.sms.activity.MessengerActivity
+import xyz.heart.sms.adapter.conversation.ConversationListAdapter
+import xyz.heart.sms.fragment.ArchivedConversationListFragment
+import xyz.heart.sms.fragment.FolderConversationListFragment
+import xyz.heart.sms.fragment.PrivateConversationListFragment
+import xyz.heart.sms.fragment.UnreadConversationListFragment
+import xyz.heart.sms.shared.data.DataSource
+import xyz.heart.sms.shared.data.Settings
+import xyz.heart.sms.shared.data.model.Conversation
+import xyz.heart.sms.shared.util.ColorUtils
+import xyz.heart.sms.shared.util.TimeUtils
+import xyz.heart.sms.utils.FixedScrollLinearLayoutManager
+import xyz.heart.sms.utils.swipe_to_dismiss.SwipeItemDecoration
 
 class ConversationRecyclerViewManager(private val fragment: ConversationListFragment) {
 

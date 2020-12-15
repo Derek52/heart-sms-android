@@ -2,8 +2,8 @@ package xyz.heart.sms.shared.util
 
 import android.annotation.SuppressLint
 import android.content.Context
-import xyz.klinker.sms.shared.R
-import xyz.klinker.sms.shared.data.Settings
+import xyz.heart.sms.shared.R
+import xyz.heart.sms.shared.data.Settings
 
 object FirstRunInitializer {
 

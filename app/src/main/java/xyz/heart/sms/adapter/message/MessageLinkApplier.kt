@@ -9,15 +9,15 @@ import com.klinker.android.link_builder.Link
 import com.klinker.android.link_builder.TouchableMovementMethod
 import com.klinker.android.link_builder.applyLinks
 import xyz.klinker.android.article.ArticleIntent
-import xyz.klinker.sms.adapter.view_holder.MessageViewHolder
+import xyz.heart.sms.adapter.view_holder.MessageViewHolder
 import xyz.heart.sms.api.implementation.firebase.AnalyticsHelper
-import xyz.klinker.sms.fragment.message.MessageListFragment
-import xyz.klinker.sms.fragment.bottom_sheet.LinkLongClickFragment
-import xyz.klinker.sms.shared.data.Settings
-import xyz.klinker.sms.shared.data.model.Message
-import xyz.klinker.sms.shared.util.PhoneNumberUtils
-import xyz.klinker.sms.shared.util.Regex
-import xyz.klinker.sms.shared.util.media.parsers.ArticleParser
+import xyz.heart.sms.fragment.message.MessageListFragment
+import xyz.heart.sms.fragment.bottom_sheet.LinkLongClickFragment
+import xyz.heart.sms.shared.data.Settings
+import xyz.heart.sms.shared.data.model.Message
+import xyz.heart.sms.shared.util.PhoneNumberUtils
+import xyz.heart.sms.shared.util.Regex
+import xyz.heart.sms.shared.util.media.parsers.ArticleParser
 
 @Suppress("DEPRECATION")
 class MessageLinkApplier(private val fragment: MessageListFragment, private val accentColor: Int, private val receivedColor: Int) {
@@ -92,7 +92,7 @@ class MessageLinkApplier(private val fragment: MessageListFragment, private val 
                 try {
                     holder.itemView.context.startActivity(url)
                 } catch (e: Exception) {
-                    _root_ide_package_.xyz.heart.sms.api.implementation.firebase.AnalyticsHelper.caughtForceClose(holder.itemView.context, "couldn't start link click: $clickedText", e)
+                    implementation.firebase.AnalyticsHelper.caughtForceClose(holder.itemView.context, "couldn't start link click: $clickedText", e)
                 }
             } else {
                 val intent = ArticleIntent.Builder(holder.itemView.context, ArticleParser.ARTICLE_API_KEY)

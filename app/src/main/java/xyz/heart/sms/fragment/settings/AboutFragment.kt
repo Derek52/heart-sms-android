@@ -27,12 +27,12 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import androidx.fragment.app.FragmentActivity
-import xyz.klinker.sms.R
-import xyz.klinker.sms.activity.MessengerActivity
-import xyz.klinker.sms.adapter.ChangelogAdapter
-import xyz.klinker.sms.adapter.OpenSourceAdapter
-import xyz.klinker.sms.shared.util.xml.ChangelogParser
-import xyz.klinker.sms.shared.util.xml.OpenSourceParser
+import xyz.heart.sms.R
+import xyz.heart.sms.activity.MessengerActivity
+import xyz.heart.sms.adapter.ChangelogAdapter
+import xyz.heart.sms.adapter.OpenSourceAdapter
+import xyz.heart.sms.shared.util.xml.ChangelogParser
+import xyz.heart.sms.shared.util.xml.OpenSourceParser
 
 /**
  * Fragment for displaying information about the app.
@@ -71,7 +71,7 @@ class AboutFragment : MaterialPreferenceFragmentCompat() {
 
         findPreference(getString(R.string.pref_about_open_source))
                 .setOnPreferenceClickListener {
-                    openWebsite("https://github.com/klinker-apps/pulse-sms-android")
+                    openWebsite("https://github.com/heart-apps/pulse-sms-android")
                     true
                 }
 

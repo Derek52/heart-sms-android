@@ -22,8 +22,8 @@ import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import android.widget.FrameLayout
 
-import xyz.klinker.sms.shared.data.ColorSet
-import xyz.klinker.sms.view.ColorPreviewButton
+import xyz.heart.sms.shared.data.ColorSet
+import xyz.heart.sms.view.ColorPreviewButton
 
 /**
  * Adapter for choosing a color to apply to an entire conversation.

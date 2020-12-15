@@ -21,15 +21,15 @@ import androidx.appcompat.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
-import xyz.klinker.sms.R
-import xyz.klinker.sms.activity.main.MainColorController
-import xyz.klinker.sms.api.implementation.Account
-import xyz.klinker.sms.api.implementation.ApiUtils
-import xyz.klinker.sms.shared.data.MmsSettings
-import xyz.klinker.sms.shared.data.Settings
-import xyz.klinker.sms.shared.util.ActivityUtils
-import xyz.klinker.sms.shared.util.ColorUtils
-import xyz.klinker.sms.shared.view.WhitableToolbar
+import xyz.heart.sms.R
+import xyz.heart.sms.activity.main.MainColorController
+import xyz.heart.sms.api.implementation.Account
+import xyz.heart.sms.api.implementation.ApiUtils
+import xyz.heart.sms.shared.data.MmsSettings
+import xyz.heart.sms.shared.data.Settings
+import xyz.heart.sms.shared.util.ActivityUtils
+import xyz.heart.sms.shared.util.ColorUtils
+import xyz.heart.sms.shared.view.WhitableToolbar
 
 /**
  * Activity to display UI for creating a new conversation.

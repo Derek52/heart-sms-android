@@ -18,7 +18,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import xyz.klinker.sms.shared.R;
+import xyz.heart.sms.shared.R;
 
 public class BillingHelper {
 

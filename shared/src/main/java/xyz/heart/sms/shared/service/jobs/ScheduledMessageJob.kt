@@ -23,19 +23,19 @@ import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
 import android.text.Html
 import android.util.Log
-import xyz.klinker.sms.api.implementation.Account
-import xyz.klinker.sms.shared.R
-import xyz.klinker.sms.shared.data.ColorSet
-import xyz.klinker.sms.shared.data.DataSource
-import xyz.klinker.sms.shared.data.model.Message
-import xyz.klinker.sms.shared.data.model.ScheduledMessage
-import xyz.klinker.sms.shared.util.*
+import xyz.heart.sms.api.implementation.Account
+import xyz.heart.sms.shared.R
+import xyz.heart.sms.shared.data.ColorSet
+import xyz.heart.sms.shared.data.DataSource
+import xyz.heart.sms.shared.data.model.Message
+import xyz.heart.sms.shared.data.model.ScheduledMessage
+import xyz.heart.sms.shared.util.*
 import android.app.AlarmManager
 import android.content.BroadcastReceiver
 import android.net.Uri
 import android.os.Build
 import android.os.Build.VERSION.SDK_INT
-import xyz.klinker.sms.shared.data.MimeType
+import xyz.heart.sms.shared.data.MimeType
 import java.util.*
 
 /**
@@ -162,7 +162,7 @@ class ScheduledMessageJob : BroadcastReceiver() {
     companion object {
 
         private var lastRun = 0L
-        const val BROADCAST_SCHEDULED_SENT = "xyz.klinker.messenger.SENT_SCHEDULED_MESSAGE"
+        const val BROADCAST_SCHEDULED_SENT = "xyz.heart.messenger.SENT_SCHEDULED_MESSAGE"
 
         fun scheduleNextRun(context: Context, source: DataSource = DataSource) {
             val account = Account

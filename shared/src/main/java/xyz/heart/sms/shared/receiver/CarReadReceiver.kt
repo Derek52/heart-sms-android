@@ -7,6 +7,6 @@ import android.content.Intent
 class CarReadReceiver : BroadcastReceiver() {
 
     override fun onReceive(context: Context, intent: Intent) {
-        xyz.klinker.sms.shared.receiver.notification_action.NotificationMarkReadReceiver.handle(intent, context)
+        xyz.heart.sms.shared.receiver.notification_action.NotificationMarkReadReceiver.handle(intent, context)
     }
 }

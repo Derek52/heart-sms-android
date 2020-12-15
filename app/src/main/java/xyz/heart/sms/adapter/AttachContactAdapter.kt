@@ -4,10 +4,10 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import xyz.klinker.sms.R
-import xyz.klinker.sms.adapter.view_holder.AttachContactViewHolder
-import xyz.klinker.sms.shared.data.model.Conversation
-import xyz.klinker.sms.shared.util.listener.AttachContactListener
+import xyz.heart.sms.R
+import xyz.heart.sms.adapter.view_holder.AttachContactViewHolder
+import xyz.heart.sms.shared.data.model.Conversation
+import xyz.heart.sms.shared.util.listener.AttachContactListener
 import java.util.*
 
 class AttachContactAdapter(private val listener: AttachContactListener?) : RecyclerView.Adapter<AttachContactViewHolder>() {

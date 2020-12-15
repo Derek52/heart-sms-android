@@ -8,10 +8,10 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
 import de.hdodenhof.circleimageview.CircleImageView
-import xyz.klinker.sms.R
-import xyz.klinker.sms.activity.MessageListActivity
-import xyz.klinker.sms.shared.data.Settings
-import xyz.klinker.sms.shared.data.model.Conversation
+import xyz.heart.sms.R
+import xyz.heart.sms.activity.MessageListActivity
+import xyz.heart.sms.shared.data.Settings
+import xyz.heart.sms.shared.data.model.Conversation
 
 class WearableConversationViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 

@@ -18,16 +18,16 @@ import androidx.core.graphics.drawable.IconCompat
 import android.text.Html
 import androidx.core.content.LocusIdCompat
 import com.google.firebase.ml.naturallanguage.smartreply.SmartReplySuggestion
-import xyz.klinker.sms.shared.R
-import xyz.klinker.sms.shared.data.MimeType
-import xyz.klinker.sms.shared.data.Settings
-import xyz.klinker.sms.shared.data.model.Message
-import xyz.klinker.sms.shared.data.pojo.NotificationAction
-import xyz.klinker.sms.shared.data.pojo.NotificationConversation
-import xyz.klinker.sms.shared.data.pojo.VibratePattern
-import xyz.klinker.sms.shared.service.ReplyService
-import xyz.klinker.sms.shared.service.notification.*
-import xyz.klinker.sms.shared.util.*
+import xyz.heart.sms.shared.R
+import xyz.heart.sms.shared.data.MimeType
+import xyz.heart.sms.shared.data.Settings
+import xyz.heart.sms.shared.data.model.Message
+import xyz.heart.sms.shared.data.pojo.NotificationAction
+import xyz.heart.sms.shared.data.pojo.NotificationConversation
+import xyz.heart.sms.shared.data.pojo.VibratePattern
+import xyz.heart.sms.shared.service.ReplyService
+import xyz.heart.sms.shared.service.notification.*
+import xyz.heart.sms.shared.util.*
 
 /**
  * Displays a notification for a single conversation.

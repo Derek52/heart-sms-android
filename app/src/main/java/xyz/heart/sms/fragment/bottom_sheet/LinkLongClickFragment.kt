@@ -14,10 +14,10 @@ import android.widget.Toast
 import java.util.Random
 
 import xyz.klinker.android.article.ArticleIntent
-import xyz.klinker.sms.R
-import xyz.klinker.sms.shared.data.MimeType
-import xyz.klinker.sms.shared.data.Settings
-import xyz.klinker.sms.shared.util.media.parsers.ArticleParser
+import xyz.heart.sms.R
+import xyz.heart.sms.shared.data.MimeType
+import xyz.heart.sms.shared.data.Settings
+import xyz.heart.sms.shared.util.media.parsers.ArticleParser
 
 import android.content.Context.CLIPBOARD_SERVICE
 

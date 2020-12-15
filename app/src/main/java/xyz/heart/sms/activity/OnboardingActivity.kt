@@ -8,7 +8,7 @@ import androidx.fragment.app.Fragment
 import com.github.paolorotolo.appintro.AppIntro
 import com.github.paolorotolo.appintro.AppIntroFragment
 
-import xyz.klinker.sms.R
+import xyz.heart.sms.R
 import xyz.heart.sms.api.implementation.firebase.AnalyticsHelper
 
 @Suppress("DEPRECATION")
@@ -17,7 +17,7 @@ class OnboardingActivity : AppIntro() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        _root_ide_package_.xyz.heart.sms.api.implementation.firebase.AnalyticsHelper.tutorialStarted(this)
+        implementation.firebase.AnalyticsHelper.tutorialStarted(this)
 
         addSlide(AppIntroFragment.newInstance(
                 getString(R.string.onboarding_title_1), getString(R.string.onboarding_content_1),
@@ -47,14 +47,14 @@ class OnboardingActivity : AppIntro() {
         super.onDonePressed(currentFragment)
         finish()
 
-        _root_ide_package_.xyz.heart.sms.api.implementation.firebase.AnalyticsHelper.tutorialFinished(this)
+        implementation.firebase.AnalyticsHelper.tutorialFinished(this)
     }
 
     override fun onSkipPressed(currentFragment: Fragment?) {
         super.onSkipPressed(currentFragment)
         finish()
 
-        _root_ide_package_.xyz.heart.sms.api.implementation.firebase.AnalyticsHelper.tutorialSkipped(this)
-        _root_ide_package_.xyz.heart.sms.api.implementation.firebase.AnalyticsHelper.tutorialFinished(this)
+        implementation.firebase.AnalyticsHelper.tutorialSkipped(this)
+        implementation.firebase.AnalyticsHelper.tutorialFinished(this)
     }
 }

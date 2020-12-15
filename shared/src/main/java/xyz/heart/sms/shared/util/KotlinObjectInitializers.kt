@@ -1,12 +1,12 @@
 package xyz.heart.sms.shared.util
 
 import android.content.Context
-import xyz.klinker.sms.api.implementation.Account
-import xyz.klinker.sms.api.implementation.ApiUtils
-import xyz.klinker.sms.shared.R
-import xyz.klinker.sms.shared.data.FeatureFlags
-import xyz.klinker.sms.shared.data.MmsSettings
-import xyz.klinker.sms.shared.data.Settings
+import xyz.heart.sms.api.implementation.Account
+import xyz.heart.sms.api.implementation.ApiUtils
+import xyz.heart.sms.shared.R
+import xyz.heart.sms.shared.data.FeatureFlags
+import xyz.heart.sms.shared.data.MmsSettings
+import xyz.heart.sms.shared.data.Settings
 
 object KotlinObjectInitializers {
 

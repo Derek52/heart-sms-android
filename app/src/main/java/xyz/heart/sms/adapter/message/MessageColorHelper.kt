@@ -1,13 +1,13 @@
 package xyz.heart.sms.adapter.message
 
 import android.content.res.ColorStateList
-import xyz.klinker.sms.R
-import xyz.klinker.sms.adapter.view_holder.MessageViewHolder
-import xyz.klinker.sms.shared.data.DataSource
-import xyz.klinker.sms.shared.data.Settings
-import xyz.klinker.sms.shared.data.model.Contact
-import xyz.klinker.sms.shared.data.model.Message
-import xyz.klinker.sms.shared.util.ColorUtils
+import xyz.heart.sms.R
+import xyz.heart.sms.adapter.view_holder.MessageViewHolder
+import xyz.heart.sms.shared.data.DataSource
+import xyz.heart.sms.shared.data.Settings
+import xyz.heart.sms.shared.data.model.Contact
+import xyz.heart.sms.shared.data.model.Message
+import xyz.heart.sms.shared.util.ColorUtils
 
 @Suppress("DEPRECATION")
 class MessageColorHelper {

@@ -3,7 +3,7 @@ package xyz.heart.sms.shared.util;
 import org.junit.Test;
 
 import xyz.heart.sms.MessengerSuite;
-import xyz.klinker.sms.shared.data.model.Conversation;
+import xyz.heart.sms.shared.data.model.Conversation;
 
 import static org.junit.Assert.*;
 

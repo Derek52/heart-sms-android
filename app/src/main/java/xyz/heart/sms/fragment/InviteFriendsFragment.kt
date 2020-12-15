@@ -27,11 +27,11 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.floatingactionbutton.FloatingActionButton
-import xyz.klinker.sms.R
-import xyz.klinker.sms.adapter.InviteFriendsAdapter
-import xyz.klinker.sms.shared.data.model.Conversation
-import xyz.klinker.sms.shared.util.*
-import xyz.klinker.sms.shared.util.listener.ContactClickedListener
+import xyz.heart.sms.R
+import xyz.heart.sms.adapter.InviteFriendsAdapter
+import xyz.heart.sms.shared.data.model.Conversation
+import xyz.heart.sms.shared.util.*
+import xyz.heart.sms.shared.util.listener.ContactClickedListener
 import java.util.*
 
 /**

@@ -16,7 +16,7 @@
 
 package xyz.heart.sms.utils.listener
 
-import xyz.klinker.sms.adapter.view_holder.ConversationViewHolder
+import xyz.heart.sms.adapter.view_holder.ConversationViewHolder
 
 /**
  * Listener for notifying an object when a conversation has been expanded or contracted.

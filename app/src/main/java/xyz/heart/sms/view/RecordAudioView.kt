@@ -33,9 +33,9 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton
 import java.io.File
 import java.io.IOException
 
-import xyz.klinker.sms.R
-import xyz.klinker.sms.shared.util.TimeUtils
-import xyz.klinker.sms.shared.util.listener.AudioRecordedListener
+import xyz.heart.sms.R
+import xyz.heart.sms.shared.util.TimeUtils
+import xyz.heart.sms.shared.util.listener.AudioRecordedListener
 
 /**
  * View that allows you to record audio samples and provides a callback to put them back into the

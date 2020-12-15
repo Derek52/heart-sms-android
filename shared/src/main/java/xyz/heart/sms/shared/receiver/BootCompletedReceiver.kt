@@ -20,9 +20,9 @@ import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
 
-import xyz.klinker.sms.shared.data.Settings
-import xyz.klinker.sms.shared.service.QuickComposeNotificationService
-import xyz.klinker.sms.shared.util.UpdateUtils
+import xyz.heart.sms.shared.data.Settings
+import xyz.heart.sms.shared.service.QuickComposeNotificationService
+import xyz.heart.sms.shared.util.UpdateUtils
 
 /**
  * Receiver for when boot has completed. This will be responsible for starting up the content

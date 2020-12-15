@@ -6,7 +6,7 @@ import android.service.quicksettings.Tile
 import android.service.quicksettings.TileService
 import androidx.annotation.RequiresApi
 
-import xyz.klinker.sms.shared.util.ActivityUtils
+import xyz.heart.sms.shared.util.ActivityUtils
 
 @RequiresApi(api = Build.VERSION_CODES.N)
 class ComposeTileService : TileService() {

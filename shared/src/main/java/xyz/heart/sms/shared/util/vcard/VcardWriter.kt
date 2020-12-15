@@ -2,7 +2,7 @@ package xyz.heart.sms.shared.util.vcard
 
 import android.content.Context
 import android.net.Uri
-import xyz.klinker.sms.shared.util.ImageUtils
+import xyz.heart.sms.shared.util.ImageUtils
 
 import java.io.File
 import java.io.FileWriter

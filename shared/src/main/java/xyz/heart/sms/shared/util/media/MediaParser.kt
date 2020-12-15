@@ -3,8 +3,8 @@ package xyz.heart.sms.shared.util.media
 import android.content.Context
 import java.util.regex.Pattern
 
-import xyz.klinker.sms.api.implementation.Account
-import xyz.klinker.sms.shared.data.model.Message
+import xyz.heart.sms.api.implementation.Account
+import xyz.heart.sms.shared.data.model.Message
 
 abstract class MediaParser(protected var context: Context?) {
     protected var matchedText: String? = null

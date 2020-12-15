@@ -29,7 +29,7 @@ import java.io.IOException
 
 import retrofit2.Response
 import xyz.heart.sms.api.Api
-import xyz.klinker.sms.api.entity.*
+import xyz.heart.sms.api.entity.*
 import xyz.heart.sms.api.implementation.firebase.FirebaseDownloadCallback
 import xyz.heart.sms.api.implementation.firebase.FirebaseUploadCallback
 import xyz.heart.sms.api.implementation.retrofit.AddConversationRetryableCallback
@@ -56,15 +56,15 @@ object ApiUtils {
      * Gets direct access to the apis for more advanced options.
      */
     var environment = "release"
-    val api: _root_ide_package_.xyz.heart.sms.api.Api by lazy { _root_ide_package_.xyz.heart.sms.api.implementation.ApiAccessor.create(environment) }
+    val api: Api by lazy { ApiAccessor.create(environment) }
     private var folderRef: StorageReference? = null
 
     /**
      * Logs into the server.
      */
-    fun login(email: String?, password: String?): _root_ide_package_.xyz.heart.sms.api.entity.LoginResponse? {
+    fun login(email: String?, password: String?): LoginResponse? {
         return try {
-            val request = _root_ide_package_.xyz.heart.sms.api.entity.LoginRequest(email, password)
+            val request = LoginRequest(email, password)
             api.account().login(request).execute().body()
         } catch (e: IOException) {
             null
@@ -75,9 +75,9 @@ object ApiUtils {
     /**
      * Signs up for the service.
      */
-    fun signup(email: String?, password: String?, name: String?, phoneNumber: String?): _root_ide_package_.xyz.heart.sms.api.entity.SignupResponse? {
+    fun signup(email: String?, password: String?, name: String?, phoneNumber: String?): SignupResponse? {
         return try {
-            val request = _root_ide_package_.xyz.heart.sms.api.entity.SignupRequest(email, name, password, phoneNumber)
+            val request = SignupRequest(email, name, password, phoneNumber)
             api.account().signup(request).execute().body()
         } catch (e: IOException) {
             null
@@ -92,7 +92,7 @@ object ApiUtils {
         val message = "removed account"
         val call = api.account().remove(accountId)
 
-        call.enqueue(_root_ide_package_.xyz.heart.sms.api.implementation.retrofit.LoggingRetryableCallback(call, RETRY_COUNT, message))
+        call.enqueue(LoggingRetryableCallback(call, RETRY_COUNT, message))
     }
 
     /**
@@ -102,7 +102,7 @@ object ApiUtils {
         val message = "cleaned account"
         val call = api.account().clean(accountId)
 
-        call.enqueue(_root_ide_package_.xyz.heart.sms.api.implementation.retrofit.LoggingRetryableCallback(call, RETRY_COUNT, message))
+        call.enqueue(LoggingRetryableCallback(call, RETRY_COUNT, message))
     }
 
     /**
@@ -110,8 +110,8 @@ object ApiUtils {
      */
     fun registerDevice(accountId: String?, info: String?, name: String?,
                        primary: Boolean, fcmToken: String?): Int? {
-        val deviceBody = _root_ide_package_.xyz.heart.sms.api.entity.DeviceBody(info, name, primary, fcmToken)
-        val request = _root_ide_package_.xyz.heart.sms.api.entity.AddDeviceRequest(accountId, deviceBody)
+        val deviceBody = DeviceBody(info, name, primary, fcmToken)
+        val request = AddDeviceRequest(accountId, deviceBody)
 
         try {
             val response = api.device().add(request).execute().body()
@@ -132,7 +132,7 @@ object ApiUtils {
         val message = "remove device"
         val call = api.device().remove(deviceId, accountId)
 
-        call.enqueue(_root_ide_package_.xyz.heart.sms.api.implementation.retrofit.LoggingRetryableCallback(call, RETRY_COUNT, message))
+        call.enqueue(LoggingRetryableCallback(call, RETRY_COUNT, message))
     }
 
     fun updatePrimaryDevice(accountId: String?, newPrimaryDeviceId: String?) {
@@ -143,13 +143,13 @@ object ApiUtils {
         val message = "update primary device"
         val call = api.device().updatePrimary(newPrimaryDeviceId, accountId)
 
-        call.enqueue(_root_ide_package_.xyz.heart.sms.api.implementation.retrofit.LoggingRetryableCallback(call, RETRY_COUNT, message))
+        call.enqueue(LoggingRetryableCallback(call, RETRY_COUNT, message))
     }
 
     /**
      * Gets a list of all devices on the server.
      */
-    fun getDevices(accountId: String?): Array<_root_ide_package_.xyz.heart.sms.api.entity.DeviceBody>? {
+    fun getDevices(accountId: String?): Array<DeviceBody>? {
         return try {
             api.device().list(accountId).execute().body()
         } catch (e: IOException) {
@@ -165,7 +165,7 @@ object ApiUtils {
         val message = "update device"
         val call = api.device().update(deviceId, accountId, name, fcmToken)
 
-        call.enqueue(_root_ide_package_.xyz.heart.sms.api.implementation.retrofit.LoggingRetryableCallback(call, RETRY_COUNT, message))
+        call.enqueue(LoggingRetryableCallback(call, RETRY_COUNT, message))
     }
 
     /**
@@ -173,20 +173,20 @@ object ApiUtils {
      */
     fun addContact(accountId: String?, id: Long, phoneNumber: String?, idMatcher: String?, name: String?, type: Int?,
                    color: Int, colorDark: Int, colorLight: Int, colorAccent: Int,
-                   encryptionUtils: _root_ide_package_.xyz.heart.sms.encryption.EncryptionUtils?) {
+                   encryptionUtils: EncryptionUtils?) {
         if (accountId == null || encryptionUtils == null) {
             return
         }
 
         val body = if (type != null) {
-            _root_ide_package_.xyz.heart.sms.api.entity.ContactBody(id, encryptionUtils.encrypt(phoneNumber), encryptionUtils.encrypt(idMatcher),
+            ContactBody(id, encryptionUtils.encrypt(phoneNumber), encryptionUtils.encrypt(idMatcher),
                     encryptionUtils.encrypt(name), type, color, colorDark, colorLight, colorAccent)
         } else {
-            _root_ide_package_.xyz.heart.sms.api.entity.ContactBody(id, encryptionUtils.encrypt(phoneNumber), encryptionUtils.encrypt(idMatcher),
+            ContactBody(id, encryptionUtils.encrypt(phoneNumber), encryptionUtils.encrypt(idMatcher),
                     encryptionUtils.encrypt(name), color, colorDark, colorLight, colorAccent)
         }
 
-        val request = _root_ide_package_.xyz.heart.sms.api.entity.AddContactRequest(accountId, body)
+        val request = AddContactRequest(accountId, body)
 
         addContact(request)
     }
@@ -194,18 +194,18 @@ object ApiUtils {
     /**
      * Adds a new contact.
      */
-    fun addContact(request: _root_ide_package_.xyz.heart.sms.api.entity.AddContactRequest) {
+    fun addContact(request: AddContactRequest) {
         val message = "add contact"
         val call = api.contact().add(request)
 
-        call.enqueue(_root_ide_package_.xyz.heart.sms.api.implementation.retrofit.LoggingRetryableCallback(call, RETRY_COUNT, message))
+        call.enqueue(LoggingRetryableCallback(call, RETRY_COUNT, message))
     }
 
     /**
      * Deletes a contact
      */
     fun deleteContact(accountId: String?, id: Long, phoneNumber: String?,
-                      encryptionUtils: _root_ide_package_.xyz.heart.sms.encryption.EncryptionUtils?) {
+                      encryptionUtils: EncryptionUtils?) {
         if (accountId == null || encryptionUtils == null) {
             return
         }
@@ -213,7 +213,7 @@ object ApiUtils {
         val message = "delete contact"
         val call = api.contact().remove(encryptionUtils.encrypt(phoneNumber), id, accountId)
 
-        call.enqueue(_root_ide_package_.xyz.heart.sms.api.implementation.retrofit.LoggingRetryableCallback(call, RETRY_COUNT, message))
+        call.enqueue(LoggingRetryableCallback(call, RETRY_COUNT, message))
     }
 
     /**
@@ -227,7 +227,7 @@ object ApiUtils {
         val message = "delete contact"
         val call = api.contact().clear(accountId)
 
-        call.enqueue(_root_ide_package_.xyz.heart.sms.api.implementation.retrofit.LoggingRetryableCallback(call, RETRY_COUNT, message))
+        call.enqueue(LoggingRetryableCallback(call, RETRY_COUNT, message))
     }
 
     /**
@@ -236,19 +236,19 @@ object ApiUtils {
     fun updateContact(accountId: String?, id: Long, phoneNumber: String?, name: String?,
                       color: Int?, colorDark: Int?, colorLight: Int?,
                       colorAccent: Int?,
-                      encryptionUtils: _root_ide_package_.xyz.heart.sms.encryption.EncryptionUtils?) {
+                      encryptionUtils: EncryptionUtils?) {
         if (accountId == null || encryptionUtils == null) {
             return
         }
 
-        val request = _root_ide_package_.xyz.heart.sms.api.entity.UpdateContactRequest(
+        val request = UpdateContactRequest(
                 encryptionUtils.encrypt(phoneNumber),
                 encryptionUtils.encrypt(name), color, colorDark, colorLight, colorAccent)
 
         val message = "update contact"
         val call = api.contact().update(encryptionUtils.encrypt(phoneNumber), id, accountId, request)
 
-        call.enqueue(_root_ide_package_.xyz.heart.sms.api.implementation.retrofit.LoggingRetryableCallback(call, RETRY_COUNT, message))
+        call.enqueue(LoggingRetryableCallback(call, RETRY_COUNT, message))
     }
 
     /**
@@ -260,27 +260,27 @@ object ApiUtils {
                         title: String?, phoneNumbers: String?, snippet: String?,
                         ringtone: String?, idMatcher: String?, mute: Boolean,
                         archive: Boolean, privateNotifications: Boolean, folderId: Long?,
-                        encryptionUtils: _root_ide_package_.xyz.heart.sms.encryption.EncryptionUtils?, retryable: Boolean = true) {
+                        encryptionUtils: EncryptionUtils?, retryable: Boolean = true) {
         if (accountId == null || encryptionUtils == null) {
             return
         }
 
-        val body = _root_ide_package_.xyz.heart.sms.api.entity.ConversationBody(
+        val body = ConversationBody(
                 deviceId, color, colorDark, colorLight, colorAccent, ledColor,
                 pinned, read, timestamp, encryptionUtils.encrypt(title),
                 encryptionUtils.encrypt(phoneNumbers), encryptionUtils.encrypt(snippet),
                 encryptionUtils.encrypt(ringtone), null,
                 encryptionUtils.encrypt(idMatcher), mute, archive, privateNotifications, folderId)
-        val request = _root_ide_package_.xyz.heart.sms.api.entity.AddConversationRequest(accountId, body)
+        val request = AddConversationRequest(accountId, body)
         val call = api.conversation().add(request)
 
         if (retryable) {
             // if the request errors out (no internet), we want to persist that issue and retry
             // it when connectivity is regained.
-            call.enqueue(_root_ide_package_.xyz.heart.sms.api.implementation.retrofit.AddConversationRetryableCallback(context, call, RETRY_COUNT, deviceId))
+            call.enqueue(AddConversationRetryableCallback(context, call, RETRY_COUNT, deviceId))
         } else {
             val message = "add conversation"
-            call.enqueue(_root_ide_package_.xyz.heart.sms.api.implementation.retrofit.LoggingRetryableCallback(call, RETRY_COUNT, message))
+            call.enqueue(LoggingRetryableCallback(call, RETRY_COUNT, message))
         }
     }
 
@@ -295,7 +295,7 @@ object ApiUtils {
         val message = "delete conversation"
         val call = api.conversation().remove(deviceId, accountId)
 
-        call.enqueue(_root_ide_package_.xyz.heart.sms.api.implementation.retrofit.LoggingRetryableCallback(call, RETRY_COUNT, message))
+        call.enqueue(LoggingRetryableCallback(call, RETRY_COUNT, message))
     }
 
     /**
@@ -309,7 +309,7 @@ object ApiUtils {
         val message = "add conversation to folder"
         val call = api.conversation().addToFolder(deviceId, folderId, accountId)
 
-        call.enqueue(_root_ide_package_.xyz.heart.sms.api.implementation.retrofit.LoggingRetryableCallback(call, RETRY_COUNT, message))
+        call.enqueue(LoggingRetryableCallback(call, RETRY_COUNT, message))
     }
 
     /**
@@ -323,7 +323,7 @@ object ApiUtils {
         val message = "remove conversation from folder"
         val call = api.conversation().removeFromFolder(deviceId, accountId)
 
-        call.enqueue(_root_ide_package_.xyz.heart.sms.api.implementation.retrofit.LoggingRetryableCallback(call, RETRY_COUNT, message))
+        call.enqueue(LoggingRetryableCallback(call, RETRY_COUNT, message))
     }
 
     /**
@@ -337,7 +337,7 @@ object ApiUtils {
         val message = "archive conversation"
         val call = api.conversation().archive(deviceId, accountId)
 
-        call.enqueue(_root_ide_package_.xyz.heart.sms.api.implementation.retrofit.LoggingRetryableCallback(call, RETRY_COUNT, message))
+        call.enqueue(LoggingRetryableCallback(call, RETRY_COUNT, message))
     }
 
     /**
@@ -351,7 +351,7 @@ object ApiUtils {
         val message = "unarchive conversation"
         val call = api.conversation().unarchive(deviceId, accountId)
 
-        call.enqueue(_root_ide_package_.xyz.heart.sms.api.implementation.retrofit.LoggingRetryableCallback(call, RETRY_COUNT, message))
+        call.enqueue(LoggingRetryableCallback(call, RETRY_COUNT, message))
     }
 
     /**
@@ -363,12 +363,12 @@ object ApiUtils {
                            read: Boolean?, timestamp: Long?, title: String?,
                            snippet: String?, ringtone: String?, mute: Boolean?,
                            archive: Boolean?, privateNotifications: Boolean?,
-                           encryptionUtils: _root_ide_package_.xyz.heart.sms.encryption.EncryptionUtils?) {
+                           encryptionUtils: EncryptionUtils?) {
         if (accountId == null || encryptionUtils == null) {
             return
         }
 
-        val request = _root_ide_package_.xyz.heart.sms.api.entity.UpdateConversationRequest(color,
+        val request = UpdateConversationRequest(color,
                 colorDark, colorLight, colorAccent, ledColor, pinned, read, timestamp,
                 encryptionUtils.encrypt(title), encryptionUtils.encrypt(snippet),
                 encryptionUtils.encrypt(ringtone), mute, archive, privateNotifications)
@@ -376,7 +376,7 @@ object ApiUtils {
         val message = "update conversation"
         val call = api.conversation().update(deviceId, accountId, request)
 
-        call.enqueue(_root_ide_package_.xyz.heart.sms.api.implementation.retrofit.LoggingRetryableCallback(call, RETRY_COUNT, message))
+        call.enqueue(LoggingRetryableCallback(call, RETRY_COUNT, message))
     }
 
     /**
@@ -385,24 +385,24 @@ object ApiUtils {
     fun updateConversationSnippet(accountId: String?, deviceId: Long,
                                   read: Boolean?, archive: Boolean?,
                                   timestamp: Long?, snippet: String?,
-                                  encryptionUtils: _root_ide_package_.xyz.heart.sms.encryption.EncryptionUtils?) {
+                                  encryptionUtils: EncryptionUtils?) {
         if (accountId == null || encryptionUtils == null) {
             return
         }
 
-        val request = _root_ide_package_.xyz.heart.sms.api.entity.UpdateConversationRequest(null, null, null, null, null, null, read, timestamp, null, encryptionUtils.encrypt(snippet), null, null, archive, null)
+        val request = UpdateConversationRequest(null, null, null, null, null, null, read, timestamp, null, encryptionUtils.encrypt(snippet), null, null, archive, null)
 
         val message = "update conversation snippet"
         val call = api.conversation().updateSnippet(deviceId, accountId, request)
 
-        call.enqueue(_root_ide_package_.xyz.heart.sms.api.implementation.retrofit.LoggingRetryableCallback(call, RETRY_COUNT, message))
+        call.enqueue(LoggingRetryableCallback(call, RETRY_COUNT, message))
     }
 
     /**
      * Updates a conversation with a new title (usually when the name changes)
      */
     fun updateConversationTitle(accountId: String?, deviceId: Long,
-                                title: String?, encryptionUtils: _root_ide_package_.xyz.heart.sms.encryption.EncryptionUtils?) {
+                                title: String?, encryptionUtils: EncryptionUtils?) {
         if (accountId == null || encryptionUtils == null) {
             return
         }
@@ -410,7 +410,7 @@ object ApiUtils {
         val message = "update conversation title"
         val call = api.conversation().updateTitle(deviceId, accountId, encryptionUtils.encrypt(title))
 
-        call.enqueue(_root_ide_package_.xyz.heart.sms.api.implementation.retrofit.LoggingRetryableCallback(call, RETRY_COUNT, message))
+        call.enqueue(LoggingRetryableCallback(call, RETRY_COUNT, message))
     }
 
     /**
@@ -424,7 +424,7 @@ object ApiUtils {
         val message = "read conversation"
         val call = api.conversation().read(deviceId, androidDevice, accountId)
 
-        call.enqueue(_root_ide_package_.xyz.heart.sms.api.implementation.retrofit.LoggingRetryableCallback(call, RETRY_COUNT, message))
+        call.enqueue(LoggingRetryableCallback(call, RETRY_COUNT, message))
     }
 
     /**
@@ -463,42 +463,42 @@ object ApiUtils {
                    data: String?, timestamp: Long, mimeType: String?,
                    read: Boolean, seen: Boolean, messageFrom: String?,
                    color: Int?, androidDeviceId: String?, simStamp: String?,
-                   encryptionUtils: _root_ide_package_.xyz.heart.sms.encryption.EncryptionUtils?, retryable: Boolean = true) {
+                   encryptionUtils: EncryptionUtils?, retryable: Boolean = true) {
         if (accountId == null || encryptionUtils == null) {
             return
         }
 
         if (mimeType == "text/plain" || messageType == 6 || mimeType == "media/map") {
-            val body = _root_ide_package_.xyz.heart.sms.api.entity.MessageBody(deviceId,
+            val body = MessageBody(deviceId,
                     deviceConversationId, messageType, encryptionUtils.encrypt(data),
                     timestamp, encryptionUtils.encrypt(mimeType), read, seen,
                     encryptionUtils.encrypt(messageFrom), color, androidDeviceId,
                     encryptionUtils.encrypt(simStamp))
-            val request = _root_ide_package_.xyz.heart.sms.api.entity.AddMessagesRequest(accountId, body)
+            val request = AddMessagesRequest(accountId, body)
             val call = api.message().add(request)
 
             if (retryable) {
                 // if the request errors out (no internet), we want to persist that issue and retry
                 // it when connectivity is regained.
-                call.enqueue(_root_ide_package_.xyz.heart.sms.api.implementation.retrofit.AddMessageRetryableCallback(context, call, RETRY_COUNT, deviceId))
+                call.enqueue(AddMessageRetryableCallback(context, call, RETRY_COUNT, deviceId))
             } else {
                 val message = "added_message"
-                call.enqueue(_root_ide_package_.xyz.heart.sms.api.implementation.retrofit.LoggingRetryableCallback(call, RETRY_COUNT, message))
+                call.enqueue(LoggingRetryableCallback(call, RETRY_COUNT, message))
             }
         } else {
             saveFirebaseFolderRef(accountId)
-            val bytes = _root_ide_package_.xyz.heart.sms.api.implementation.BinaryUtils.getMediaBytes(context, data, mimeType, true)
-            uploadBytesToFirebase(accountId, bytes, deviceId, encryptionUtils, _root_ide_package_.xyz.heart.sms.api.implementation.firebase.FirebaseUploadCallback {
-                val body = _root_ide_package_.xyz.heart.sms.api.entity.MessageBody(deviceId, deviceConversationId,
+            val bytes = BinaryUtils.getMediaBytes(context, data, mimeType, true)
+            uploadBytesToFirebase(accountId, bytes, deviceId, encryptionUtils, FirebaseUploadCallback {
+                val body = MessageBody(deviceId, deviceConversationId,
                         messageType, encryptionUtils.encrypt("firebase -1"),
                         timestamp, encryptionUtils.encrypt(mimeType), read, seen,
                         encryptionUtils.encrypt(messageFrom), color, androidDeviceId,
                         encryptionUtils.encrypt(simStamp))
-                val request = _root_ide_package_.xyz.heart.sms.api.entity.AddMessagesRequest(accountId, body)
+                val request = AddMessagesRequest(accountId, body)
                 val message = "add media message"
                 val call = api.message().add(request)
 
-                call.enqueue(_root_ide_package_.xyz.heart.sms.api.implementation.retrofit.LoggingRetryableCallback(call, RETRY_COUNT, message))
+                call.enqueue(LoggingRetryableCallback(call, RETRY_COUNT, message))
             }, 0)
         }
     }
@@ -512,11 +512,11 @@ object ApiUtils {
             return
         }
 
-        val request = _root_ide_package_.xyz.heart.sms.api.entity.UpdateMessageRequest(type, read, seen, timestamp)
+        val request = UpdateMessageRequest(type, read, seen, timestamp)
         val message = "update message"
         val call = api.message().update(deviceId, accountId, request)
 
-        call.enqueue(_root_ide_package_.xyz.heart.sms.api.implementation.retrofit.LoggingRetryableCallback(call, 6, message))
+        call.enqueue(LoggingRetryableCallback(call, 6, message))
     }
 
     /**
@@ -530,7 +530,7 @@ object ApiUtils {
         val message = "update message type"
         val call = api.message().updateType(deviceId, accountId, type)
 
-        call.enqueue(_root_ide_package_.xyz.heart.sms.api.implementation.retrofit.LoggingRetryableCallback(call, RETRY_COUNT, message))
+        call.enqueue(LoggingRetryableCallback(call, RETRY_COUNT, message))
     }
 
     /**
@@ -544,7 +544,7 @@ object ApiUtils {
         val message = "delete message"
         val call = api.message().remove(deviceId, accountId)
 
-        call.enqueue(_root_ide_package_.xyz.heart.sms.api.implementation.retrofit.LoggingRetryableCallback(call, RETRY_COUNT, message))
+        call.enqueue(LoggingRetryableCallback(call, RETRY_COUNT, message))
     }
 
     /**
@@ -558,7 +558,7 @@ object ApiUtils {
         val message = "clean up messages"
         val call = api.message().cleanup(accountId, timestamp)
 
-        call.enqueue(_root_ide_package_.xyz.heart.sms.api.implementation.retrofit.LoggingRetryableCallback(call, RETRY_COUNT, message))
+        call.enqueue(LoggingRetryableCallback(call, RETRY_COUNT, message))
     }
 
     /**
@@ -572,7 +572,7 @@ object ApiUtils {
         val message = "clean up conversation messages"
         val call = api.conversation().cleanup(accountId, conversationId, timestamp)
 
-        call.enqueue(_root_ide_package_.xyz.heart.sms.api.implementation.retrofit.LoggingRetryableCallback(call, RETRY_COUNT, message))
+        call.enqueue(LoggingRetryableCallback(call, RETRY_COUNT, message))
     }
 
     /**
@@ -580,19 +580,19 @@ object ApiUtils {
      */
     fun addDraft(accountId: String?, deviceId: Long,
                  deviceConversationId: Long, data: String?,
-                 mimeType: String?, encryptionUtils: _root_ide_package_.xyz.heart.sms.encryption.EncryptionUtils?) {
+                 mimeType: String?, encryptionUtils: EncryptionUtils?) {
         if (accountId == null || encryptionUtils == null) {
             return
         }
 
-        val body = _root_ide_package_.xyz.heart.sms.api.entity.DraftBody(deviceId, deviceConversationId,
+        val body = DraftBody(deviceId, deviceConversationId,
                 encryptionUtils.encrypt(data), encryptionUtils.encrypt(mimeType))
-        val request = _root_ide_package_.xyz.heart.sms.api.entity.AddDraftRequest(accountId, body)
+        val request = AddDraftRequest(accountId, body)
 
         val message = "add draft"
         val call = api.draft().add(request)
 
-        call.enqueue(_root_ide_package_.xyz.heart.sms.api.implementation.retrofit.LoggingRetryableCallback(call, RETRY_COUNT, message))
+        call.enqueue(LoggingRetryableCallback(call, RETRY_COUNT, message))
     }
 
     /**
@@ -606,26 +606,26 @@ object ApiUtils {
         val message = "delete drafts"
         val call = api.draft().remove(deviceConversationId, androidDeviceId, accountId)
 
-        call.enqueue(_root_ide_package_.xyz.heart.sms.api.implementation.retrofit.LoggingRetryableCallback(call, RETRY_COUNT, message))
+        call.enqueue(LoggingRetryableCallback(call, RETRY_COUNT, message))
     }
 
     /**
      * Adds a blacklist.
      */
     fun addBlacklist(accountId: String?, deviceId: Long, phoneNumber: String?, phrase: String?,
-                     encryptionUtils: _root_ide_package_.xyz.heart.sms.encryption.EncryptionUtils?) {
+                     encryptionUtils: EncryptionUtils?) {
         if (accountId == null || encryptionUtils == null) {
             return
         }
 
-        val body = _root_ide_package_.xyz.heart.sms.api.entity.BlacklistBody(deviceId,
+        val body = BlacklistBody(deviceId,
                 encryptionUtils.encrypt(phoneNumber), encryptionUtils.encrypt(phrase))
-        val request = _root_ide_package_.xyz.heart.sms.api.entity.AddBlacklistRequest(accountId, body)
+        val request = AddBlacklistRequest(accountId, body)
 
         val message = "add blacklist"
         val call = api.blacklist().add(request)
 
-        call.enqueue(_root_ide_package_.xyz.heart.sms.api.implementation.retrofit.LoggingRetryableCallback(call, RETRY_COUNT, message))
+        call.enqueue(LoggingRetryableCallback(call, RETRY_COUNT, message))
     }
 
     /**
@@ -639,7 +639,7 @@ object ApiUtils {
         val message = "delete blacklist"
         val call = api.blacklist().remove(deviceId, accountId)
 
-        call.enqueue(_root_ide_package_.xyz.heart.sms.api.implementation.retrofit.LoggingRetryableCallback(call, RETRY_COUNT, message))
+        call.enqueue(LoggingRetryableCallback(call, RETRY_COUNT, message))
     }
 
     /**
@@ -647,12 +647,12 @@ object ApiUtils {
      */
     fun addScheduledMessage(accountId: String?, deviceId: Long, title: String?,
                             to: String?, data: String?, mimeType: String?,
-                            timestamp: Long, repeat: Int?, encryptionUtils: _root_ide_package_.xyz.heart.sms.encryption.EncryptionUtils?) {
+                            timestamp: Long, repeat: Int?, encryptionUtils: EncryptionUtils?) {
         if (accountId == null || encryptionUtils == null) {
             return
         }
 
-        val body = _root_ide_package_.xyz.heart.sms.api.entity.ScheduledMessageBody(
+        val body = ScheduledMessageBody(
                 deviceId,
                 encryptionUtils.encrypt(to),
                 encryptionUtils.encrypt(data),
@@ -661,12 +661,12 @@ object ApiUtils {
                 encryptionUtils.encrypt(title),
                 repeat ?: 0)
 
-        val request = _root_ide_package_.xyz.heart.sms.api.entity.AddScheduledMessageRequest(accountId, body)
+        val request = AddScheduledMessageRequest(accountId, body)
 
         val message = "add scheduled message"
         val call = api.scheduled().add(request)
 
-        call.enqueue(_root_ide_package_.xyz.heart.sms.api.implementation.retrofit.LoggingRetryableCallback(call, RETRY_COUNT, message))
+        call.enqueue(LoggingRetryableCallback(call, RETRY_COUNT, message))
     }
 
     /**
@@ -674,12 +674,12 @@ object ApiUtils {
      */
     fun updateScheduledMessage(accountId: String?, deviceId: Long, title: String?,
                                to: String?, data: String?, mimeType: String?,
-                               timestamp: Long, repeat: Int?, encryptionUtils: _root_ide_package_.xyz.heart.sms.encryption.EncryptionUtils?) {
+                               timestamp: Long, repeat: Int?, encryptionUtils: EncryptionUtils?) {
         if (accountId == null || encryptionUtils == null) {
             return
         }
 
-        val request = _root_ide_package_.xyz.heart.sms.api.entity.UpdateScheduledMessageRequest(
+        val request = UpdateScheduledMessageRequest(
                 encryptionUtils.encrypt(to), encryptionUtils.encrypt(data),
                 encryptionUtils.encrypt(mimeType), timestamp,
                 encryptionUtils.encrypt(title),
@@ -688,7 +688,7 @@ object ApiUtils {
         val message = "update scheduled message"
         val call = api.scheduled().update(deviceId, accountId, request)
 
-        call.enqueue(_root_ide_package_.xyz.heart.sms.api.implementation.retrofit.LoggingRetryableCallback(call, RETRY_COUNT, message))
+        call.enqueue(LoggingRetryableCallback(call, RETRY_COUNT, message))
     }
 
     /**
@@ -702,39 +702,39 @@ object ApiUtils {
         val message = "delete scheduled message"
         val call = api.scheduled().remove(deviceId, accountId)
 
-        call.enqueue(_root_ide_package_.xyz.heart.sms.api.implementation.retrofit.LoggingRetryableCallback(call, RETRY_COUNT, message))
+        call.enqueue(LoggingRetryableCallback(call, RETRY_COUNT, message))
     }
 
     /**
      * Adds a template.
      */
-    fun addTemplate(accountId: String?, deviceId: Long, text: String, encryptionUtils: _root_ide_package_.xyz.heart.sms.encryption.EncryptionUtils?) {
+    fun addTemplate(accountId: String?, deviceId: Long, text: String, encryptionUtils: EncryptionUtils?) {
         if (accountId == null || encryptionUtils == null) {
             return
         }
 
-        val body = _root_ide_package_.xyz.heart.sms.api.entity.TemplateBody(deviceId, encryptionUtils.encrypt(text))
-        val request = _root_ide_package_.xyz.heart.sms.api.entity.AddTemplateRequest(accountId, body)
+        val body = TemplateBody(deviceId, encryptionUtils.encrypt(text))
+        val request = AddTemplateRequest(accountId, body)
         val message = "add template"
 
         val call = api.template().add(request)
-        call.enqueue(_root_ide_package_.xyz.heart.sms.api.implementation.retrofit.LoggingRetryableCallback(call, RETRY_COUNT, message))
+        call.enqueue(LoggingRetryableCallback(call, RETRY_COUNT, message))
     }
 
     /**
      * Update the text for a given template.
      */
     fun updateTemplate(accountId: String?, deviceId: Long, text: String,
-                       encryptionUtils: _root_ide_package_.xyz.heart.sms.encryption.EncryptionUtils?) {
+                       encryptionUtils: EncryptionUtils?) {
         if (accountId == null || encryptionUtils == null) {
             return
         }
 
-        val request = _root_ide_package_.xyz.heart.sms.api.entity.UpdateTemplateRequest(encryptionUtils.encrypt(text))
+        val request = UpdateTemplateRequest(encryptionUtils.encrypt(text))
         val message = "update template"
 
         val call = api.template().update(deviceId, accountId, request)
-        call.enqueue(_root_ide_package_.xyz.heart.sms.api.implementation.retrofit.LoggingRetryableCallback(call, RETRY_COUNT, message))
+        call.enqueue(LoggingRetryableCallback(call, RETRY_COUNT, message))
     }
 
     /**
@@ -748,42 +748,42 @@ object ApiUtils {
         val message = "delete template"
         val call = api.template().remove(deviceId, accountId)
 
-        call.enqueue(_root_ide_package_.xyz.heart.sms.api.implementation.retrofit.LoggingRetryableCallback(call, RETRY_COUNT, message))
+        call.enqueue(LoggingRetryableCallback(call, RETRY_COUNT, message))
     }
 
     /**
      * Adds a template.
      */
     fun addAutoReply(accountId: String?, deviceId: Long, type: String, pattern: String, response: String,
-                     encryptionUtils: _root_ide_package_.xyz.heart.sms.encryption.EncryptionUtils?) {
+                     encryptionUtils: EncryptionUtils?) {
         if (accountId == null || encryptionUtils == null) {
             return
         }
 
-        val body = _root_ide_package_.xyz.heart.sms.api.entity.AutoReplyBody(deviceId, type, encryptionUtils.encrypt(pattern),
+        val body = AutoReplyBody(deviceId, type, encryptionUtils.encrypt(pattern),
                 encryptionUtils.encrypt(response))
-        val request = _root_ide_package_.xyz.heart.sms.api.entity.AddAutoReplyRequest(accountId, body)
+        val request = AddAutoReplyRequest(accountId, body)
         val message = "add auto reply"
 
         val call = api.autoReply().add(request)
-        call.enqueue(_root_ide_package_.xyz.heart.sms.api.implementation.retrofit.LoggingRetryableCallback(call, RETRY_COUNT, message))
+        call.enqueue(LoggingRetryableCallback(call, RETRY_COUNT, message))
     }
 
     /**
      * Update the text for a given template.
      */
     fun updateAutoReply(accountId: String?, deviceId: Long, type: String, pattern: String, response: String,
-                       encryptionUtils: _root_ide_package_.xyz.heart.sms.encryption.EncryptionUtils?) {
+                       encryptionUtils: EncryptionUtils?) {
         if (accountId == null || encryptionUtils == null) {
             return
         }
 
-        val request = _root_ide_package_.xyz.heart.sms.api.entity.UpdateAutoReplyRequest(type, encryptionUtils.encrypt(pattern),
+        val request = UpdateAutoReplyRequest(type, encryptionUtils.encrypt(pattern),
                 encryptionUtils.encrypt(response))
         val message = "update auto reply"
 
         val call = api.autoReply().update(deviceId, accountId, request)
-        call.enqueue(_root_ide_package_.xyz.heart.sms.api.implementation.retrofit.LoggingRetryableCallback(call, RETRY_COUNT, message))
+        call.enqueue(LoggingRetryableCallback(call, RETRY_COUNT, message))
     }
 
     /**
@@ -797,40 +797,40 @@ object ApiUtils {
         val message = "delete auto reply"
         val call = api.autoReply().remove(deviceId, accountId)
 
-        call.enqueue(_root_ide_package_.xyz.heart.sms.api.implementation.retrofit.LoggingRetryableCallback(call, RETRY_COUNT, message))
+        call.enqueue(LoggingRetryableCallback(call, RETRY_COUNT, message))
     }
 
     /**
      * Adds a folder.
      */
     fun addFolder(accountId: String?, deviceId: Long, name: String, color: Int, colorDark: Int,
-                  colorLight: Int, colorAccent: Int, encryptionUtils: _root_ide_package_.xyz.heart.sms.encryption.EncryptionUtils?) {
+                  colorLight: Int, colorAccent: Int, encryptionUtils: EncryptionUtils?) {
         if (accountId == null || encryptionUtils == null) {
             return
         }
 
-        val body = _root_ide_package_.xyz.heart.sms.api.entity.FolderBody(deviceId, encryptionUtils.encrypt(name), color, colorDark, colorLight, colorAccent)
-        val request = _root_ide_package_.xyz.heart.sms.api.entity.AddFolderRequest(accountId, body)
+        val body = FolderBody(deviceId, encryptionUtils.encrypt(name), color, colorDark, colorLight, colorAccent)
+        val request = AddFolderRequest(accountId, body)
         val message = "add folder"
 
         val call = api.folder().add(request)
-        call.enqueue(_root_ide_package_.xyz.heart.sms.api.implementation.retrofit.LoggingRetryableCallback(call, RETRY_COUNT, message))
+        call.enqueue(LoggingRetryableCallback(call, RETRY_COUNT, message))
     }
 
     /**
      * Update the text for a given folder.
      */
     fun updateFolder(accountId: String?, deviceId: Long, name: String, color: Int, colorDark: Int,
-                     colorLight: Int, colorAccent: Int, encryptionUtils: _root_ide_package_.xyz.heart.sms.encryption.EncryptionUtils?) {
+                     colorLight: Int, colorAccent: Int, encryptionUtils: EncryptionUtils?) {
         if (accountId == null || encryptionUtils == null) {
             return
         }
 
-        val request = _root_ide_package_.xyz.heart.sms.api.entity.UpdateFolderRequest(encryptionUtils.encrypt(name), color, colorDark, colorLight, colorAccent)
+        val request = UpdateFolderRequest(encryptionUtils.encrypt(name), color, colorDark, colorLight, colorAccent)
         val message = "update folder"
 
         val call = api.folder().update(deviceId, accountId, request)
-        call.enqueue(_root_ide_package_.xyz.heart.sms.api.implementation.retrofit.LoggingRetryableCallback(call, RETRY_COUNT, message))
+        call.enqueue(LoggingRetryableCallback(call, RETRY_COUNT, message))
     }
 
     /**
@@ -844,18 +844,18 @@ object ApiUtils {
         val message = "delete folder"
         val call = api.folder().remove(deviceId, accountId)
 
-        call.enqueue(_root_ide_package_.xyz.heart.sms.api.implementation.retrofit.LoggingRetryableCallback(call, RETRY_COUNT, message))
+        call.enqueue(LoggingRetryableCallback(call, RETRY_COUNT, message))
     }
 
     /**
-     * Uploads a byte array of encrypted data to firebase.
+     * Uploads a byte array of encrypted data to 
      *
      * @param bytes the byte array to upload.
      * @param messageId the message id that the data belongs to.
      * @param encryptionUtils the utils to encrypt the byte array with.
      */
-    fun uploadBytesToFirebase(accountId: String?, bytes: ByteArray, messageId: Long, encryptionUtils: _root_ide_package_.xyz.heart.sms.encryption.EncryptionUtils?,
-                              callback: _root_ide_package_.xyz.heart.sms.api.implementation.firebase.FirebaseUploadCallback, retryCount: Int) {
+    fun uploadBytesToFirebase(accountId: String?, bytes: ByteArray, messageId: Long, encryptionUtils: EncryptionUtils?,
+                              callback: FirebaseUploadCallback, retryCount: Int) {
         if (encryptionUtils == null || retryCount > RETRY_COUNT) {
             callback.onUploadFinished()
             return
@@ -904,8 +904,8 @@ object ApiUtils {
      * @param encryptionUtils the utils to use to decrypt the message.
      */
     fun downloadFileFromFirebase(accountId: String?, file: File, messageId: Long,
-                                 encryptionUtils: _root_ide_package_.xyz.heart.sms.encryption.EncryptionUtils?,
-                                 callback: _root_ide_package_.xyz.heart.sms.api.implementation.firebase.FirebaseDownloadCallback, retryCount: Int) {
+                                 encryptionUtils: EncryptionUtils?,
+                                 callback: FirebaseDownloadCallback, retryCount: Int) {
         if (encryptionUtils == null || retryCount > RETRY_COUNT) {
             callback.onDownloadComplete()
             return
@@ -997,7 +997,7 @@ object ApiUtils {
         val message = "dismiss notification"
         val call = api.account().dismissedNotification(accountId, deviceId, conversationId)
 
-        call.enqueue(_root_ide_package_.xyz.heart.sms.api.implementation.retrofit.LoggingRetryableCallback(call, RETRY_COUNT, message))
+        call.enqueue(LoggingRetryableCallback(call, RETRY_COUNT, message))
     }
 
     /**
@@ -1011,7 +1011,7 @@ object ApiUtils {
         val message = "update subscription"
         val call = api.account().updateSubscription(accountId, subscriptionType!!, expirationDate!!)
 
-        call.enqueue(_root_ide_package_.xyz.heart.sms.api.implementation.retrofit.LoggingRetryableCallback(call, RETRY_COUNT, message))
+        call.enqueue(LoggingRetryableCallback(call, RETRY_COUNT, message))
     }
 
     /**
@@ -1516,7 +1516,7 @@ object ApiUtils {
         val message = "added a new purchase/install"
         val call = api.purchases().record(type)
 
-        call.enqueue(_root_ide_package_.xyz.heart.sms.api.implementation.retrofit.LoggingRetryableCallback(call, RETRY_COUNT, message))
+        call.enqueue(LoggingRetryableCallback(call, RETRY_COUNT, message))
 
     }
 
@@ -1536,6 +1536,6 @@ object ApiUtils {
         val message = "update $pref setting"
         val call = api.account().updateSetting(accountId, pref, type, value)
 
-        call.enqueue(_root_ide_package_.xyz.heart.sms.api.implementation.retrofit.LoggingRetryableCallback(call, RETRY_COUNT, message))
+        call.enqueue(LoggingRetryableCallback(call, RETRY_COUNT, message))
     }
 }

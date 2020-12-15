@@ -32,12 +32,12 @@ import com.larswerkman.lobsterpicker.LobsterPicker
 import com.larswerkman.lobsterpicker.sliders.LobsterShadeSlider
 
 import de.hdodenhof.circleimageview.CircleImageView
-import xyz.klinker.sms.R
-import xyz.klinker.sms.adapter.ColorPickerAdapter
-import xyz.klinker.sms.shared.data.ColorSet
-import xyz.klinker.sms.shared.util.ColorUtils
-import xyz.klinker.sms.shared.util.listener.ColorSelectedListener
-import xyz.klinker.sms.shared.view.HexColorPicker
+import xyz.heart.sms.R
+import xyz.heart.sms.adapter.ColorPickerAdapter
+import xyz.heart.sms.shared.data.ColorSet
+import xyz.heart.sms.shared.util.ColorUtils
+import xyz.heart.sms.shared.util.listener.ColorSelectedListener
+import xyz.heart.sms.shared.view.HexColorPicker
 
 
 /**

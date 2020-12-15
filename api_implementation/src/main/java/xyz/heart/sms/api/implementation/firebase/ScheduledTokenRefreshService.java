@@ -4,7 +4,7 @@ import android.app.IntentService;
 import android.content.Context;
 import android.content.Intent;
 
-import xyz.klinker.sms.api.implementation.Account;
+import xyz.heart.sms.api.implementation.Account;
 
 public class ScheduledTokenRefreshService extends IntentService {
 

@@ -9,7 +9,7 @@ import org.junit.Test;
 import org.mockito.Mock;
 
 import xyz.heart.sms.MessengerSuite;
-import xyz.klinker.sms.shared.data.pojo.KeyboardLayout;
+import xyz.heart.sms.shared.data.pojo.KeyboardLayout;
 
 import static org.mockito.Mockito.*;
 

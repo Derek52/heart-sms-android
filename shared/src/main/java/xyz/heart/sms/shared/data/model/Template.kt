@@ -30,7 +30,7 @@ class Template : DatabaseTable {
     var text: String? = null
 
     constructor()
-    constructor(body: _root_ide_package_.xyz.heart.sms.api.entity.TemplateBody) {
+    constructor(body: TemplateBody) {
         this.id = body.deviceId
         this.text = body.text
     }
@@ -48,11 +48,11 @@ class Template : DatabaseTable {
         }
     }
 
-    override fun encrypt(utils: _root_ide_package_.xyz.heart.sms.encryption.EncryptionUtils) {
+    override fun encrypt(utils: EncryptionUtils) {
         this.text = utils.encrypt(this.text)
     }
 
-    override fun decrypt(utils: _root_ide_package_.xyz.heart.sms.encryption.EncryptionUtils) {
+    override fun decrypt(utils: EncryptionUtils) {
         try {
             this.text = utils.decrypt(this.text)
         } catch (e: Exception) {

@@ -3,12 +3,12 @@ package xyz.heart.sms.activity.main
 import android.os.Build
 import android.os.Handler
 import androidx.recyclerview.widget.LinearLayoutManager
-import xyz.klinker.sms.activity.MessengerActivity
-import xyz.klinker.sms.shared.data.DataSource
-import xyz.klinker.sms.shared.service.jobs.ScheduledMessageJob
-import xyz.klinker.sms.shared.util.CursorUtil
-import xyz.klinker.sms.shared.util.NotificationUtils
-import xyz.klinker.sms.utils.TextAnywhereConversationCardApplier
+import xyz.heart.sms.activity.MessengerActivity
+import xyz.heart.sms.shared.data.DataSource
+import xyz.heart.sms.shared.service.jobs.ScheduledMessageJob
+import xyz.heart.sms.shared.util.CursorUtil
+import xyz.heart.sms.shared.util.NotificationUtils
+import xyz.heart.sms.utils.TextAnywhereConversationCardApplier
 
 class MainOnStartDelegate(private val activity: MessengerActivity) {
 

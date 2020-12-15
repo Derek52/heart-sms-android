@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
     <!--
-  ~ Copyright (C) 2017 Luke Klinker
+  ~ Copyright (C) 2017 Luke heart
   ~
   ~ Licensed under the Apache License, Version 2.0 (the "License");
   ~ you may not use this file except in compliance with the License.
@@ -242,7 +242,7 @@ em que não tenha criado um Canal de Notificação individual por personalizaç�
     <string name="receiving_a_message">Recebendo uma mensagem...</string>
     <!-- About, Help and Feedback and Settings -->
     <string name="changelog">Registo de alterações</string>
-    <string name="copyright">© 2018 Luke &amp; Jake Klinker</string>
+    <string name="copyright">© 2018 Luke &amp; Jake heart</string>
     <string name="copyright_summary">Ver informação de licenças de código aberto</string>
     <string name="app_version">Versão da aplicação</string>
     <string name="account_information">Informação de conta</string>

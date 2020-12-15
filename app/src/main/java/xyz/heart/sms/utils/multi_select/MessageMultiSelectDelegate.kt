@@ -10,20 +10,20 @@ import androidx.appcompat.view.ActionMode
 import android.view.Menu
 import android.view.MenuItem
 import com.bignerdranch.android.multiselector.SelectableHolder
-import xyz.klinker.sms.R
-import xyz.klinker.sms.adapter.message.MessageListAdapter
-import xyz.klinker.sms.adapter.view_holder.MessageViewHolder
-import xyz.klinker.sms.fragment.bottom_sheet.CopyMessageTextFragment
-import xyz.klinker.sms.fragment.bottom_sheet.MessageShareFragment
-import xyz.klinker.sms.fragment.message.MessageListFragment
-import xyz.klinker.sms.shared.data.*
-import xyz.klinker.sms.shared.data.model.Message
-import xyz.klinker.sms.shared.util.ColorUtils
+import xyz.heart.sms.R
+import xyz.heart.sms.adapter.message.MessageListAdapter
+import xyz.heart.sms.adapter.view_holder.MessageViewHolder
+import xyz.heart.sms.fragment.bottom_sheet.CopyMessageTextFragment
+import xyz.heart.sms.fragment.bottom_sheet.MessageShareFragment
+import xyz.heart.sms.fragment.message.MessageListFragment
+import xyz.heart.sms.shared.data.*
+import xyz.heart.sms.shared.data.model.Message
+import xyz.heart.sms.shared.util.ColorUtils
 import java.util.*
 import android.view.View
 import android.view.inputmethod.InputMethodManager
 import android.speech.tts.TextToSpeech
-import xyz.klinker.sms.shared.util.ActivityUtils
+import xyz.heart.sms.shared.util.ActivityUtils
 
 
 @Suppress("DEPRECATION")

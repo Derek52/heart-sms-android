@@ -9,19 +9,19 @@ import android.view.Menu
 import android.view.MenuItem
 import com.bignerdranch.android.multiselector.ModalMultiSelectorCallback
 import com.bignerdranch.android.multiselector.SelectableHolder
-import xyz.klinker.sms.R
-import xyz.klinker.sms.adapter.conversation.ConversationListAdapter
-import xyz.klinker.sms.adapter.view_holder.ConversationViewHolder
-import xyz.klinker.sms.fragment.ArchivedConversationListFragment
-import xyz.klinker.sms.fragment.conversation.ConversationListFragment
-import xyz.klinker.sms.shared.data.DataSource
-import xyz.klinker.sms.shared.data.Settings
-import xyz.klinker.sms.shared.data.model.Conversation
-import xyz.klinker.sms.shared.data.pojo.BaseTheme
+import xyz.heart.sms.R
+import xyz.heart.sms.adapter.conversation.ConversationListAdapter
+import xyz.heart.sms.adapter.view_holder.ConversationViewHolder
+import xyz.heart.sms.fragment.ArchivedConversationListFragment
+import xyz.heart.sms.fragment.conversation.ConversationListFragment
+import xyz.heart.sms.shared.data.DataSource
+import xyz.heart.sms.shared.data.Settings
+import xyz.heart.sms.shared.data.model.Conversation
+import xyz.heart.sms.shared.data.pojo.BaseTheme
 import java.util.*
 import android.graphics.PorterDuff
 import android.util.Log
-import xyz.klinker.sms.shared.util.ActivityUtils
+import xyz.heart.sms.shared.util.ActivityUtils
 
 @Suppress("DEPRECATION")
 class ConversationsMultiSelectDelegate(private val fragment: ConversationListFragment) : MultiSelector() {

@@ -22,8 +22,8 @@ import android.os.Build
 import androidx.annotation.ColorInt
 import androidx.annotation.ColorRes
 
-import xyz.klinker.sms.shared.R
-import xyz.klinker.sms.shared.util.ColorConverter
+import xyz.heart.sms.shared.R
+import xyz.heart.sms.shared.util.ColorConverter
 
 /**
  * Holds 4 different theme colors: the primary color, a darker and lighter version of the primary

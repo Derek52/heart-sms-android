@@ -6,7 +6,7 @@ import android.content.Context
 import android.content.Intent
 import android.os.PowerManager
 import android.util.Log
-import xyz.klinker.sms.shared.util.TimeUtils
+import xyz.heart.sms.shared.util.TimeUtils
 
 /**
  * Android can shut down IntentService's during transition time, if there is no wakelocks.
@@ -53,7 +53,7 @@ abstract class WakefulIntentService(name: String) : IntentService(name) {
 
     companion object {
 
-        private val NAME = "xyz.klinker.messenger.WakefulIntentService"
+        private val NAME = "xyz.heart.messenger.WakefulIntentService"
 
         @Volatile private var lockStatic: PowerManager.WakeLock? = null
         @Synchronized private fun getLock(context: Context): PowerManager.WakeLock? {

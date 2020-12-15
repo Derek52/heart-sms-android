@@ -6,16 +6,16 @@ import androidx.appcompat.app.AppCompatActivity
 import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.wear.widget.WearableRecyclerView
-import xyz.klinker.sms.R
-import xyz.klinker.sms.adapter.WearableConversationListAdapter
-import xyz.klinker.sms.api.implementation.Account
-import xyz.klinker.sms.shared.MessengerActivityExtras
-import xyz.klinker.sms.shared.data.DataSource
-import xyz.klinker.sms.shared.receiver.ConversationListUpdatedReceiver
-import xyz.klinker.sms.shared.shared_interfaces.IConversationListFragment
-import xyz.klinker.sms.shared.util.ColorUtils
-import xyz.klinker.sms.shared.util.PermissionsUtils
-import xyz.klinker.sms.shared.util.TimeUtils
+import xyz.heart.sms.R
+import xyz.heart.sms.adapter.WearableConversationListAdapter
+import xyz.heart.sms.api.implementation.Account
+import xyz.heart.sms.shared.MessengerActivityExtras
+import xyz.heart.sms.shared.data.DataSource
+import xyz.heart.sms.shared.receiver.ConversationListUpdatedReceiver
+import xyz.heart.sms.shared.shared_interfaces.IConversationListFragment
+import xyz.heart.sms.shared.util.ColorUtils
+import xyz.heart.sms.shared.util.PermissionsUtils
+import xyz.heart.sms.shared.util.TimeUtils
 
 class MessengerActivity : AppCompatActivity(), IConversationListFragment {
 

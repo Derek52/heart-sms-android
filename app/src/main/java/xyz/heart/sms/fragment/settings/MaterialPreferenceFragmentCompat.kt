@@ -5,7 +5,7 @@ import android.view.View
 import androidx.preference.Preference
 import androidx.preference.PreferenceFragmentCompat
 
-import xyz.klinker.sms.R
+import xyz.heart.sms.R
 
 @Suppress("DEPRECATION")
 abstract class MaterialPreferenceFragmentCompat : PreferenceFragmentCompat() {

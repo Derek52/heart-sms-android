@@ -40,15 +40,15 @@ import xyz.heart.sms.adapter.view_holder.ConversationViewHolder;
 import xyz.heart.sms.utils.listener.ConversationExpandedListener;
 import xyz.heart.sms.utils.swipe_to_dismiss.SwipeToDeleteListener;
 import xyz.heart.sms.MessengerRobolectricSuite;
-import xyz.klinker.sms.activity.MessengerActivity;
-import xyz.klinker.sms.adapter.conversation.ConversationListAdapter;
-import xyz.klinker.sms.adapter.view_holder.ConversationViewHolder;
-import xyz.klinker.sms.shared.data.ColorSet;
-import xyz.klinker.sms.shared.data.SectionType;
-import xyz.klinker.sms.shared.data.model.Conversation;
-import xyz.klinker.sms.shared.util.TimeUtils;
-import xyz.klinker.sms.utils.listener.ConversationExpandedListener;
-import xyz.klinker.sms.utils.swipe_to_dismiss.SwipeToDeleteListener;
+import xyz.heart.sms.activity.MessengerActivity;
+import xyz.heart.sms.adapter.conversation.ConversationListAdapter;
+import xyz.heart.sms.adapter.view_holder.ConversationViewHolder;
+import xyz.heart.sms.shared.data.ColorSet;
+import xyz.heart.sms.shared.data.SectionType;
+import xyz.heart.sms.shared.data.model.Conversation;
+import xyz.heart.sms.shared.util.TimeUtils;
+import xyz.heart.sms.utils.listener.ConversationExpandedListener;
+import xyz.heart.sms.utils.swipe_to_dismiss.SwipeToDeleteListener;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
@@ -185,7 +185,7 @@ public class ConversationListAdapterTest extends MessengerRobolectricSuite {
         adapter.onBindViewHolder(holder, 0, 0, 0);
 
         assertNotNull(holder.getConversation());
-        verify(name).setText("Luke Klinker");
+        verify(name).setText("Luke heart");
         verify(summary).setText("So maybe not going to be able to get platinum huh?");
         verify(name, times(1)).setTypeface(any(Typeface.class), anyInt());
         verify(summary, times(1)).setTypeface(any(Typeface.class), anyInt());
@@ -211,7 +211,7 @@ public class ConversationListAdapterTest extends MessengerRobolectricSuite {
         adapter.onBindViewHolder(holder, 1, 0, 2);
 
         assertNotNull(holder.getConversation());
-        verify(name).setText("Kris Klinker");
+        verify(name).setText("Kris heart");
         verify(summary).setText("Will probably be there from 6:30-9, just stop by when you can!");
         verify(name).setTypeface(Typeface.DEFAULT_BOLD, Typeface.NORMAL);
         verify(summary).setTypeface(Typeface.DEFAULT_BOLD, Typeface.NORMAL);
@@ -353,7 +353,7 @@ public class ConversationListAdapterTest extends MessengerRobolectricSuite {
                 1,
                 1,
                 TimeUtils.INSTANCE.getNow() - (1000 * 60 * 60),
-                "Luke Klinker",
+                "Luke heart",
                 "(515) 991-1493",
                 "So maybe not going to be able to get platinum huh?",
                 null,
@@ -385,7 +385,7 @@ public class ConversationListAdapterTest extends MessengerRobolectricSuite {
                 0,
                 0,
                 TimeUtils.INSTANCE.getNow() - (1000 * 60),
-                "Kris Klinker",
+                "Kris heart",
                 "(515) 419-6726",
                 "Will probably be there from 6:30-9, just stop by when you can!",
                 null,
@@ -401,7 +401,7 @@ public class ConversationListAdapterTest extends MessengerRobolectricSuite {
                 0,
                 1,
                 TimeUtils.INSTANCE.getNow() - (1000 * 60 * 60 * 24),
-                "Andrew Klinker",
+                "Andrew heart",
                 "(515) 991-8235",
                 "Just finished, it was a lot of fun",
                 null,
@@ -417,7 +417,7 @@ public class ConversationListAdapterTest extends MessengerRobolectricSuite {
                 0,
                 1,
                 TimeUtils.INSTANCE.getNow() - (1000 * 60 * 60 * 24),
-                "Aaron Klinker",
+                "Aaron heart",
                 "(515) 556-7749",
                 "Yeah I'll do it when I get home",
                 null,
@@ -433,7 +433,7 @@ public class ConversationListAdapterTest extends MessengerRobolectricSuite {
                 0,
                 1,
                 TimeUtils.INSTANCE.getNow() - (1000 * 60 * 60 * 55),
-                "Mike Klinker",
+                "Mike heart",
                 "(515) 480-8532",
                 "Yeah so hiking around in some place called beaver meadows now.",
                 null,

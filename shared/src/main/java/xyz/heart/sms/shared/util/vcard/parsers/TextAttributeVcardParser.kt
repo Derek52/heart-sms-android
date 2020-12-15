@@ -2,10 +2,10 @@ package xyz.heart.sms.shared.util.vcard.parsers
 
 import android.content.Context
 import android.util.Log
-import xyz.klinker.sms.shared.data.MimeType
-import xyz.klinker.sms.shared.data.model.Message
-import xyz.klinker.sms.shared.util.StringUtils
-import xyz.klinker.sms.shared.util.vcard.VcardParser
+import xyz.heart.sms.shared.data.MimeType
+import xyz.heart.sms.shared.data.model.Message
+import xyz.heart.sms.shared.util.StringUtils
+import xyz.heart.sms.shared.util.vcard.VcardParser
 
 class TextAttributeVcardParser(context: Context) : VcardParser(context) {
 

@@ -46,7 +46,7 @@ public class ConversationFillTest extends MessengerRobolectricSuite {
         assertTrue(conversation.getPinned());
         assertTrue(conversation.getRead());
         assertEquals(1000L, conversation.getTimestamp());
-        assertEquals("Luke Klinker", conversation.getTitle());
+        assertEquals("Luke heart", conversation.getTitle());
         assertEquals("So maybe not going to be able to get platinum huh?", conversation.getSnippet());
         assertEquals("uri", conversation.getRingtoneUri());
         assertEquals("image_uri", conversation.getImageUri());
@@ -86,7 +86,7 @@ public class ConversationFillTest extends MessengerRobolectricSuite {
                 1,
                 1,
                 1000L,
-                "Luke Klinker",
+                "Luke heart",
                 "(515) 991-1493",
                 "So maybe not going to be able to get platinum huh?",
                 "uri",

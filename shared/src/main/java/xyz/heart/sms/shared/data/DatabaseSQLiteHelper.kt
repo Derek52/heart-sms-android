@@ -21,7 +21,7 @@ import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
 import android.graphics.Color
 
-import xyz.klinker.sms.shared.data.model.*
+import xyz.heart.sms.shared.data.model.*
 
 /**
  * Handles creating and updating databases.

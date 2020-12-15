@@ -4,15 +4,15 @@ import android.app.IntentService
 import android.content.Context
 import android.content.Intent
 import androidx.core.app.NotificationCompat
-import xyz.klinker.sms.shared.R
-import xyz.klinker.sms.shared.data.ColorSet
-import xyz.klinker.sms.shared.data.DataSource
-import xyz.klinker.sms.shared.data.model.Message
-import xyz.klinker.sms.shared.receiver.MessageListUpdatedReceiver
-import xyz.klinker.sms.shared.util.AndroidVersionUtil
-import xyz.klinker.sms.shared.util.NotificationUtils
-import xyz.klinker.sms.shared.util.vcard.VcardParser
-import xyz.klinker.sms.shared.util.vcard.VcardParserFactory
+import xyz.heart.sms.shared.R
+import xyz.heart.sms.shared.data.ColorSet
+import xyz.heart.sms.shared.data.DataSource
+import xyz.heart.sms.shared.data.model.Message
+import xyz.heart.sms.shared.receiver.MessageListUpdatedReceiver
+import xyz.heart.sms.shared.util.AndroidVersionUtil
+import xyz.heart.sms.shared.util.NotificationUtils
+import xyz.heart.sms.shared.util.vcard.VcardParser
+import xyz.heart.sms.shared.util.vcard.VcardParserFactory
 
 class VcardParserService : IntentService("VcardParserService") {
 

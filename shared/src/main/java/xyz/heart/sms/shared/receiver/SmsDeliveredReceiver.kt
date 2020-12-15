@@ -23,14 +23,14 @@ import android.net.Uri
 import android.provider.Telephony
 
 import com.klinker.android.send_message.DeliveredReceiver
-import xyz.klinker.sms.api.implementation.Account
+import xyz.heart.sms.api.implementation.Account
 
-import xyz.klinker.sms.shared.data.DataSource
-import xyz.klinker.sms.shared.data.Settings
-import xyz.klinker.sms.shared.data.model.Message
-import xyz.klinker.sms.shared.util.CursorUtil
-import xyz.klinker.sms.shared.util.SmsMmsUtils
-import xyz.klinker.sms.shared.util.TimeUtils
+import xyz.heart.sms.shared.data.DataSource
+import xyz.heart.sms.shared.data.Settings
+import xyz.heart.sms.shared.data.model.Message
+import xyz.heart.sms.shared.util.CursorUtil
+import xyz.heart.sms.shared.util.SmsMmsUtils
+import xyz.heart.sms.shared.util.TimeUtils
 
 /**
  * Receiver for getting notifications of when an SMS has been delivered. By default it's super

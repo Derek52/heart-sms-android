@@ -20,7 +20,7 @@ import android.view.View
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-import xyz.klinker.sms.R
+import xyz.heart.sms.R
 
 /**
  * A very simple view holder that displays a single line of text.

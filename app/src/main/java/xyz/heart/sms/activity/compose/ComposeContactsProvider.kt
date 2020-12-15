@@ -15,14 +15,14 @@ import com.android.ex.chips.BaseRecipientAdapter
 import com.android.ex.chips.RecipientEditTextView
 import com.android.ex.chips.recipientchip.DrawableRecipientChip
 import com.roughike.bottombar.BottomBar
-import xyz.klinker.sms.R
-import xyz.klinker.sms.adapter.ContactAdapter
-import xyz.klinker.sms.shared.data.DataSource
-import xyz.klinker.sms.shared.data.Settings
-import xyz.klinker.sms.shared.data.model.Conversation
-import xyz.klinker.sms.shared.data.model.ImageContact
-import xyz.klinker.sms.shared.util.*
-import xyz.klinker.sms.shared.util.listener.ContactClickedListener
+import xyz.heart.sms.R
+import xyz.heart.sms.adapter.ContactAdapter
+import xyz.heart.sms.shared.data.DataSource
+import xyz.heart.sms.shared.data.Settings
+import xyz.heart.sms.shared.data.model.Conversation
+import xyz.heart.sms.shared.data.model.ImageContact
+import xyz.heart.sms.shared.util.*
+import xyz.heart.sms.shared.util.listener.ContactClickedListener
 import java.util.ArrayList
 
 @Suppress("DEPRECATION")

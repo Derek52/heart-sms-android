@@ -1,16 +1,16 @@
 package xyz.heart.sms.shared.util
 
 import android.content.Context
-import xyz.klinker.sms.api.implementation.Account
-import xyz.klinker.sms.shared.data.DataSource
-import xyz.klinker.sms.shared.data.MimeType
-import xyz.klinker.sms.shared.data.Settings
-import xyz.klinker.sms.shared.data.model.Conversation
-import xyz.klinker.sms.shared.data.model.Message
-import xyz.klinker.sms.shared.service.message_parser.AutoReplyParserService
-import xyz.klinker.sms.shared.service.message_parser.MediaParserService
-import xyz.klinker.sms.shared.service.message_parser.VcardParserService
-import xyz.klinker.sms.shared.util.media.parsers.ArticleParser
+import xyz.heart.sms.api.implementation.Account
+import xyz.heart.sms.shared.data.DataSource
+import xyz.heart.sms.shared.data.MimeType
+import xyz.heart.sms.shared.data.Settings
+import xyz.heart.sms.shared.data.model.Conversation
+import xyz.heart.sms.shared.data.model.Message
+import xyz.heart.sms.shared.service.message_parser.AutoReplyParserService
+import xyz.heart.sms.shared.service.message_parser.MediaParserService
+import xyz.heart.sms.shared.service.message_parser.VcardParserService
+import xyz.heart.sms.shared.util.media.parsers.ArticleParser
 
 @Suppress("RedundantIf")
 class MessageInsertionMetadataHelper(private val context: Context) {

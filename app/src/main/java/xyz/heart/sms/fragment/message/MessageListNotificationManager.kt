@@ -5,10 +5,10 @@ import android.content.Context
 import android.os.Build
 import androidx.core.app.NotificationManagerCompat
 import androidx.fragment.app.FragmentActivity
-import xyz.klinker.sms.activity.BubbleActivity
-import xyz.klinker.sms.api.implementation.Account
-import xyz.klinker.sms.api.implementation.ApiUtils
-import xyz.klinker.sms.shared.util.NotificationUtils
+import xyz.heart.sms.activity.BubbleActivity
+import xyz.heart.sms.api.implementation.Account
+import xyz.heart.sms.api.implementation.ApiUtils
+import xyz.heart.sms.shared.util.NotificationUtils
 
 
 class MessageListNotificationManager(private val fragment: MessageListFragment) {

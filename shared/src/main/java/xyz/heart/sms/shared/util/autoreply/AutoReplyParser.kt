@@ -1,11 +1,11 @@
 package xyz.heart.sms.shared.util.autoreply
 
 import android.content.Context
-import xyz.klinker.sms.api.implementation.Account
-import xyz.klinker.sms.shared.data.MimeType
-import xyz.klinker.sms.shared.data.model.AutoReply
-import xyz.klinker.sms.shared.data.model.Conversation
-import xyz.klinker.sms.shared.data.model.Message
+import xyz.heart.sms.api.implementation.Account
+import xyz.heart.sms.shared.data.MimeType
+import xyz.heart.sms.shared.data.model.AutoReply
+import xyz.heart.sms.shared.data.model.Conversation
+import xyz.heart.sms.shared.data.model.Message
 
 abstract class AutoReplyParser(protected var context: Context?, protected val reply: AutoReply) {
 

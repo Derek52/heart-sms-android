@@ -2,7 +2,7 @@ package xyz.heart.sms.activity.notification
 
 import android.content.Intent
 import androidx.core.app.RemoteInput
-import xyz.klinker.sms.shared.service.ReplyService
+import xyz.heart.sms.shared.service.ReplyService
 
 class ReplyWearableHandler(private val activity: MarshmallowReplyActivity) {
 
