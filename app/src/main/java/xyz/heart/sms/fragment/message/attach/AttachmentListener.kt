@@ -15,7 +15,7 @@ import androidx.core.view.inputmethod.InputContentInfoCompat
 import androidx.fragment.app.FragmentActivity
 import com.afollestad.materialcamera.MaterialCamera
 import com.yalantis.ucrop.UCrop
-import xyz.heart.giphy.Giphy
+import xyz.klinker.giphy.Giphy
 import xyz.heart.sms.R
 import xyz.heart.sms.fragment.message.MessageListFragment
 import xyz.heart.sms.shared.data.MimeType
