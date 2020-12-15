@@ -81,7 +81,7 @@
         android:required="false" />
 
     <application
-        android:name=".MessengerApplication"
+        android:name="xyz.heart.sms.MessengerApplication"
         android:allowBackup="false"
         android:icon="@mipmap/ic_launcher"
         android:banner="@mipmap/ic_banner"
@@ -91,7 +91,8 @@
         android:networkSecurityConfig="@xml/security_config"
         android:supportsRtl="true"
         android:theme="@style/PulseTheme"
-        tools:replace="android:allowBackup">
+        tools:replace="android:allowBackup"
+        tools:ignore="Instantiatable">
 
         <meta-data
             android:name="com.google.android.gms.car.application"
@@ -259,7 +260,7 @@
             android:name=".activity.ImageViewerActivity"
             android:theme="@style/PulseTheme.NoActionBar.Translucent" />
         <activity
-            android:name="xyz.heart.giphy.GiphyActivity"
+            android:name="xyz.klinker.giphy.GiphyActivity"
             android:theme="@style/PulseTheme.NoActionBar"
             tools:replace="android:theme" />
         <activity
@@ -272,7 +273,8 @@
             android:excludeFromRecents="true"
             android:launchMode="singleInstance"
             android:theme="@style/api_Theme.MaterialComponents.Translucent"/>
-        <activity android:name="net.rdrei.android.dirchooser.DirectoryChooserActivity" />
+        <activity android:name="net.rdrei.android.dirchooser.DirectoryChooserActivity"
+            tools:ignore="MissingClass" />
         <activity android:name="xyz.heart.sms.activity.passcode.PasscodeVerificationActivity"
             android:theme="@style/PulsePasscode"
             android:launchMode="singleInstance" />
