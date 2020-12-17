@@ -17,7 +17,7 @@ class OnboardingActivity : AppIntro() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        implementation.firebase.AnalyticsHelper.tutorialStarted(this)
+        AnalyticsHelper.tutorialStarted(this)
 
         addSlide(AppIntroFragment.newInstance(
                 getString(R.string.onboarding_title_1), getString(R.string.onboarding_content_1),
@@ -47,14 +47,14 @@ class OnboardingActivity : AppIntro() {
         super.onDonePressed(currentFragment)
         finish()
 
-        implementation.firebase.AnalyticsHelper.tutorialFinished(this)
+        AnalyticsHelper.tutorialFinished(this)
     }
 
     override fun onSkipPressed(currentFragment: Fragment?) {
         super.onSkipPressed(currentFragment)
         finish()
 
-        implementation.firebase.AnalyticsHelper.tutorialSkipped(this)
-        implementation.firebase.AnalyticsHelper.tutorialFinished(this)
+        AnalyticsHelper.tutorialSkipped(this)
+        AnalyticsHelper.tutorialFinished(this)
     }
 }

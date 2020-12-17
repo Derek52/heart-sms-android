@@ -18,7 +18,7 @@ class ConversationAdapterDataProvider(private val adapter: ConversationListAdapt
 
         if (adapter.showHeaderAboutTextingOnline()) {
             sectionCounts.add(SectionType(SectionType.CARD_ABOUT_ONLINE, 0))
-            implementation.firebase.AnalyticsHelper.convoListCardShown(activity)
+            AnalyticsHelper.convoListCardShown(activity)
         }
 
         var currentSection = 0

@@ -605,7 +605,7 @@ Gebruik het standaard kanaal om meldingen weer te geven voor conversaties die je
     <string name="off">Uit</string>
     <string name="on">Aan</string>
     <string name="share_promo">Hey, I am loving Pulse for texting! Give it a try:
-https://play.google.com/store/apps/details?id=xyz.heart.messenger</string>
+https://play.google.com/store/apps/details?id=xyz.heart.sms</string>
     <string name="verifying_password">Wachtwoord verifiëren...</string>
     <!-- Rate it -->
     <string name="rate_it">Rate it!</string>
@@ -660,7 +660,7 @@ Verstuur berichten via het web, desktop pc, je tablet, je smartwatch en zelfs je
     <string name="trial_description">Geen enkele andere app kan tippen aan de <b>eindeloze platformondersteuning</b> en <b>lage prijs</b> van Pulse. Synchroniseer berichten direct en naadloos tussen al je toestellen.</string>
     <string name="purchase_description">Geef de online versie een kans. Je kunt <b>7 dagen</b> lang alles uittesten. Daarna kan je beslissen om een abonnement af te sluiten:\n\n<b>$10.99</b> voor een levenslang abonnement\n<b>$5.99</b> per jaar\n<b>$1.99</b> per 3 maanden\n<b>$0.99</b> per maand</string>
     <string name="start_free_trial">Begin je proefperiode nu!</string>
-    <string name="create_your_pulse_account">Creëer een Pulse-account!</string>
+    <string name="create_your_heart_account">Creëer een Pulse-account!</string>
     <string name="try_it">Probeer nu!</string>
     <string name="select_purchase">Kies een aankoop</string>
     <string name="have_an_account">Heb je een account?\nInloggen</string>

@@ -28,14 +28,14 @@
             android:key="@string/pref_theme_settings"
             android:title="@string/theme_settings_redirect" />
 
-        <xyz.heart.messenger.view.AutoSummaryListPreference
+        <xyz.heart.sms.view.AutoSummaryListPreference
             android:key="@string/pref_emoji_style"
             android:title="@string/emoji_style"
             android:entries="@array/emoji_style"
             android:entryValues="@array/emoji_style_values"
             android:defaultValue="default" />
 
-        <xyz.heart.messenger.view.AutoSummaryListPreference
+        <xyz.heart.sms.view.AutoSummaryListPreference
             android:key="@string/pref_keyboard_layout"
             android:title="@string/keyboard_layout"
             android:entries="@array/keyboard_layout"
@@ -58,7 +58,7 @@
         android:key="@string/pref_notification_category"
         android:title="@string/notification_settings">
 
-        <xyz.heart.messenger.view.preference.NotificationAlertsPreference
+        <xyz.heart.sms.view.preference.NotificationAlertsPreference
             android:key="@string/pref_alert_types"
             android:title="@string/notification_customization"
             android:summary="@string/alert_types_summary" />
@@ -75,7 +75,7 @@
             android:summary="@string/show_conversation_history_summary"
             android:defaultValue="true" />
 
-        <xyz.heart.messenger.view.preference.NotificationActionsPreference
+        <xyz.heart.sms.view.preference.NotificationActionsPreference
             android:key="@string/pref_notification_actions"
             android:title="@string/notification_actions"
             android:summary="@string/notification_actions_summary_2" />

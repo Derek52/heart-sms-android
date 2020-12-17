@@ -43,7 +43,7 @@ class DrivingModeQuickSettingTile : TileService() {
 
     companion object {
         private const val LOG_TAG = "pulse_driving_mode"
-        private const val UPDATE_STATE_BROADCAST = "xyz.heart.messenger.UPDATE_DRIVING_TILE"
+        private const val UPDATE_STATE_BROADCAST = "xyz.heart.sms.UPDATE_DRIVING_TILE"
         fun updateState(context: Context) {
 //            context.sendBroadcast(Intent(UPDATE_STATE_BROADCAST))
         }

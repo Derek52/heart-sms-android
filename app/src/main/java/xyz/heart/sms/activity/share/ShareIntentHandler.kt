@@ -25,7 +25,7 @@ class ShareIntentHandler(private val page: QuickSharePage) {
                 intent.action == Intent.ACTION_SEND -> shareContent(intent)
             }
         } catch (e: Error) {
-            implementation.firebase.AnalyticsHelper.caughtForceClose(page.context, "caught when sharing to quick share activity", e)
+            AnalyticsHelper.caughtForceClose(page.context, "caught when sharing to quick share activity", e)
         }
     }
 

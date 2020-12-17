@@ -621,7 +621,7 @@
     <string name="off">关闭</string>
     <string name="on">开启</string>
     <string name="share_promo">嗨，我最近喜欢上了用Pulse发短信，你也来试试吧：
-https://play.google.com/store/apps/details?id=xyz.heart.messenger</string>
+https://play.google.com/store/apps/details?id=xyz.heart.sms</string>
     <string name="verifying_password">正在验证密码...</string>
     <!-- Rate it -->
     <string name="rate_it">给它打分！</string>
@@ -678,7 +678,7 @@ https://play.google.com/store/apps/details?id=xyz.heart.messenger</string>
     <string name="trial_description">任何竞争对手都无法达到Pulse的<b>全平台支持</b>及其<b>低价</b>。 消息可在您的所有设备之间即时无缝地同步。</string>
     <string name="purchase_description">尝试在线版本，持续7天，然后决定如何支持该应用程序：\n\n终身会员<b>10.99美元</b>\n每年<b>5.99美元</b>\n每三个月<b>1.99美元 </b>\n每月<b>0.99美元</b></string>
     <string name="start_free_trial">开始您的免费试用！</string>
-    <string name="create_your_pulse_account">创建 Pulse 账户！</string>
+    <string name="create_your_heart_account">创建 Pulse 账户！</string>
     <string name="try_it">试试吧！</string>
     <string name="select_purchase">选择方案</string>
     <string name="have_an_account">已有账户？\n登陆</string>

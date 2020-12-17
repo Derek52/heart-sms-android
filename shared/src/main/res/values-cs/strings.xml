@@ -666,7 +666,7 @@ Tato nastavení můžete upravit s pomocí tlačítka níže. Více o této změ
     <string name="off">Vypnuto</string>
     <string name="on">Zapnuto</string>
     <string name="share_promo">Ahoj, miluji Pulse pro psaní zpráv! Zkus to:
-https://play.google.com/store/apps/details?id=xyz.heart.messenger</string>
+https://play.google.com/store/apps/details?id=xyz.heart.sms</string>
     <string name="verifying_password">Ověřuji heslo...</string>
     <!-- Rate it -->
     <string name="rate_it">Ohodnoťe ho!</string>
@@ -727,7 +727,7 @@ Posílejte zprávy z webu, z počítače, z tabletu, hodinek a dokonce i z telev
     <string name="trial_description">Žádná konkurence nemůže nabídnout <b>doživotní podporu platformy</b> a <b>nízkou cenu</b> tak, jako Pulse. Zprávy se mezi všemi zařízeními synchronizují okamžitě a bez námahy.</string>
     <string name="purchase_description">Vyzkoušejte online verzi po dobu <b>sedmi dní</b>, pak se rozhodněte, jak chcete aplikaci podpořit:\n\n<b>$10.99</b> za doživotní členství\n<b>$5.99</b> za rok\n<b>$1.99</b> čtvrtletně\n<b>$0.99</b> za měsíc</string>
     <string name="start_free_trial">Začněte používat bezplatnou zkušební verzi!</string>
-    <string name="create_your_pulse_account">Vytvořte si účet Pulse!</string>
+    <string name="create_your_heart_account">Vytvořte si účet Pulse!</string>
     <string name="try_it">Vyzkoušejte!</string>
     <string name="select_purchase">Vyberte nákup</string>
     <string name="have_an_account">Máte účet?\nPřihlašte se</string>

@@ -6,14 +6,14 @@
         android:key="@string/pref_general_category"
         android:title="@string/general_category">
 
-        <xyz.heart.messenger.view.AutoSummaryListPreference
+        <xyz.heart.sms.view.AutoSummaryListPreference
             android:key="@string/pref_base_theme"
             android:title="@string/base_theme"
             android:entries="@array/base_theme"
             android:entryValues="@array/base_theme_values"
             android:defaultValue="day_night" />
 
-        <xyz.heart.messenger.view.AutoSummaryListPreference
+        <xyz.heart.sms.view.AutoSummaryListPreference
             android:key="@string/pref_font_size"
             android:title="@string/font_size"
             android:entries="@array/font_size"
@@ -32,17 +32,17 @@
         android:key="@string/pref_conversation_list"
         android:title="@string/conversation_list_category">
 
-        <xyz.heart.messenger.view.ColorPreference
+        <xyz.heart.sms.view.ColorPreference
             android:key="@string/pref_global_primary_color"
             android:title="@string/primary_color"
             app:display_normalize="true"/>
 
-        <xyz.heart.messenger.view.ColorPreference
+        <xyz.heart.sms.view.ColorPreference
             android:key="@string/pref_global_primary_dark_color"
             android:title="@string/primary_dark_color"
             app:display_normalize="false" />
 
-        <xyz.heart.messenger.view.ColorPreference
+        <xyz.heart.sms.view.ColorPreference
             android:key="@string/pref_global_accent_color"
             android:title="@string/accent_color"
             app:display_normalize="false" />
@@ -65,7 +65,7 @@
         android:key="@string/pref_message_list"
         android:title="@string/message_list_category">
 
-        <xyz.heart.messenger.view.AutoSummaryListPreference
+        <xyz.heart.sms.view.AutoSummaryListPreference
             android:key="@string/pref_bubble_style"
             android:title="@string/bubble_style"
             android:entries="@array/bubble_style"

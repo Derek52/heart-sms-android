@@ -14,7 +14,7 @@
   ~ limitations under the License.
   -->
 
-<manifest package="xyz.heart.messenger.encryption">
+<manifest package="xyz.heart.sms.encryption">
 
     <application />
 

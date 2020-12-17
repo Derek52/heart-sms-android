@@ -32,7 +32,7 @@ public class MessengerFirebaseMessagingService extends FirebaseMessagingService 
 
     private static final String TAG = "FCMService";
     public static final String ACTION_FIREBASE_MESSAGE_RECEIVED =
-            "xyz.heart.messenger.api.implementation.MESSAGE_RECEIVED";
+            "xyz.heart.sms.api.implementation.MESSAGE_RECEIVED";
     public static final String EXTRA_OPERATION = "operation";
     public static final String EXTRA_DATA = "data";
 

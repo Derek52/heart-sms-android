@@ -121,9 +121,9 @@ class MessengerAppWidgetProvider : AppWidgetProvider() {
     companion object {
         private val TAG = "AppWidgetProvider"
 
-        const val REFRESH_ACTION = "xyz.heart.messenger.shared.widget.REFRESH"
-        const val OPEN_ACTION = "xyz.heart.messenger.shared.widget.OPEN"
-        const val EXTRA_ITEM_ID = "xyz.heart.messenger.shared.widget.EXTRA_ITEM_ID"
+        const val REFRESH_ACTION = "xyz.heart.sms.shared.widget.REFRESH"
+        const val OPEN_ACTION = "xyz.heart.sms.shared.widget.OPEN"
+        const val EXTRA_ITEM_ID = "xyz.heart.sms.shared.widget.EXTRA_ITEM_ID"
 
         var baseWidgetTheme = BaseTheme.DAY_NIGHT
 

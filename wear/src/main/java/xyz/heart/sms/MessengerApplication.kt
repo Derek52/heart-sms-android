@@ -32,7 +32,7 @@ import xyz.heart.sms.shared.util.*
  * Base application that will serve as any intro for any context in the rest of the app. Main
  * function is to enable night mode so that colors change depending on time of day.
  */
-class MessengerApplication : implementation.firebase.FirebaseApplication(), AccountInvalidator {
+class MessengerApplication : FirebaseApplication(), AccountInvalidator {
 
     override fun onCreate() {
         super.onCreate()
@@ -46,8 +46,8 @@ class MessengerApplication : implementation.firebase.FirebaseApplication(), Acco
         NotificationUtils.createNotificationChannels(this)
     }
 
-    override fun getFirebaseMessageHandler(): implementation.firebase.FirebaseMessageHandler {
-        return object : implementation.firebase.FirebaseMessageHandler {
+    override fun getFirebaseMessageHandler(): FirebaseMessageHandler {
+        return object : FirebaseMessageHandler {
             override fun handleMessage(application: Application, operation: String, data: String) {
                 Thread { FirebaseHandlerService.process(application, operation, data) }.start()
             }

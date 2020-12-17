@@ -35,16 +35,16 @@ import xyz.heart.sms.shared.data.pojo.BaseTheme
  */
 object ActivityUtils {
 
-    val MESSENGER_ACTIVITY = ComponentName("xyz.heart.messenger",
-            "xyz.heart.messenger" + ".activity.MessengerActivity")
-    val BUBBLE_ACTIVITY = ComponentName("xyz.heart.messenger",
-            "xyz.heart.messenger" + ".activity.BubbleActivity")
-    val COMPOSE_ACTIVITY = ComponentName("xyz.heart.messenger",
-            "xyz.heart.messenger" + ".activity.compose.ComposeActivity")
-    val QUICK_SHARE_ACTIVITY = ComponentName("xyz.heart.messenger",
-            "xyz.heart.messenger" + ".activity.share.QuickShareActivity")
-    val NOTIFICATION_REPLY = ComponentName("xyz.heart.messenger",
-            "xyz.heart.messenger" + ".activity.notification.MarshmallowReplyActivity")
+    val MESSENGER_ACTIVITY = ComponentName("xyz.heart.sms",
+            "xyz.heart.sms" + ".activity.MessengerActivity")
+    val BUBBLE_ACTIVITY = ComponentName("xyz.heart.sms",
+            "xyz.heart.sms" + ".activity.BubbleActivity")
+    val COMPOSE_ACTIVITY = ComponentName("xyz.heart.sms",
+            "xyz.heart.sms" + ".activity.compose.ComposeActivity")
+    val QUICK_SHARE_ACTIVITY = ComponentName("xyz.heart.sms",
+            "xyz.heart.sms" + ".activity.share.QuickShareActivity")
+    val NOTIFICATION_REPLY = ComponentName("xyz.heart.sms",
+            "xyz.heart.sms" + ".activity.notification.MarshmallowReplyActivity")
 
     fun buildForComponent(component: ComponentName): Intent {
         val intent = Intent(Intent.ACTION_MAIN)

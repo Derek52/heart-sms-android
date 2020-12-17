@@ -63,7 +63,7 @@ class ConversationSectionHeaderBinder(private val adapter: ConversationListAdapt
             tryIt.postDelayed({
                 activity.navController.drawerItemClicked(R.id.drawer_account)
                 activity.clickNavigationItem(R.id.drawer_account)
-                implementation.firebase.AnalyticsHelper.convoListTryIt(activity)
+                AnalyticsHelper.convoListTryIt(activity)
             }, 500)
         }
 
@@ -74,7 +74,7 @@ class ConversationSectionHeaderBinder(private val adapter: ConversationListAdapt
 
             Settings.setValue(activity, activity.getString(R.string.pref_show_text_online_on_conversation_list), false)
             adapter.notifyItemRemoved(0)
-            implementation.firebase.AnalyticsHelper.convoListNotNow(activity)
+            AnalyticsHelper.convoListNotNow(activity)
         }
     }
 }

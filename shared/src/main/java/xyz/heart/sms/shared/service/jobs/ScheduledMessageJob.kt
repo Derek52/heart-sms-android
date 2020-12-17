@@ -162,7 +162,7 @@ class ScheduledMessageJob : BroadcastReceiver() {
     companion object {
 
         private var lastRun = 0L
-        const val BROADCAST_SCHEDULED_SENT = "xyz.heart.messenger.SENT_SCHEDULED_MESSAGE"
+        const val BROADCAST_SCHEDULED_SENT = "xyz.heart.sms.SENT_SCHEDULED_MESSAGE"
 
         fun scheduleNextRun(context: Context, source: DataSource = DataSource) {
             val account = Account

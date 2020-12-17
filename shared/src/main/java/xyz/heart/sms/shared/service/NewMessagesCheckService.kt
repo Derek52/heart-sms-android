@@ -170,7 +170,7 @@ class NewMessagesCheckService : IntentService("NewMessageCheckService") {
 
         private const val FOREGROUND_NOTIFICATION_ID = 44562
         private const val EXTRA_FOREGROUND_NOTIFICATION = "extra_foreground_notification"
-        const val REFRESH_WHOLE_CONVERSATION_LIST = "xyz.heart.messenger.REFRESH_WHOLE_CONVERSATION_LIST"
+        const val REFRESH_WHOLE_CONVERSATION_LIST = "xyz.heart.sms.REFRESH_WHOLE_CONVERSATION_LIST"
 
         fun startService(activity: Activity) {
             try {

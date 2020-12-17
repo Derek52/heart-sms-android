@@ -23,7 +23,7 @@ class AccountTrialActivity : AppCompatActivity() {
     public override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        implementation.firebase.AnalyticsHelper.accountStartTrialTutorial(this)
+        AnalyticsHelper.accountStartTrialTutorial(this)
 
         setResult(Activity.RESULT_CANCELED)
         setContentView(R.layout.activity_account_trial)
@@ -51,7 +51,7 @@ class AccountTrialActivity : AppCompatActivity() {
 
     private fun tryIt() {
         setResult(MyAccountFragment.RESULT_START_TRIAL)
-        implementation.firebase.AnalyticsHelper.accountAcceptFreeTrial(this)
+        AnalyticsHelper.accountAcceptFreeTrial(this)
 
         close()
     }

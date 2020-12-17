@@ -699,7 +699,7 @@ Wysyłaj wiadomości z przeglądarki internetowej, komputera, tabletu, smart zeg
     <string name="trial_description">Żadna konkurencyjna aplikacja nie może nawet zbliżyć się do Pulse w <b>nieskończonej ilości obsługiwanych platform</b> połączonej z <b>niską ceną</b>. Wiadomości synchronizowane są pomiędzy wszystkimi urządzeniami, natychmiast i bez problemów.</string>
     <string name="purchase_description">Wypróbuj wersję online przez <b>siedem dni</b>, a następnie zdecyduj, w jaki sposób chcesz wesprzeć aplikację:\n\n<b>10,99 USD</b> za dożywotnie członkostwo\n<b>5,99 USD</b> rocznie\n<b>1,99 USD</b> co trzy miesiące\n<b>0,99 USD</b> miesięcznie</string>
     <string name="start_free_trial">Rozpocznij bezpłatny okres próbny!</string>
-    <string name="create_your_pulse_account">Utwórz konto Pulse!</string>
+    <string name="create_your_heart_account">Utwórz konto Pulse!</string>
     <string name="try_it">Wypróbuj teraz!</string>
     <string name="select_purchase">Wybierz zakup</string>
     <string name="have_an_account">Masz już konto?\nZaloguj się</string>

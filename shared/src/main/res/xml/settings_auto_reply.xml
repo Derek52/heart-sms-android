@@ -24,7 +24,7 @@
             android:key="@string/pref_driving_mode"
             android:summary="@string/driving_mode_summary"/>
 
-        <xyz.heart.messenger.shared.view.AutoSummaryEditTextPreference
+        <xyz.heart.sms.shared.view.AutoSummaryEditTextPreference
             android:key="@string/pref_driving_mode_editable"
             android:title="@string/auto_reply_text" />
 
@@ -38,7 +38,7 @@
             android:key="@string/pref_vacation_mode"
             android:summary="@string/driving_mode_summary"/>
 
-        <xyz.heart.messenger.shared.view.AutoSummaryEditTextPreference
+        <xyz.heart.sms.shared.view.AutoSummaryEditTextPreference
             android:key="@string/pref_vacation_mode_editable"
             android:title="@string/auto_reply_text" />
 

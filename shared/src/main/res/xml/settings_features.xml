@@ -35,7 +35,7 @@
     <xyz.heart.sms.shared.view.MaterialPreferenceCategory
         android:title="@string/spam_features_category">
 
-        <xyz.heart.messenger.view.AutoSummaryListPreference
+        <xyz.heart.sms.view.AutoSummaryListPreference
             android:key="@string/pref_unknown_number_reception"
             android:title="@string/handle_messages_from_unknown_numbers"
             android:entries="@array/unknown_numbers"
@@ -83,7 +83,7 @@
             android:key="@string/pref_quick_compose"
             android:summary="@string/quick_compose_notification_summary" />
 
-        <xyz.heart.messenger.view.preference.QuickComposeFavoriteUserPreference
+        <xyz.heart.sms.view.preference.QuickComposeFavoriteUserPreference
             android:dependency="@string/pref_quick_compose"
             android:key="@string/pref_quick_compose_favorites"
             android:summary="@string/quick_compose_favorites_summary"

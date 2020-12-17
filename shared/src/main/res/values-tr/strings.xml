@@ -631,7 +631,7 @@ Aşağıdaki düğme ile bu seçenekleri özelleştirebilirsiniz. Daha fazla bil
     <string name="off">Kapalı</string>
     <string name="on">Açık</string>
     <string name="share_promo">Selam, mesajlaşmak için Pulse\'a bayılıyorum! Bir şans ver:
-https://play.google.com/store/apps/details?id=xyz.heart.messenger</string>
+https://play.google.com/store/apps/details?id=xyz.heart.sms</string>
     <string name="verifying_password">Parola doğrulanıyor...</string>
     <!-- Rate it -->
     <string name="rate_it">Oyla!</string>
@@ -690,7 +690,7 @@ Web\'den, masaüstü bilgisayardan, tabletinizden, saatinizden ve hatta TV\'nizd
     <string name="trial_description">Hiçbir rakip, Pulse\'un <b>sonsuz platform desteği</b> ve <b>düşük fiyatı</b> ile rekabet edemez. Mesajlar, tüm cihazlarınız arasında anında ve sorunsuz bir şekilde senkronize edilir.</string>
     <string name="purchase_description">Çevrimiçi sürümü <b>yedi gün</b> süresince deneyin, ardından uygulamayı nasıl desteklemek istediğinize karar verin:\n\n<b>$10.99</b> ömür boyu üyelik\n<b>$5.99</b> yıllık\n<b>$1.99</b> üç aylık\n<b>$0.99</b> aylık</string>
     <string name="start_free_trial">Ücretsiz deneme sürümünü başlat!</string>
-    <string name="create_your_pulse_account">Bir Pulse hesabı oluştur!</string>
+    <string name="create_your_heart_account">Bir Pulse hesabı oluştur!</string>
     <string name="try_it">Deneyin!</string>
     <string name="select_purchase">Satın Al\'ı Seçin</string>
     <string name="have_an_account">Hasabınız var mı?\nOturum açın</string>

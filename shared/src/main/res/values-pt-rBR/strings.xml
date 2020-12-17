@@ -638,7 +638,7 @@ Você pode personalizar estas opções tocando no botão abaixo e saber mais a r
     <string name="off">Desligado</string>
     <string name="on">Ligado</string>
     <string name="share_promo">Ei, estou adorando o Pulse para o envio de mensagens! Dê uma olhada:
-https://play.google.com/store/apps/details?id=xyz.heart.messenger</string>
+https://play.google.com/store/apps/details?id=xyz.heart.sms</string>
     <string name="verifying_password">Verificando senha...</string>
     <!-- Rate it -->
     <string name="rate_it">Avalie!</string>
@@ -697,7 +697,7 @@ Envie mensagens pela web, computador, tablet, smartwatch e mesmo de sua TV.</str
     <string name="trial_description">A competição não alcança <b>o amplo suporte a plataformas</b> do Pulse e seu <b>preço baixo</b>. As mensagens são sincronizadas entre todos os seus dispositivos, instantaneamente e com perfeição.</string>
     <string name="purchase_description">Experimente a versão on-line por <b>sete dias</b> e decida o melhor plano:\n\n<b>$10.99</b> Vitalício\n  <b>$5.99</b> Anual\n  <b>$1.99</b> Trimestral\n  <b>$0.99</b> Mensal</string>
     <string name="start_free_trial">Comece a testar gratuitamente!</string>
-    <string name="create_your_pulse_account">Crie uma conta Pulse!</string>
+    <string name="create_your_heart_account">Crie uma conta Pulse!</string>
     <string name="try_it">Teste agora!</string>
     <string name="select_purchase">Selecionar Plano</string>
     <string name="have_an_account">Já tem uma conta?\nAcesse</string>

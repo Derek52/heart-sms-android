@@ -60,7 +60,7 @@ class SmartReplyManager(private val fragment: MessageListFragment) {
                         tv.text = suggestion.text
 
                         layout.setOnClickListener {
-                            implementation.firebase.AnalyticsHelper.sendSmartReply(activity)
+                            AnalyticsHelper.sendSmartReply(activity)
 
                             messageEntry.setText(suggestion.text)
                             messageEntry.setSelection(suggestion.text.length)

@@ -6,7 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.widget.EditText
 import android.widget.FrameLayout
-import xyz.heart.giphy.GiphyView
+import xyz.klinker.giphy.GiphyView
 import xyz.heart.sms.BuildConfig
 import xyz.heart.sms.R
 import xyz.heart.sms.shared.data.MimeType

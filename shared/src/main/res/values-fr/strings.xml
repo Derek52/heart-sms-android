@@ -636,7 +636,7 @@ Utilisez le canal par défaut pour personnaliser les conversations auxquelles vo
     <string name="channels_global_warning_3">Avec Android Oreo, certaines des options ci-dessus vous redirigeront vers les paramètres des <i>canaux de notifications</i> d\'Android. Pour en savoir plus à propos de ces canaux, de la façon dont ils fonctionnent, et pourquoi ils doivent être utilisés, dirigez vous vers la page d\'aide de Pulse.</string>
     <string name="off">Inactif</string>
     <string name="on">Actif</string>
-    <string name="share_promo">Hey, j\'utilise Pulse pour envoyer des messages ! Essaye le : https://play.google.com/store/apps/details?id=xyz.heart.messenger</string>
+    <string name="share_promo">Hey, j\'utilise Pulse pour envoyer des messages ! Essaye le : https://play.google.com/store/apps/details?id=xyz.heart.sms</string>
     <string name="verifying_password">Vérification du mot de passe...</string>
     <!-- Rate it -->
     <string name="rate_it">Noter l\'application !</string>
@@ -695,7 +695,7 @@ Envoyez des messages depuis internet, un ordinateur de bureau, votre tablette, e
     <string name="trial_description">Aucune concurrence ne peut atteindre le <b>support d\'un nombre illimité de plateforme</b> de Pulse associé à son <b>prix bas</b>. Vos messages sont synchronisés entre tous vos appareils, instantanément et en toute transparence.</string>
     <string name="purchase_description">Essayez la version en ligne, pour <b>sept jours</b>, puis choisissez comment vous souhaitez supporter l\'application :\n\n<b>11,99€</b> pour une adhésion à vie\n<b>6.99€</b> par an\n<b>2,19€</b> par trimestre\n<b>1,09€</b> par mois</string>
     <string name="start_free_trial">Commencer votre période d\'essai !</string>
-    <string name="create_your_pulse_account">Créer un compte Pulse !</string>
+    <string name="create_your_heart_account">Créer un compte Pulse !</string>
     <string name="try_it">Essayez-le !</string>
     <string name="select_purchase">Sélectionner l\'achat</string>
     <string name="have_an_account">Déjà un compte ?\nSe connecter</string>

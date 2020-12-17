@@ -575,7 +575,7 @@ Med ditt konto kommer Pulse automatiskt säkerhetskopiera alla meddelanden som d
     <string name="channels_global_warning_3">Med Android Oreo kommer några av inställningarna ovan att omdirigera dig till systeminställningarna för <i>notiskanaler</i>. För att läsa mer om notiskanaler, hur de fungerar och varför de måste användas, var vänlig läs Pulse hjälpsidor.</string>
     <string name="off">Av</string>
     <string name="on">På</string>
-    <string name="share_promo">Hej, jag älskar Pulse för meddelanden! Prova du med: https://play.google.com/store/apps/details?id=xyz.heart.messenger</string>
+    <string name="share_promo">Hej, jag älskar Pulse för meddelanden! Prova du med: https://play.google.com/store/apps/details?id=xyz.heart.sms</string>
     <string name="verifying_password">Bekräftar lösenord...</string>
     <!-- Rate it -->
     <string name="rate_it">Betygsätt!</string>
@@ -630,7 +630,7 @@ dig i 2 dagar. Om detta är ett fel kontakta mig via epost.
     <string name="trial_description">Inga av konkurrenterna kan mäta sig med Pulse <b>oändliga plattformsstöd</b> ihop med dess <b>låga pris</b>. Meddelanden synkroniseras mellan alla dina enheter, omedelbart och sömlöst.</string>
     <string name="purchase_description">Prova online-versionen i <b>sju dagar</b> innan du avgör hur du vill stödja appen:\n\n<b>$10.99</b> för livstidsmedlemskap\n<b>$5.99</b> per år\n<b>$1.99</b> var tredje månad\n<b>$0.99</b> per månad</string>
     <string name="start_free_trial">Påbörja din gratis prövotid!</string>
-    <string name="create_your_pulse_account">Skapa ett Pulse-konto!</string>
+    <string name="create_your_heart_account">Skapa ett Pulse-konto!</string>
     <string name="try_it">Prova nu!</string>
     <string name="select_purchase">Välj köp</string>
     <string name="have_an_account">Har du ett konto?\nLogga in</string>

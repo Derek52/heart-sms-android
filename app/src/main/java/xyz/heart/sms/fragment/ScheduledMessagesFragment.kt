@@ -41,7 +41,7 @@ import com.android.ex.chips.RecipientEditTextView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.google.android.material.floatingactionbutton.FloatingActionButton
-import xyz.heart.giphy.Giphy
+import xyz.klinker.giphy.Giphy
 import xyz.heart.sms.BuildConfig
 import xyz.heart.sms.R
 import xyz.heart.sms.activity.MessengerActivity
@@ -56,6 +56,7 @@ import xyz.heart.sms.shared.service.jobs.ScheduledMessageJob
 import xyz.heart.sms.shared.util.*
 import xyz.heart.sms.shared.util.listener.ScheduledMessageClickListener
 import java.util.*
+import kotlin.jvm.Throws
 
 @Suppress("DEPRECATION")
 /**

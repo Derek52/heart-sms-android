@@ -158,6 +158,7 @@ open class InitialLoadActivity : AppCompatActivity(), ProgressUpdateListener {
     }
 
     public override fun onActivityResult(requestCode: Int, responseCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, responseCode, data)
         if (requestCode == PermissionsUtils.REQUEST_DEFAULT_SMS_APP) {
             requestPermissions()
         } else  if (requestCode == SETUP_REQUEST) {
@@ -173,11 +174,11 @@ open class InitialLoadActivity : AppCompatActivity(), ProgressUpdateListener {
 
                     startDatabaseSync()
                 }
-                implementation.LoginActivity.RESULT_START_DEVICE_SYNC -> {
+                LoginActivity.RESULT_START_DEVICE_SYNC -> {
                     startDatabaseSync()
                     startUploadAfterSync = true
                 }
-                implementation.LoginActivity.RESULT_START_NETWORK_SYNC -> {
+                LoginActivity.RESULT_START_NETWORK_SYNC -> {
                     ApiDownloadService.start(this)
                     downloadReceiver = object : BroadcastReceiver() {
                         override fun onReceive(context: Context, intent: Intent) {
@@ -187,7 +188,7 @@ open class InitialLoadActivity : AppCompatActivity(), ProgressUpdateListener {
 
                     registerReceiver(downloadReceiver, IntentFilter(ApiDownloadService.ACTION_DOWNLOAD_FINISHED))
                 }
-                implementation.ActivateActivity.RESULT_FAILED -> finish()
+                ActivateActivity.RESULT_FAILED -> finish()
             }
         }
     }
@@ -204,7 +205,7 @@ open class InitialLoadActivity : AppCompatActivity(), ProgressUpdateListener {
     private fun startLogin() {
         // we want to pass the extras from the last intent to this one, since they will tell us if
         // we should automatically skip the login and just go into the data load.
-        val login = Intent(this, implementation.LoginActivity::class.java)
+        val login = Intent(this, LoginActivity::class.java)
         login.putExtras(intent)
 
         startActivityForResult(login, SETUP_REQUEST)
@@ -240,7 +241,7 @@ open class InitialLoadActivity : AppCompatActivity(), ProgressUpdateListener {
             source.insertContacts(this, contacts, null)
 
             val importTime = TimeUtils.now - startTime
-            implementation.firebase.AnalyticsHelper.importFinished(this, importTime)
+            AnalyticsHelper.importFinished(this, importTime)
             Log.v("initial_load", "load took $importTime ms")
 
             try {

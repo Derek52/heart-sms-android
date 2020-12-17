@@ -65,7 +65,7 @@ import xyz.heart.sms.shared.util.billing.PurchasedItemCallback
 class MyAccountFragment : MaterialPreferenceFragmentCompat() {
 
     private val fragmentActivity: FragmentActivity? by lazy { activity }
-    private var billing: _root_ide_package_.xyz.heart.sms.shared.util.billing.BillingHelper? = null
+    private var billing: BillingHelper? = null
 
     /**
      * Gets a device id for this device. This will be a 32-bit random hex value.
@@ -79,7 +79,7 @@ class MyAccountFragment : MaterialPreferenceFragmentCompat() {
     override fun onCreatePreferences(bundle: Bundle?, s: String?) {
         addPreferencesFromResource(R.xml.my_account)
 
-        billing = _root_ide_package_.xyz.heart.sms.shared.util.billing.BillingHelper(fragmentActivity)
+        billing = BillingHelper(fragmentActivity)
 
         if (initSetupPreference()) {
             initLifetimeSubscriberPreference()
@@ -102,8 +102,8 @@ class MyAccountFragment : MaterialPreferenceFragmentCompat() {
         if (openTrialUpgradePreference) {
             upgradeTrial()
 
-            implementation.firebase.AnalyticsHelper.accountExpiredFreeTrial(fragmentActivity!!)
-            implementation.firebase.AnalyticsHelper.accountFreeTrialUpgradeDialogShown(fragmentActivity!!)
+            AnalyticsHelper.accountExpiredFreeTrial(fragmentActivity!!)
+            AnalyticsHelper.accountFreeTrialUpgradeDialogShown(fragmentActivity!!)
             
             openTrialUpgradePreference = false
         }
@@ -190,7 +190,7 @@ class MyAccountFragment : MaterialPreferenceFragmentCompat() {
             if (!runUi) {
                 if (hasSubs && Account.exists() && Account.subscriptionType == Account.SubscriptionType.FREE_TRIAL) {
                     Account.updateSubscription(fragmentActivity!!, Account.SubscriptionType.SUBSCRIBER, 1L, true)
-                    implementation.firebase.AnalyticsHelper.accountRestoreSubToTrial(fragmentActivity!!)
+                    AnalyticsHelper.accountRestoreSubToTrial(fragmentActivity!!)
                 }
 
                 return@Thread
@@ -264,7 +264,7 @@ class MyAccountFragment : MaterialPreferenceFragmentCompat() {
 
             preference.setOnPreferenceClickListener {
                 upgradeTrial()
-                implementation.firebase.AnalyticsHelper.accountFreeTrialUpgradeDialogShown(fragmentActivity!!)
+                AnalyticsHelper.accountFreeTrialUpgradeDialogShown(fragmentActivity!!)
                 false
             }
         }
@@ -360,7 +360,7 @@ class MyAccountFragment : MaterialPreferenceFragmentCompat() {
 
                         Thread { ApiUtils.deleteAccount(accountId) }.start()
 
-                        startActivity(Intent(fragmentActivity!!, implementation.RecreateAccountActivity::class.java))
+                        startActivity(Intent(fragmentActivity!!, RecreateAccountActivity::class.java))
                     }.show()
             true
         }
@@ -432,7 +432,7 @@ class MyAccountFragment : MaterialPreferenceFragmentCompat() {
 
                 val login = Intent(fragmentActivity!!, InitialLoadActivity::class.java)
                 login.putExtra(InitialLoadActivity.UPLOAD_AFTER_SYNC, true)
-                login.putExtra(implementation.LoginActivity.ARG_SKIP_LOGIN, true)
+                login.putExtra(LoginActivity.ARG_SKIP_LOGIN, true)
                 startActivity(login)
                 fragmentActivity?.finish()
             }
@@ -445,12 +445,12 @@ class MyAccountFragment : MaterialPreferenceFragmentCompat() {
                     .setMessage(R.string.redirect_to_play_store)
                     .setPositiveButton(R.string.play_store) { _: DialogInterface, _: Int ->
                         val intent = Intent(Intent.ACTION_VIEW)
-                        intent.data = Uri.parse("https://play.google.com/store/apps/details?id=xyz.heart.messenger")
+                        intent.data = Uri.parse("https://play.google.com/store/apps/details?id=xyz.heart.sms")
                         fragmentActivity?.startActivity(intent)
                     }.show()
         } else {
             val intent = Intent(Intent.ACTION_VIEW)
-            intent.data = Uri.parse("https://play.google.com/store/apps/details?id=xyz.heart.messenger")
+            intent.data = Uri.parse("https://play.google.com/store/apps/details?id=xyz.heart.sms")
             fragmentActivity?.startActivity(intent)
 
             Toast.makeText(fragmentActivity, R.string.redirect_to_play_store, Toast.LENGTH_LONG).show()
@@ -506,7 +506,7 @@ class MyAccountFragment : MaterialPreferenceFragmentCompat() {
             }
         } else if (!billing!!.handleOnActivityResult(requestCode, responseCode, data)) {
             if (requestCode == SETUP_REQUEST && responseCode != Activity.RESULT_CANCELED) {
-                if (responseCode == implementation.LoginActivity.RESULT_START_DEVICE_SYNC) {
+                if (responseCode == LoginActivity.RESULT_START_DEVICE_SYNC) {
                     ApiUploadService.start(fragmentActivity!!)
                     returnToConversationsAfterLogin()
 
@@ -514,7 +514,7 @@ class MyAccountFragment : MaterialPreferenceFragmentCompat() {
                     nav.menu.findItem(R.id.drawer_account).setTitle(R.string.menu_account)
 
                     fragmentActivity!!.startService(Intent(fragmentActivity!!, SimpleLifetimeSubscriptionCheckService::class.java))
-                } else if (responseCode == implementation.LoginActivity.RESULT_START_NETWORK_SYNC) {
+                } else if (responseCode == LoginActivity.RESULT_START_NETWORK_SYNC) {
                     restoreAccount()
                 }
             } else if (requestCode == ONBOARDING_REQUEST) {
@@ -539,13 +539,13 @@ class MyAccountFragment : MaterialPreferenceFragmentCompat() {
                     // record the purchase to the API
                     Thread { ApiUtils.recordNewPurchase(product.productId) }.start()
 
-                    implementation.firebase.AnalyticsHelper.accountCompetedPurchase(fragmentActivity!!)
-                    implementation.firebase.AnalyticsHelper.userSubscribed(fragmentActivity!!, productId)
+                    AnalyticsHelper.accountCompetedPurchase(fragmentActivity!!)
+                    AnalyticsHelper.userSubscribed(fragmentActivity!!, productId)
                     Account.setHasPurchased(fragmentActivity!!, true)
                 }
 
                 if (Account.accountId == null) {
-                    implementation.firebase.AnalyticsHelper.userSubscribed(fragmentActivity!!, productId)
+                    AnalyticsHelper.userSubscribed(fragmentActivity!!, productId)
 
                     if (product.productId.contains("lifetime")) {
                         Account.updateSubscription(fragmentActivity!!, Account.SubscriptionType.LIFETIME, Date(1))
@@ -560,7 +560,7 @@ class MyAccountFragment : MaterialPreferenceFragmentCompat() {
                     val newExperation = ProductPurchased.getExpiration(product.productId)
                     val oldSubscription = Account.subscriptionType
 
-                    implementation.firebase.AnalyticsHelper.userUpgraded(fragmentActivity!!, productId)
+                    AnalyticsHelper.userUpgraded(fragmentActivity!!, productId)
                     if (product.productId.contains("lifetime")) {
                         Account.updateSubscription(fragmentActivity!!, Account.SubscriptionType.LIFETIME, Date(newExperation))
                     } else {
@@ -582,7 +582,7 @@ class MyAccountFragment : MaterialPreferenceFragmentCompat() {
     }
 
     private fun purchaseCancelled(message: String? = null) {
-        implementation.firebase.AnalyticsHelper.purchaseError(fragmentActivity!!)
+        AnalyticsHelper.purchaseError(fragmentActivity!!)
         if (message != null) {
             fragmentActivity?.runOnUiThread { Toast.makeText(activity, message, Toast.LENGTH_SHORT).show() }
         }
@@ -630,10 +630,10 @@ class MyAccountFragment : MaterialPreferenceFragmentCompat() {
     }
 
     private fun startLoginActivity(signInOnly: Boolean = false) {
-        val intent = Intent(fragmentActivity, implementation.LoginActivity::class.java)
-        intent.putExtra(implementation.LoginActivity.ARG_FORCE_NO_CREATE_ACCOUNT, signInOnly)
-        intent.putExtra(implementation.LoginActivity.ARG_BACKGROUND_COLOR, Settings.mainColorSet.color)
-        intent.putExtra(implementation.LoginActivity.ARG_ACCENT_COLOR, Settings.mainColorSet.colorAccent)
+        val intent = Intent(fragmentActivity, LoginActivity::class.java)
+        intent.putExtra(LoginActivity.ARG_FORCE_NO_CREATE_ACCOUNT, signInOnly)
+        intent.putExtra(LoginActivity.ARG_BACKGROUND_COLOR, Settings.mainColorSet.color)
+        intent.putExtra(LoginActivity.ARG_ACCENT_COLOR, Settings.mainColorSet.colorAccent)
         startActivityForResult(intent, SETUP_REQUEST)
     }
 

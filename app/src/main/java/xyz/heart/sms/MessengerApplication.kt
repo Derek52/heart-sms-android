@@ -40,7 +40,7 @@ import xyz.heart.sms.shared.util.UpdateUtils
  * Base application that will serve as any intro for any context in the rest of the app. Main
  * function is to enable night mode so that colors change depending on time of day.
  */
-class MessengerApplication : implementation.firebase.FirebaseApplication(), implementation.retrofit.ApiErrorPersister, AccountInvalidator, EventHandler.Provider, ShortcutUpdater {
+class MessengerApplication : FirebaseApplication(), ApiErrorPersister, AccountInvalidator, EventHandler.Provider, ShortcutUpdater {
 
     override fun onCreate() {
         super.onCreate()
@@ -83,8 +83,8 @@ class MessengerApplication : implementation.firebase.FirebaseApplication(), impl
         }
     }
 
-    override fun getFirebaseMessageHandler(): implementation.firebase.FirebaseMessageHandler {
-        return object : implementation.firebase.FirebaseMessageHandler {
+    override fun getFirebaseMessageHandler(): FirebaseMessageHandler {
+        return object : FirebaseMessageHandler {
             override fun handleMessage(application: Application, operation: String, data: String) {
                 Thread { FirebaseHandlerService.process(application, operation, data) }.start()
             }
@@ -148,7 +148,7 @@ class MessengerApplication : implementation.firebase.FirebaseApplication(), impl
     override val eventHandler: EventHandler
         get() = object : EventHandler {
             override fun onAnalyticsEvent(type: String, message: String?) {
-                implementation.firebase.AnalyticsHelper.logEvent(this@MessengerApplication, type)
+                AnalyticsHelper.logEvent(this@MessengerApplication, type)
             }
         }
 }

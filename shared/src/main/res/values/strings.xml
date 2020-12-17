@@ -676,7 +676,7 @@
     <string name="set_passcode">Save Passcode</string>
     <string name="confirm_fingerprint">Confirm fingerprint to continue. Touch sensor now.</string>
     <string name="confirm_passcode">Confirm passcode to continue.</string>
-    <string name="confirm_Heart_password">Confirm Heart account credentials to continue.</string>
+    <string name="confirm_heart_password">Confirm Heart account credentials to continue.</string>
     <string name="type_passcode">Create a passcode.</string>
     <string name="incorrect_passcode">Incorrect passcode.</string>
     <string name="verify">Verify</string>
@@ -712,7 +712,7 @@
     <string name="off">Off</string>
     <string name="on">On</string>
     <string name="share_promo">Hey, I am loving Heart for texting! Give it a try:
-        https://play.google.com/store/apps/details?id=xyz.heart.messenger</string>
+        https://play.google.com/store/apps/details?id=xyz.heart.sms</string>
     <string name="verifying_password">Verifying password…</string>
 
 
@@ -722,7 +722,7 @@
     <string name="rate_it_title">Top ratings go a long way</string>
     <string name="rate_it_summary"><b>Top ratings</b> are important to the app\'s growth! If you want to see the app <i>continue to soar</i>, please take a second to help me out.</string>
     <string name="rate_it_not_ready"><b>Not ready to rate it?</b> No problem. Hit your phone\'s back button and I will never ask again.</string>
-    <string name="love_Heart_question">Love Heart?</string>
+    <string name="love_heart_question">Love Heart?</string>
     <string name="give_a_rating">Consider giving it a rating or sharing it with your friends!\n\n
         Your 5 star reviews warm my heart :)</string>
 
@@ -779,7 +779,7 @@
     <string name="trial_description">No competition can touch Heart\'s <b>endless platform support</b> paired with its <b>low price</b>. Messages sync between all your devices, instantly and seamlessly.</string>
     <string name="purchase_description">Give the online version a try, for <b>seven days</b>, then you decide how you want to support the app:\n\n<b>$10.99</b> for a lifetime membership\n<b>$5.99</b> per year\n<b>$1.99</b> every three months\n<b>$0.99</b> per month</string>
     <string name="start_free_trial">Start your free trial!</string>
-    <string name="create_your_Heart_account">Create a Heart account!</string>
+    <string name="create_your_heart_account">Create a Heart account!</string>
     <string name="try_it">Try it!</string>
     <string name="select_purchase">Select Purchase</string>
     <string name="have_an_account">Have an account?\nSign in</string>

@@ -34,17 +34,17 @@
         android:key="@string/pref_contact_customization_group"
         android:title="@string/theme_settings">
 
-        <xyz.heart.messenger.view.ColorPreference
+        <xyz.heart.sms.view.ColorPreference
             android:key="@string/pref_contact_primary_color"
             android:title="@string/primary_color"
             app:display_normalize="true"/>
 
-        <xyz.heart.messenger.view.ColorPreference
+        <xyz.heart.sms.view.ColorPreference
             android:key="@string/pref_contact_primary_dark_color"
             android:title="@string/primary_dark_color"
             app:display_normalize="false" />
 
-        <xyz.heart.messenger.view.ColorPreference
+        <xyz.heart.sms.view.ColorPreference
             android:key="@string/pref_contact_accent_color"
             android:title="@string/accent_color"
             app:display_normalize="false" />
@@ -67,7 +67,7 @@
             android:showDefault="true"
             android:showSilent="true" />
 
-        <xyz.heart.messenger.view.ColorPreference
+        <xyz.heart.sms.view.ColorPreference
             android:key="@string/pref_contact_led_color"
             android:title="@string/led_color"
             app:display_normalize="true"/>

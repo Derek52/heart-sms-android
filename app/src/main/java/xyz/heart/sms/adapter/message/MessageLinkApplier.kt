@@ -92,7 +92,7 @@ class MessageLinkApplier(private val fragment: MessageListFragment, private val 
                 try {
                     holder.itemView.context.startActivity(url)
                 } catch (e: Exception) {
-                    implementation.firebase.AnalyticsHelper.caughtForceClose(holder.itemView.context, "couldn't start link click: $clickedText", e)
+                    AnalyticsHelper.caughtForceClose(holder.itemView.context, "couldn't start link click: $clickedText", e)
                 }
             } else {
                 val intent = ArticleIntent.Builder(holder.itemView.context, ArticleParser.ARTICLE_API_KEY)

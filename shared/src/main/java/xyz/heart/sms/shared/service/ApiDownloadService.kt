@@ -583,7 +583,7 @@ class ApiDownloadService : Service() {
 
         private const val TAG = "ApiDownloadService"
         private const val MESSAGE_DOWNLOAD_ID = 7237
-        const val ACTION_DOWNLOAD_FINISHED = "xyz.heart.messenger.API_DOWNLOAD_FINISHED"
+        const val ACTION_DOWNLOAD_FINISHED = "xyz.heart.sms.API_DOWNLOAD_FINISHED"
 
         const val MESSAGE_DOWNLOAD_PAGE_SIZE = 5000
         const val CONVERSATION_DOWNLOAD_PAGE_SIZE = 500

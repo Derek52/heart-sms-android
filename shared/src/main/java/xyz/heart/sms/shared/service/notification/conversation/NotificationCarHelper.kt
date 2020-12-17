@@ -15,16 +15,16 @@ class NotificationCarHelper(private val service: Context) {
 
     fun buildExtender(conversation: NotificationConversation, remoteInput: RemoteInput): NotificationCompat.CarExtender {
         val carReply = Intent().addFlags(Intent.FLAG_INCLUDE_STOPPED_PACKAGES)
-                .setAction("xyz.heart.messenger.CAR_REPLY")
+                .setAction("xyz.heart.sms.CAR_REPLY")
                 .putExtra(ReplyService.EXTRA_CONVERSATION_ID, conversation.id)
-                .setPackage("xyz.heart.messenger")
+                .setPackage("xyz.heart.sms")
         val pendingCarReply = PendingIntent.getBroadcast(service, conversation.id.toInt(),
                 carReply, PendingIntent.FLAG_UPDATE_CURRENT)
 
         val carRead = Intent().addFlags(Intent.FLAG_INCLUDE_STOPPED_PACKAGES)
-                .setAction("xyz.heart.messenger.CAR_READ")
+                .setAction("xyz.heart.sms.CAR_READ")
                 .putExtra(NotificationMarkReadReceiver.EXTRA_CONVERSATION_ID, conversation.id)
-                .setPackage("xyz.heart.messenger")
+                .setPackage("xyz.heart.sms")
         val pendingCarRead = PendingIntent.getBroadcast(service, conversation.id.toInt(),
                 carRead, PendingIntent.FLAG_UPDATE_CURRENT)
 

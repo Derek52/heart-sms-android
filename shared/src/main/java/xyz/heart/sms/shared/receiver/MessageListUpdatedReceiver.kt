@@ -104,7 +104,7 @@ class MessageListUpdatedReceiver(private val fragment: IMessageListFragment) : B
 
     companion object {
 
-        private val ACTION_UPDATED = "xyz.heart.messenger.MESSAGE_UPDATED"
+        private val ACTION_UPDATED = "xyz.heart.sms.MESSAGE_UPDATED"
         private val ARG_CONVERSATION_ID = "conversation_id"
         private val ARG_NEW_MESSAGE_TEXT = "new_message_text"
         private val ARG_MESSAGE_TYPE = "message_type"

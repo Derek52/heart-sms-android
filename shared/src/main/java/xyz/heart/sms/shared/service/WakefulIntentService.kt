@@ -53,7 +53,7 @@ abstract class WakefulIntentService(name: String) : IntentService(name) {
 
     companion object {
 
-        private val NAME = "xyz.heart.messenger.WakefulIntentService"
+        private val NAME = "xyz.heart.sms.WakefulIntentService"
 
         @Volatile private var lockStatic: PowerManager.WakeLock? = null
         @Synchronized private fun getLock(context: Context): PowerManager.WakeLock? {

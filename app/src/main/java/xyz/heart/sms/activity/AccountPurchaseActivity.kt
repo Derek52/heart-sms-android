@@ -32,7 +32,7 @@ class AccountPurchaseActivity : AppCompatActivity() {
     public override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        implementation.firebase.AnalyticsHelper.accountTutorialStarted(this)
+        AnalyticsHelper.accountTutorialStarted(this)
 
         setResult(Activity.RESULT_CANCELED)
         setContentView(R.layout.activity_account_purchase)
@@ -64,7 +64,7 @@ class AccountPurchaseActivity : AppCompatActivity() {
 
     private fun tryIt() {
         slidePurchaseOptionsIn()
-        implementation.firebase.AnalyticsHelper.accountTutorialFinished(this)
+        AnalyticsHelper.accountTutorialFinished(this)
 
         // set up purchasing views here
         val monthly = findViewById<View>(R.id.monthly)
@@ -110,13 +110,13 @@ class AccountPurchaseActivity : AppCompatActivity() {
             Toast.makeText(this, R.string.subscription_toast, Toast.LENGTH_LONG).show()
         }
 
-        implementation.firebase.AnalyticsHelper.accountSelectedPurchase(this)
+        AnalyticsHelper.accountSelectedPurchase(this)
         finish()
     }
 
     private fun startSignIn() {
         setResult(MyAccountFragment.RESULT_SIGN_IN)
-        implementation.firebase.AnalyticsHelper.accountSignInInsteadOfPurchase(this)
+        AnalyticsHelper.accountSignInInsteadOfPurchase(this)
 
         finish()
     }

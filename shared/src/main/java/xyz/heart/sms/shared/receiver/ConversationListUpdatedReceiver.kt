@@ -172,7 +172,7 @@ class ConversationListUpdatedReceiver(private val fragment: IConversationListFra
 
     companion object {
 
-        private const val ACTION_UPDATED = "xyz.heart.messenger.CONVERSATION_UPDATED"
+        private const val ACTION_UPDATED = "xyz.heart.sms.CONVERSATION_UPDATED"
         private const val EXTRA_CONVERSATION_ID = "conversation_id"
         private const val EXTRA_SNIPPET = "snippet"
         private const val EXTRA_TITLE = "title"

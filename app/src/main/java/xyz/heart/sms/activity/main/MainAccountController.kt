@@ -62,7 +62,7 @@ class MainAccountController(private val activity: MessengerActivity) {
         if (requestCode == MessengerActivityExtras.REQUEST_ONBOARDING) {
             val hasTelephone = activity.packageManager.hasSystemFeature(PackageManager.FEATURE_TELEPHONY)
             val login = Intent(activity, InitialLoadActivity::class.java)
-            login.putExtra(implementation.LoginActivity.ARG_SKIP_LOGIN, hasTelephone)
+            login.putExtra(LoginActivity.ARG_SKIP_LOGIN, hasTelephone)
 
             activity.startActivity(login)
             activity.finish()
