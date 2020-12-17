@@ -185,7 +185,7 @@ public class MessageListAdapterTest extends MessengerRobolectricSuite {
                 "text/plain",
                 1,
                 1,
-                "Luke heart",
+                "Luke Klinker",
                 null
         });
 
@@ -229,7 +229,7 @@ public class MessageListAdapterTest extends MessengerRobolectricSuite {
                 "text/plain",
                 1,
                 1,
-                "Luke heart",
+                "Luke Klinker",
                 null
         });
 
@@ -269,7 +269,7 @@ public class MessageListAdapterTest extends MessengerRobolectricSuite {
                 "text/plain",
                 1,
                 1,
-                "Luke heart",
+                "Luke Klinker",
                 null
         });
 
@@ -295,7 +295,7 @@ public class MessageListAdapterTest extends MessengerRobolectricSuite {
                 "text/plain",
                 1,
                 1,
-                "Luke heart",
+                "Luke Klinker",
                 null
         });
 
@@ -322,7 +322,7 @@ public class MessageListAdapterTest extends MessengerRobolectricSuite {
                 "text/plain",
                 1,
                 1,
-                "Luke heart",
+                "Luke Klinker",
                 null
         });
 

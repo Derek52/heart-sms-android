@@ -61,7 +61,7 @@ class InitialLoadWearActivity : Activity(), ProgressUpdateListener {
 
     public override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(xyz.heart.sms.R.layout.activity_initial_load_wear)
+        setContentView(R.layout.activity_initial_load_wear)
 
         handler = Handler()
         requestPermissions()
@@ -101,11 +101,11 @@ class InitialLoadWearActivity : Activity(), ProgressUpdateListener {
 
                     startDatabaseSync()
                 }
-                implementation.LoginActivity.RESULT_START_DEVICE_SYNC -> {
+                LoginActivity.RESULT_START_DEVICE_SYNC -> {
                     startDatabaseSync()
                     startUploadAfterSync = true
                 }
-                implementation.LoginActivity.RESULT_START_NETWORK_SYNC -> {
+                LoginActivity.RESULT_START_NETWORK_SYNC -> {
                     ApiDownloadService.start(this)
                     downloadReceiver = object : BroadcastReceiver() {
                         override fun onReceive(context: Context, intent: Intent) {
@@ -116,7 +116,7 @@ class InitialLoadWearActivity : Activity(), ProgressUpdateListener {
                     registerReceiver(downloadReceiver,
                             IntentFilter(ApiDownloadService.ACTION_DOWNLOAD_FINISHED))
                 }
-                implementation.ActivateActivity.RESULT_FAILED -> finish()
+                ActivateActivity.RESULT_FAILED -> finish()
             }
         }
     }

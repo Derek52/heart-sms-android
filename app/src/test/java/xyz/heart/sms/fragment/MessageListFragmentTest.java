@@ -39,7 +39,7 @@ public class MessageListFragmentTest extends MessengerRobolectricSuite {
     @Before
     public void setUp() {
         Conversation conversation = new Conversation();
-        conversation.setTitle("Luke heart");
+        conversation.setTitle("Luke Klinker");
         conversation.setPhoneNumbers("(515) 991-1493");
         conversation.getColors().setColor(Color.RED);
         conversation.getColors().setColorDark(Color.BLUE);

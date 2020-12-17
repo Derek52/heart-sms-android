@@ -83,7 +83,7 @@ public class NotificationServiceTest extends MessengerRobolectricSuite {
         List<NotificationConversation> conversations = new NotificationUnreadConversationQuery(service).getUnseenConversations(source);
 
         assertEquals(3, conversations.size());
-        assertEquals("Luke heart", conversations.get(2).getTitle());
+        assertEquals("Luke Klinker", conversations.get(2).getTitle());
         assertEquals(3, conversations.get(2).getMessages().size());
         assertEquals("Hey what's up?", conversations.get(2).getMessages().get(0).getData());
         assertEquals("Yo, you around?", conversations.get(2).getMessages().get(1).getData());
@@ -155,7 +155,7 @@ public class NotificationServiceTest extends MessengerRobolectricSuite {
 
     private Conversation getConversation1() {
         Conversation conversation = new Conversation();
-        conversation.setTitle("Luke heart");
+        conversation.setTitle("Luke Klinker");
         conversation.setPhoneNumbers("test");
         conversation.setTimestamp(1);
         return conversation;

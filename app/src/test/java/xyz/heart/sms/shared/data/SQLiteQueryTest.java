@@ -283,7 +283,7 @@ public class SQLiteQueryTest extends MessengerRealDataSuite {
             cursor.close();
         }
 
-        assertEquals("Luke heart", titles.get(0));
+        assertEquals("Luke Klinker", titles.get(0));
         assertEquals("Aaron heart", titles.get(1));
         assertEquals("Aaron, Luke", titles.get(2));
     }
@@ -302,7 +302,7 @@ public class SQLiteQueryTest extends MessengerRealDataSuite {
         }
 
         assertEquals(2, titles.size());
-        assertEquals("Luke heart", titles.get(0));
+        assertEquals("Luke Klinker", titles.get(0));
         assertEquals("Aaron heart", titles.get(1));
     }
 
@@ -319,7 +319,7 @@ public class SQLiteQueryTest extends MessengerRealDataSuite {
 
     @Test
     public void findConversationByName() {
-        Long id = source.findConversationIdByTitle(context, "Luke heart");
+        Long id = source.findConversationIdByTitle(context, "Luke Klinker");
         assertEquals(id, Long.valueOf(1));
     }
 
@@ -354,7 +354,7 @@ public class SQLiteQueryTest extends MessengerRealDataSuite {
     @Test
     public void getConversation() {
         Conversation conversation = source.getConversation(context, 1L);
-        assertEquals("Luke heart", conversation.getTitle());
+        assertEquals("Luke Klinker", conversation.getTitle());
     }
 
     @Test

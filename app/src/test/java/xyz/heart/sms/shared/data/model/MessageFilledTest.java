@@ -42,7 +42,7 @@ public class MessageFilledTest extends MessengerRobolectricSuite {
         assertEquals("text/plain", message.getMimeType());
         assertEquals(true, message.getSeen());
         assertEquals(true, message.getRead());
-        assertEquals("Luke heart", message.getFrom());
+        assertEquals("Luke Klinker", message.getFrom());
         assertEquals(null, message.getColor());
     }
 
@@ -69,7 +69,7 @@ public class MessageFilledTest extends MessengerRobolectricSuite {
                 "text/plain",
                 1,
                 1,
-                "Luke heart",
+                "Luke Klinker",
                 null
         });
 

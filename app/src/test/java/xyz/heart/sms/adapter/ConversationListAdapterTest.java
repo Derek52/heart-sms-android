@@ -185,7 +185,7 @@ public class ConversationListAdapterTest extends MessengerRobolectricSuite {
         adapter.onBindViewHolder(holder, 0, 0, 0);
 
         assertNotNull(holder.getConversation());
-        verify(name).setText("Luke heart");
+        verify(name).setText("Luke Klinker");
         verify(summary).setText("So maybe not going to be able to get platinum huh?");
         verify(name, times(1)).setTypeface(any(Typeface.class), anyInt());
         verify(summary, times(1)).setTypeface(any(Typeface.class), anyInt());
@@ -353,7 +353,7 @@ public class ConversationListAdapterTest extends MessengerRobolectricSuite {
                 1,
                 1,
                 TimeUtils.INSTANCE.getNow() - (1000 * 60 * 60),
-                "Luke heart",
+                "Luke Klinker",
                 "(515) 991-1493",
                 "So maybe not going to be able to get platinum huh?",
                 null,

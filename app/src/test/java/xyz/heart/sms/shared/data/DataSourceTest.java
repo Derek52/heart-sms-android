@@ -752,7 +752,7 @@ public class DataSourceTest extends MessengerRobolectricSuite {
         List<Conversation> conversations = new ArrayList<>();
 
         Conversation conversation = new Conversation();
-        conversation.setTitle("Luke heart");
+        conversation.setTitle("Luke Klinker");
         conversation.setPhoneNumbers("(515) 991-1493");
 //        conversation.colors.color = resources.getColor(R.color.materialIndigo);
 //        conversation.colors.colorDark = resources.getColor(R.color.materialIndigoDark);
@@ -871,7 +871,7 @@ public class DataSourceTest extends MessengerRobolectricSuite {
 
         Contact contact = new Contact();
         contact.setId(11);
-        contact.setName("Luke heart");
+        contact.setName("Luke Klinker");
         contact.setPhoneNumber("(515) 991-1493");
 //        contact.colors.color = resources.getColor(R.color.materialIndigo);
 //        contact.colors.colorDark = resources.getColor(R.color.materialIndigoDark);

@@ -22,7 +22,7 @@ import xyz.heart.sms.shared.data.model.Message
 import xyz.heart.sms.shared.receiver.MessageListUpdatedReceiver
 import xyz.heart.sms.shared.shared_interfaces.IMessageListFragment
 import xyz.heart.sms.shared.util.*
-import xyz.heart.wear.reply.WearableReplyActivity
+import xyz.klinker.wear.reply.WearableReplyActivity//This is another class that must be located in a project jar or something. I can't find the source.
 
 class MessageListActivity : AppCompatActivity(), IMessageListFragment {
 
