@@ -66,8 +66,8 @@ class ColorSet {
         private var defaultSet: ColorSet? = null
         fun DEFAULT(context: Context): ColorSet {
             if (defaultSet == null) {
-                defaultSet = ColorSet(context, R.color.pulseColorPrimary, R.color.pulseColorPrimaryDark,
-                        R.color.pulseColorPrimaryLight, R.color.pulseColorAccent)
+                defaultSet = ColorSet(context, R.color.heartColorPrimary, R.color.heartColorPrimaryDark,
+                        R.color.heartColorPrimaryLight, R.color.heartColorAccent)
             }
 
             return defaultSet!!

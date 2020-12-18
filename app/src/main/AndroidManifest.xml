@@ -90,7 +90,7 @@
         android:largeHeap="true"
         android:networkSecurityConfig="@xml/security_config"
         android:supportsRtl="true"
-        android:theme="@style/PulseTheme"
+        android:theme="@style/HeartTheme"
         tools:replace="android:allowBackup"
         tools:ignore="Instantiatable">
 
@@ -102,7 +102,7 @@
             android:name=".activity.MessengerActivity"
             android:configChanges="keyboardHidden"
             android:launchMode="singleTop"
-            android:theme="@style/PulseTheme.MessengerActivity"
+            android:theme="@style/HeartTheme.MessengerActivity"
             android:resizeableActivity="true"
             android:windowSoftInputMode="adjustResize|stateAlwaysHidden">
 
@@ -122,7 +122,7 @@
 
         <activity
             android:name=".activity.BubbleActivity"
-            android:theme="@style/PulseTheme.MessengerActivity"
+            android:theme="@style/HeartTheme.MessengerActivity"
             android:allowEmbedded="true"
             android:documentLaunchMode="always"
             android:resizeableActivity="true"
@@ -143,7 +143,7 @@
         <activity
             android:name=".activity.compose.ComposeActivity"
             android:exported="true"
-            android:theme="@style/PulseTheme.NoActionBar"
+            android:theme="@style/HeartTheme.NoActionBar"
             android:windowSoftInputMode="adjustResize" >
 
             <intent-filter>
@@ -228,7 +228,7 @@
 
         <activity
             android:name=".activity.NoLimitMessageListActivity"
-            android:theme="@style/PulseTheme.NoActionBar" />
+            android:theme="@style/HeartTheme.NoActionBar" />
         <activity
             android:name=".shared.util.RedirectToMyAccount"
             android:theme="@style/Theme.MaterialComponents.Light.NoActionBar" />
@@ -245,23 +245,23 @@
             android:configChanges="keyboardHidden|keyboard|screenLayout|orientation|screenSize" />
         <activity
             android:name=".activity.InitialLoadTvActivity"
-            android:theme="@style/PulseTheme.NoActionBar" />
+            android:theme="@style/HeartTheme.NoActionBar" />
         <activity
             android:name=".activity.MediaGridActivity"
-            android:theme="@style/PulseTheme.NoColors.Media" />
+            android:theme="@style/HeartTheme.NoColors.Media" />
         <activity
             android:name=".activity.ContactSettingsActivity"
-            android:theme="@style/PulseTheme.NoColors" />
+            android:theme="@style/HeartTheme.NoColors" />
         <activity
             android:name=".activity.SettingsActivity"
             android:label="@string/menu_settings"
-            android:theme="@style/PulseTheme.NoColors" />
+            android:theme="@style/HeartTheme.NoColors" />
         <activity
             android:name=".activity.ImageViewerActivity"
-            android:theme="@style/PulseTheme.NoActionBar.Translucent" />
+            android:theme="@style/HeartTheme.NoActionBar.Translucent" />
         <activity
             android:name="xyz.klinker.giphy.GiphyActivity"
-            android:theme="@style/PulseTheme.NoActionBar"
+            android:theme="@style/HeartTheme.NoActionBar"
             tools:replace="android:theme" />
         <activity
             android:name=".activity.notification.MarshmallowReplyActivity"
@@ -276,10 +276,10 @@
         <activity android:name="net.rdrei.android.dirchooser.DirectoryChooserActivity"
             tools:ignore="MissingClass" />
         <activity android:name="xyz.heart.sms.activity.passcode.PasscodeVerificationActivity"
-            android:theme="@style/PulsePasscode"
+            android:theme="@style/HeartPasscode"
             android:launchMode="singleInstance" />
         <activity android:name="xyz.heart.sms.activity.passcode.PasscodeSetupActivity"
-            android:theme="@style/PulsePasscode"
+            android:theme="@style/HeartPasscode"
             android:launchMode="singleInstance" />
 
 
